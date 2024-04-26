@@ -25,13 +25,14 @@ const Home = () => {
   }, []);
 
   // scrolldown
-  useEffect(() => {
-    console.log("Effect is running!"); // Debugging statement to check if the useEffect is executed
 
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    console.log("Effect is running!");
+
     const appearances = document.querySelectorAll(".mil-up");
-    console.log("Appearances found:", appearances.length); // Debugging statement to check if elements are found
+    console.log("Appearances found:", appearances.length);
 
     appearances.forEach((section) => {
       gsap.fromTo(
@@ -56,7 +57,7 @@ const Home = () => {
     });
 
     const scaleImages = document.querySelectorAll(".mil-scale");
-    console.log("Scale images found:", scaleImages.length); // Debugging statement to check if elements are found
+    console.log("Scale images found:", scaleImages.length);
 
     scaleImages.forEach((section) => {
       const value1 = parseFloat(section.getAttribute("data-value-1"));
@@ -78,13 +79,49 @@ const Home = () => {
       );
     });
 
-    // Add similar debugging statements for other sections...
+    if (window.innerWidth > 960) {
+      const parallaxImages = document.querySelectorAll(".mil-parallax");
+      parallaxImages.forEach((section) => {
+        const value1 = parseFloat(section.getAttribute("data-value-1"));
+        const value2 = parseFloat(section.getAttribute("data-value-2"));
+        gsap.fromTo(
+          section,
+          {
+            y: value1,
+          },
+          {
+            y: value2,
+            ease: "sine",
+            scrollTrigger: {
+              trigger: section,
+              scrub: true,
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      });
+    }
 
+    const rotateSections = document.querySelectorAll(".mil-rotate");
+    rotateSections.forEach((section) => {
+      const value = parseFloat(section.getAttribute("data-value"));
+      gsap.fromTo(
+        section,
+        {
+          rotate: 0,
+        },
+        {
+          rotate: value,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            scrub: true,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
   }, []);
-
- 
- 
- 
   // /mouse/
   // useEffect(() => {
   //   const cursor = document.querySelector(".mil-ball");
@@ -129,55 +166,55 @@ const Home = () => {
   // };
   useEffect(() => {
     const handleMouseMove = (e) => {
-      const cursor = document.querySelector('.custom-cursor__cursor');
-      const cursorInner = document.querySelector('.custom-cursor__cursor-two');
+      const cursor = document.querySelector(".custom-cursor__cursor");
+      const cursorInner = document.querySelector(".custom-cursor__cursor-two");
       cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
-      cursorInner.style.left = e.clientX + 'px';
-      cursorInner.style.top = e.clientY + 'px';
+      cursorInner.style.left = e.clientX + "px";
+      cursorInner.style.top = e.clientY + "px";
     };
 
     const handleMouseDown = () => {
-      const cursor = document.querySelector('.custom-cursor__cursor');
-      const cursorInner = document.querySelector('.custom-cursor__cursor-two');
-      cursor.classList.add('click');
-      cursorInner.classList.add('custom-cursor__innerhover');
+      const cursor = document.querySelector(".custom-cursor__cursor");
+      const cursorInner = document.querySelector(".custom-cursor__cursor-two");
+      cursor.classList.add("click");
+      cursorInner.classList.add("custom-cursor__innerhover");
     };
 
     const handleMouseUp = () => {
-      const cursor = document.querySelector('.custom-cursor__cursor');
-      const cursorInner = document.querySelector('.custom-cursor__cursor-two');
-      cursor.classList.remove('click');
-      cursorInner.classList.remove('custom-cursor__innerhover');
+      const cursor = document.querySelector(".custom-cursor__cursor");
+      const cursorInner = document.querySelector(".custom-cursor__cursor-two");
+      cursor.classList.remove("click");
+      cursorInner.classList.remove("custom-cursor__innerhover");
     };
 
     const handleLinkHover = (e) => {
-      const cursor = document.querySelector('.custom-cursor__cursor');
-      cursor.classList.add('custom-cursor__hover');
+      const cursor = document.querySelector(".custom-cursor__cursor");
+      cursor.classList.add("custom-cursor__hover");
     };
 
     const handleLinkLeave = () => {
-      const cursor = document.querySelector('.custom-cursor__cursor');
-      cursor.classList.remove('custom-cursor__hover');
+      const cursor = document.querySelector(".custom-cursor__cursor");
+      cursor.classList.remove("custom-cursor__hover");
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mousedown', handleMouseDown);
-    document.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mousedown", handleMouseDown);
+    document.addEventListener("mouseup", handleMouseUp);
 
-    const links = document.querySelectorAll('a');
+    const links = document.querySelectorAll("a");
     links.forEach((link) => {
-      link.addEventListener('mouseover', handleLinkHover);
-      link.addEventListener('mouseleave', handleLinkLeave);
+      link.addEventListener("mouseover", handleLinkHover);
+      link.addEventListener("mouseleave", handleLinkLeave);
     });
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mousedown", handleMouseDown);
+      document.removeEventListener("mouseup", handleMouseUp);
 
       links.forEach((link) => {
-        link.removeEventListener('mouseover', handleLinkHover);
-        link.removeEventListener('mouseleave', handleLinkLeave);
+        link.removeEventListener("mouseover", handleLinkHover);
+        link.removeEventListener("mouseleave", handleLinkLeave);
       });
     };
   }, []);
@@ -193,12 +230,12 @@ const Home = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to('.mil-progress', {
-      height: '100%',
-      ease: 'sine',
+    gsap.to(".mil-progress", {
+      height: "100%",
+      ease: "sine",
       scrollTrigger: {
-        scrub: 0.3
-      }
+        scrub: 0.3,
+      },
     });
   }, []);
 
@@ -234,13 +271,13 @@ const Home = () => {
     gsap.to(btt, {
       x: 0,
       opacity: 1,
-      ease: 'sine',
+      ease: "sine",
       scrollTrigger: {
         trigger: "body",
         start: "top -40%",
         end: "top -40%",
-        toggleActions: "play none reverse none"
-      }
+        toggleActions: "play none reverse none",
+      },
     });
   }, []);
 
@@ -293,7 +330,6 @@ const Home = () => {
     }
   }, []); // Empty array means this effect will only run once after the first render
 
-  
   return (
     <>
       {/* <div
@@ -309,8 +345,8 @@ const Home = () => {
         <div className="mil-more-text">More</div>
         <div className="mil-choose-text">Choose</div>
       </div> */}
-           <div class="custom-cursor__cursor"></div>
-    <div class="custom-cursor__cursor-two"></div>
+      <div class="custom-cursor__cursor"></div>
+      <div class="custom-cursor__cursor-two"></div>
 
       <div class="mil-progress-track">
         <div class="mil-progress"></div>
@@ -504,7 +540,7 @@ const Home = () => {
       <div class="mil-frame">
         <div className="mil-frame-top">
           <a href="#" className="mil-logo">
-          <img src={logo} style={{ width: "40%" }} />
+            <img src={logo} style={{ width: "40%" }} />
           </a>
           <div className="mil-menu-btn">
             <span></span>
@@ -636,54 +672,54 @@ const Home = () => {
                 </svg>
               </a>
               <div className="mil-circle-text">
-      <svg
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        x="0px"
-        y="0px"
-        viewBox="0 0 300 300"
-        enableBackground="new 0 0 300 300"
-        xmlSpace="preserve"
-        className="mil-ct-svg mil-rotate"
-        data-value="360"
-        style={{
-          translate: "none",
-          rotate: "none",
-          scale: "none",
-          transform:
-            "translate3d(0px, 0px, 0px) rotate(159.782deg) scale(2, 2)",
-        }}
-      >
-        <defs>
-          <path
-            id="circlePath"
-            d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-          ></path>
-        </defs>
-        <circle cx="150" cy="100" r="75" fill="none"></circle>
-        <g>
-          <use xlinkHref="#circlePath" fill="none"></use>
-          <text style={{ letterSpacing: "6.5px" }}>
-            <textPath xlinkHref="#circlePath">
-              Scroll down - Scroll down -{" "}
-            </textPath>
-          </text>
-        </g>
-      </svg>
-      <a
-        href="#about"
-        className="mil-button mil-arrow-place mil-icon-button mil-arrow-down"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          className="mil-arrow"
-        >
-          <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"></path>
-        </svg>
-      </a>
-    </div>
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 300 300"
+                  enableBackground="new 0 0 300 300"
+                  xmlSpace="preserve"
+                  className="mil-ct-svg mil-rotate"
+                  data-value="360"
+                  style={{
+                    translate: "none",
+                    rotate: "none",
+                    scale: "none",
+                    transform:
+                      "translate3d(0px, 0px, 0px) rotate(159.782deg) scale(2, 2)",
+                  }}
+                >
+                  <defs>
+                    <path
+                      id="circlePath"
+                      d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+                    ></path>
+                  </defs>
+                  <circle cx="150" cy="100" r="75" fill="none"></circle>
+                  <g>
+                    <use xlinkHref="#circlePath" fill="none"></use>
+                    <text style={{ letterSpacing: "6.5px" }}>
+                      <textPath xlinkHref="#circlePath">
+                        Scroll down - Scroll down -{" "}
+                      </textPath>
+                    </text>
+                  </g>
+                </svg>
+                <a
+                  href="#about"
+                  className="mil-button mil-arrow-place mil-icon-button mil-arrow-down"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className="mil-arrow"
+                  >
+                    <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
