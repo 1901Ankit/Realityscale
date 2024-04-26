@@ -1,0 +1,48 @@
+.cubebanner {
+  background-image: url("../../assests/images/landing/cube.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.overlay {
+  background: #00000042;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  color: white;
+}
+.imagination {
+  font-size: 50px;
+  font-weight: 700;
+}
+.innovation {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.buttonhov:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.buttonhov {
+  display: inline-flex;
+  overflow: hidden;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: none;
+}
+
+.acnhor {
+  text-decoration: none;
+  color: black;
+}
+.acnhor:hover {
+  color: white;
+}
