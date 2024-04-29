@@ -1,24 +1,24 @@
 import React from "react";
 import "./index.css";
-import logo from "../../assests/images/logo/Reality Scale Logo-03.png";
+import logo from "../../assests/images/logo/newlogo/Reality Scale Logo White 04.png";
 const Navigation = () => {
   return (
     <nav className="mil-footer-menu mil-mb-30">
       <ul className="p-0">
         <li className="mil-up mil-active">
-          <a href="home-1.html">Home</a>
+          <a href="#">Home</a>
         </li>
         <li className="mil-up">
-          <a href="portfolio-1.html">Portfolio</a>
+          <a href="#">Portfolio</a>
         </li>
         <li className="mil-up">
-          <a href="services.html">Services</a>
+          <a href="#">Services</a>
         </li>
         <li className="mil-up">
-          <a href="contact.html">Contact</a>
+          <a href="#">Contact</a>
         </li>
         <li className="mil-up">
-          <a href="blog.html">Blog</a>
+          <a href="#">Blog</a>
         </li>
       </ul>
     </nav>
@@ -70,13 +70,13 @@ const SocialIcons = () => {
       <li>
         <a href="#." target="_blank" className="social-icon">
           {" "}
-          <i class="fa-brands fa-instagram"></i>
+          <i className="fa-brands fa-instagram"></i>
         </a>
       </li>
       <li>
         <a href="#." target="_blank" className="social-icon">
           {" "}
-          <i class="fa-brands fa-youtube"></i>
+          <i className="fa-brands fa-youtube"></i>
         </a>
       </li>
       <li>
@@ -88,7 +88,7 @@ const SocialIcons = () => {
       <li>
         <a href="#." target="_blank" className="social-icon">
           {" "}
-          <i class="fa-brands fa-facebook"></i>
+          <i className="fa-brands fa-facebook"></i>
         </a>
       </li>
     </ul>
@@ -109,7 +109,7 @@ const Footer = () => {
               <div className="mil-muted mil-logo mil-up mil-mb-30 mt-4 ">
                 <img src={logo} style={{ width: "50%" }} />
               </div>
-              <p className="mil-light-soft mil-up mil-mb-30">
+              <p className="mil-light-soft mil-up mil-mb-30 mt-5">
                 Subscribe our newsletter:
               </p>
               <form className="mil-subscribe-form mil-up">
@@ -162,7 +162,7 @@ const Footer = () => {
                   <SocialIcons />
                 </div>
                 <p className="mil-light-soft mil-up">
-                  © Copyright 2024 - Mil. All Rights Reserved.
+                  © Copyright 2024 - Reality-Scale. All Rights Reserved.
                 </p>
               </div>
             </div>

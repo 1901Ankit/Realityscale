@@ -114,17 +114,17 @@ const Multicarousel = () => {
 
               <div className="swiper-container mil-reviews-slider">
                 <div className="swiper-wrapper">
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <div
-                      class="mil-review-frame mil-center"
+                      className="mil-review-frame mil-center"
                       data-swiper-parallax="-200"
                       data-swiper-parallax-opacity="0"
                     >
-                      <h5 class="mil-up mil-mb-10">Emma Trueman</h5>
-                      <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
+                      <h5 className="mil-up mil-mb-10">Emma Trueman</h5>
+                      <p className="mil-mb-5 mil-upper mil-up mil-mb-30">
                         Envato market
                       </p>
-                      <p class="mil-text-xl mil-up">
+                      <p className="mil-text-xl mil-up">
                         I had the pleasure of working with this creative agency,
                         and I must say, they truly impressed me. They
                         consistently think outside the box, resulting in
@@ -134,17 +134,17 @@ const Multicarousel = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <div
-                      class="mil-review-frame mil-center"
+                      className="mil-review-frame mil-center"
                       data-swiper-parallax="-200"
                       data-swiper-parallax-opacity="0"
                     >
-                      <h5 class="mil-up mil-mb-10">Emma Trueman</h5>
-                      <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
+                      <h5 className="mil-up mil-mb-10">Emma Trueman</h5>
+                      <p className="mil-mb-5 mil-upper mil-up mil-mb-30">
                         Envato market
                       </p>
-                      <p class="mil-text-xl mil-up">
+                      <p className="mil-text-xl mil-up">
                         I had the pleasure of working with this creative agency,
                         and I must say, they truly impressed me. They
                         consistently think outside the box, resulting in
@@ -154,17 +154,17 @@ const Multicarousel = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <div
-                      class="mil-review-frame mil-center"
+                      className="mil-review-frame mil-center"
                       data-swiper-parallax="-200"
                       data-swiper-parallax-opacity="0"
                     >
-                      <h5 class="mil-up mil-mb-10">Emma Trueman</h5>
-                      <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
+                      <h5 className="mil-up mil-mb-10">Emma Trueman</h5>
+                      <p className="mil-mb-5 mil-upper mil-up mil-mb-30">
                         Envato market
                       </p>
-                      <p class="mil-text-xl mil-up">
+                      <p className="mil-text-xl mil-up">
                         I had the pleasure of working with this creative agency,
                         and I must say, they truly impressed me. They
                         consistently think outside the box, resulting in
@@ -174,17 +174,17 @@ const Multicarousel = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <div
-                      class="mil-review-frame mil-center"
+                      className="mil-review-frame mil-center"
                       data-swiper-parallax="-200"
                       data-swiper-parallax-opacity="0"
                     >
-                      <h5 class="mil-up mil-mb-10">Emma Trueman</h5>
-                      <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
+                      <h5 className="mil-up mil-mb-10">Emma Trueman</h5>
+                      <p className="mil-mb-5 mil-upper mil-up mil-mb-30">
                         Envato market
                       </p>
-                      <p class="mil-text-xl mil-up">
+                      <p className="mil-text-xl mil-up">
                         I had the pleasure of working with this creative agency,
                         and I must say, they truly impressed me. They
                         consistently think outside the box, resulting in
@@ -194,17 +194,17 @@ const Multicarousel = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <div
-                      class="mil-review-frame mil-center"
+                      className="mil-review-frame mil-center"
                       data-swiper-parallax="-200"
                       data-swiper-parallax-opacity="0"
                     >
-                      <h5 class="mil-up mil-mb-10">Emma Trueman</h5>
-                      <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
+                      <h5 className="mil-up mil-mb-10">Emma Trueman</h5>
+                      <p className="mil-mb-5 mil-upper mil-up mil-mb-30">
                         Envato market
                       </p>
-                      <p class="mil-text-xl mil-up">
+                      <p className="mil-text-xl mil-up">
                         I had the pleasure of working with this creative agency,
                         and I must say, they truly impressed me. They
                         consistently think outside the box, resulting in
@@ -214,17 +214,17 @@ const Multicarousel = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <div
-                      class="mil-review-frame mil-center"
+                      className="mil-review-frame mil-center"
                       data-swiper-parallax="-200"
                       data-swiper-parallax-opacity="0"
                     >
-                      <h5 class="mil-up mil-mb-10">Emma Trueman</h5>
-                      <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
+                      <h5 className="mil-up mil-mb-10">Emma Trueman</h5>
+                      <p className="mil-mb-5 mil-upper mil-up mil-mb-30">
                         Envato market
                       </p>
-                      <p class="mil-text-xl mil-up">
+                      <p className="mil-text-xl mil-up">
                         I had the pleasure of working with this creative agency,
                         and I must say, they truly impressed me. They
                         consistently think outside the box, resulting in
@@ -234,17 +234,17 @@ const Multicarousel = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <div
-                      class="mil-review-frame mil-center"
+                      className="mil-review-frame mil-center"
                       data-swiper-parallax="-200"
                       data-swiper-parallax-opacity="0"
                     >
-                      <h5 class="mil-up mil-mb-10">Emma Trueman</h5>
-                      <p class="mil-mb-5 mil-upper mil-up mil-mb-30">
+                      <h5 className="mil-up mil-mb-10">Emma Trueman</h5>
+                      <p className="mil-mb-5 mil-upper mil-up mil-mb-30">
                         Envato market
                       </p>
-                      <p class="mil-text-xl mil-up">
+                      <p className="mil-text-xl mil-up">
                         I had the pleasure of working with this creative agency,
                         and I must say, they truly impressed me. They
                         consistently think outside the box, resulting in

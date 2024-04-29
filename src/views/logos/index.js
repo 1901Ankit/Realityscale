@@ -1,18 +1,18 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-import image1 from "../../assests/images/logo/Reality Scale Logo-03.png";
-import image2 from "../../assests/images/logo/Reality Scale Logo-03.png";
-import image3 from "../../assests/images/logo/Reality Scale Logo-03.png";
-import image5 from "../../assests/images/logo/Reality Scale Logo-03.png";
-import image4 from "../../assests/images/logo/Reality Scale Logo-03.png";
-import image6 from "../../assests/images/logo/Reality Scale Logo-03.png";
-import image7 from "../../assests/images/logo/Reality Scale Logo-03.png";
-import image8 from "../../assests/images/logo/Reality Scale Logo-03.png";
-import image9 from "../../assests/images/logo/Reality Scale Logo-03.png";
-import image10 from "../../assests/images/logo/Reality Scale Logo-03.png";
-import image11 from "../../assests/images/logo/Reality Scale Logo-03.png";
-import image12 from "../../assests/images/logo/Reality Scale Logo-03.png";
-import image13 from "../../assests/images/logo/Reality Scale Logo-03.png";
+import image1 from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import image2 from"../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import image3 from"../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import image5 from"../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import image4 from"../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import image6 from"../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import image7 from"../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import image8 from"../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import image9 from"../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import image10 from"../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import image11 from"../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import image12 from"../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import image13 from"../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
 import "./index.css";
 
 const Sliderlogo = () => {
@@ -95,7 +95,7 @@ const Sliderlogo = () => {
             infinite={true}
           >
             {images.map((val) => (
-              <img src={val.img} alt="" height={50} />
+              <img src={val.img} alt="" height={100} />
             ))}
           </Carousel>
         </div>

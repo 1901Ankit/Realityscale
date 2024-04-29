@@ -6,7 +6,7 @@ import Aos from "aos";
 const Eight = () => {
   Aos.init();
   return (
-<div class="container p-0 events-content">
+<div className="container p-0 events-content">
       <div className="row align-items-center mt-3">
         <div className="col-sm-6 ">
           {/* <img

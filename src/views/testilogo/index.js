@@ -1,18 +1,18 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-import image1 from"../../assests/images/logo/Reality Scale Logo-04.png";
-import image2 from"../../assests/images/logo/Reality Scale Logo-04.png";
-import image3 from"../../assests/images/logo/Reality Scale Logo-04.png";
-import image5 from"../../assests/images/logo/Reality Scale Logo-04.png";
-import image4 from"../../assests/images/logo/Reality Scale Logo-04.png";
-import image6 from"../../assests/images/logo/Reality Scale Logo-04.png";
-import image7 from"../../assests/images/logo/Reality Scale Logo-04.png";
-import image8 from"../../assests/images/logo/Reality Scale Logo-04.png";
-import image9 from"../../assests/images/logo/Reality Scale Logo-04.png";
-import image10 from"../../assests/images/logo/Reality Scale Logo-04.png";
-import image11 from"../../assests/images/logo/Reality Scale Logo-04.png";
-import image12 from"../../assests/images/logo/Reality Scale Logo-04.png";
-import image13 from"../../assests/images/logo/Reality Scale Logo-04.png";
+import image1 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image2 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image3 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image5 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image4 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image6 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image7 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image8 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image9 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image10 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image11 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image12 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image13 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
 import "./index.css";
 
 const Testilogo = () => {
@@ -23,7 +23,7 @@ const Testilogo = () => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -94,7 +94,7 @@ const Testilogo = () => {
             infinite={true}
           >
             {images.map((val) => (
-              <img src={val.img} alt="" height={60} />
+              <img src={val.img} alt="" height={100} />
             ))}
           </Carousel>
         </div>

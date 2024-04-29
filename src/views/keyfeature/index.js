@@ -5,6 +5,7 @@ import image1 from "../../assests/images/landing/door.jpg";
 import image2 from "../../assests/images/landing/plane.jpg";
 import image3 from "../../assests/images/landing/cube.jpg";
 import image4 from "../../assests/images/landing/proche.jpg";
+import description from "../../assests/data/constant";
 const Keyfeature = () => {
   const showSlider = () => {
     let carouselDom = document.querySelector(".carousel");
@@ -38,64 +39,60 @@ const Keyfeature = () => {
                 <img src={image1} className="" />
 
                 <div className="content">
-                  <div className="title"> Lorem</div>
-                  <div className="topic">Ipsum</div>
-                  <div className="des">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                    sequi, rem magnam nesciunt minima placeat, itaque eum neque
-                    officiis unde, eaque optio ratione aliquid assumenda facere
-                    ab et quasi ducimus aut doloribus non numquam. Explicabo,
-                    laboriosam nisi reprehenderit tempora at laborum natus unde.
-                    Ut, exercitationem eum aperiam illo illum laudantium?
+                  <div className="title">
+                    {" "}
+                    {description.description.heading1}
                   </div>
+                  <div className="topic">
+                    {" "}
+                    {description.description.Subheading1}
+                  </div>
+                  <div className="des">{description.description.message1}</div>
                 </div>
               </div>
               <div className="item">
                 <img src={image2} className="" />
 
                 <div className="content">
-                  <div className="title"> Lorem</div>
-                  <div className="topic">Ipsum</div>
-                  <div className="des">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                    sequi, rem magnam nesciunt minima placeat, itaque eum neque
-                    officiis unde, eaque optio ratione aliquid assumenda facere
-                    ab et quasi ducimus aut doloribus non numquam. Explicabo,
-                    laboriosam nisi reprehenderit tempora at laborum natus unde.
-                    Ut, exercitationem eum aperiam illo illum laudantium?
+                  <div className="title">
+                    {" "}
+                    {description.description.heading2}
                   </div>
+                  <div className="topic">
+                    {" "}
+                    {description.description.Subheading2}
+                  </div>
+                  <div className="des">{description.description.message2}</div>
                 </div>
               </div>
               <div className="item">
                 {" "}
                 <img src={image3} className="" />{" "}
                 <div className="content">
-                  <div className="title"> Lorem</div>
-                  <div className="topic">Ipsum</div>
-                  <div className="des">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                    sequi, rem magnam nesciunt minima placeat, itaque eum neque
-                    officiis unde, eaque optio ratione aliquid assumenda facere
-                    ab et quasi ducimus aut doloribus non numquam. Explicabo,
-                    laboriosam nisi reprehenderit tempora at laborum natus unde.
-                    Ut, exercitationem eum aperiam illo illum laudantium?
+                  <div className="title">
+                    {" "}
+                    {description.description.heading3}
                   </div>
+                  <div className="topic">
+                    {" "}
+                    {description.description.Subheading3}
+                  </div>
+                  <div className="des">{description.description.message3}</div>
                 </div>
               </div>
               <div className="item">
                 <img src={image4} className="" />
 
                 <div className="content">
-                  <div className="title"> Lorem</div>
-                  <div className="topic">Ipsum</div>
-                  <div className="des">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                    sequi, rem magnam nesciunt minima placeat, itaque eum neque
-                    officiis unde, eaque optio ratione aliquid assumenda facere
-                    ab et quasi ducimus aut doloribus non numquam. Explicabo,
-                    laboriosam nisi reprehenderit tempora at laborum natus unde.
-                    Ut, exercitationem eum aperiam illo illum laudantium?
+                  <div className="title">
+                    {" "}
+                    {description.description.heading4}
                   </div>
+                  <div className="topic">
+                    {" "}
+                    {description.description.Subheading4}
+                  </div>
+                  <div className="des">{description.description.message4}</div>
                 </div>
               </div>
             </div>

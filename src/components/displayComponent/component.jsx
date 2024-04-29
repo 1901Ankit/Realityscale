@@ -7,7 +7,7 @@ import { IconButton } from "@mui/material";
 const Component = ({ handleNext, handlePrev }) => {
   Aos.init();
   return (
-    <div class="container p-0 events-content">
+    <div className="container p-0 events-content">
       <div className="row align-items-center mt-3">
         {/* <div className="col-sm-1">
           <IconButton onClick={handlePrev}>
@@ -38,11 +38,6 @@ const Component = ({ handleNext, handlePrev }) => {
             </p>
           </div>
         </div>
-        {/* <div className="col-sm-1">
-          <IconButton onChange={handleNext}>
-            <FaChevronRight color="#fff" />
-          </IconButton>
-        </div> */}
       </div>
     </div>
   );
