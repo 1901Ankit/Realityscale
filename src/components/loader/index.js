@@ -120,9 +120,9 @@ const Loader = () => {
     <div className="mil-preloader">
       <div className="mil-preloader-animation">
         <div className="mil-pos-abs mil-animation-1">
-          <p className="mil-h3 mil-muted mil-thin text-white">Pioneering</p>
-          <p className="mil-h3 mil-muted text-white">Creative</p>
-          <p className="mil-h3 mil-muted mil-thin text-white">Excellence</p>
+          <p className="mil-h3 mil-muted mil-thin text-white">Create</p>
+          <p className="mil-h3 mil-muted text-white">Your</p>
+          <p className="mil-h3 mil-muted mil-thin text-white">Reality</p>
         </div>
         <div className="mil-pos-abs mil-animation-2">
           <div className="mil-reveal-frame">
