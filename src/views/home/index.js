@@ -18,6 +18,7 @@ import Game from "../game";
 import { Container, Grid, Typography } from "@mui/material";
 import data from "../../assests/data/data";
 const Home = () => {
+  
   const [rotation, setRotation] = useState(0);
 
   useEffect(() => {
