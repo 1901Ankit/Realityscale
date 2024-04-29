@@ -30,7 +30,7 @@ const Home = () => {
 
   // scrolldown
 
-  useEffect(() => {
+  function setupAnimations() {
     gsap.registerPlugin(ScrollTrigger);
 
     console.log("Effect is running!");
@@ -104,70 +104,24 @@ const Home = () => {
           }
         );
       });
-    }
 
-    const rotateSections = document.querySelectorAll(".mil-rotate");
-    rotateSections.forEach((section) => {
-      const value = parseFloat(section.getAttribute("data-value"));
-      gsap.fromTo(
-        section,
-        {
-          rotate: 0,
-        },
-        {
-          rotate: value,
+      const rotateSections = document.querySelectorAll(".mil-rotate");
+      rotateSections.forEach((section) => {
+        const value = parseFloat(section.getAttribute("data-value"));
+        gsap.to(section, {
+          rotation: value,
           ease: "sine",
           scrollTrigger: {
             trigger: section,
             scrub: true,
             toggleActions: "play none none reverse",
           },
-        }
-      );
-    });
-  }, []);
-  // /mouse/
-  // useEffect(() => {
-  //   const cursor = document.querySelector(".mil-ball");
+        });
+      });
+    }
+  }
 
-  //   gsap.set(cursor, {
-  //     xPercent: -50,
-  //     yPercent: -50,
-  //   });
-
-  //   const moveCursor = (e) => {
-  //     gsap.to(cursor, {
-  //       duration: 0.6,
-  //       ease: "sine",
-  //       x: e.clientX,
-  //       y: e.clientY,
-  //     });
-  //   };
-
-  //   document.addEventListener("pointermove", moveCursor);
-
-  //   return () => {
-  //     document.removeEventListener("pointermove", moveCursor);
-  //   };
-  // }, []);
-
-  // const handleMouseOver = () => {
-  //   gsap.to(".mil-ball", 0.2, {
-  //     width: 90,
-  //     height: 90,
-  //     opacity: 1,
-  //     ease: "sine",
-  //   });
-  // };
-
-  // const handleMouseLeave = () => {
-  //   gsap.to(".mil-ball", 0.2, {
-  //     width: 20,
-  //     height: 20,
-  //     opacity: 0.1,
-  //     ease: "sine",
-  //   });
-  // };
+  document.addEventListener("DOMContentLoaded", setupAnimations);
   useEffect(() => {
     const handleMouseMove = (e) => {
       const cursor = document.querySelector(".custom-cursor__cursor");
@@ -222,15 +176,6 @@ const Home = () => {
       });
     };
   }, []);
-
-  // progress
-  // gsap.to(".mil-progress", {
-  //   height: "100%",
-  //   ease: "sine",
-  //   scrollTrigger: {
-  //     scrub: 0.3,
-  //   },
-  // });
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -242,26 +187,6 @@ const Home = () => {
       },
     });
   }, []);
-
-  // backtotop
-  // const btt = document.querySelector(".mil-back-to-top .mil-link");
-
-  // gsap.set(btt, {
-  //   x: -30,
-  //   opacity: 0,
-  // });
-
-  // gsap.to(btt, {
-  //   x: 0,
-  //   opacity: 1,
-  //   ease: "sine",
-  //   scrollTrigger: {
-  //     trigger: "body",
-  //     start: "top -40%",
-  //     end: "top -40%",
-  //     toggleActions: "play none reverse none",
-  //   },
-  // });
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -286,19 +211,24 @@ const Home = () => {
   }, []);
 
   // menu
-  useEffect(() => {
-    // This code runs after the component mounts
-    document.querySelectorAll(".mil-menu-btn").forEach((element) => {
-      element.classList.remove("mil-active");
-    });
-    document.querySelectorAll(".mil-menu").forEach((element) => {
-      element.classList.remove("mil-active");
-    });
-    document.querySelectorAll(".mil-menu-frame").forEach((element) => {
-      element.classList.remove("mil-active");
-    });
+  // Function to toggle the active class for menu elements
+function toggleMenu() {
+  document.querySelectorAll(".mil-menu-btn").forEach((element) => {
+    element.classList.toggle("mil-active");
+  });
+  document.querySelectorAll(".mil-menu").forEach((element) => {
+    element.classList.toggle("mil-active");
+  });
+  document.querySelectorAll(".mil-menu-frame").forEach((element) => {
+    element.classList.toggle("mil-active");
+  });
+}
 
-    // Clone elements
+document.querySelectorAll(".mil-menu-btn").forEach((element) => {
+  element.addEventListener("click", toggleMenu);
+});
+
+  useEffect(() => {
     const arrowPlace = document.querySelector(".mil-arrow-place");
     if (arrowPlace) {
       const arrow = arrowPlace.querySelector(".mil-arrow");
@@ -336,19 +266,6 @@ const Home = () => {
 
   return (
     <>
-      {/* <div
-        className="mil-ball"
-        onMouseOver={handleMouseOver}
-        onMouseLeave={handleMouseLeave}
-      >
-        <span className="mil-icon-1">
-          <svg viewBox="0 0 128 128">
-            <path d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2	c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2	L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9	z" />
-          </svg>
-        </span>
-        <div className="mil-more-text">More</div>
-        <div className="mil-choose-text">Choose</div>
-      </div> */}
       <div className="custom-cursor__cursor"></div>
       <div className="custom-cursor__cursor-two"></div>
 
@@ -735,37 +652,37 @@ const Home = () => {
       <Range />
       <div className="contactus_parallax">
         <div className="paralaxoverlay">
-        <Container sx={{ p: 10 }}>
-          <div>
-            <p className="keyfetR text-center">OUR WORK SHOWCASE</p>
-            <p className="keyfet text-center"> Every Our Best</p>
-          </div>
-          <Grid container spacing={5} marginTop={0}>
-            {data.gameData.map((val, i) => (
-              <Grid item lg={3} key={i}>
-                <Game
-                  image={val.image}
-                  heading={val.heading}
-                  // subHeading={val.subHeading}
-                  price={val.price}
-                />
-              </Grid>
-            ))}
-          </Grid>
-          <Grid container spacing={5} marginTop={0}>
-            {data.gameData.map((val, i) => (
-              <Grid item lg={3} key={i}>
-                <Game
-                  image={val.image}
-                  heading={val.heading}
-                  // subHeading={val.subHeading}
-                  // price={val.price}
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </div>
+          <Container sx={{ p: 10, paddingBottom: 15 }}>
+            <div>
+              <p className="keyfetR text-center">OUR WORK SHOWCASE</p>
+              <p className="keyfet text-center"> Every Our Best</p>
+            </div>
+            <Grid container spacing={5} marginTop={0}>
+              {data.gameData.map((val, i) => (
+                <Grid item lg={3} key={i}>
+                  <Game
+                    image={val.image}
+                    heading={val.heading}
+                    // subHeading={val.subHeading}
+                    price={val.price}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+            <Grid container spacing={5} marginTop={0}>
+              {data.gameData.map((val, i) => (
+                <Grid item lg={3} key={i}>
+                  <Game
+                    image={val.image}
+                    heading={val.heading}
+                    // subHeading={val.subHeading}
+                    // price={val.price}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
+        </div>
       </div>
       <Business />
       {/* <TeamSection /> */}

@@ -57,38 +57,23 @@ let data = {
     {
       image: backgroundImage,
       heading: "Thunder and City",
-      // subHeading: "starting from",
-      // price: "$14.99",
     },
     {
       image: backgroundImage1,
       heading: "Thunder and City",
-      // subHeading: "starting from",
-      // price: "$14.99",
+     
     },
-    // {
-    //   image: backgroundImage2,
-    //   heading: "Thunder and City",
-      // subHeading: "starting from",
-    //   price: "$14.99",
-    // },
+  
     {
       image: backgroundImage3,
       heading: "Thunder and City",
-      // subHeading: "starting from",
-      // price: "$14.99",
+     
     },
-    // {
-    //   image: backgroundImage4,
-    //   heading: "Thunder and City",
-      // subHeading: "starting from",
-    //   price: "$14.99",
-    // },
+ 
     {
       image: backgroundImage5,
       heading: "Thunder and City",
-      // subHeading: "starting from",
-      // price: "$14.99",
+     
     },
   ],
 };

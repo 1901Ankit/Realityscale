@@ -341,9 +341,13 @@ button
   margin-left: 0;
 }
 
+.mil-button.mil-icon-button-smq {
+  padding: 0;
+  height: 18px;
+}
 .mil-button.mil-icon-button-sm {
   padding: 0;
-  height: 25px;
+  height: 35px;
 }
 
 .mil-button.mil-icon-button-sm svg {
