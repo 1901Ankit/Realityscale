@@ -17,8 +17,25 @@ import GameCollection from "../game";
 import Game from "../game";
 import { Container, Grid, Typography } from "@mui/material";
 import data from "../../assests/data/data";
+import Loader from "../../components/loader";
 const Home = () => {
-  
+  useEffect(() => {
+    const cloneAndAppend = (sourceSelector, targetSelector) => {
+      const sourceElement = document.querySelector(sourceSelector);
+      const targetElement = document.querySelector(targetSelector);
+
+      if (sourceElement && targetElement) {
+        const clone = sourceElement.cloneNode(true);
+        targetElement.appendChild(clone);
+      }
+    };
+
+    // cloneAndAppend('.mil-arrow', '.mil-arrow-place');
+    cloneAndAppend(".mil-dodecahedron", ".mil-animation");
+    cloneAndAppend(".mil-lines", ".mil-lines-place");
+    cloneAndAppend(".mil-main-menu ul li.mil-active > a", ".mil-current-page");
+  }, []);
+
   const [rotation, setRotation] = useState(0);
 
   useEffect(() => {
@@ -30,107 +47,94 @@ const Home = () => {
   }, []);
 
   // scrolldown
-
   function setupAnimations() {
-    // Register ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
-
     console.log("Effect is running!");
-
-    // Animations for elements with class "mil-up"
     const appearances = document.querySelectorAll(".mil-up");
     console.log("Appearances found:", appearances.length);
-
     appearances.forEach((section) => {
-        gsap.fromTo(
-            section,
-            {
-                opacity: 0,
-                y: 40,
-                scale: 0.98,
-            },
-            {
-                y: 0,
-                opacity: 1,
-                scale: 1,
-                duration: 0.4,
-                ease: "sine",
-                scrollTrigger: {
-                    trigger: section,
-                    toggleActions: "play none none reverse",
-                },
-            }
-        );
+      gsap.fromTo(
+        section,
+        {
+          opacity: 0,
+          y: 40,
+          scale: 0.98,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.4,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
     });
-
-    // Animations for elements with class "mil-scale"
     const scaleImages = document.querySelectorAll(".mil-scale");
     console.log("Scale images found:", scaleImages.length);
 
     scaleImages.forEach((section) => {
+      const value1 = parseFloat(section.getAttribute("data-value-1"));
+      const value2 = parseFloat(section.getAttribute("data-value-2"));
+      gsap.fromTo(
+        section,
+        {
+          scale: value1,
+        },
+        {
+          scale: value2,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            scrub: true,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+    if (window.innerWidth > 960) {
+      const parallaxImages = document.querySelectorAll(".mil-parallax");
+      parallaxImages.forEach((section) => {
         const value1 = parseFloat(section.getAttribute("data-value-1"));
         const value2 = parseFloat(section.getAttribute("data-value-2"));
         gsap.fromTo(
-            section,
-            {
-                scale: value1,
+          section,
+          {
+            y: value1,
+          },
+          {
+            y: value2,
+            ease: "sine",
+            scrollTrigger: {
+              trigger: section,
+              scrub: true,
+              toggleActions: "play none none reverse",
             },
-            {
-                scale: value2,
-                ease: "sine",
-                scrollTrigger: {
-                    trigger: section,
-                    scrub: true,
-                    toggleActions: "play none none reverse",
-                },
-            }
+          }
         );
-    });
+      });
 
-    // Animations for parallax images and rotate sections (if window width is greater than 960px)
-    if (window.innerWidth > 960) {
-        const parallaxImages = document.querySelectorAll(".mil-parallax");
-        parallaxImages.forEach((section) => {
-            const value1 = parseFloat(section.getAttribute("data-value-1"));
-            const value2 = parseFloat(section.getAttribute("data-value-2"));
-            gsap.fromTo(
-                section,
-                {
-                    y: value1,
-                },
-                {
-                    y: value2,
-                    ease: "sine",
-                    scrollTrigger: {
-                        trigger: section,
-                        scrub: true,
-                        toggleActions: "play none none reverse",
-                    },
-                }
-            );
+      const rotateSections = document.querySelectorAll(".mil-rotate");
+      rotateSections.forEach((section) => {
+        const value = parseFloat(section.getAttribute("data-value"));
+        gsap.to(section, {
+          rotation: value,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            scrub: true,
+            toggleActions: "play none none reverse",
+          },
         });
-
-        const rotateSections = document.querySelectorAll(".mil-rotate");
-        rotateSections.forEach((section) => {
-            const value = parseFloat(section.getAttribute("data-value"));
-            gsap.to(section, {
-                rotation: value,
-                ease: "sine",
-                scrollTrigger: {
-                    trigger: section,
-                    scrub: true,
-                    toggleActions: "play none none reverse",
-                },
-            });
-        });
+      });
     }
-}
+  }
 
-// Call the setupAnimations function when the page is loaded
-window.addEventListener("load", setupAnimations);
-
+  window.addEventListener("load", setupAnimations);
   //   Cursor
-
   document.addEventListener("DOMContentLoaded", setupAnimations);
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -255,10 +259,12 @@ window.addEventListener("load", setupAnimations);
         currentPage.appendChild(activeLink.cloneNode(true));
       }
     }
-  }, []); // Empty array means this effect will only run once after the first render
+  }, []);
 
   return (
     <>
+
+    <Loader/>
       <div className="custom-cursor__cursor"></div>
       <div className="custom-cursor__cursor-two"></div>
 

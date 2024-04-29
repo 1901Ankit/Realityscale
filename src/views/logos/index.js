@@ -88,7 +88,7 @@ const Sliderlogo = () => {
           <Carousel
             responsive={responsive}
             arrows={false}
-            className="text-center"
+            className="text-center mb-4"
             showDots={false}
             autoPlay={true}
             autoPlaySpeed={2000}
