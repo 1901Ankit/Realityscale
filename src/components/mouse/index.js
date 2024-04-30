@@ -7,9 +7,7 @@ const Mouse = () => {
   //----scrolldown----//
   function setupAnimations() {
     gsap.registerPlugin(ScrollTrigger);
-    console.log("Effect is running!");
     const appearances = document.querySelectorAll(".mil-up");
-    console.log("Appearances found:", appearances.length);
     appearances.forEach((section) => {
       gsap.fromTo(
         section,
@@ -32,7 +30,7 @@ const Mouse = () => {
       );
     });
     const scaleImages = document.querySelectorAll(".mil-scale");
-    console.log("Scale images found:", scaleImages.length);
+
 
     scaleImages.forEach((section) => {
       const value1 = parseFloat(section.getAttribute("data-value-1"));
