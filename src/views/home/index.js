@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./index.css";
-// import { gsap } from "gsap";
-import { gsap, ScrollTrigger } from "gsap/all";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TweenMax, Power3 } from "gsap";
 import Keyfeature from "../keyfeature";
 import About from "../about";
@@ -20,10 +20,10 @@ import data from "../../assests/data/data";
 import Loader from "../../components/loader";
 import $ from "jquery";
 import Swup from "swup";
+import Mouse from "../../components/mouse";
 const Home = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const cloneAndAppend = (sourceSelector, targetSelector) => {
       const sourceElement = document.querySelector(sourceSelector);
       const targetElement = document.querySelector(targetSelector);
@@ -43,6 +43,7 @@ const Home = () => {
   const [rotation, setRotation] = useState(0);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const interval = setInterval(() => {
       setRotation((rotation) => rotation + 1);
     }, 50);
@@ -52,10 +53,20 @@ const Home = () => {
 
   //----scrolldown----//
   function setupAnimations() {
+    // Register the ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
+
     console.log("Effect is running!");
+
+    // Cache elements for better performance
     const appearances = document.querySelectorAll(".mil-up");
+    const scaleImages = document.querySelectorAll(".mil-scale");
+    const parallaxImages = document.querySelectorAll(".mil-parallax");
+    const rotateSections = document.querySelectorAll(".mil-rotate");
+
     console.log("Appearances found:", appearances.length);
+    console.log("Scale images found:", scaleImages.length);
+
     appearances.forEach((section) => {
       gsap.fromTo(
         section,
@@ -77,12 +88,11 @@ const Home = () => {
         }
       );
     });
-    const scaleImages = document.querySelectorAll(".mil-scale");
-    console.log("Scale images found:", scaleImages.length);
 
     scaleImages.forEach((section) => {
       const value1 = parseFloat(section.getAttribute("data-value-1"));
       const value2 = parseFloat(section.getAttribute("data-value-2"));
+
       gsap.fromTo(
         section,
         {
@@ -99,11 +109,12 @@ const Home = () => {
         }
       );
     });
+
     if (window.innerWidth > 960) {
-      const parallaxImages = document.querySelectorAll(".mil-parallax");
       parallaxImages.forEach((section) => {
         const value1 = parseFloat(section.getAttribute("data-value-1"));
         const value2 = parseFloat(section.getAttribute("data-value-2"));
+
         gsap.fromTo(
           section,
           {
@@ -121,9 +132,9 @@ const Home = () => {
         );
       });
 
-      const rotateSections = document.querySelectorAll(".mil-rotate");
       rotateSections.forEach((section) => {
         const value = parseFloat(section.getAttribute("data-value"));
+
         gsap.to(section, {
           rotation: value,
           ease: "sine",
@@ -136,7 +147,9 @@ const Home = () => {
       });
     }
   }
+
   window.addEventListener("load", setupAnimations);
+
   //------endscrolldown-----//
 
   useEffect(() => {
@@ -174,6 +187,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const arrowPlace = document.querySelector(".mil-arrow-place");
     if (arrowPlace) {
       const arrow = arrowPlace.querySelector(".mil-arrow");
@@ -237,13 +251,12 @@ const Home = () => {
       $("body").css("overflow-y", "auto");
     };
   }, []);
-  
 
   //---- end mainmenu-------//
   return (
     <>
       <Loader />
-
+      <Mouse />
       <div className="mil-progress-track">
         <div className="mil-progress"></div>
       </div>
