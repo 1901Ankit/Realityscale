@@ -20,7 +20,7 @@ const Game = ({ image, heading, subHeading, price }) => {
         className="d-overlay"
         style={{
           backgroundImage: `url(${image})`,
-          height: 380,
+          height: 350,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",

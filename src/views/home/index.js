@@ -13,6 +13,7 @@ import Range from "../../components/rngecaroul";
 import Multicarousel from "../testimonal";
 import Sliderlogo from "../logos";
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import logoe from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
 import GameCollection from "../game";
 import Game from "../game";
 import { Container, Grid, Typography } from "@mui/material";
@@ -61,89 +62,88 @@ const Home = () => {
     const appearances = document.querySelectorAll(".mil-up");
     console.log("Appearances found:", appearances.length);
     appearances.forEach((section) => {
-        gsap.fromTo(
-            section,
-            {
-                opacity: 0,
-                y: 40,
-                scale: 0.98,
-            },
-            {
-                y: 0,
-                opacity: 1,
-                scale: 1,
-                duration: 0.4,
-                ease: "sine",
-                scrollTrigger: {
-                    trigger: section,
-                    toggleActions: "play none none reverse",
-                },
-            }
-        );
+      gsap.fromTo(
+        section,
+        {
+          opacity: 0,
+          y: 40,
+          scale: 0.98,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.4,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
     });
 
     const scaleImages = document.querySelectorAll(".mil-scale");
     console.log("Scale images found:", scaleImages.length);
     scaleImages.forEach((section) => {
-        const value1 = parseFloat(section.getAttribute("data-value-1"));
-        const value2 = parseFloat(section.getAttribute("data-value-2"));
-        gsap.fromTo(
-            section,
-            {
-                scale: value1,
-            },
-            {
-                scale: value2,
-                ease: "sine",
-                scrollTrigger: {
-                    trigger: section,
-                    scrub: true,
-                    toggleActions: "play none none reverse",
-                },
-            }
-        );
+      const value1 = parseFloat(section.getAttribute("data-value-1"));
+      const value2 = parseFloat(section.getAttribute("data-value-2"));
+      gsap.fromTo(
+        section,
+        {
+          scale: value1,
+        },
+        {
+          scale: value2,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            scrub: true,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
     });
 
     if (window.innerWidth > 960) {
-        const parallaxImages = document.querySelectorAll(".mil-parallax");
-        parallaxImages.forEach((section) => {
-            const value1 = parseFloat(section.getAttribute("data-value-1"));
-            const value2 = parseFloat(section.getAttribute("data-value-2"));
-            gsap.fromTo(
-                section,
-                {
-                    y: value1,
-                },
-                {
-                    y: value2,
-                    ease: "sine",
-                    scrollTrigger: {
-                        trigger: section,
-                        scrub: true,
-                        toggleActions: "play none none reverse",
-                    },
-                }
-            );
-        });
+      const parallaxImages = document.querySelectorAll(".mil-parallax");
+      parallaxImages.forEach((section) => {
+        const value1 = parseFloat(section.getAttribute("data-value-1"));
+        const value2 = parseFloat(section.getAttribute("data-value-2"));
+        gsap.fromTo(
+          section,
+          {
+            y: value1,
+          },
+          {
+            y: value2,
+            ease: "sine",
+            scrollTrigger: {
+              trigger: section,
+              scrub: true,
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      });
 
-        const rotateSections = document.querySelectorAll(".mil-rotate");
-        rotateSections.forEach((section) => {
-            const value = parseFloat(section.getAttribute("data-value"));
-            gsap.to(section, {
-                rotation: value,
-                ease: "sine",
-                scrollTrigger: {
-                    trigger: section,
-                    scrub: true,
-                    toggleActions: "play none none reverse",
-                },
-            });
+      const rotateSections = document.querySelectorAll(".mil-rotate");
+      rotateSections.forEach((section) => {
+        const value = parseFloat(section.getAttribute("data-value"));
+        gsap.to(section, {
+          rotation: value,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            scrub: true,
+            toggleActions: "play none none reverse",
+          },
         });
+      });
     }
-}
+  }
 
-window.addEventListener("load", setupAnimations);
-
+  window.addEventListener("load", setupAnimations);
 
   //------endscrolldown-----//
 
@@ -250,7 +250,7 @@ window.addEventListener("load", setupAnimations);
   //---- end mainmenu-------//
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
       <Mouse />
       <div className="mil-progress-track">
         <div className="mil-progress"></div>
@@ -258,7 +258,7 @@ window.addEventListener("load", setupAnimations);
       <div className="mil-menu-frame">
         <div className="mil-frame-top">
           <a href="/" className="mil-logo">
-            <img src={logo} style={{ width: "20%" }} />
+            <img src={logoe} style={{ width: "20%" }} />
           </a>
           <div className="mil-menu-btn">
             <span></span>
@@ -269,22 +269,22 @@ window.addEventListener("load", setupAnimations);
           <div className="mil-menu-content">
             <div className="row">
               <div className="col-xl-5">
-                <nav className="mil-main-menu" id="swupMenu">
-                  <ul>
-                    <li class="mil-has-children">
-                      <a href="#">HomePage</a>
+                <nav className="mil-main-menu" id="">
+                  <ul className="unlisted">
+                    <li class="mil-has-children mil-active">
+                      <span>HomePage</span>
                     </li>
                     <li class="mil-has-children">
-                      <a href="#">Portfolio</a>
+                      <span>Portfolio</span>
                     </li>
                     <li class="mil-has-children">
-                      <a href="#">Services</a>
+                      <span>Services</span>
                     </li>
                     <li class="mil-has-children">
-                      <a href="#">Newsletter</a>
+                      <span>Newsletter</span>
                     </li>
                     <li class="mil-has-children">
-                      <a href="#">Other pages</a>
+                      <span>Other pages</span>
                     </li>
                   </ul>
                 </nav>
@@ -307,32 +307,32 @@ window.addEventListener("load", setupAnimations);
 
                         <ul className="mil-menu-list">
                           <li>
-                            <a href="project-1.html" className="mil-light-soft">
+                            <a href="#" className="mil-light-soft">
                               Interior design studio
                             </a>
                           </li>
                           <li>
-                            <a href="project-2.html" className="mil-light-soft">
+                            <a href="#" className="mil-light-soft">
                               Home Security Camera
                             </a>
                           </li>
                           <li>
-                            <a href="project-3.html" className="mil-light-soft">
+                            <a href="#" className="mil-light-soft">
                               Kemia Honest Skincare
                             </a>
                           </li>
                           <li>
-                            <a href="project-4.html" className="mil-light-soft">
+                            <a href="#" className="mil-light-soft">
                               Cascade of Lava
                             </a>
                           </li>
                           <li>
-                            <a href="project-5.html" className="mil-light-soft">
+                            <a href="#" className="mil-light-soft">
                               Air Pro by Molekule
                             </a>
                           </li>
                           <li>
-                            <a href="project-6.html" className="mil-light-soft">
+                            <a href="#" className="mil-light-soft">
                               Tony's Chocolonely
                             </a>
                           </li>
@@ -343,22 +343,22 @@ window.addEventListener("load", setupAnimations);
 
                         <ul className="mil-menu-list">
                           <li>
-                            <a href="#." className="mil-light-soft">
+                            <a href="#" className="mil-light-soft">
                               Privacy Policy
                             </a>
                           </li>
                           <li>
-                            <a href="#." className="mil-light-soft">
+                            <a href="#" className="mil-light-soft">
                               Terms and conditions
                             </a>
                           </li>
                           <li>
-                            <a href="#." className="mil-light-soft">
+                            <a href="#" className="mil-light-soft">
                               Cookie Policy
                             </a>
                           </li>
                           <li>
-                            <a href="#." className="mil-light-soft">
+                            <a href="#" className="mil-light-soft">
                               Careers
                             </a>
                           </li>
@@ -423,6 +423,17 @@ window.addEventListener("load", setupAnimations);
 
       <div className="mil-banner mil-dark-bg">
         <div className="mi-invert-fix">
+          <div className="container-fluid p-0">
+            <div className="bg-overlay">
+              <aside class="leftsidetag">
+                <span class="text-center get">GET SUPPORT</span>
+                <span class="ms-3">|</span>
+                <span class="text-center get ms-3">PRIVACY POLICY</span>
+                <span class="ms-3">|</span>
+                <span class="text-center get ms-3">GET IN TOUCH</span>
+              </aside>
+            </div>
+          </div>
           <div className="mil-animation-frame">
             <div
               className="mil-animation mil-position-1 mil-scale"
@@ -494,7 +505,7 @@ window.addEventListener("load", setupAnimations);
               }}
             >
               <h1 className="mil-muted mil-mb-10">
-                Designing <span className="mil-thin">a Better</span>
+                Designing <span className="mil-thin" style={{fontWeight:"100px"}}>a Better</span>
                 <br /> World <span className="mil-thin">Today</span>
               </h1>
               <div className="row">

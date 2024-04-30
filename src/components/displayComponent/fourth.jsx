@@ -11,7 +11,7 @@ const Fourth = () => {
       <div className="col-sm-6 ">
       <img
             src={image1}
-            width="450px"
+            width="400px"
             className="image22 process_hover  "
             height="450px"
           />

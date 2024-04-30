@@ -2,8 +2,8 @@
   border-bottom: 5px solid white !important;
   border-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, white 1px, rgba(255, 255, 255, 0.2) 3px) 5 !important;
   margin-bottom: 30px;
-    /* border-bottom: 2px solid #fff !important; */
-    border: none;
+  /* border-bottom: 2px solid #fff !important; */
+  border: none;
   width: 100%;
   text-align: left;
   padding: 15px;
@@ -17,7 +17,7 @@
 }
 
 .accordion_body {
-  padding: 5px;
+  padding: 0px;
   color: white !important;
   font-size: 15px !important;
   display: flex;
@@ -25,10 +25,19 @@
 }
 
 .black {
-  background-color: black;
+  background-image: url("../../assests/images/landing/3.jpg");
+  width: 100%;
   height: 100%;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  background-position: center;
+  background-size: cover;
+}
+
+.overlayed {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
 }
 
 .cta-one__author {
@@ -151,7 +160,6 @@
   font-weight: 400;
   height: 60px;
   line-height: 60px;
-  speak: normal;
   text-align: center;
   text-size-adjust: 100%;
   text-transform: none;
@@ -252,6 +260,24 @@
   color: #000
 }
 
+.ourcors {
+  background-color: transparent;
+  border-bottom: 3px solid white;
+  border-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, white, rgba(255, 255, 255, 0.1) 3px) 3;
+}
+
+.ourcors:after {
+  background-color: transparent
+}
+
+.ourcors {
+  font-family: Sora, sans-serif;
+  display: inline-block;
+  padding-bottom: 10px;
+  color: #000;
+  font-weight: 600
+}
+
 .mil-suptitle:after {
   background-color: transparent
 }
@@ -335,7 +361,8 @@
 .mil-accordion-content {
   padding-left: 40px
 }
-.mil-lighter{
+
+.mil-lighter {
   font-size: 25px;
   color: white;
   font-weight: 500;

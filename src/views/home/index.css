@@ -345,6 +345,7 @@ button
   padding: 0;
   height: 18px;
 }
+
 .mil-button.mil-icon-button-sm {
   padding: 0;
   height: 35px;
@@ -1435,7 +1436,7 @@ menu
   margin-bottom: 0;
 }
 
-.mil-main-menu ul li a {
+.mil-main-menu ul li span {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1451,12 +1452,12 @@ menu
 }
 
 @media screen and (max-width: 992px) {
-  .mil-main-menu ul li a {
+  .mil-main-menu ul li span {
     font-size: 26px;
   }
 }
 
-.mil-main-menu ul li a:before {
+.mil-main-menu ul li span:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1470,36 +1471,36 @@ menu
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
 
-.mil-main-menu ul li a:hover {
+.mil-main-menu ul li span:hover {
   color: rgb(255, 255, 255);
 }
 
-.mil-main-menu ul li a.mil-active {
+.mil-main-menu ul li span.mil-active {
   padding-left: 25px;
 }
 
-.mil-main-menu ul li a.mil-active:before {
+.mil-main-menu ul li span.mil-active:before {
   -webkit-transform: scale(1);
   transform: scale(1);
   background-color: #ffd94a;
 }
 
-.mil-main-menu ul li.mil-active>a {
+.mil-main-menu ul li.mil-active>span {
   color: #ffd94a;
 }
 
-.mil-main-menu ul li.mil-active>a:hover {
+.mil-main-menu ul li.mil-active>span:hover {
   color: #ffd94a !important;
   -webkit-filter: brightness(110%);
   filter: brightness(110%);
 }
 
-.mil-main-menu ul li.mil-has-children>a:hover {
+.mil-main-menu ul li.mil-has-children>span:hover {
   color: rgb(255, 255, 255);
   padding-left: 25px;
 }
 
-.mil-main-menu ul li.mil-has-children>a:hover:before {
+.mil-main-menu ul li.mil-has-children>span:hover:before {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
@@ -4540,4 +4541,41 @@ html.is-animating .mil-menu-frame {
     display: none;
     /* padding: 80px 0 50px; */
   }
+}
+
+.unlisted {
+  list-style-type: none;
+}
+
+
+.leftsidetag {
+  align-content: flex-end;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  height: 25px;
+  left: 0;
+  line-height: 25px;
+  margin-left: 50px;
+  position: absolute;
+  top: 40%;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  width: 50%;
+  z-index: 3;
+  font-size: 12px !important;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+
+  .leftsidetag {
+    display: none;
+  }
+}.bg-overlay {
+  background-color: #00000050;
+  height: 100%;
+  color: white;
+  display: grid;
+  place-items: start;
+  align-items: start;
 }

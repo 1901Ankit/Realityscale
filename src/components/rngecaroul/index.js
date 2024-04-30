@@ -75,7 +75,7 @@ const Range = () => {
         <p className="keyfetR text-center pt-5">OUR USP</p>
         <p className="keyfet text-center"> Every Detail Counts</p>
       </div>
-      <div className="container" style={{ maxWidth: 1100 }}>
+      <div className="container" style={{ maxWidth: 1080 }}>
         <Stepper
           activeStep={activeStep}
           alternativeLabel
@@ -130,8 +130,8 @@ const Range = () => {
           sx={{
             "&.MuiSlider-root": {
               color: "#fff",
-              left: "52px",
-              width: "93%",
+              left: "41px",
+              width: "93.5%",
             },
             "& .MuiSlider-thumb": {
               display: "none",
