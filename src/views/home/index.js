@@ -18,7 +18,11 @@ import Game from "../game";
 import { Container, Grid, Typography } from "@mui/material";
 import data from "../../assests/data/data";
 import Loader from "../../components/loader";
+import $ from "jquery";
+import Swup from "swup";
 const Home = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   useEffect(() => {
     const cloneAndAppend = (sourceSelector, targetSelector) => {
       const sourceElement = document.querySelector(sourceSelector);
@@ -46,7 +50,7 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // scrolldown
+  //----scrolldown----//
   function setupAnimations() {
     gsap.registerPlugin(ScrollTrigger);
     console.log("Effect is running!");
@@ -132,64 +136,8 @@ const Home = () => {
       });
     }
   }
-
   window.addEventListener("load", setupAnimations);
-  //   Cursor
-  document.addEventListener("DOMContentLoaded", setupAnimations);
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const cursor = document.querySelector(".custom-cursor__cursor");
-      const cursorInner = document.querySelector(".custom-cursor__cursor-two");
-      cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
-      cursorInner.style.left = e.clientX + "px";
-      cursorInner.style.top = e.clientY + "px";
-    };
-
-    const handleMouseDown = () => {
-      const cursor = document.querySelector(".custom-cursor__cursor");
-      const cursorInner = document.querySelector(".custom-cursor__cursor-two");
-      cursor.classList.add("click");
-      cursorInner.classList.add("custom-cursor__innerhover");
-    };
-
-    const handleMouseUp = () => {
-      const cursor = document.querySelector(".custom-cursor__cursor");
-      const cursorInner = document.querySelector(".custom-cursor__cursor-two");
-      cursor.classList.remove("click");
-      cursorInner.classList.remove("custom-cursor__innerhover");
-    };
-
-    const handleLinkHover = (e) => {
-      const cursor = document.querySelector(".custom-cursor__cursor");
-      cursor.classList.add("custom-cursor__hover");
-    };
-
-    const handleLinkLeave = () => {
-      const cursor = document.querySelector(".custom-cursor__cursor");
-      cursor.classList.remove("custom-cursor__hover");
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mousedown", handleMouseDown);
-    document.addEventListener("mouseup", handleMouseUp);
-
-    const links = document.querySelectorAll("a");
-    links.forEach((link) => {
-      link.addEventListener("mouseover", handleLinkHover);
-      link.addEventListener("mouseleave", handleLinkLeave);
-    });
-
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mousedown", handleMouseDown);
-      document.removeEventListener("mouseup", handleMouseUp);
-
-      links.forEach((link) => {
-        link.removeEventListener("mouseover", handleLinkHover);
-        link.removeEventListener("mouseleave", handleLinkLeave);
-      });
-    };
-  }, []);
+  //------endscrolldown-----//
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -261,20 +209,48 @@ const Home = () => {
     }
   }, []);
 
+  //---------- mainmenu-------//
+  useEffect(() => {
+    function toggleMenu() {
+      $(".mil-menu-btn").toggleClass("mil-active");
+      $(".mil-menu").toggleClass("mil-active");
+      $(".mil-menu-frame").toggleClass("mil-active");
+      $("body").toggleClass("menu-open");
+      if ($("body").hasClass("menu-open")) {
+        $("body").css("overflow-y", "hidden");
+      } else {
+        $("body").css("overflow-y", "auto");
+      }
+    }
+    $(".mil-main-menu li").on("click", function (event) {
+      const link = $(this).find("a").attr("href");
+      if (link) {
+        event.preventDefault();
+        toggleMenu();
+        window.location.href = link;
+      }
+    });
+    $(".mil-menu-btn").on("click", toggleMenu);
+    return () => {
+      $(".mil-menu-btn").off("click", toggleMenu);
+      $(".mil-main-menu li").off("click");
+      $("body").css("overflow-y", "auto");
+    };
+  }, []);
+  
+
+  //---- end mainmenu-------//
   return (
     <>
-
-    <Loader/>
-      <div className="custom-cursor__cursor"></div>
-      <div className="custom-cursor__cursor-two"></div>
+      <Loader />
 
       <div className="mil-progress-track">
         <div className="mil-progress"></div>
       </div>
       <div className="mil-menu-frame">
         <div className="mil-frame-top">
-          <a href="#" className="mil-logo">
-            R.
+          <a href="/" className="mil-logo">
+            <img src={logo} style={{ width: "20%" }} />
           </a>
           <div className="mil-menu-btn">
             <span></span>
@@ -284,76 +260,27 @@ const Home = () => {
         <div className="container">
           <div className="mil-menu-content">
             <div className="row">
-              {/* <div className="col-xl-5">
+              <div className="col-xl-5">
                 <nav className="mil-main-menu" id="swupMenu">
                   <ul>
-                    <li class="mil-has-children mil-active">
-                      <a href="#.">Homepage</a>
-                      <ul>
-                        <li>
-                          <a href="home-1.html">Landing page</a>
-                        </li>
-                        <li>
-                          <a href="home-2.html">Personal</a>
-                        </li>
-                        <li>
-                          <a href="portfolio-3.html">Portfolio slider</a>
-                        </li>
-                      </ul>
+                    <li class="mil-has-children">
+                      <a href="#">HomePage</a>
                     </li>
                     <li class="mil-has-children">
-                      <a href="#.">Portfolio</a>
-                      <ul>
-                        <li>
-                          <a href="portfolio-1.html">Grid type 1</a>
-                        </li>
-                        <li>
-                          <a href="portfolio-2.html">Grid type 2</a>
-                        </li>
-                        <li>
-                          <a href="portfolio-3.html">Slider</a>
-                        </li>
-                      </ul>
+                      <a href="#">Portfolio</a>
                     </li>
                     <li class="mil-has-children">
-                      <a href="#.">Services</a>
-                      <ul>
-                        <li>
-                          <a href="services.html">Services List</a>
-                        </li>
-                        <li>
-                          <a href="service.html">Single service</a>
-                        </li>
-                      </ul>
+                      <a href="#">Services</a>
                     </li>
                     <li class="mil-has-children">
-                      <a href="#.">Newsletter</a>
-                      <ul>
-                        <li>
-                          <a href="blog.html">Blog List</a>
-                        </li>
-                        <li>
-                          <a href="publication.html">Publication</a>
-                        </li>
-                      </ul>
+                      <a href="#">Newsletter</a>
                     </li>
                     <li class="mil-has-children">
-                      <a href="#.">Other pages</a>
-                      <ul>
-                        <li>
-                          <a href="team.html">Team</a>
-                        </li>
-                        <li>
-                          <a href="contact.html">Contact</a>
-                        </li>
-                        <li>
-                          <a href="404.html">404</a>
-                        </li>
-                      </ul>
+                      <a href="#">Other pages</a>
                     </li>
                   </ul>
                 </nav>
-              </div> */}
+              </div>
               <div className="col-xl-7">
                 <div className="mil-menu-right-frame">
                   <div className="mil-animation-in">
@@ -459,7 +386,7 @@ const Home = () => {
       <div className="mil-curtain"></div>
       <div className="mil-frame">
         <div className="mil-frame-top">
-          <a href="#" className="mil-logo">
+          <a href="/" className="mil-logo">
             <img src={logo} style={{ width: "20%" }} />
           </a>
           <div className="mil-menu-btn">

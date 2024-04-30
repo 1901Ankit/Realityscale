@@ -61,28 +61,8 @@ const Range = () => {
     {
       label: "BOOST SALES ENGAGEMENT",
     },
-    // {
-    //   label: "Industry Leading Graphics",
-    // },
-    // {
-    //   label: "Industry Leading Graphics",
-    // },
-    // {
-    //   label: "Industry Leading Graphics",
-    // },
-    // {
-    //   label: "Industry Leading Graphics",
-    // },
   ];
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setActiveStep((prevStep) =>
-  //       prevStep === components.length - 1 ? 0 : prevStep + 1
-  //     );
-  //   }, 5000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
+  
 
   const handleSliderChange = (event, newValue) => {
     setActiveStep(newValue);
@@ -95,7 +75,7 @@ const Range = () => {
         <p className="keyfetR text-center pt-5">OUR USP</p>
         <p className="keyfet text-center"> Every Detail Counts</p>
       </div>
-      <div className="container" style={{ maxWidth: 1260 }}>
+      <div className="container" style={{ maxWidth: 1100 }}>
         <Stepper
           activeStep={activeStep}
           alternativeLabel
@@ -159,7 +139,7 @@ const Range = () => {
           }}
         />
 
-        <Stack direction={"row"} alignItems={"center"} spacing={-1} mt={5}>
+        <Stack direction={"row"} alignItems={"center"} spacing={0} mt={5}>
           <IconButton onClick={handlePrev}>
             <FaChevronLeft color="#fff" />
           </IconButton>

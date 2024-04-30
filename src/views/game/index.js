@@ -20,11 +20,11 @@ const Game = ({ image, heading, subHeading, price }) => {
         className="d-overlay"
         style={{
           backgroundImage: `url(${image})`,
-          height: 400,
+          height: 380,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          borderRadius: 8,
+          borderRadius: 10,
         }}
       >
         <Box
@@ -43,6 +43,7 @@ const Game = ({ image, heading, subHeading, price }) => {
               zIndex: 1,
               background:
                 "linear-gradient(0, rgba(0, 0, 0, .75), transparent 50%)",
+                borderRadius:"10",
             },
           }}
           onMouseEnter={handleMouseEnter}

@@ -4,18 +4,12 @@ import "./index.css";
 
 const Loader = () => {
   useEffect(() => {
-    // Prevent scrolling
     document.body.style.overflow = "hidden";
-
-    // Reset scroll position to the top
     window.scrollTo(0, 0);
-
     const timeline = gsap.timeline();
-
     timeline.to(".mil-preloader-animation", {
       opacity: 1,
     });
-
     timeline.fromTo(
       ".mil-animation-1 .mil-h3",
       {
@@ -28,7 +22,6 @@ const Loader = () => {
         stagger: 0.4,
       }
     );
-
     timeline.to(
       ".mil-animation-1 .mil-h3",
       {
@@ -107,7 +100,6 @@ const Loader = () => {
         opacity: 1,
         scale: 1,
         onComplete: function () {
-          // Enable scrolling when loader finishes
           document.body.style.overflow = "auto";
           document.querySelector(".mil-preloader").classList.add("mil-hidden");
         },
@@ -115,7 +107,6 @@ const Loader = () => {
       "-=1"
     );
   }, []);
-  
   return (
     <div className="mil-preloader">
       <div className="mil-preloader-animation">
@@ -134,5 +125,4 @@ const Loader = () => {
     </div>
   );
 };
-
 export default Loader;

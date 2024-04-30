@@ -17,10 +17,9 @@ const Component = ({ handleNext, handlePrev }) => {
         <div className="col-sm-6 ">
           <img
             src={image1}
-            width="550px"
+            width="450px"
             className="image22 process_hover  "
-
-            height="600px"
+            height="450px"
           />
         </div>
         <div className="col-sm-6 lormips">
@@ -30,11 +29,7 @@ const Component = ({ handleNext, handlePrev }) => {
               A multiplayer framework serves as the backbone for creating online
               multiplayer experiences across a wide range of applications,
               including video games, virtual worlds, collaborative platforms,
-              and more. These frameworks provide developers with the tools and
-              infrastructure necessary to implement networking, communication,
-              synchronization, and other essential features required for
-              multiplayer functionality. Here's an overview of key components
-              and considerations in designing a multiplayer framework.
+              and more. 
             </p>
           </div>
         </div>
