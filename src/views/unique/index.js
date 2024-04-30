@@ -6,10 +6,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Uniq_production from "../../components/uniq_prodution";
 import unique from "../../assests/data/unique";
 const Business = () => {
-  useEffect(() => {
+  function setupAnimations() {
+    // Register the ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
+    console.log("Effect is running!");
+
     const appearances = document.querySelectorAll(".mil-up");
+    console.log("Appearances found:", appearances.length);
     appearances.forEach((section) => {
       gsap.fromTo(
         section,
@@ -33,6 +37,7 @@ const Business = () => {
     });
 
     const scaleImages = document.querySelectorAll(".mil-scale");
+    console.log("Scale images found:", scaleImages.length);
     scaleImages.forEach((section) => {
       const value1 = parseFloat(section.getAttribute("data-value-1"));
       const value2 = parseFloat(section.getAttribute("data-value-2"));
@@ -52,7 +57,46 @@ const Business = () => {
         }
       );
     });
-  }, []);
+
+    if (window.innerWidth > 960) {
+      const parallaxImages = document.querySelectorAll(".mil-parallax");
+      parallaxImages.forEach((section) => {
+        const value1 = parseFloat(section.getAttribute("data-value-1"));
+        const value2 = parseFloat(section.getAttribute("data-value-2"));
+        gsap.fromTo(
+          section,
+          {
+            y: value1,
+          },
+          {
+            y: value2,
+            ease: "sine",
+            scrollTrigger: {
+              trigger: section,
+              scrub: true,
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      });
+
+      const rotateSections = document.querySelectorAll(".mil-rotate");
+      rotateSections.forEach((section) => {
+        const value = parseFloat(section.getAttribute("data-value"));
+        gsap.to(section, {
+          rotation: value,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            scrub: true,
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
+    }
+  }
+
+  window.addEventListener("load", setupAnimations);
 
   let data = [
     {
@@ -127,7 +171,7 @@ const Business = () => {
               data-value-2="1"
               style={{
                 left: "50px",
-                top:"60px",
+                top: "60px",
                 transform: "translate3d(0px, 0px, 0px) scale(1.236, 1.236)",
               }}
             >
