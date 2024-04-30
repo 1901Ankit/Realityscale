@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./index.css";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
+import { gsap, ScrollTrigger } from "gsap/all";
 import { TweenMax, Power3 } from "gsap";
 import Keyfeature from "../keyfeature";
 import About from "../about";
