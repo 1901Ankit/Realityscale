@@ -7,18 +7,18 @@ const SecondComponent = () => {
   Aos.init();
   return (
     <div className="container p-0 events-content">
-    <div className="row align-items-center mt-3">
-      <div className="col-sm-6 ">
-      <img
+   <div className="row align-items-center mt-3">
+        <div className="col-sm-12 ">
+          <img
             src={image1}
-            width="400px"
+            width="100%"
             className="image22 process_hover  "
-            height="450px"
+            height="500px"
           />
+        </div>
       </div>
-      <div className="col-sm-6 lormips"
-      
-      >
+      <div className="row mt-5">
+        <div className="col-sm-12 lormips">
         <div className="pl-left">
           <h2 className="onbord mb-4">SEAMLESS ACCESS</h2>
           <p className="skills_para">

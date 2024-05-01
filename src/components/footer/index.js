@@ -1,15 +1,19 @@
 import React from "react";
 import "./index.css";
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo White 04.png";
+import { FaInstagram } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 const Navigation = () => {
   return (
     <nav className="mil-footer-menu mil-mb-30">
       <ul className="p-0">
-        <li className="mil-up mil-active">
+        <li className="mil-up ">
           <a href="#">Home</a>
         </li>
-        <li className="mil-up">
-          <a href="#">Portfolio</a>
+        <li className="mil-up ">
+          <a href="/team">Team</a>
         </li>
         <li className="mil-up">
           <a href="#">Services</a>
@@ -70,25 +74,25 @@ const SocialIcons = () => {
       <li>
         <a href="#." target="_blank" className="social-icon">
           {" "}
-          <i className="fa-brands fa-instagram"></i>
+          <FaInstagram />
         </a>
       </li>
       <li>
         <a href="#." target="_blank" className="social-icon">
           {" "}
-          <i className="fa-brands fa-youtube"></i>
+          <FaYoutube />
         </a>
       </li>
       <li>
         <a href="#." target="_blank" className="social-icon">
           {" "}
-          <i className="fab fa-twitter"></i>
+          <FaXTwitter />
         </a>
       </li>
       <li>
         <a href="#." target="_blank" className="social-icon">
           {" "}
-          <i className="fa-brands fa-facebook"></i>
+          <FaFacebook />
         </a>
       </li>
     </ul>

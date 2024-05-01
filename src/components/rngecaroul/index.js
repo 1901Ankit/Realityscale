@@ -39,7 +39,7 @@ const Range = () => {
     <SecondComponent />,
     <Third />,
     <Fourth />,
-    <Fifth />,
+    // <Fifth />,
     // <Sixth />,
     // <Seven />,
     // <Eight />,
@@ -58,9 +58,9 @@ const Range = () => {
     {
       label: "STREAMLINED MARKETING",
     },
-    {
-      label: "BOOST SALES ENGAGEMENT",
-    },
+    // {
+    //   label: "BOOST SALES ENGAGEMENT",
+    // },
   ];
   
 
@@ -130,8 +130,8 @@ const Range = () => {
           sx={{
             "&.MuiSlider-root": {
               color: "#fff",
-              left: "41px",
-              width: "93.5%",
+              left: "80px",
+              width: "87%",
             },
             "& .MuiSlider-thumb": {
               display: "none",

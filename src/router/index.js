@@ -5,6 +5,8 @@ import Home from "../views/home";
 import Footer from "../components/footer";
 
 import Loader from "../components/loader";
+import CTA from "../components/cta";
+import Member from "../views/team_member";
 
 const Router = () => {
   // const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +32,10 @@ const Router = () => {
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
+            {/* <Route exact path="/" element={<Loader/>} /> */}
+            <Route exact path="/team" element={<Member />} />
           </Routes>
+          <CTA/>
           <Footer />
         </>
       {/* // )} */}

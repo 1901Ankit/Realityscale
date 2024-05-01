@@ -22,6 +22,9 @@ import Loader from "../../components/loader";
 import $ from "jquery";
 import Swup from "swup";
 import Mouse from "../../components/mouse";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import memberimage from "../../assests/images/human/christopher-campbell-rDEOVtE7vOs-unsplash.jpg";
 const Home = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -248,6 +251,11 @@ const Home = () => {
   }, []);
 
   //---- end mainmenu-------//
+  const navigate = useNavigate();
+  const Member = () => {
+    navigate("/team");
+  };
+
   return (
     <>
       <Loader />
@@ -268,14 +276,17 @@ const Home = () => {
         <div className="container">
           <div className="mil-menu-content">
             <div className="row">
-              <div className="col-xl-5">
+              <div className="col-xl-5 mt-5">
                 <nav className="mil-main-menu" id="">
                   <ul className="unlisted">
                     <li class="mil-has-children mil-active">
                       <span>HomePage</span>
                     </li>
                     <li class="mil-has-children">
-                      <span>Portfolio</span>
+                      {/* <a href="/team"> */}
+                      <span className="" onClick={Member}>
+                        Team
+                      </span>
                     </li>
                     <li class="mil-has-children">
                       <span>Services</span>
@@ -423,24 +434,22 @@ const Home = () => {
 
       <div className="mil-banner mil-dark-bg">
         <div className="mi-invert-fix">
-          <div className="container-fluid p-0">
+          {/* <div className="container-fluid p-0">
             <div className="bg-overlay">
               <aside class="leftsidetag">
-                <span class="text-center get">GET SUPPORT</span>
-                <span class="ms-3">|</span>
-                <span class="text-center get ms-3">PRIVACY POLICY</span>
-                <span class="ms-3">|</span>
-                <span class="text-center get ms-3">GET IN TOUCH</span>
+            
+                <span class="text-center get ms-3">OUR TEAM</span>
+            
               </aside>
             </div>
-          </div>
+          </div> */}
           <div className="mil-animation-frame">
             <div
               className="mil-animation mil-position-1 mil-scale"
               data-value-1="7"
               data-value-2="1.6"
               style={{
-                transform: "translate3d(0px, 0px, 0px) scale(2.5178, 2.5178)",
+                transform: "translate3d(0px, 0px, 0px) scale(2.2178, 2.2178)",
               }}
             >
               <div className="mil-dodecahedron">
@@ -491,11 +500,11 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="mil-gradient"></div>
+          {/* <div className="mil-gradient"></div> */}
 
           <div className="container">
             <div
-              className="mil-banner-content mil-up"
+              className=" mil-up"
               style={{
                 translate: "none",
                 rotate: "none",
@@ -504,17 +513,25 @@ const Home = () => {
                 opacity: 1,
               }}
             >
-              <h1 className="mil-muted mil-mb-10">
-                Designing <span className="mil-thin" style={{fontWeight:"100px"}}>a Better</span>
-                <br /> World <span className="mil-thin">Today</span>
-              </h1>
-              <div className="row">
-                <div className="col-md-7 col-lg-5">
+              <div className="row align-items-center">
+                <div className="col-md-7 col-lg-6">
+                  <h1 className="mil-muted mil-mb-60">
+                    Your{" "}
+                    <span className="mil-thin" style={{ fontWeight: "100px" }}>
+                      Imagination
+                    </span>
+                    <br /> Meets{" "}
+                    <span className="mil-thin">Our Innovation</span>
+                  </h1>
+
                   <p className="mil-light-soft mil-mb-60">
                     Welcome to our world of endless imagination and boundless
                     creativity. Together, let's embark on a remarkable journey
                     where dreams become tangible realities.
                   </p>
+                </div>
+                <div className="col-md-7 col-lg-6">
+                  <img src={memberimage} style={{ width: "100%" }} />
                 </div>
               </div>
               <a href="#" className="mil-button mil-arrow-place mil-btn-space">
@@ -537,7 +554,7 @@ const Home = () => {
                   <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"></path>
                 </svg>
               </a>
-              <div className="mil-circle-text">
+              <div className="mil-circle-text ">
                 <svg
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -592,9 +609,10 @@ const Home = () => {
       </div>
 
       <Sliderlogo />
+      <Range />
       <About />
       <Keyfeature />
-      <Range />
+
       <div className="contactus_parallax">
         <div className="paralaxoverlay">
           <Container sx={{ p: 10, paddingBottom: 15 }}>

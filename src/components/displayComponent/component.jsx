@@ -9,27 +9,24 @@ const Component = ({ handleNext, handlePrev }) => {
   return (
     <div className="container p-0 events-content">
       <div className="row align-items-center mt-3">
-        {/* <div className="col-sm-1">
-          <IconButton onClick={handlePrev}>
-            <FaChevronLeft color="#fff" />
-          </IconButton>
-        </div> */}
-        <div className="col-sm-6 ">
+        <div className="col-sm-12 ">
           <img
             src={image1}
-            width="400px"
+            width="100%"
             className="image22 process_hover  "
-            height="450px"
+            height="500px"
           />
         </div>
-        <div className="col-sm-6 lormips">
+      </div>
+      <div className="row mt-5">
+        <div className="col-sm-12 lormips">
           <div className="pl-left">
-            <h2 className="multiplyer mb-4"> EMPOWER YOUR VISION</h2>
+            <h2 className="multiplyer mb-4 "> EMPOWER YOUR VISION</h2>
             <p className="skills_para">
               A multiplayer framework serves as the backbone for creating online
               multiplayer experiences across a wide range of applications,
               including video games, virtual worlds, collaborative platforms,
-              and more. 
+              and more.
             </p>
           </div>
         </div>

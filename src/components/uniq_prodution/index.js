@@ -5,7 +5,7 @@ const Uniq_production = (props) => {
     <>
       <div className="mil-service-card-sm mil-up">
         <h5 className="mil-muteded mil-mb-30 text-white">{props.head}</h5>
-        <p className="mil-light-softer mil-mb-30 text-white">{props.para}</p>\
+        <p className="mil-light-softer mil-mb-30 text-white">{props.para}</p>
         <div className="">
           <img
             src={props.img}
