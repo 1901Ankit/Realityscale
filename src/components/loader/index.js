@@ -118,7 +118,7 @@ const Loader = () => {
         <div className="mil-pos-abs mil-animation-2">
           <div className="mil-reveal-frame">
             <p className="mil-reveal-box"></p>
-            <p className="mil-h3 mil-muted mil-thin text-white">realityscale.com</p>
+            <p className="mil-h3 mil-muted mil-thin text-white">reality scale.com</p>
           </div>
         </div>
       </div>

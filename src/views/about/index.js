@@ -205,7 +205,7 @@ window.addEventListener("load", setupAnimations);
                   data-value-2="1.2"
                   style={{
                     transform:
-                      "translate3d(0px, 0px, 0px) scale(1.1453, 1.1453)",
+                      "translate3d(0px, 0px, 0px) scale(1.1353, 1.1353)",
                   }}
                 />
               </div>

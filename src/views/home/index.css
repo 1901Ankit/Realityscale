@@ -1429,7 +1429,7 @@ menu
 }
 
 .mil-main-menu ul li {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .mil-main-menu ul li:last-child {
@@ -1601,7 +1601,7 @@ banner
 }
 
 .mil-banner .container {
-  height: 90%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3651,7 +3651,7 @@ price
 
 .mil-price-card .mil-price-number .mil-thin {
   font-weight: 200;
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
 /***************************
@@ -4579,4 +4579,12 @@ html.is-animating .mil-menu-frame {
   display: grid;
   place-items: start;
   align-items: start;
+}
+.mil-mutede{
+color: white;
+font-size: 55px;
+/* padding: 0 450px; */
+}
+.imageside{
+  padding-right: 80px !important;
 }

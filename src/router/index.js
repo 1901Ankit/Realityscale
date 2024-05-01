@@ -29,7 +29,7 @@ const Router = () => {
         <Loader />
       ) : ( */}
         <>
-          <Navbar />
+          {/* <Navbar /> */}
           <Routes>
             <Route exact path="/" element={<Home />} />
             {/* <Route exact path="/" element={<Loader/>} /> */}

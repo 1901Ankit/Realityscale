@@ -280,7 +280,7 @@ const Home = () => {
                 <nav className="mil-main-menu" id="">
                   <ul className="unlisted">
                     <li class="mil-has-children mil-active">
-                      <span>HomePage</span>
+                      <span>Home</span>
                     </li>
                     <li class="mil-has-children">
                       {/* <a href="/team"> */}
@@ -295,7 +295,7 @@ const Home = () => {
                       <span>Newsletter</span>
                     </li>
                     <li class="mil-has-children">
-                      <span>Other pages</span>
+                      <span>Other's</span>
                     </li>
                   </ul>
                 </nav>
@@ -402,7 +402,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mil-curtain"></div>
+      {/* <div className="mil-curtain"></div> */}
       <div className="mil-frame">
         <div className="mil-frame-top">
           <a href="/" className="mil-logo">
@@ -500,38 +500,31 @@ const Home = () => {
             </div>
           </div>
 
-          {/* <div className="mil-gradient"></div> */}
+          <div className="mil-gradient"></div>
 
           <div className="container">
             <div
               className=" mil-up"
               style={{
-                translate: "none",
-                rotate: "none",
-                scale: "none",
-                transform: "translate(0px, 0px)",
                 opacity: 1,
               }}
             >
-              <div className="row align-items-center">
-                <div className="col-md-7 col-lg-6">
-                  <h1 className="mil-muted mil-mb-60">
-                    Your{" "}
-                    <span className="mil-thin" style={{ fontWeight: "100px" }}>
-                      Imagination
-                    </span>
-                    <br /> Meets{" "}
-                    <span className="mil-thin">Our Innovation</span>
-                  </h1>
-
-                  <p className="mil-light-soft mil-mb-60">
-                    Welcome to our world of endless imagination and boundless
-                    creativity. Together, let's embark on a remarkable journey
-                    where dreams become tangible realities.
-                  </p>
+              <div className="row align-items-center d-flex justify-content-center">
+                <div className="" style={{ position: "absolute" }}>
+                  <div className="col-md-7 col-lg-5">
+                    <h1 className="text-white">Discover Our Studio</h1>
+                    <p className="text-white">
+                      At our design studio, we are a collective of talented
+                      individuals ignited by our unwavering passion for
+                      transforming ideas into reality. With a harmonious blend
+                      of diverse backgrounds and a vast array of skill sets, we
+                      join forces to create compelling solutions for our
+                      esteemed clients.
+                    </p>
+                  </div>
                 </div>
-                <div className="col-md-7 col-lg-6">
-                  <img src={memberimage} style={{ width: "100%" }} />
+                <div className="col-md-7 col-lg-7">
+                  <img src={memberimage} style={{ width: "120%" }} />
                 </div>
               </div>
               <a href="#" className="mil-button mil-arrow-place mil-btn-space">
@@ -604,6 +597,7 @@ const Home = () => {
                 </a>
               </div>
             </div>
+            
           </div>
         </div>
       </div>

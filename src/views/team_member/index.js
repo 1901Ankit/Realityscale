@@ -11,6 +11,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 // import Loader from "../../components/loader";
+import { useNavigate } from "react-router-dom";
 import Mouse from "../../components/mouse";
 const Member = () => {
   useEffect(() => {
@@ -238,10 +239,14 @@ const Member = () => {
   }, []);
 
   //---- end mainmenu-------//
+  const navigate = useNavigate();
+  const Home = () => {
+    navigate("/");
+  };
   return (
     <>
-    {/* <Loader/> */}
-<Mouse/>
+      {/* <Loader/> */}
+      <Mouse />
       <div className="mil-progress-track">
         <div className="mil-progress"></div>
       </div>
@@ -262,9 +267,9 @@ const Member = () => {
                 <nav className="mil-main-menu" id="">
                   <ul className="unlisted">
                     <li class="mil-has-children ">
-                      <a href="/">
-                        <span>HomePage</span>
-                      </a>
+                      <span className="" onClick={Home}>
+                        Home
+                      </span>
                     </li>
                     <li class="mil-has-children mil-active">
                       <span>Team</span>
