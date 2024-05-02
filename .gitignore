@@ -11,7 +11,7 @@
 # production
 
 /build
-/src/assests
+
 # misc
 .DS_Store
 .env.local
