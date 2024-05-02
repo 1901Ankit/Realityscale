@@ -1,0 +1,130 @@
+.main-footer__about {
+    box-sizing: border-box;
+    color: rgb(93, 93, 93);
+    display: block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    height: 111.525px;
+    line-height: 28.125px;
+    outline-color: transparent;
+    outline-style: solid;
+    outline-width: 0.8px;
+    position: relative;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    visibility: visible;
+    width: 650px;
+    /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
+}
+
+.main-footer__about p {
+    box-sizing: border-box;
+    color: rgb(93, 93, 93);
+    display: block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: 40px;
+    letter-spacing: -0.96px;
+    line-height: 30px;
+    margin-block-end: 9px;
+    margin-block-start: 0px;
+    margin-bottom: 9px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-top: 0px;
+    outline-color: transparent;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    visibility: visible;
+    width: 770px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.main-footer__about a {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    height: 60px;
+    letter-spacing: -2.4px;
+    line-height: 30px;
+    outline-color: transparent;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    text-size-adjust: 100%;
+    transition-behavior: normal;
+    transition-delay: 0s;
+    transition-duration: 0.5s;
+    transition-property: all;
+    transition-timing-function: ease;
+    visibility: visible;
+    width: 577.562px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 767px) {
+    .main-footer__about a {
+        box-sizing: border-box;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        height: 30px;
+        letter-spacing: -1px;
+        line-height: 30px;
+        text-decoration-color: rgb(255, 255, 255);
+        text-decoration-line: none;
+        text-decoration-style: solid;
+        text-decoration-thickness: auto;
+        text-size-adjust: 100%;
+        transition-behavior: normal;
+        transition-delay: 0s;
+        transition-duration: 0.5s;
+        transition-property: all;
+        transition-timing-function: ease;
+        visibility: visible;
+        width: 291.987px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+}
+.mil-dark-back {
+    position: relative;
+}
+
+.mil-dark-back:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    -webkit-backdrop-filter: invert(100%);
+    backdrop-filter: invert(100%);
+  }
+  
+  .mil-dark-back .mi-inverter-fix {
+    height: 100%;
+    position: relative;
+    pointer-events: none;
+    z-index: 3;
+  }
+  
+  .mil-dark-back .mi-inverter-fix .container {
+    pointer-events: all;
+  }
+  
+  .mil-soft-bg {
+    background-color: rgb(242, 242, 242);
+  }
+  .mil-dark-backs{
+    background-color: black;
+  }

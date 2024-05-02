@@ -1,0 +1,147 @@
+.accordion_head {
+  /* border-bottom: 5px solid white !important; */
+  /* border-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, white 1px, rgba(255, 255, 255, 0.2) 3px) 5 !important; */
+  margin-bottom: 30px;
+  border-bottom: 2px solid #fff !important;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  line-height: 45px;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.accordion_body {
+  padding: 0px;
+  color: white !important;
+  font-size: 15px !important;
+  display: flex;
+  margin-left: 5px;
+}
+
+.black {
+  background-image: url("../../assests/images/landing/3.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.mil-accordion-group.mil-dark .mil-accordion-menu,
+.mil-accordion-group.mil-dark .mil-accordion-menu h6 {
+  color: #000
+}
+
+.ourcors {
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  /* border-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, white, rgba(255, 255, 255, 0.1) 3px) 3; */
+}
+
+.ourcors:after {
+  background-color: transparent
+}
+
+.ourcors {
+  font-family: Sora, sans-serif;
+  display: inline-block;
+  padding-bottom: 10px;
+  color: #000;
+  font-weight: 600
+}
+
+.mil-suptitle:after {
+  background-color: transparent
+}
+
+.mil-suptitle {
+  font-family: Sora, sans-serif;
+  display: inline-block;
+  padding-bottom: 10px;
+  color: #000;
+  font-weight: 600
+}
+
+.mil-suptitle:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px
+}
+
+.mil-suptitle.mil-light:after {
+  background-color: transparent;
+  border: 3px solid white;
+  border-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, white, rgba(255, 255, 255, 0.1) 3px) 3;
+}
+
+
+.mil-accordion-group .mil-accordion-menu h6 {
+  transition: .4s cubic-bezier(0, 0, .3642, 1)
+}
+
+.mil-accordion-group.mil-dark {
+  border-bottom: 5px solid rgba(0, 0, 0, .1)
+}
+
+.mil-accordion-content,
+.mil-accordion-content.mil-expanded {
+  height: 0;
+  overflow: hidden
+}
+
+.mil-accordion-group {
+  border-bottom: 5px solid rgba(255, 255, 255, .2);
+  border-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0.2) 3px) 5;
+  margin-bottom: 30px
+}
+
+.mil-accordion-group .mil-accordion-menu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 30px
+}
+
+.mil-accordion-group .mil-accordion-menu .mil-symbol {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 10px;
+  position: relative
+}
+
+.mil-accordion-group .mil-accordion-menu .mil-symbol .mil-minus,
+.mil-accordion-group .mil-accordion-menu .mil-symbol .mil-plus,
+.mil-menu-btn span:after,
+.mil-menu-btn span:before {
+  position: absolute
+}
+
+.mil-accordion-group .mil-accordion-menu .mil-symbol .mil-minus {
+  color: #ffd94a;
+  transform: translateY(-2px)
+}
+
+.mil-accordion-group .mil-accordion-menu:hover h6 {
+  transform: translateX(10px)
+}
+
+.mil-accordion-content {
+  padding-left: 40px
+}
+
+.mil-lighter {
+  font-size: 25px;
+  color: white;
+  font-weight: 500;
+}
