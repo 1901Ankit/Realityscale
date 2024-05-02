@@ -13,6 +13,9 @@ import { FaYoutube } from "react-icons/fa";
 // import Loader from "../../components/loader";
 import { useNavigate } from "react-router-dom";
 import Mouse from "../../components/mouse";
+import Arrow from "../../components/arrow";
+import ArrowSVG from "../../components/arrow";
+import TeamMembercontent from "../../components/member";
 const Member = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -247,6 +250,48 @@ const Member = () => {
   const Contactus = () => {
     navigate("/contact");
   };
+
+  const menuItems = [
+    { name: "Home", onClick: Home },
+    { name: "Team" },
+    { name: "Contact us", onClick: Contactus },
+    { name: "Newsletter" },
+    { name: "Other's" },
+  ];
+
+  const projects = [
+    "Interior design studio",
+    "Home Security Camera",
+    "Kemia Honest Skincare",
+    "Cascade of Lava",
+    "Air Pro by Molekule",
+    "Tony's Chocolonely",
+  ];
+
+  const usefulLinks = [
+    "Privacy Policy",
+    "Terms and conditions",
+    "Cookie Policy",
+    "Careers",
+  ];
+
+  const address = {
+    line1: "2nd Floor, D-320, Sector 63 Rd,",
+    line2: "Sector 63, Noida, Uttar Pradesh, 201307",
+  };
+  const teamMembers = [
+    {
+      name: "Anna Oldman",
+      role: "Art Director",
+      image: memberimage,
+      socialMedia: {
+        instagram: "#",
+        youtube: "#",
+        twitter: "#",
+        facebook: "#",
+      },
+    },
+  ];
   return (
     <>
       {/* <Loader/> */}
@@ -270,25 +315,13 @@ const Member = () => {
               <div className="col-xl-5">
                 <nav className="mil-main-menu" id="">
                   <ul className="unlisted">
-                    <li class="mil-has-children ">
-                      <span className="" onClick={Home}>
-                        Home
-                      </span>
-                    </li>
-                    <li class="mil-has-children mil-active">
-                      <span>Team</span>
-                    </li>
-                    <li class="mil-has-children">
-                      <span className="" onClick={Contactus}>
-                        Contact us
-                      </span>
-                    </li>
-                    <li class="mil-has-children">
-                      <span>Newsletter</span>
-                    </li>
-                    <li class="mil-has-children">
-                      <span>Other's</span>
-                    </li>
+                    {menuItems.map((item, index) => (
+                      <li key={index} className="mil-has-children">
+                        <span className="" onClick={item.onClick}>
+                          {item.name}
+                        </span>
+                      </li>
+                    ))}
                   </ul>
                 </nav>
               </div>
@@ -306,84 +339,37 @@ const Member = () => {
                   <div className="mil-menu-right">
                     <div className="row">
                       <div className="col-lg-8 mil-mb-60">
-                        <h6 className="mil-muted mil-mb-30">Projects</h6>
-
+                        <h6 className="mil-muted mil-mb-10">Projects</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Interior design studio
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Home Security Camera
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Kemia Honest Skincare
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Cascade of Lava
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Air Pro by Molekule
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Tony's Chocolonely
-                            </a>
-                          </li>
+                          {projects.map((project, index) => (
+                            <li key={index}>
+                              <a href="#" className="mil-light-soft">
+                                {project}
+                              </a>
+                            </li>
+                          ))}
                         </ul>
                       </div>
                       <div className="col-lg-4 mil-mb-60">
-                        <h6 className="mil-muted mil-mb-30">Useful links</h6>
-
+                        <h6 className="mil-muted mil-mb-10">Useful links</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Privacy Policy
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Terms and conditions
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Cookie Policy
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Careers
-                            </a>
-                          </li>
+                          {usefulLinks.map((link, index) => (
+                            <li key={index}>
+                              <a href="#" className="mil-light-soft">
+                                {link}
+                              </a>
+                            </li>
+                          ))}
                         </ul>
                       </div>
                     </div>
                     <div className="mil-divider mil-mb-60"></div>
                     <div className="row justify-content-between">
-                      <div className="col-lg-4 mil-mb-60">
-                        <h6 className="mil-muted mil-mb-30">Canada</h6>
-
+                      <div className="col-md-6 col-lg-6">
+                        <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
                         <p className="mil-light-soft mil-up">
-                          71 South Los Carneros Road, California
-                          <span className="mil-no-wrap">+51 174 705 812</span>
-                        </p>
-                      </div>
-                      <div className="col-lg-4 mil-mb-60">
-                        <h6 className="mil-muted mil-mb-30">Germany</h6>
-
-                        <p className="mil-light-soft">
-                          Leehove 40, 2678 MC De Lier, Netherlands{" "}
-                          <span className="mil-no-wrap">+31 174 705 811</span>
+                          {address.line1},<br />
+                          {address.line2}
                         </p>
                       </div>
                     </div>
@@ -409,16 +395,10 @@ const Member = () => {
           <div className="mil-back-to-top">
             <a href="#top" className="mil-link mil-dark mil-arrow-place">
               <span className="text-grey">Back to top</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+              <ArrowSVG
                 className="mil-slider-arrow mil-revi-next mil-arrow-place"
-              >
-                <path
-                  d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"
-                  fill="#000000"
-                />
-              </svg>
+                fill="#000000"
+              />
             </a>
           </div>
         </div>
@@ -469,7 +449,7 @@ const Member = () => {
                     <a href="/team">Team</a>
                   </li>
                 </ul>
-                <h1 class="mil-mb-60">
+                <h1 class="mil-mb-60" style={{ padding: "0" }}>
                   Meet <span class="mil-thin">Our</span>
                   <br /> Creative <span class="mil-thin">Team</span>
                 </h1>
@@ -478,13 +458,7 @@ const Member = () => {
                   class="mil-link mil-dark mil-arrow-place mil-down-arrow"
                 >
                   <span>Our team</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    class="mil-arrow"
-                  >
-                    <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"></path>
-                  </svg>
+                  <ArrowSVG className="mil-arrow" fill="#000000" />
                 </a>
               </div>
             </div>
@@ -494,151 +468,24 @@ const Member = () => {
             <div class="container mil-p-120-90">
               <div class="row">
                 <div class="col-sm-6 col-md-4 col-lg-4">
-                  <div
-                    class="mil-team-card mil-up mil-mb-30"
-                    style={{
-                      rotate: "none",
-                      scale: "none",
-                      transform: "translate(0px, 0px)",
-                      opacity: 1,
-                      translate: "none",
-                    }}
-                  >
-                    <img src={memberimage} alt="Team member" />
-                    <div class="mil-description">
-                      <div class="mil-secrc-text">
-                        <h5 class="mil-muted mil-mb-5">
-                          <a href="home-2.html">Anna Oldman</a>
-                        </h5>
-                        <p class="mil-link mil-light-soft mil-mb-10">
-                          Art Director
-                        </p>
-                        <ul class="mil-social-icons mil-center">
-                          <li>
-                            <a href="#." target="_blank" class="social-icon">
-                              {" "}
-                              <FaInstagram />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#." target="_blank" class="social-icon">
-                              {" "}
-                              <FaYoutube />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#." target="_blank" class="social-icon">
-                              {" "}
-                              <FaXTwitter />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#." target="_blank" class="social-icon">
-                              {" "}
-                              <FaFacebook />
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                  <div>
+                    {teamMembers.map((member, index) => (
+                      <TeamMembercontent key={index} member={member} />
+                    ))}
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-4">
-                  <div
-                    class="mil-team-card mil-up mil-mb-30"
-                    style={{
-                      rotate: "none",
-                      scale: "none",
-                      transform: "translate(0px, 0px)",
-                      opacity: 1,
-                      translate: "none",
-                    }}
-                  >
-                    <img src={memberimage} alt="Team member" />
-                    <div class="mil-description">
-                      <div class="mil-secrc-text">
-                        <h5 class="mil-muted mil-mb-5">
-                          <a href="home-2.html">Oscar Freeman</a>
-                        </h5>
-                        <p class="mil-link mil-light-soft mil-mb-10">
-                          Frontend Dev
-                        </p>
-                        <ul class="mil-social-icons mil-center">
-                          <li>
-                            <a href="#." target="_blank" class="social-icon">
-                              {" "}
-                              <FaInstagram />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#." target="_blank" class="social-icon">
-                              {" "}
-                              <FaYoutube />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#." target="_blank" class="social-icon">
-                              {" "}
-                              <FaXTwitter />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#." target="_blank" class="social-icon">
-                              {" "}
-                              <FaFacebook />
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                  <div>
+                    {teamMembers.map((member, index) => (
+                      <TeamMembercontent key={index} member={member} />
+                    ))}
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-4">
-                  <div
-                    class="mil-team-card mil-up mil-mb-30"
-                    style={{
-                      rotate: "none",
-                      scale: "none",
-                      transform: "translate(0px, 0px)",
-                      opacity: 1,
-                      translate: "none",
-                    }}
-                  >
-                    <img src={memberimage} alt="Team member" />
-                    <div class="mil-description">
-                      <div class="mil-secrc-text">
-                        <h5 class="mil-muted mil-mb-5">
-                          <a href="home-2.html">Emma Newman</a>
-                        </h5>
-                        <p class="mil-link mil-light-soft mil-mb-10">Founder</p>
-                        <ul class="mil-social-icons mil-center">
-                          <li>
-                            <a href="#." target="_blank" class="social-icon">
-                              {" "}
-                              <FaInstagram />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#." target="_blank" class="social-icon">
-                              {" "}
-                              <FaYoutube />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#." target="_blank" class="social-icon">
-                              {" "}
-                              <FaXTwitter />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#." target="_blank" class="social-icon">
-                              {" "}
-                              <FaFacebook />
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                  <div>
+                    {teamMembers.map((member, index) => (
+                      <TeamMembercontent key={index} member={member} />
+                    ))}
                   </div>
                 </div>
               </div>
@@ -690,13 +537,7 @@ const Member = () => {
                 >
                   <a href="#" class="mil-button mil-arrow-place">
                     <span>Contact us</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      class="mil-arrow"
-                    >
-                      <path d="M 14 5.417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"></path>
-                    </svg>
+                    <ArrowSVG className="mil-arrow" fill="#000000" />
                   </a>
                 </div>
               </div>

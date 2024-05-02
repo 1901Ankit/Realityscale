@@ -59,7 +59,7 @@ blockquote {
 }
 
 .mil-thin {
-  font-weight: 100 !important;
+  font-weight:100 !important;
 }
 
 a {
@@ -291,8 +291,8 @@ button
 ------------------------------------------- */
 .mil-button {
   cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
+  /* display: -webkit-inline-box;
+  display: -ms-inline-flexbox; */
   display: inline-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1051,7 +1051,7 @@ frame
 }
 
 .mil-frame {
-  padding: 50px 60px 60px 60px;
+  padding: 30px 60px 60px 60px;
   position: fixed;
   z-index: 2;
   pointer-events: none;

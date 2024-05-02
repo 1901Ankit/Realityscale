@@ -97,6 +97,8 @@ const About = () => {
 
 window.addEventListener("load", setupAnimations);
 
+
+
   return (
     <section id="about">
       <div className="container mil-p-120-30">

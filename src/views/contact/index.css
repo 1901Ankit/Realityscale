@@ -110,8 +110,8 @@
     width: 100%;
     border: none;
     background-color: #101010 !important;
-    padding-left: 30px;
-    padding-right: 30px;
+    /* padding-left: 30px;
+    padding-right: 30px; */
     outline: none;
     font-size: 14px;
     color: #5d5d5d !important;

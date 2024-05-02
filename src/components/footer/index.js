@@ -10,7 +10,7 @@ const Navigation = () => {
     <nav className="mil-footer-menu mil-mb-30">
       <ul className="p-0">
         <li className="mil-up ">
-          <a href="#">Home</a>
+          <a href="/">Home</a>
         </li>
         <li className="mil-up ">
           <a href="/team">Team</a>
@@ -19,7 +19,7 @@ const Navigation = () => {
           <a href="#">Services</a>
         </li>
         <li className="mil-up">
-          <a href="#">Contact</a>
+          <a href="/contact">Contact</a>
         </li>
         <li className="mil-up">
           <a href="#">Blog</a>
@@ -59,10 +59,10 @@ const MenuList = () => {
 const Address = () => {
   return (
     <>
-      <h6 className="mil-muted mil-up mil-mb-10">Canada</h6>
+      <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
       <p className="mil-light-soft mil-up">
-        71 South Los Carneros Road, California{" "}
-        <span className="mil-no-wrap">+51 174 705 812</span>
+      2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307
+        {/* <span className="mil-no-wrap">+51 174 705 812</span> */}
       </p>
     </>
   );
@@ -154,9 +154,9 @@ const Footer = () => {
                 <div className="col-md-6 col-lg-5">
                   <Address />
                 </div>
-                <div className="col-md-6 col-lg-5">
+                {/* <div className="col-md-6 col-lg-5">
                   <Address />
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-md-4 col-lg-6 mil-mb-20">

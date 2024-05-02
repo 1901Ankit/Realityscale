@@ -47,7 +47,13 @@ const Keyfeature = () => {
                     {" "}
                     {description.description.Subheading1}
                   </div>
-                  <div className="des">{description.description.message1}</div>
+                  <div className="des mt-3">
+                    {description.description.message1}{" "}
+                  </div>
+                  <br />
+                  <div className="des">
+                    {description.description.submessage1}
+                  </div>
                 </div>
               </div>
               <div className="item">
@@ -62,7 +68,13 @@ const Keyfeature = () => {
                     {" "}
                     {description.description.Subheading2}
                   </div>
-                  <div className="des">{description.description.message2}</div>
+                  <div className="des mt-3">
+                    {description.description.message2}{" "}
+                  </div>
+                  <br />
+                  <div className="des">
+                    {description.description.submessage2}
+                  </div>
                 </div>
               </div>
               <div className="item">
@@ -77,7 +89,13 @@ const Keyfeature = () => {
                     {" "}
                     {description.description.Subheading3}
                   </div>
-                  <div className="des">{description.description.message3}</div>
+                  <div className="des mt-3">
+                    {description.description.message3}{" "}
+                  </div>
+                  <br />
+                  <div className="des">
+                    {description.description.submessage3}
+                  </div>
                 </div>
               </div>
               <div className="item">
@@ -92,7 +110,13 @@ const Keyfeature = () => {
                     {" "}
                     {description.description.Subheading4}
                   </div>
-                  <div className="des">{description.description.message4}</div>
+                  <div className="des mt-3">
+                    {description.description.message4}{" "}
+                  </div>
+                  <br />
+                  <div className="des">
+                    {description.description.submessage4}
+                  </div>
                 </div>
               </div>
             </div>
@@ -101,28 +125,29 @@ const Keyfeature = () => {
               <div className="item">
                 <img src={image1} />
                 <div className="content">
-                  <div className="title">Key Feature</div>
+                  <div className="title">Cloud</div>
                   <div className="description">Description</div>
                 </div>
               </div>
               <div className="item">
                 <img src={image2} className="" />
                 <div className="content">
-                  <div className="title">Key Feature</div>
+                  <div className="title">
+Reality </div>
                   <div className="description">Description</div>
                 </div>
               </div>
               <div className="item">
                 <img src={image3} className="" />
                 <div className="content">
-                  <div className="title">Key Feature</div>
+                  <div className="title">Business</div>
                   <div className="description">Description</div>
                 </div>
               </div>
               <div className="item">
                 <img src={image4} className="" />
                 <div className="content">
-                  <div className="title">Key Feature</div>
+                  <div className="title">Adaptive</div>
                   <div className="description">Description</div>
                 </div>
               </div>

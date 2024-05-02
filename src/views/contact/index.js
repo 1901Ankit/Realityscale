@@ -322,7 +322,7 @@ const Contactus = () => {
                   <div className="mil-menu-right">
                     <div className="row">
                       <div className="col-lg-8 mil-mb-60">
-                        <h6 className="mil-muted mil-mb-30">Projects</h6>
+                        <h6 className="mil-muted mil-mb-10">Projects</h6>
 
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
                           <li>
@@ -358,7 +358,7 @@ const Contactus = () => {
                         </ul>
                       </div>
                       <div className="col-lg-4 mil-mb-60">
-                        <h6 className="mil-muted mil-mb-30">Useful links</h6>
+                        <h6 className="mil-muted mil-mb-10">Useful links</h6>
 
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
                           <li>
@@ -386,22 +386,12 @@ const Contactus = () => {
                     </div>
                     <div className="mil-divider mil-mb-60"></div>
                     <div className="row justify-content-between">
-                      <div className="col-lg-4 mil-mb-60">
-                        <h6 className="mil-muted mil-mb-30">Canada</h6>
-
-                        <p className="mil-light-soft mil-up">
-                          71 South Los Carneros Road, California
-                          <span className="mil-no-wrap">+51 174 705 812</span>
-                        </p>
-                      </div>
-                      <div className="col-lg-4 mil-mb-60">
-                        <h6 className="mil-muted mil-mb-30">Germany</h6>
-
-                        <p className="mil-light-soft">
-                          Leehove 40, 2678 MC De Lier, Netherlands{" "}
-                          <span className="mil-no-wrap">+31 174 705 811</span>
-                        </p>
-                      </div>
+                <div className="col-md-6 col-lg-6">
+                      <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
+      <p className="mil-light-soft mil-up">
+      2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307
+      </p>
+</div>
                     </div>
                   </div>
                 </div>
@@ -467,7 +457,7 @@ const Contactus = () => {
                     </div>
                   </div>
                   <div class="container">
-                    <ul class="mil-breadcrumbs mil-light mil-mb-60">
+                    <ul class="mil-breadcrumbs mil-light mil-mb-60" style={{padding:"0"}}>
                       <li>
                         <a href="/">Homepage</a>
                       </li>
@@ -496,6 +486,10 @@ const Contactus = () => {
                 </div>
               </div>
             </div>
+
+
+
+            
           </div>
         </div>
       </div>
