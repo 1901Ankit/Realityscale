@@ -163,7 +163,7 @@ const Home = () => {
 
   return (
     <>
-      {/* <Loader /> */}
+      <Loader />
       <Mouse />
       <div className="mil-progress-track">
         <div className="mil-progress"></div>
