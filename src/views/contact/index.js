@@ -46,10 +46,10 @@ const Contactus = () => {
     // Register the ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
-    console.log("Effect is running!");
+ 
 
     const appearances = document.querySelectorAll(".mil-up");
-    console.log("Appearances found:", appearances.length);
+   
     appearances.forEach((section) => {
       gsap.fromTo(
         section,
@@ -73,7 +73,7 @@ const Contactus = () => {
     });
 
     const scaleImages = document.querySelectorAll(".mil-scale");
-    console.log("Scale images found:", scaleImages.length);
+
     scaleImages.forEach((section) => {
       const value1 = parseFloat(section.getAttribute("data-value-1"));
       const value2 = parseFloat(section.getAttribute("data-value-2"));
@@ -306,23 +306,23 @@ const Contactus = () => {
               <div className="col-xl-5">
                 <nav className="mil-main-menu" id="">
                   <ul className="unlisted">
-                    <li class="mil-has-children ">
+                    <li className="mil-has-children ">
                       <span className="" onClick={Home}>
                         Home
                       </span>
                     </li>
-                    <li class="mil-has-children ">
+                    <li className="mil-has-children ">
                       <span className="" onClick={Member}>
                         Team
                       </span>
                     </li>
-                    <li class="mil-has-children mil-active">
+                    <li className="mil-has-children mil-active">
                       <span>Contact us</span>
                     </li>
-                    <li class="mil-has-children">
+                    <li className="mil-has-children">
                       <span>Newsletter</span>
                     </li>
-                    <li class="mil-has-children">
+                    <li className="mil-has-children">
                       <span>Other's</span>
                     </li>
                   </ul>
@@ -407,13 +407,13 @@ const Contactus = () => {
         </div>
       </div>
 
-      <div class="mil-content">
-        <div id="swupMain" class="mil-main-transition">
-          <div class="mil-dark-bg">
-            <div class="mil-inner-banner">
-              <div class="mi-invert-fix">
-                <div class="mil-banner-content mil-up">
-                  <div class="mil-animation-frame">
+      <div className="mil-content">
+        <div id="swupMain" className="mil-main-transition">
+          <div className="mil-dark-bg">
+            <div className="mil-inner-banner">
+              <div className="mi-invert-fix">
+                <div className="mil-banner-content mil-up">
+                  <div className="mil-animation-frame">
                     <div
                       className="mil-animation mil-position-1 mil-scale"
                       data-value-1="7"
@@ -433,9 +433,9 @@ const Contactus = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="container">
+                  <div className="container">
                     <ul
-                      class="mil-breadcrumbs mil-light mil-mb-60"
+                      className="mil-breadcrumbs mil-light mil-mb-60"
                       style={{ padding: "0" }}
                     >
                       <li>
@@ -445,13 +445,13 @@ const Contactus = () => {
                         <a href="#">Contact</a>
                       </li>
                     </ul>
-                    <h1 class="mil-muted mil-mb-60">
-                      This is <span class="mil-thin">what</span>
-                      <br /> we do <span class="mil-thin">best</span>
+                    <h1 className="mil-muted mil-mb-60">
+                      This is <span className="mil-thin">what</span>
+                      <br /> we do <span className="mil-thin">best</span>
                     </h1>
                     <a
                       href="#services"
-                      class="mil-link mil-accent mil-arrow-place mil-down-arrow"
+                      className="mil-link mil-accent mil-arrow-place mil-down-arrow"
                     >
                       <span className="text-white">Send Message</span>
                       <ArrowSVG className=" mil-arrow" fill="#000000" />

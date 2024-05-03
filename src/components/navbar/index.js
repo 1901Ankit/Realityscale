@@ -83,22 +83,22 @@ function Navbar() {
               <div className="col-xl-5 mt-5">
                 <nav className="mil-main-menu" id="">
                   <ul className="unlisted">
-                    <li class="mil-has-children mil-active">
+                    <li className="mil-has-children mil-active">
                       <span>HomePage</span>
                     </li>
-                    <li class="mil-has-children">
+                    <li className="mil-has-children">
                       {/* <a href="/team"> */}
                       <span className="" onClick={Member}>
                         Team
                       </span>
                     </li>
-                    <li class="mil-has-children">
+                    <li className="mil-has-children">
                       <span>Services</span>
                     </li>
-                    <li class="mil-has-children">
+                    <li className="mil-has-children">
                       <span>Newsletter</span>
                     </li>
-                    <li class="mil-has-children">
+                    <li className="mil-has-children">
                       <span>Other pages</span>
                     </li>
                   </ul>

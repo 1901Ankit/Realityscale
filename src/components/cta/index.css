@@ -1,216 +1,215 @@
-
 .blacked {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-color: black;
-    background-size: cover;
-  }
-  
-  .overlayed {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .8);
-  }
-  
-  .cta-one__author {
-    box-sizing: border-box;
-    color: rgb(93, 93, 93);
-    display: inline-flex;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    height: 175px;
-    line-height: 28.125px;
-    margin-bottom: 34px;
-    position: relative;
-    text-align: center;
-    text-size-adjust: 100%;
-    unicode-bidi: isolate;
-    visibility: visible;
-    width: 300px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  
-  .cta-one__author--wrap {
-    background-color: rgb(0, 0, 0);
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    box-sizing: border-box;
-    color: rgb(93, 93, 93);
-    display: block;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    height: 175px;
-    line-height: 28.125px;
-    margin-right: -25px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    text-align: center;
-    text-size-adjust: 100%;
-    unicode-bidi: isolate;
-    visibility: visible;
-    width: 175px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  
-  .cta-one__author--wrap>img {
-    box-sizing: border-box;
-    color: rgb(93, 93, 93);
-    display: inline;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    height: 175px;
-    line-height: 28.125px;
-    mix-blend-mode: luminosity;
-    object-fit: cover;
-    overflow-clip-margin: content-box;
-    overflow-x: clip;
-    overflow-y: clip;
-    text-align: center;
-    text-size-adjust: 100%;
-    vertical-align: middle;
-    visibility: visible;
-    width: 175px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  
-  .cta-one__author .cta-one__icon {
-    align-items: center;
-    background-color: #ffd94a;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    box-sizing: border-box;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: flex;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 60px;
-    font-weight: 500;
-    height: 175px;
-    justify-content: center;
-    line-height: 112.5px;
-    margin-left: -25px;
-    position: relative;
-    text-align: center;
-    text-decoration-color: rgb(255, 255, 255);
-    text-decoration-line: none;
-    text-decoration-style: solid;
-    text-decoration-thickness: auto;
-    text-size-adjust: 100%;
-    transform: matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0);
-    transition-behavior: normal;
-    transition-delay: 0s;
-    transition-duration: 0.5s;
-    transition-property: all;
-    transition-timing-function: ease;
-    visibility: visible;
-    width: 175px;
-    z-index: 2;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  
-  .cta-one__author .cta-one__icon span {
-    box-sizing: border-box;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: block;
-    font-family: icomoon;
-    font-size: 60px;
-    font-style: normal;
-    font-variant-alternates: normal;
-    font-variant-caps: normal;
-    font-variant-east-asian: normal;
-    font-variant-ligatures: normal;
-    font-variant-numeric: normal;
-    font-variant-position: normal;
-    font-weight: 400;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    text-size-adjust: 100%;
-    text-transform: none;
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    transition-behavior: normal;
-    transition-delay: 0s;
-    transition-duration: 0.5s;
-    transition-property: all;
-    transition-timing-function: linear;
-    visibility: visible;
-    width: 93px;
-    -webkit-font-smoothing: antialiased;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  
-  .section-title {
-    box-sizing: border-box;
-    color: rgb(93, 93, 93);
-    display: block;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    height: 144px;
-    line-height: 28.125px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    position: relative;
-    text-align: center;
-    text-size-adjust: 100%;
-    unicode-bidi: isolate;
-    visibility: visible;
-    width: 1170px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-color: black;
+  background-size: cover;
+}
+
+.overlayed {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.cta-one__author {
+  box-sizing: border-box;
+  color: rgb(93, 93, 93);
+  display: inline-flex;
+  font-family: "Outfit", sans-serif !important;
+  font-size: 15px;
+  font-weight: 500;
+  height: 175px;
+  line-height: 28.125px;
+  margin-bottom: 34px;
+  position: relative;
+  text-align: center;
+  text-size-adjust: 100%;
+  unicode-bidi: isolate;
+  visibility: visible;
+  width: 300px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.cta-one__author--wrap {
+  background-color: rgb(0, 0, 0);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  box-sizing: border-box;
+  color: rgb(93, 93, 93);
+  display: block;
+  font-family:  "Outfit", sans-serif !important;
+  font-size: 15px;
+  font-weight: 500;
+  height: 175px;
+  line-height: 28.125px;
+  margin-right: -25px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: center;
+  text-size-adjust: 100%;
+  unicode-bidi: isolate;
+  visibility: visible;
+  width: 175px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.cta-one__author--wrap>img {
+  box-sizing: border-box;
+  color: rgb(93, 93, 93);
+  display: inline;
+  font-family:  "Outfit", sans-serif !important;
+  font-size: 15px;
+  font-weight: 500;
+  height: 175px;
+  line-height: 28.125px;
+  mix-blend-mode: luminosity;
+  object-fit: cover;
+  overflow-clip-margin: content-box;
+  overflow-x: clip;
+  overflow-y: clip;
+  text-align: center;
+  text-size-adjust: 100%;
+  vertical-align: middle;
+  visibility: visible;
+  width: 175px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.cta-one__author .cta-one__icon {
+  align-items: center;
+  background-color: #ffd94a;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: flex;
+  font-family:  "Outfit", sans-serif !important;
+  font-size: 60px;
+  font-weight: 500;
+  height: 175px;
+  justify-content: center;
+  line-height: 112.5px;
+  margin-left: -25px;
+  position: relative;
+  text-align: center;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-size-adjust: 100%;
+  transform: matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0);
+  transition-behavior: normal;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: ease;
+  visibility: visible;
+  width: 175px;
+  z-index: 2;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.cta-one__author .cta-one__icon span {
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: block;
+  font-family:  "Outfit", sans-serif !important;
+  font-size: 60px;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-weight: 400;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  text-size-adjust: 100%;
+  text-transform: none;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition-behavior: normal;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: linear;
+  visibility: visible;
+  width: 93px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.section-title {
+  box-sizing: border-box;
+  color: rgb(93, 93, 93);
+  display: block;
+  font-family:  "Outfit", sans-serif !important;
+  font-size: 15px;
+  font-weight: 500;
+  height: 144px;
+  line-height: 28.125px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  position: relative;
+  text-align: center;
+  text-size-adjust: 100%;
+  unicode-bidi: isolate;
+  visibility: visible;
+  width: 1170px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.cta-one .section-title__title {
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  display: block;
+  font-family:  "Outfit", sans-serif !important;
+  font-size: 50px;
+  font-weight: 800;
+  height: 144px;
+  letter-spacing: -2.4px;
+  line-height: 72px;
+  margin-block-end: 0px;
+}
+
+@media (max-width: 767px) {
   .cta-one .section-title__title {
     box-sizing: border-box;
     color: rgb(255, 255, 255);
     display: block;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 50px;
+    font-family:  "Outfit", sans-serif !important;
+    font-size: 30px;
     font-weight: 800;
-    height: 144px;
-    letter-spacing: -2.4px;
-    line-height: 72px;
+    height: 120px;
+    letter-spacing: -1px;
+    line-height: 40px;
     margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin-bottom: 0px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    text-align: center;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    visibility: visible;
+    width: 360.4px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
   }
-  
-  @media (max-width: 767px) {
-    .cta-one .section-title__title {
-      box-sizing: border-box;
-      color: rgb(255, 255, 255);
-      display: block;
-      font-family: "Plus Jakarta Sans", sans-serif;
-      font-size: 30px;
-      font-weight: 800;
-      height: 120px;
-      letter-spacing: -1px;
-      line-height: 40px;
-      margin-block-end: 0px;
-      margin-block-start: 0px;
-      margin-bottom: 0px;
-      margin-inline-end: 0px;
-      margin-inline-start: 0px;
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-top: 0px;
-      text-align: center;
-      text-size-adjust: 100%;
-      unicode-bidi: isolate;
-      visibility: visible;
-      width: 360.4px;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-    }
-  
-    ;
-  }
+
+  ;
+}

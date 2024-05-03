@@ -1,9 +1,9 @@
-import backgroundImage from "../images/landing/1.9f88f939.webp";
-import backgroundImage1 from "../images/gamecollection/2.082ca6f8.webp";
-// import backgroundImage2 from "../images/gamecollection/3.3c69c9c1.webp";
-import backgroundImage3 from "../images/gamecollection/4.2765c400.webp";
-// import backgroundImage4 from "../images/gamecollection/6.0a2a5eec.webp";
-import backgroundImage5 from "../images/gamecollection/5.a8fd040e.webp";
+import backgroundImage1 from "../images/Products/ai-integration.webp";
+import backgroundImage2 from "../images/Products/automotive-solutions.webp";
+import backgroundImage3 from "../images/Products/web3-frontier.webp";
+import backgroundImage4 from "../images/Products/real-estate-solutions.webp";
+import backgroundImage5 from "../images/Products/xr-immersion.webp";
+import backgroundImage6 from "../images/Products/reality-scale-framework.webp";
 
 let data = {
   footerLinks: [
@@ -55,22 +55,36 @@ let data = {
   ],
   gameData: [
     {
-      image: backgroundImage,
-      heading: "Thunder and City",
+      image: backgroundImage1,
+      heading: "AI Integration",
+      subHeading: "",
     },
     {
-      image: backgroundImage1,
-      heading: "Thunder and City",
+      image: backgroundImage2,
+      heading: "Automotive Solutions",
+      subHeading: "",
     },
 
     {
       image: backgroundImage3,
-      heading: "Thunder and City",
+      heading: "Web3 Frontier ",
+      subHeading: "",
     },
 
     {
+      image: backgroundImage4,
+      heading: "Real Estate Solutions ",
+      subHeading: "",
+    },
+    {
       image: backgroundImage5,
-      heading: "Thunder and City",
+      heading: "XR Immersion",
+      subHeading: "",
+    },
+    {
+      image: backgroundImage6,
+      heading: "Reality Scale Framework ",
+      subHeading: "",
     },
   ],
   blogPosts: [

@@ -5,15 +5,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Uniq_production from "../../components/uniq_prodution";
 import unique from "../../assests/data/unique";
+import ArrowSVG from "../../components/arrow";
 const Business = () => {
   function setupAnimations() {
     // Register the ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
-    console.log("Effect is running!");
-
     const appearances = document.querySelectorAll(".mil-up");
-    console.log("Appearances found:", appearances.length);
+
     appearances.forEach((section) => {
       gsap.fromTo(
         section,
@@ -37,7 +36,7 @@ const Business = () => {
     });
 
     const scaleImages = document.querySelectorAll(".mil-scale");
-    console.log("Scale images found:", scaleImages.length);
+
     scaleImages.forEach((section) => {
       const value1 = parseFloat(section.getAttribute("data-value-1"));
       const value2 = parseFloat(section.getAttribute("data-value-2"));
@@ -218,26 +217,28 @@ const Business = () => {
               </h2>
               <div className="mil-services-button mil-button mil-arrow-place">
                 <span>What we do</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="mil-arrow"
-                >
-                  <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"></path>
-                </svg>
+                <ArrowSVG className="mil-arrow" />
               </div>
             </div>
           </div>
           <div className="row mil-services-grid m-0">
-            {data.map((val) => (
-              <div className="col-md-6 col-lg-3 mil-services-grid-item p-0">
-                <Uniq_production
-                  head={val.head}
-                  para={val.para}
-                  img={val.img}
-                />
-              </div>
-            ))}
+            {data.map(
+              (
+                val,
+                index 
+              ) => (
+                <div
+                  key={index}
+                  className="col-md-6 col-lg-3 mil-services-grid-item p-0"
+                >
+                  <Uniq_production
+                    head={val.head}
+                    para={val.para}
+                    img={val.img}
+                  />
+                </div>
+              )
+            )}
           </div>
         </div>
       </div>

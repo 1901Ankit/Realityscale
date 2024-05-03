@@ -27,7 +27,7 @@ const Game = ({ image, heading, subHeading, price }) => {
         className="d-overlay"
         style={{
           backgroundImage: `url(${image})`,
-          height: phoneMatches ? 200 : 350,
+          height: phoneMatches ? 200 : 200,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -65,13 +65,14 @@ const Game = ({ image, heading, subHeading, price }) => {
               {heading}
             </Typography>
             <Stack direction={"row"} alignItems={"center"} spacing={1}>
-              <Typography>{subHeading}</Typography>
+              <Typography
+                sx={{ fontSize: 20, fontWeight: 600 }}
+                className="d-text"
+              >
+                {subHeading}
+              </Typography>
               <Box
                 sx={{
-                  // backgroundColor: "#6A79FA",
-                  // p: 0,
-                  // borderRadius: 2,
-                  // fontWeight: 600,
                   display: isButtonVisible ? "block" : "none",
                   transform: isButtonVisible
                     ? "translateY(0)"

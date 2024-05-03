@@ -106,8 +106,8 @@ const Footer = () => {
         <div className="container mil-p-120-60">
           <div className="row justify-content-between">
             <div className="col-md-4 col-lg-4 mil-mb-60">
-              <div class="main-footer__about">
-                <p class="footer-widget__text">Let’s start working together</p>
+              <div className="main-footer__about">
+                <p className="footer-widget__text">Let’s start working together</p>
                 <a href="#">help@company.com</a>
               </div>
               <div className="mil-muted mil-logo mil-up mil-mb-30 mt-4 ">

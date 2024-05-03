@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./index.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -163,7 +163,7 @@ const Home = () => {
 
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
       <Mouse />
       <div className="mil-progress-track">
         <div className="mil-progress"></div>
@@ -184,23 +184,23 @@ const Home = () => {
               <div className="col-xl-5 mt-5">
                 <nav className="mil-main-menu" id="">
                   <ul className="unlisted">
-                    <li class="mil-has-children mil-active">
+                    <li className="mil-has-children mil-active">
                       <span>Home</span>
                     </li>
-                    <li class="mil-has-children">
+                    <li className="mil-has-children">
                       <span className="" onClick={Member}>
                         Team
                       </span>
                     </li>
-                    <li class="mil-has-children">
+                    <li className="mil-has-children">
                       <span className="" onClick={Contactus}>
                         Contact us
                       </span>
                     </li>
-                    <li class="mil-has-children">
+                    <li className="mil-has-children">
                       <span>Newsletter</span>
                     </li>
-                    <li class="mil-has-children">
+                    <li className="mil-has-children">
                       <span>Other's</span>
                     </li>
                   </ul>
@@ -345,17 +345,90 @@ const Home = () => {
 
           <div className="mil-gradient"></div>
 
-          <div className="container">
+          <div className="container ">
             <div
               className=" mil-up"
               style={{
                 opacity: 1,
               }}
             >
-              <div className="row align-items-center d-flex justify-content-center mb-5">
-                <div className="" style={{ position: "absolute" }}>
+              <div className="systemvideo">
+                <div className="row align-items-center d-flex justify-content-center mb-5 ">
+                  <div className="" style={{ position: "absolute" }}>
+                    <div className="col-md-7 col-lg-6">
+                      <h1 className="mil-mutede mil-mb-30">
+                        Your{" "}
+                        <span
+                          className="mil-thin"
+                          style={{ fontWeight: "100px" }}
+                        >
+                          Digital
+                        </span>
+                        <br /> Innovation{" "}
+                        <span className="mil-thin">Partner</span>
+                      </h1>
+
+                      <p className="mil-light-soft mil-mb-60 text-white">
+                        We craft solutions that elevate your business
+                        <br />
+                        interactions and customer engagements
+                        <br /> to new realities
+                      </p>
+                      <a
+                        href="/contact"
+                        className="mil-button mil-arrow-place mil-btn-space"
+                      >
+                        <span> Contact Us</span>
+                        <ArrowSVG className="mil-arrow" fill="#000000" />
+                      </a>
+                      <a
+                        href="#"
+                        className="mil-link mil-muted mil-arrow-place"
+                      >
+                        <span>What we do</span>
+                        <ArrowSVG className="mil-arrow" fill="#000000" />
+                      </a>
+                    </div>
+                  </div>
+
                   <div className="col-md-7 col-lg-6">
-                    <h1 className="mil-mutede mil-mb-30">
+                    <div className="jiskaksia">
+                      <video
+                        autoPlay
+                        playsInline
+                        loop
+                        muted
+                        className="video"
+                        style={{ pointerEvents: "none" }}
+                      >
+                        <source src={video} type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mobilevideo">
+                <div className="row ">
+                  <div className="col-md-6 col-lg-6">
+                    <div className="">
+                      <video
+                        autoPlay
+                        playsInline
+                        loop
+                        muted
+                        className="video"
+                        style={{ pointerEvents: "none" }}
+                      >
+                        <source src={video} type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                  <div
+                    className="col-md-6  col-lg-6"
+                    style={{ marginTop: "35px" }}
+                  >
+                    <h1 className="mil-mutede">
                       Your{" "}
                       <span
                         className="mil-thin"
@@ -367,7 +440,10 @@ const Home = () => {
                       <span className="mil-thin">Our Innovation</span>
                     </h1>
 
-                    <p className="mil-light-soft mil-mb-60 text-white">
+                    <p
+                      className="mil-light-soft mil-mb-30 text-white"
+                      style={{ fontSize: "12px" }}
+                    >
                       Welcome to our world of endless imagination and boundless
                       creativity. Together, let's embark on a remarkable journey
                       where dreams become tangible realities.
@@ -385,45 +461,8 @@ const Home = () => {
                     </a>
                   </div>
                 </div>
-
-                <div className="col-md-7 col-lg-6">
-                  <div className="jiskaksia">
-                    <video
-                      autoPlay
-                      playsInline
-                      loop
-                      muted
-                      className="video"
-                      style={{ pointerEvents: "none" }}
-                    >
-                      <source src={video} type="video/mp4" />
-                    </video>
-                  </div>
-                </div>
               </div>
-              {/* <a
-                href="/contactus"
-                className="mil-button mil-arrow-place mil-btn-space"
-              >
-                <span> Contact Us</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="mil-arrow"
-                >
-                  <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"></path>
-                </svg>
-              </a>
-              <a href="#" className="mil-link mil-muted mil-arrow-place">
-                <span>What we do</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="mil-arrow"
-                >
-                  <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"></path>
-                </svg>
-              </a> */}
+
               <div className="mil-circle-text ">
                 <svg
                   version="1.1"
@@ -479,31 +518,29 @@ const Home = () => {
 
       <div className="contactus_parallax">
         <div className="paralaxoverlay">
-          <Container sx={{ p: { lg: 10, xs: 5 }, paddingBottom: 15 }}>
+          <Container sx={{ p: { lg: 5, xs: 5 }, paddingBottom: 15 }}>
             <div>
-              <p className="keyfetR text-center">OUR WORK SHOWCASE</p>
-              <p className="keyfet text-center"> Every Our Best</p>
+              <p className="keyfetR text-center">LET REALITY SCALE HELP YOU</p>
+              <p className="keyfet text-center"> TRANSFORM</p>
+              <p className="keyfetE text-center">
+                {" "}
+                how you showcase your products and engage with your customers!
+              </p>
             </div>
-            <Grid container spacing={{ lg: 5, xs: 2 }} marginTop={0}>
+            <Grid
+              container
+              spacing={{ lg: 5, xs: 2 }}
+              marginTop={0}
+              marginBottom={4}
+              className="mt-2"
+            >
               {data.gameData.map((val, i) => (
-                <Grid item lg={3} xs={12} key={i}>
+                <Grid item lg={4} xs={12} key={i}>
                   <Game
                     image={val.image}
                     heading={val.heading}
-                    // subHeading={val.subHeading}
+                    subHeading={val.subHeading}
                     price={val.price}
-                  />
-                </Grid>
-              ))}
-            </Grid>
-            <Grid container spacing={{ lg: 5, xs: 2 }} marginTop={0}>
-              {data.gameData.map((val, i) => (
-                <Grid item lg={3} xs={12} key={i}>
-                  <Game
-                    image={val.image}
-                    heading={val.heading}
-                    // subHeading={val.subHeading}
-                    // price={val.price}
                   />
                 </Grid>
               ))}

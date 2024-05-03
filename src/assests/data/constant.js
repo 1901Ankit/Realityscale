@@ -1,30 +1,40 @@
 let description = {
   heading1: "Cloud-Native Platform",
   Subheading1: "Limitless Reach, Unmatched Agility",
-  message1:
-    "a. Seamlessly access and showcase your products from anywhere, on any device.",
+  span1: "Global Accessibility :",
+  message1: "Access products from anywhere, enhancing convenience.",
+  subspan1: "Scalability and Flexibility :",
   submessage1:
-    "b. Scale your business effortlessly with cloud-based technology that adapts with you.",
+    "Quickly adapt to market changes without additional infrastructure.",
+
   heading2: "Reality Modeling",
   Subheading2: "See Your Vision in Stunning Detail",
-  message2:
-    "a.Transform blueprints and ideas into breathtaking, photorealistic 3D experiences.",
-  submessage2:
-    "b.Explore products and spaces in ways impossible in the physical world, enhancing engagement and understanding.",
+  span2: "Enhanced Customer Engagement :",
+  message2: "Captivate audiences with photorealistic 3D visualizations.",
+  subspan2: "Improved Product Understanding :",
+  submessage2: "Explore products in detail beyond physical limitations.",
 
   heading3: "Business Accelerator",
-  Subheading3: "Virtualize, Optimize, Thrive",
+  Subheading3: "Enhance Efficiency, Maximize Impact",
+  span3: "Efficient Operations :",
   message3:
-    "a. Immerse customers in interactive sales presentations and training simulations remotely.",
-  submessage3:
-    "b.Leverage custom analytics to make data-driven decisions that refine your marketing and sales strategies.",
+    "Streamline sales and marketing with impactful remote presentations.",
+  subspan3: "Strategic Insights:",
+  submessage3: "Utilize analytics to refine strategies and boost ROI.",
   heading4: "Adaptive AI",
   Subheading4: " Intelligent Interactions, Personalized Experiences",
-  message4:
-    "a. Let our AI-powered sales assistant guide potential customers 24/7, showcasing your products with expertise.",
+  span4: "24/7 Customer Assistance :",
+  message4: "Offer constant AI-powered customer support.",
+  subspan4: "Tailored Customer Interactions :",
   submessage4:
-    "b.Customize AI interactions to meet the specific needs of your customers and the unique demands of your industry.",
+    "Personalize experiences to enhance satisfaction and conversions.",
+  heading5: "Content Creation Suite",
+  Subheading5: " Craft Compelling Experiences",
+  span5: "Streamlined Content Production :",
+  message5: "Simplify digital content creation to save time and costs.",
+  subspan5: "Marketing Autonomy :",
+  submessage5:
+    "Quickly update marketing materials in-house, keeping campaigns effective and relevant.",
 };
 
-
-export default { description};
+export default { description };

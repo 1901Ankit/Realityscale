@@ -3,101 +3,97 @@ import "./index.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./index.css";
-import image1 from "../../assests/images/landing/door.jpg";
+import image1 from "../../assests/images/Welcome to Reality Scale/Welcome_to_Reality_Scale.webp";
 const About = () => {
   function setupAnimations() {
     // Register the ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
-    console.log("Effect is running!");
-
     const appearances = document.querySelectorAll(".mil-up");
-    console.log("Appearances found:", appearances.length);
+
     appearances.forEach((section) => {
-        gsap.fromTo(
-            section,
-            {
-                opacity: 0,
-                y: 40,
-                scale: 0.98,
-            },
-            {
-                y: 0,
-                opacity: 1,
-                scale: 1,
-                duration: 0.4,
-                ease: "sine",
-                scrollTrigger: {
-                    trigger: section,
-                    toggleActions: "play none none reverse",
-                },
-            }
-        );
+      gsap.fromTo(
+        section,
+        {
+          opacity: 0,
+          y: 40,
+          scale: 0.98,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.4,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
     });
 
     const scaleImages = document.querySelectorAll(".mil-scale");
-    console.log("Scale images found:", scaleImages.length);
+
     scaleImages.forEach((section) => {
-        const value1 = parseFloat(section.getAttribute("data-value-1"));
-        const value2 = parseFloat(section.getAttribute("data-value-2"));
-        gsap.fromTo(
-            section,
-            {
-                scale: value1,
-            },
-            {
-                scale: value2,
-                ease: "sine",
-                scrollTrigger: {
-                    trigger: section,
-                    scrub: true,
-                    toggleActions: "play none none reverse",
-                },
-            }
-        );
+      const value1 = parseFloat(section.getAttribute("data-value-1"));
+      const value2 = parseFloat(section.getAttribute("data-value-2"));
+      gsap.fromTo(
+        section,
+        {
+          scale: value1,
+        },
+        {
+          scale: value2,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            scrub: true,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
     });
 
     if (window.innerWidth > 960) {
-        const parallaxImages = document.querySelectorAll(".mil-parallax");
-        parallaxImages.forEach((section) => {
-            const value1 = parseFloat(section.getAttribute("data-value-1"));
-            const value2 = parseFloat(section.getAttribute("data-value-2"));
-            gsap.fromTo(
-                section,
-                {
-                    y: value1,
-                },
-                {
-                    y: value2,
-                    ease: "sine",
-                    scrollTrigger: {
-                        trigger: section,
-                        scrub: true,
-                        toggleActions: "play none none reverse",
-                    },
-                }
-            );
-        });
+      const parallaxImages = document.querySelectorAll(".mil-parallax");
+      parallaxImages.forEach((section) => {
+        const value1 = parseFloat(section.getAttribute("data-value-1"));
+        const value2 = parseFloat(section.getAttribute("data-value-2"));
+        gsap.fromTo(
+          section,
+          {
+            y: value1,
+          },
+          {
+            y: value2,
+            ease: "sine",
+            scrollTrigger: {
+              trigger: section,
+              scrub: true,
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      });
 
-        const rotateSections = document.querySelectorAll(".mil-rotate");
-        rotateSections.forEach((section) => {
-            const value = parseFloat(section.getAttribute("data-value"));
-            gsap.to(section, {
-                rotation: value,
-                ease: "sine",
-                scrollTrigger: {
-                    trigger: section,
-                    scrub: true,
-                    toggleActions: "play none none reverse",
-                },
-            });
+      const rotateSections = document.querySelectorAll(".mil-rotate");
+      rotateSections.forEach((section) => {
+        const value = parseFloat(section.getAttribute("data-value"));
+        gsap.to(section, {
+          rotation: value,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            scrub: true,
+            toggleActions: "play none none reverse",
+          },
         });
+      });
     }
-}
+  }
 
-window.addEventListener("load", setupAnimations);
-
-
+  window.addEventListener("load", setupAnimations);
 
   return (
     <section id="about">
@@ -105,29 +101,44 @@ window.addEventListener("load", setupAnimations);
         <div className="row justify-content-between align-items-center">
           <div className="col-lg-6 col-xl-5">
             <div className="mil-mb-90">
-              <h2 className="mil-up mil-mb-60">
-                Discover <br />
-                Our <span className="mil-thin">Studio</span>
-              </h2>
-              <p className="mil-up mil-mb-30">
-                At our design studio, we are a collective of talented
-                individuals ignited by our unwavering passion for transforming
-                ideas into reality. With a harmonious blend of diverse
-                backgrounds and a vast array of skill sets, we join forces to
-                create compelling solutions for our esteemed clients.
+              <h2 className="mil-up mil-mb-30">
+                Welcome <br />
+                to <span className="mil-thin" style={{fontWeight:"100"}}>Reality Scale</span>
+              </h2>{" "}
+              <p className="">
+                Where Innovation Bridges the Digital and Physical Realms.
               </p>
-
+              <p className="mil-up mil-mb-10">
+                <span className=" fw-bold">At Reality Scale,</span>
+                <span className="mx-1">
+                  we are driven by a vision to revolutionize digital
+                  presentations across industries. Our studio is at the
+                  forefront of creating interactive experiences that not only
+                  captivate but also seamlessly integrate with practical
+                  business applications.
+                </span>
+              </p>
+              <p className="mil-up mil-mb-10">
+                <span className=" fw-bold">Innovation is Our Passion:</span>
+                <span className="mx-1">
+                  it's the core of our mission. By continuously pushing the
+                  boundaries of immersive technology, we provide businesses with
+                  unique tools to enhance customer interaction.
+                </span>
+              </p>
               <p className="mil-up mil-mb-60">
-                Collaboration is at the heart of what we do. Our team thrives on
-                the synergy that arises when unique perspectives converge,
-                fostering an environment of boundless creativity. By harnessing
-                our collective expertise, we produce extraordinary results that
-                consistently surpass expectations.
-              </p>
+                <span className=" fw-bold">Visualize the Future:</span>
 
+                <span className="mx-1">
+                  Imagine a world where digital interactions rival the depth and
+                  detail of the real world. Reality Scale makes it a reality,
+                  offering a suite of tools that bring unprecedented realism and
+                  interactivity to your digital products.
+                </span>
+              </p>
               <div className="mil-about-quote">
                 <div className="mil-avatar mil-up">
-                  <img src={image1}alt="Founder" />
+                  <img src={image1} alt="Founder" />
                 </div>
                 <h6 className="mil-quote mil-up">
                   Passionately Creating{" "}

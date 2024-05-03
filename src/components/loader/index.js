@@ -1,15 +1,55 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import "./index.css";
+import videoed from "../../assests/video/Realityloop.mp4";
 
 const Loader = () => {
+  const [showVideo, setShowVideo] = useState(true);
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     window.scrollTo(0, 0);
+    const loaderTimeout = setTimeout(() => {
+      setShowVideo(false);
+      startLoaderAnimation();
+    }, 4000);
+    return () => {
+      clearTimeout(loaderTimeout);
+    };
+  }, []);
+
+  useEffect(() => {
+    const video = document.querySelector(".videoed");
+    const fadeDuration = 5;
+
+    video.addEventListener("timeupdate", handleTimeUpdate);
+
+    function handleTimeUpdate() {
+      const videoDuration = video.duration;
+      const currentTime = video.currentTime;
+      const fadeTimeThreshold = 3;
+      if (videoDuration - currentTime <= fadeTimeThreshold) {
+        const opacity =
+          (fadeTimeThreshold - (videoDuration - currentTime)) /
+          fadeTimeThreshold;
+        gsap.to(video, {
+          opacity: opacity,
+          duration: fadeDuration,
+          ease: "power1.inOut",
+        });
+      }
+    }
+
+    return () => {
+      video.removeEventListener("timeupdate", handleTimeUpdate);
+    };
+  }, []);
+  const startLoaderAnimation = () => {
     const timeline = gsap.timeline();
     timeline.to(".mil-preloader-animation", {
       opacity: 1,
     });
+
     timeline.fromTo(
       ".mil-animation-1 .mil-h3",
       {
@@ -22,6 +62,7 @@ const Loader = () => {
         stagger: 0.4,
       }
     );
+
     timeline.to(
       ".mil-animation-1 .mil-h3",
       {
@@ -106,23 +147,44 @@ const Loader = () => {
       },
       "-=1"
     );
-  }, []);
+  };
+
   return (
-    <div className="mil-preloader">
-      <div className="mil-preloader-animation">
-        <div className="mil-pos-abs mil-animation-1">
-          <p className="mil-h3 mil-muted mil-thin text-white">Create</p>
-          <p className="mil-h3 mil-muted text-white">Your</p>
-          <p className="mil-h3 mil-muted mil-thin text-white">Reality</p>
-        </div>
-        <div className="mil-pos-abs mil-animation-2">
-          <div className="mil-reveal-frame">
-            <p className="mil-reveal-box"></p>
-            <p className="mil-h3 mil-muted mil-thin text-white  reltiy">realityscale.com</p>
+    <>
+      <div className="mil-preloader">
+        {showVideo && (
+          <video
+            autoPlay
+            playsInline
+            loop
+            muted
+            className="videoed"
+            style={{ pointerEvents: "none" }}
+          >
+            <source src={videoed} type="video/mp4" />
+          </video>
+        )}
+
+        <div
+          className={`mil-preloader-animation ${!showVideo ? "visible" : ""}`}
+        >
+          <div className="mil-pos-abs mil-animation-1">
+            <p className="mil-h3 mil-muted mil-thin text-white">Create</p>
+            <p className="mil-h3 mil-muted text-white">Your</p>
+            <p className="mil-h3 mil-muted mil-thin text-white">Reality</p>
+          </div>
+          <div className="mil-pos-abs mil-animation-2">
+            <div className="mil-reveal-frame">
+              <p className="mil-reveal-box"></p>
+              <p className="mil-h3 mil-muted mil-thin text-white reltiy">
+                realityscale.com
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
+
 export default Loader;

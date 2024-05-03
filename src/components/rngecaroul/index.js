@@ -8,7 +8,7 @@ import {
   StepLabel,
   Stepper,
 } from "@mui/material";
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import Component from "../displayComponent/component";
 import Fourth from "../displayComponent/fourth";
@@ -49,7 +49,6 @@ const Range = () => {
       label: "STREAMLINED MARKETING",
     },
   ];
-  
 
   const handleSliderChange = (event, newValue) => {
     setActiveStep(newValue);
@@ -57,89 +56,88 @@ const Range = () => {
 
   return (
     <div className=" mil-dark-bg pb-5">
-    <div className="mi-invert-fix">
-      <div>
-        <p className="keyfetR text-center pt-5">OUR USP</p>
-        <p className="keyfet text-center"> Every Detail Counts</p>
-      </div>
-      <div className="container" style={{ maxWidth: 1080 }}>
-        <Stepper
-          activeStep={activeStep}
-          alternativeLabel
-          style={{
-            position: "relative",
-            borderBottom: "none",
-            boxShadow: "none",
-          }} // Remove the bottom border
-        >
-          {componentLabel.map((component, index) => (
-            <Step
-              key={index}
-              sx={{
-                "& .MuiStepConnector-line": {
-                  border: "none",
-                },
-                " & .MuiStepLabel-iconContainer": {
-                  display: "none",
-                },
-                "& .MuiStepLabel-label": {
-                  color: "#fff ",
-                  fontSize: 11,
-                },
-                "& .MuiStepLabel-label.Mui-active": {
-                  color: "#fff ",
-                },
-                "& .MuiStepLabel-label.Mui-completed": {
-                  color: "#fff ",
-                },
-                "&": {
-                  top: "55px",
-                },
-              }}
-            >
-              <StepLabel>{component.label}</StepLabel>
-            </Step>
-          ))}
-        </Stepper>
+      <div className="mi-invert-fix">
+        <div>
+          <h1 className="keyfetR text-center pt-5">OUR USP</h1>
+          <h1 className="keyfet text-center"> Every Detail Counts</h1>
+        </div>
+        <div className="container" style={{ maxWidth: 1080 }}>
+          <Stepper
+            activeStep={activeStep}
+            alternativeLabel
+            style={{
+              position: "relative",
+              borderBottom: "none",
+              boxShadow: "none",
+            }} // Remove the bottom border
+          >
+            {componentLabel.map((component, index) => (
+              <Step
+                key={index}
+                sx={{
+                  "& .MuiStepConnector-line": {
+                    border: "none",
+                  },
+                  " & .MuiStepLabel-iconContainer": {
+                    display: "none",
+                  },
+                  "& .MuiStepLabel-label": {
+                    color: "#fff ",
+                    fontSize: 11,
+                  },
+                  "& .MuiStepLabel-label.Mui-active": {
+                    color: "#fff ",
+                  },
+                  "& .MuiStepLabel-label.Mui-completed": {
+                    color: "#fff ",
+                  },
+                  "&": {
+                    top: "55px",
+                  },
+                }}
+              >
+                <StepLabel>{component.label}</StepLabel>
+              </Step>
+            ))}
+          </Stepper>
 
-        {/* <IconButton onClick={handlePrev}>
+          {/* <IconButton onClick={handlePrev}>
           <FaChevronLeft/>
         </IconButton> */}
 
-        <Slider
-          value={activeStep}
-          onChange={handleSliderChange}
-          min={0}
-          max={components.length - 1}
-          step={1}
-          marks
-          aria-labelledby="slider-label"
-          sx={{
-            "&.MuiSlider-root": {
-              color: "#fff",
-              left: "80px",
-              width: "87%",
-            },
-            "& .MuiSlider-thumb": {
-              display: "none",
-            },
-          }}
-        />
+          <Slider
+            value={activeStep}
+            onChange={handleSliderChange}
+            min={0}
+            max={components.length - 1}
+            step={1}
+            marks
+            aria-labelledby="slider-label"
+            sx={{
+              "&.MuiSlider-root": {
+                color: "#fff",
+                left: "80px",
+                width: "87%",
+              },
+              "& .MuiSlider-thumb": {
+                display: "none",
+              },
+            }}
+          />
 
-        <Stack direction={"row"} alignItems={"center"} spacing={0} mt={5}>
-          <IconButton onClick={handlePrev}>
-            <FaChevronLeft color="#fff" />
-          </IconButton>
-          <div className="container">
-
-          <div className="text-start">{components[activeStep]}</div>
-          </div>
-          <IconButton onClick={handleNext}>
-            <FaChevronRight color="#fff" />
-          </IconButton>
-        </Stack>
+          <Stack direction={"row"} alignItems={"center"} spacing={0} mt={5}>
+            <IconButton onClick={handlePrev}>
+              <FaChevronLeft color="#fff" />
+            </IconButton>
+            <div className="container">
+              <div className="text-start">{components[activeStep]}</div>
+            </div>
+            <IconButton onClick={handleNext}>
+              <FaChevronRight color="#fff" />
+            </IconButton>
+          </Stack>
+        </div>
       </div>
-    </div>
     </div>
   );
 };

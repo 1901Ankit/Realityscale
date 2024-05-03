@@ -50,7 +50,7 @@
 }
 
 .ourcors {
-  font-family: Sora, sans-serif;
+font-family:  "Outfit", sans-serif !important;
   display: inline-block;
   padding-bottom: 10px;
   color: #000;
@@ -62,7 +62,7 @@
 }
 
 .mil-suptitle {
-  font-family: Sora, sans-serif;
+font-family:  "Outfit", sans-serif !important;
   display: inline-block;
   padding-bottom: 10px;
   color: #000;

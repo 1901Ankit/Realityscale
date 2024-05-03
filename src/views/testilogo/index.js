@@ -1,18 +1,9 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-import image1 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import image2 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import image3 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import image5 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import image4 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import image6 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import image7 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import image8 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import image9 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import image10 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import image11 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import image12 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import image13 from"../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
+import image1 from "../../assests/images/brand/mahindra.png";
+import image2 from "../../assests/images/brand/renault.png";
+import image3 from "../../assests/images/brand/honda.png";
+import image4 from "../../assests/images/brand/mahindra.png";
 import "./index.css";
 
 const Testilogo = () => {
@@ -47,59 +38,25 @@ const Testilogo = () => {
     {
       img: image4,
     },
-    {
-      img: image5,
-    },
-    {
-      img: image6,
-    },
-    {
-      img: image7,
-    },
-    {
-      img: image8,
-    },
-    {
-      img: image9,
-    },
-    {
-      img: image10,
-    },
-    {
-      img: image11,
-    },
-    {
-      img: image12,
-    },
-    {
-      img: image13,
-    },
   ];
   return (
-
-      <div className="mil-softer-bg">
-        <div className="container p-5 logoclient">
-          <div className="row ">
-            {/* <div className="col-sm-12 text-center">
-              <h5>Our Clients</h5>
-            </div> */}
-          </div>
-          <Carousel
-            responsive={responsive}
-            arrows={false}
-            className="text-center"
-            showDots={false}
-            autoPlay={true}
-            autoPlaySpeed={2000}
-            infinite={true}
-          >
-            {images.map((val) => (
-              <img src={val.img} alt="" height={100} />
-            ))}
-          </Carousel>
-        </div>
+    <div className="mil-softer-bg">
+      <div className="container p-5 logoclient">
+        <Carousel
+          responsive={responsive}
+          arrows={false}
+          className="text-center"
+          showDots={false}
+          autoPlay={true}
+          autoPlaySpeed={2000}
+          infinite={true}
+        >
+          {images.map((val, index) => (
+            <img key={index} src={val.img} alt="" height={100} />
+          ))}
+        </Carousel>
       </div>
-
+    </div>
   );
 };
 

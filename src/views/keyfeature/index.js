@@ -1,9 +1,10 @@
 import React from "react";
 import "./index.css";
-import image1 from "../../assests/images/landing/door.jpg";
-import image2 from "../../assests/images/landing/plane.jpg";
-import image3 from "../../assests/images/landing/cube.jpg";
-import image4 from "../../assests/images/landing/proche.jpg";
+import image1 from "../../assests/images/Features/cloud.webp";
+import image2 from "../../assests/images/Features/realit.webp";
+import image3 from "../../assests/images/Features/business.webp";
+import image4 from "../../assests/images/Features/adaptive.webp";
+import image5 from "../../assests/images/Features/adaptive.webp";
 import description from "../../assests/data/constant";
 const Keyfeature = () => {
   const showSlider = () => {
@@ -47,10 +48,16 @@ const Keyfeature = () => {
                     {description.description.Subheading1}
                   </div>
                   <div className="des mt-3">
+                    <span className="fw-bold mx-1">
+                      {description.description.span1}
+                    </span>
                     {description.description.message1}{" "}
                   </div>
                   <br />
                   <div className="des">
+                    <span className="fw-bold mx-1">
+                      {description.description.subspan1}
+                    </span>
                     {description.description.submessage1}
                   </div>
                 </div>
@@ -68,10 +75,16 @@ const Keyfeature = () => {
                     {description.description.Subheading2}
                   </div>
                   <div className="des mt-3">
+                    <span className="fw-bold mx-1">
+                      {description.description.span2}
+                    </span>
                     {description.description.message2}{" "}
                   </div>
                   <br />
                   <div className="des">
+                    <span className="fw-bold mx-1">
+                      {description.description.subspan2}
+                    </span>
                     {description.description.submessage2}
                   </div>
                 </div>
@@ -89,10 +102,16 @@ const Keyfeature = () => {
                     {description.description.Subheading3}
                   </div>
                   <div className="des mt-3">
+                    <span className="fw-bold mx-1">
+                      {description.description.span3}
+                    </span>
                     {description.description.message3}{" "}
                   </div>
                   <br />
                   <div className="des">
+                    <span className="fw-bold mx-1">
+                      {description.description.subspan3}
+                    </span>
                     {description.description.submessage3}
                   </div>
                 </div>
@@ -110,11 +129,44 @@ const Keyfeature = () => {
                     {description.description.Subheading4}
                   </div>
                   <div className="des mt-3">
+                    <span className="fw-bold mx-1">
+                      {description.description.span4}
+                    </span>
                     {description.description.message4}{" "}
                   </div>
                   <br />
                   <div className="des">
+                    <span className="fw-bold mx-1">
+                      {description.description.subspan4}
+                    </span>
                     {description.description.submessage4}
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <img src={image5} className="" />
+
+                <div className="content">
+                  <div className="title">
+                    {" "}
+                    {description.description.heading5}
+                  </div>
+                  <div className="topic">
+                    {" "}
+                    {description.description.Subheading5}
+                  </div>
+                  <div className="des mt-3">
+                    <span className="fw-bold mx-1">
+                      {description.description.span5}
+                    </span>
+                    {description.description.message5}{" "}
+                  </div>
+                  <br />
+                  <div className="des">
+                    <span className="fw-bold mx-1">
+                      {description.description.subspan5}
+                    </span>
+                    {description.description.submessage5}
                   </div>
                 </div>
               </div>
@@ -131,8 +183,7 @@ const Keyfeature = () => {
               <div className="item">
                 <img src={image2} className="" />
                 <div className="content">
-                  <div className="title">
-Reality </div>
+                  <div className="title">Reality </div>
                   <div className="description">Description</div>
                 </div>
               </div>
@@ -145,6 +196,13 @@ Reality </div>
               </div>
               <div className="item">
                 <img src={image4} className="" />
+                <div className="content">
+                  <div className="title">Adaptive</div>
+                  <div className="description">Description</div>
+                </div>
+              </div>
+              <div className="item">
+                <img src={image5} className="" />
                 <div className="content">
                   <div className="title">Adaptive</div>
                   <div className="description">Description</div>

@@ -1,3 +1,11 @@
+.mobilevideo {
+  display: none;
+}
+
+.systemvideo {
+  display: block;
+}
+
 .mil-no-wrap {
   white-space: nowrap;
 }
@@ -59,7 +67,7 @@ blockquote {
 }
 
 .mil-thin {
-  font-weight:100 !important;
+  font-weight: 100 !important;
 }
 
 a {
@@ -4536,30 +4544,39 @@ html.is-animating .mil-menu-frame {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
-.logoimagesystm{
+
+.logoimagesystm {
   display: block;
-    }
-    .logoimagemobile{
+}
+
+.logoimagemobile {
   display: none;
-    }
+}
+
 @media (max-width: 767px) {
   .mil-frame {
     /* display: none; */
     padding: 30px 0 50px;
   }
-  .logoimagesystm{
-display: none;
+
+  .logoimagesystm {
+    display: none;
   }
-  .logoimagemobile{
-display: block;
+
+  .logoimagemobile {
+    display: block;
   }
- .mil-mutede {
+
+  .mil-mutede {
     color: white;
     font-size: 34px !important;
-}
-.video{
-  width: 100% !important;
-}
+  }
+
+  .video {
+    width: 100% !important;
+  }
+
+
 }
 
 .unlisted {
@@ -4591,6 +4608,14 @@ display: block;
   .leftsidetag {
     display: none;
   }
+
+  .systemvideo {
+    display: none !important;
+  }
+
+  .mobilevideo {
+    display: block;
+  }
 }
 
 .bg-overlay {
@@ -4604,7 +4629,7 @@ display: block;
 
 .mil-mutede {
   color: white;
-  font-size: 70px;
+  font-size: 50px;
   /* padding: 0 450px; */
 }
 
