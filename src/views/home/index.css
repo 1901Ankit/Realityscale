@@ -1091,6 +1091,7 @@ frame
     padding: 0 30px;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
+    /* width: 90%; */
   }
 
   .mil-frame .mil-frame-top .mil-logo {

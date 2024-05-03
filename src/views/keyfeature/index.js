@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import "./index.css";
 import image1 from "../../assests/images/landing/door.jpg";
 import image2 from "../../assests/images/landing/plane.jpg";

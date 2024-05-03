@@ -8,7 +8,6 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import backgroundImage from "../../assests/images/landing/1.9f88f939.webp";
 import arrow from "../../assests/images/svg/arrow.png";
 const Game = ({ image, heading, subHeading, price }) => {
   const [isButtonVisible, setIsButtonVisible] = useState(false);

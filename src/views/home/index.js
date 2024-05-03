@@ -1,30 +1,24 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {useEffect} from "react";
 import "./index.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TweenMax, Power3 } from "gsap";
 import Keyfeature from "../keyfeature";
 import About from "../about";
 import Business from "../unique";
 import Production from "../production";
-import TeamSection from "../team";
 import FAQ from "../faq";
 import Range from "../../components/rngecaroul";
 import Multicarousel from "../testimonal";
 import Sliderlogo from "../logos";
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
 import logoe from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
-import GameCollection from "../game";
 import Game from "../game";
 import { Container, Grid, Typography } from "@mui/material";
 import data from "../../assests/data/data";
 import Loader from "../../components/loader";
 import $ from "jquery";
-import Swup from "swup";
 import Mouse from "../../components/mouse";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import memberimage from "../../assests/images/human/christopher-campbell-rDEOVtE7vOs-unsplash.jpg";
 import video from "../../assests/video/police.mp4";
 import ArrowSVG from "../../components/arrow";
 const Home = () => {
@@ -47,129 +41,47 @@ const Home = () => {
   const address =
     "2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307";
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const cloneAndAppend = (sourceSelector, targetSelector) => {
-      const sourceElement = document.querySelector(sourceSelector);
-      const targetElement = document.querySelector(targetSelector);
+  const cloneAndAppend = (sourceSelector, targetSelector) => {
+    const source = document.querySelector(sourceSelector);
+    const target = document.querySelector(targetSelector);
+    if (source && target) target.appendChild(source.cloneNode(true));
+  };
 
-      if (sourceElement && targetElement) {
-        const clone = sourceElement.cloneNode(true);
-        targetElement.appendChild(clone);
-      }
-    };
+  const menuBtnHandler = () => {
+    $(".mil-menu-btn, .mil-menu, .mil-menu-frame, body").toggleClass(
+      "mil-active menu-open"
+    );
+    $("body").css(
+      "overflow-y",
+      $("body").hasClass("menu-open") ? "hidden" : "auto"
+    );
+  };
 
-    // cloneAndAppend('.mil-arrow', '.mil-arrow-place');
-    cloneAndAppend(".mil-dodecahedron", ".mil-animation");
-    cloneAndAppend(".mil-lines", ".mil-lines-place");
-    cloneAndAppend(".mil-main-menu ul li.mil-active > a", ".mil-current-page");
-  }, []);
-
-  const [rotation, setRotation] = useState(0);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const interval = setInterval(() => {
-      setRotation((rotation) => rotation + 1);
-    }, 50);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  //----scrolldown----//
-  function setupAnimations() {
-    // Register the ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
-
-    console.log("Effect is running!");
-
-    const appearances = document.querySelectorAll(".mil-up");
-    console.log("Appearances found:", appearances.length);
-    appearances.forEach((section) => {
-      gsap.fromTo(
-        section,
-        {
-          opacity: 0,
-          y: 40,
-          scale: 0.98,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 0.4,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            toggleActions: "play none none reverse",
-          },
-        }
+  const menuItemHandler = (event) => {
+    const link = $(event.currentTarget).find("a").attr("href");
+    if (link) {
+      event.preventDefault();
+      $(".mil-menu-btn, .mil-menu, .mil-menu-frame, body").removeClass(
+        "mil-active menu-open"
       );
-    });
-
-    const scaleImages = document.querySelectorAll(".mil-scale");
-    console.log("Scale images found:", scaleImages.length);
-    scaleImages.forEach((section) => {
-      const value1 = parseFloat(section.getAttribute("data-value-1"));
-      const value2 = parseFloat(section.getAttribute("data-value-2"));
-      gsap.fromTo(
-        section,
-        {
-          scale: value1,
-        },
-        {
-          scale: value2,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            scrub: true,
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-
-    if (window.innerWidth > 960) {
-      const parallaxImages = document.querySelectorAll(".mil-parallax");
-      parallaxImages.forEach((section) => {
-        const value1 = parseFloat(section.getAttribute("data-value-1"));
-        const value2 = parseFloat(section.getAttribute("data-value-2"));
-        gsap.fromTo(
-          section,
-          {
-            y: value1,
-          },
-          {
-            y: value2,
-            ease: "sine",
-            scrollTrigger: {
-              trigger: section,
-              scrub: true,
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      });
-
-      const rotateSections = document.querySelectorAll(".mil-rotate");
-      rotateSections.forEach((section) => {
-        const value = parseFloat(section.getAttribute("data-value"));
-        gsap.to(section, {
-          rotation: value,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            scrub: true,
-            toggleActions: "play none none reverse",
-          },
-        });
-      });
+      $("body").css("overflow-y", "auto");
+      setTimeout(() => (window.location.href = link), 300);
     }
-  }
+  };
 
-  window.addEventListener("load", setupAnimations);
-
-  //------endscrolldown-----//
+  useEffect(() => {
+    const sections = [
+      ".mil-dodecahedron",
+      ".mil-lines",
+      ".mil-main-menu ul li.mil-active > a",
+    ];
+    sections.forEach((section) =>
+      cloneAndAppend(
+        section,
+        section.endsWith("a") ? ".mil-current-page" : ".mil-animation"
+      )
+    );
+  }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -178,100 +90,39 @@ const Home = () => {
       height: "100%",
       ease: "sine",
       scrollTrigger: {
+        trigger: document.body,
+        start: "top 0",
+        end: "bottom 0",
         scrub: 0.3,
       },
     });
-  }, []);
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
 
     const btt = document.querySelector(".mil-back-to-top .mil-link");
-
-    gsap.set(btt, {
-      x: -30,
-      opacity: 0,
-    });
-
-    gsap.to(btt, {
-      x: 0,
-      opacity: 1,
-      ease: "sine",
-      scrollTrigger: {
-        trigger: "body",
-        start: "top -40%",
-        end: "top -40%",
-        toggleActions: "play none reverse none",
-      },
-    });
-  }, []);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const arrowPlace = document.querySelector(".mil-arrow-place");
-    if (arrowPlace) {
-      const arrow = arrowPlace.querySelector(".mil-arrow");
-      if (arrow) {
-        arrowPlace.appendChild(arrow.cloneNode(true));
-      }
-    }
-
-    const animation = document.querySelector(".mil-animation");
-    if (animation) {
-      const dodecahedron = animation.querySelector(".mil-dodecahedron");
-      if (dodecahedron) {
-        animation.appendChild(dodecahedron.cloneNode(true));
-      }
-    }
-
-    const linesPlace = document.querySelector(".mil-lines-place");
-    if (linesPlace) {
-      const lines = linesPlace.querySelector(".mil-lines");
-      if (lines) {
-        linesPlace.appendChild(lines.cloneNode(true));
-      }
-    }
-
-    const currentPage = document.querySelector(".mil-current-page");
-    if (currentPage) {
-      const activeLink = document.querySelector(
-        ".mil-main-menu ul li.mil-active > a"
-      );
-      if (activeLink) {
-        currentPage.appendChild(activeLink.cloneNode(true));
-      }
+    if (btt) {
+      gsap.set(btt, { x: -30, opacity: 0 });
+      gsap.to(btt, {
+        x: 0,
+        opacity: 1,
+        ease: "sine",
+        scrollTrigger: {
+          trigger: "body",
+          start: "top -40%",
+          end: "top -40%",
+          toggleActions: "play none reverse none",
+        },
+      });
     }
   }, []);
 
-  //---------- mainmenu-------//
   useEffect(() => {
-    function toggleMenu() {
-      $(".mil-menu-btn").toggleClass("mil-active");
-      $(".mil-menu").toggleClass("mil-active");
-      $(".mil-menu-frame").toggleClass("mil-active");
-      $("body").toggleClass("menu-open");
-      if ($("body").hasClass("menu-open")) {
-        $("body").css("overflow-y", "hidden");
-      } else {
-        $("body").css("overflow-y", "auto");
-      }
-    }
-    $(".mil-main-menu li").on("click", function (event) {
-      const link = $(this).find("a").attr("href");
-      if (link) {
-        event.preventDefault();
-        toggleMenu();
-        window.location.href = link;
-      }
-    });
-    $(".mil-menu-btn").on("click", toggleMenu);
+    $(".mil-menu-btn").on("click", menuBtnHandler);
+    $(".mil-main-menu li").on("click", menuItemHandler);
     return () => {
-      $(".mil-menu-btn").off("click", toggleMenu);
-      $(".mil-main-menu li").off("click");
+      $(".mil-menu-btn, .mil-main-menu li").off("click");
       $("body").css("overflow-y", "auto");
     };
   }, []);
 
-  //---- end mainmenu-------//
   const navigate = useNavigate();
   const Member = () => {
     navigate("/team");

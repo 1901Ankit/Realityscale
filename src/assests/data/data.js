@@ -61,19 +61,76 @@ let data = {
     {
       image: backgroundImage1,
       heading: "Thunder and City",
-     
     },
-  
+
     {
       image: backgroundImage3,
       heading: "Thunder and City",
-     
     },
- 
+
     {
       image: backgroundImage5,
       heading: "Thunder and City",
-     
+    },
+  ],
+  blogPosts: [
+    {
+      category: "TECHNOLOGY",
+      date: "May 24, 2024",
+      title: "How to Become a Graphic Designer in 10 Simple Steps",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!",
+    },
+    {
+      category: "TECHNOLOGY",
+      date: "May 24, 2024",
+      title: "How to Become a Graphic Designer in 10 Simple Steps",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam cupiditate consectetur nostrum qui! Repellat natus nulla, nisi aliquid, asperiores impedit tempora sequi est reprehenderit cumque explicabo, dicta. Rem nihil ullam totam ea voluptas quibusdam repudiandae id ut at iure! Totam, a!",
+    },
+  ],
+  testimonial: [
+    {
+      testimonialheading: "Emma Trueman",
+      testimonialsubheading: "Envato market",
+      testimonialparagraph:
+        "   I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    },
+    {
+      testimonialheading: "Emma Trueman",
+      testimonialsubheading: "Envato market",
+      testimonialparagraph:
+        "   I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    },
+    {
+      testimonialheading: "Emma Trueman",
+      testimonialsubheading: "Envato market",
+      testimonialparagraph:
+        "   I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    },
+    {
+      testimonialheading: "Emma Trueman",
+      testimonialsubheading: "Envato market",
+      testimonialparagraph:
+        "   I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    },
+    {
+      testimonialheading: "Emma Trueman",
+      testimonialsubheading: "Envato market",
+      testimonialparagraph:
+        "   I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    },
+    {
+      testimonialheading: "Emma Trueman",
+      testimonialsubheading: "Envato market",
+      testimonialparagraph:
+        "   I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    },
+    {
+      testimonialheading: "Emma Trueman",
+      testimonialsubheading: "Envato market",
+      testimonialparagraph:
+        "   I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
     },
   ],
 };

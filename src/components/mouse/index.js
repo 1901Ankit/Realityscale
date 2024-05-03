@@ -8,94 +8,89 @@ const Mouse = () => {
   function setupAnimations() {
     // Register the ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
-
-    console.log("Effect is running!");
-
     const appearances = document.querySelectorAll(".mil-up");
-    console.log("Appearances found:", appearances.length);
     appearances.forEach((section) => {
-        gsap.fromTo(
-            section,
-            {
-                opacity: 0,
-                y: 40,
-                scale: 0.98,
-            },
-            {
-                y: 0,
-                opacity: 1,
-                scale: 1,
-                duration: 0.4,
-                ease: "sine",
-                scrollTrigger: {
-                    trigger: section,
-                    toggleActions: "play none none reverse",
-                },
-            }
-        );
+      gsap.fromTo(
+        section,
+        {
+          opacity: 0,
+          y: 40,
+          scale: 0.98,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.4,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
     });
 
     const scaleImages = document.querySelectorAll(".mil-scale");
-    console.log("Scale images found:", scaleImages.length);
     scaleImages.forEach((section) => {
-        const value1 = parseFloat(section.getAttribute("data-value-1"));
-        const value2 = parseFloat(section.getAttribute("data-value-2"));
-        gsap.fromTo(
-            section,
-            {
-                scale: value1,
-            },
-            {
-                scale: value2,
-                ease: "sine",
-                scrollTrigger: {
-                    trigger: section,
-                    scrub: true,
-                    toggleActions: "play none none reverse",
-                },
-            }
-        );
+      const value1 = parseFloat(section.getAttribute("data-value-1"));
+      const value2 = parseFloat(section.getAttribute("data-value-2"));
+      gsap.fromTo(
+        section,
+        {
+          scale: value1,
+        },
+        {
+          scale: value2,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            scrub: true,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
     });
 
     if (window.innerWidth > 960) {
-        const parallaxImages = document.querySelectorAll(".mil-parallax");
-        parallaxImages.forEach((section) => {
-            const value1 = parseFloat(section.getAttribute("data-value-1"));
-            const value2 = parseFloat(section.getAttribute("data-value-2"));
-            gsap.fromTo(
-                section,
-                {
-                    y: value1,
-                },
-                {
-                    y: value2,
-                    ease: "sine",
-                    scrollTrigger: {
-                        trigger: section,
-                        scrub: true,
-                        toggleActions: "play none none reverse",
-                    },
-                }
-            );
-        });
+      const parallaxImages = document.querySelectorAll(".mil-parallax");
+      parallaxImages.forEach((section) => {
+        const value1 = parseFloat(section.getAttribute("data-value-1"));
+        const value2 = parseFloat(section.getAttribute("data-value-2"));
+        gsap.fromTo(
+          section,
+          {
+            y: value1,
+          },
+          {
+            y: value2,
+            ease: "sine",
+            scrollTrigger: {
+              trigger: section,
+              scrub: true,
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      });
 
-        const rotateSections = document.querySelectorAll(".mil-rotate");
-        rotateSections.forEach((section) => {
-            const value = parseFloat(section.getAttribute("data-value"));
-            gsap.to(section, {
-                rotation: value,
-                ease: "sine",
-                scrollTrigger: {
-                    trigger: section,
-                    scrub: true,
-                    toggleActions: "play none none reverse",
-                },
-            });
+      const rotateSections = document.querySelectorAll(".mil-rotate");
+      rotateSections.forEach((section) => {
+        const value = parseFloat(section.getAttribute("data-value"));
+        gsap.to(section, {
+          rotation: value,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: section,
+            scrub: true,
+            toggleActions: "play none none reverse",
+          },
         });
+      });
     }
-}
+  }
 
-window.addEventListener("load", setupAnimations);
+  window.addEventListener("load", setupAnimations);
 
   //------endscrolldown-----//
   document.addEventListener("DOMContentLoaded", setupAnimations);

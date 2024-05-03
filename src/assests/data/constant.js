@@ -26,4 +26,5 @@ let description = {
     "b.Customize AI interactions to meet the specific needs of your customers and the unique demands of your industry.",
 };
 
-export default { description };
+
+export default { description};

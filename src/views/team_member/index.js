@@ -6,14 +6,8 @@ import "./index.css";
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
 import logoe from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
 import memberimage from "../../assests/images/human/christopher-campbell-rDEOVtE7vOs-unsplash.jpg";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
-// import Loader from "../../components/loader";
 import { useNavigate } from "react-router-dom";
 import Mouse from "../../components/mouse";
-import Arrow from "../../components/arrow";
 import ArrowSVG from "../../components/arrow";
 import TeamMembercontent from "../../components/member";
 const Member = () => {
@@ -250,15 +244,6 @@ const Member = () => {
   const Contactus = () => {
     navigate("/contact");
   };
-
-  const menuItems = [
-    { name: "Home", onClick: Home },
-    { name: "Team" },
-    { name: "Contact us", onClick: Contactus },
-    { name: "Newsletter" },
-    { name: "Other's" },
-  ];
-
   const projects = [
     "Interior design studio",
     "Home Security Camera",
@@ -294,7 +279,6 @@ const Member = () => {
   ];
   return (
     <>
-      {/* <Loader/> */}
       <Mouse />
       <div className="mil-progress-track">
         <div className="mil-progress"></div>
@@ -315,13 +299,25 @@ const Member = () => {
               <div className="col-xl-5">
                 <nav className="mil-main-menu" id="">
                   <ul className="unlisted">
-                    {menuItems.map((item, index) => (
-                      <li key={index} className="mil-has-children">
-                        <span className="" onClick={item.onClick}>
-                          {item.name}
-                        </span>
-                      </li>
-                    ))}
+                    <li class="mil-has-children ">
+                      <span className="" onClick={Home}>
+                        Home
+                      </span>
+                    </li>
+                    <li class="mil-has-children mil-active">
+                      <span className="">Team</span>
+                    </li>
+                    <li class="mil-has-children">
+                      <span className="" onClick={Contactus}>
+                        Contact us
+                      </span>
+                    </li>
+                    <li class="mil-has-children">
+                      <span>Newsletter</span>
+                    </li>
+                    <li class="mil-has-children">
+                      <span>Other's</span>
+                    </li>
                   </ul>
                 </nav>
               </div>

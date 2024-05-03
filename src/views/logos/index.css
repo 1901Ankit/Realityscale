@@ -91,9 +91,8 @@ z-index :1;
 .client-carousel__tilte {
     text-align: center;
     display: block;
-    color: #ffd94a;
     font-weight: 500;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid grey !important;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1.3px;

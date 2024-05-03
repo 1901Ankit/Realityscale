@@ -10,6 +10,7 @@ import { HiLocationMarker } from "react-icons/hi";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiFillMail } from "react-icons/ai";
 import "./index.css";
+import ArrowSVG from "../../components/arrow";
 const Contactus = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -263,9 +264,28 @@ const Contactus = () => {
         "2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh 201307",
     },
   ];
+  const projects = [
+    "Interior design studio",
+    "Home Security Camera",
+    "Kemia Honest Skincare",
+    "Cascade of Lava",
+    "Air Pro by Molekule",
+    "Tony's Chocolonely",
+  ];
+
+  const usefulLinks = [
+    "Privacy Policy",
+    "Terms and conditions",
+    "Cookie Policy",
+    "Careers",
+  ];
+
+  const address = {
+    line1: "2nd Floor, D-320, Sector 63 Rd,",
+    line2: "Sector 63, Noida, Uttar Pradesh, 201307",
+  };
   return (
     <>
-      {/* <Loader/> */}
       <Mouse />
       <div className="mil-progress-track">
         <div className="mil-progress"></div>
@@ -291,13 +311,13 @@ const Contactus = () => {
                         Home
                       </span>
                     </li>
-                    <li class="mil-has-children mil-active">
+                    <li class="mil-has-children ">
                       <span className="" onClick={Member}>
                         Team
                       </span>
                     </li>
-                    <li class="mil-has-children">
-                      <span>Services</span>
+                    <li class="mil-has-children mil-active">
+                      <span>Contact us</span>
                     </li>
                     <li class="mil-has-children">
                       <span>Newsletter</span>
@@ -323,75 +343,38 @@ const Contactus = () => {
                     <div className="row">
                       <div className="col-lg-8 mil-mb-60">
                         <h6 className="mil-muted mil-mb-10">Projects</h6>
-
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Interior design studio
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Home Security Camera
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Kemia Honest Skincare
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Cascade of Lava
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Air Pro by Molekule
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Tony's Chocolonely
-                            </a>
-                          </li>
+                          {projects.map((project, index) => (
+                            <li key={index}>
+                              <a href="#" className="mil-light-soft">
+                                {project}
+                              </a>
+                            </li>
+                          ))}
                         </ul>
                       </div>
                       <div className="col-lg-4 mil-mb-60">
                         <h6 className="mil-muted mil-mb-10">Useful links</h6>
-
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Privacy Policy
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Terms and conditions
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Cookie Policy
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="mil-light-soft">
-                              Careers
-                            </a>
-                          </li>
+                          {usefulLinks.map((link, index) => (
+                            <li key={index}>
+                              <a href="#" className="mil-light-soft">
+                                {link}
+                              </a>
+                            </li>
+                          ))}
                         </ul>
                       </div>
                     </div>
                     <div className="mil-divider mil-mb-60"></div>
                     <div className="row justify-content-between">
-                <div className="col-md-6 col-lg-6">
-                      <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
-      <p className="mil-light-soft mil-up">
-      2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307
-      </p>
-</div>
+                      <div className="col-md-6 col-lg-6">
+                        <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
+                        <p className="mil-light-soft mil-up">
+                          {address.line1},<br />
+                          {address.line2}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -415,16 +398,10 @@ const Contactus = () => {
           <div className="mil-back-to-top">
             <a href="#top" className="mil-link mil-dark mil-arrow-place">
               <span className="text-grey">Back to top</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+              <ArrowSVG
                 className="mil-slider-arrow mil-revi-next mil-arrow-place"
-              >
-                <path
-                  d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"
-                  fill="#000000"
-                />
-              </svg>
+                fill="#000000"
+              />
             </a>
           </div>
         </div>
@@ -457,7 +434,10 @@ const Contactus = () => {
                     </div>
                   </div>
                   <div class="container">
-                    <ul class="mil-breadcrumbs mil-light mil-mb-60" style={{padding:"0"}}>
+                    <ul
+                      class="mil-breadcrumbs mil-light mil-mb-60"
+                      style={{ padding: "0" }}
+                    >
                       <li>
                         <a href="/">Homepage</a>
                       </li>
@@ -474,22 +454,12 @@ const Contactus = () => {
                       class="mil-link mil-accent mil-arrow-place mil-down-arrow"
                     >
                       <span className="text-white">Send Message</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        class="mil-arrow"
-                      >
-                        <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"></path>
-                      </svg>
+                      <ArrowSVG className=" mil-arrow" fill="#000000" />
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-
-
-
-            
           </div>
         </div>
       </div>
@@ -612,13 +582,7 @@ const Contactus = () => {
                       class="mil-services-button mil-button mil-arrow-place"
                     >
                       <span>Send Message</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        class="mil-arrow"
-                      >
-                        <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"></path>
-                      </svg>
+                      <ArrowSVG className=" mil-arrow" fill="#000000" />
                     </button>
                   </div>
                 </div>

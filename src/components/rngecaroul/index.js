@@ -8,16 +8,11 @@ import {
   StepLabel,
   Stepper,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-import Eight from "../displayComponent/Eight";
 import Component from "../displayComponent/component";
-import Fifth from "../displayComponent/fifth";
 import Fourth from "../displayComponent/fourth";
-import Nine from "../displayComponent/nine";
 import SecondComponent from "../displayComponent/secondComponent";
-import Seven from "../displayComponent/seven";
-import Sixth from "../displayComponent/six";
 import Third from "../displayComponent/third";
 import "./index.css";
 
@@ -39,11 +34,6 @@ const Range = () => {
     <SecondComponent />,
     <Third />,
     <Fourth />,
-    // <Fifth />,
-    // <Sixth />,
-    // <Seven />,
-    // <Eight />,
-    // <Nine />,
   ];
   const componentLabel = [
     {
@@ -58,9 +48,6 @@ const Range = () => {
     {
       label: "STREAMLINED MARKETING",
     },
-    // {
-    //   label: "BOOST SALES ENGAGEMENT",
-    // },
   ];
   
 

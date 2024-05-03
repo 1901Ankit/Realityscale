@@ -5,6 +5,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
+import ArrowSVG from "../arrow";
 const Navigation = () => {
   return (
     <nav className="mil-footer-menu mil-mb-30">
@@ -61,8 +62,7 @@ const Address = () => {
     <>
       <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
       <p className="mil-light-soft mil-up">
-      2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307
-        {/* <span className="mil-no-wrap">+51 174 705 812</span> */}
+        2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307
       </p>
     </>
   );
@@ -108,7 +108,7 @@ const Footer = () => {
             <div className="col-md-4 col-lg-4 mil-mb-60">
               <div class="main-footer__about">
                 <p class="footer-widget__text">Let’s start working together</p>
-                <a href="mailto:help@company.com">help@company.com</a>
+                <a href="#">help@company.com</a>
               </div>
               <div className="mil-muted mil-logo mil-up mil-mb-30 mt-4 ">
                 <img src={logo} style={{ width: "50%" }} />
@@ -122,13 +122,7 @@ const Footer = () => {
                   type="submit"
                   className="mil-button mil-icon-button-sm mil-arrow-place"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    className="mil-arrow"
-                  >
-                    <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"></path>
-                  </svg>
+                  <ArrowSVG className="mil-arrow" fill="#000000" />
                 </button>
               </form>
             </div>
