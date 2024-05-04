@@ -525,14 +525,14 @@ const Home = () => {
         <div className="paralaxoverlay">
           <Container sx={{ p: { lg: 5, xs: 5 }, paddingBottom: 15 }}>
             <div>
-              <p className="keyfetR text-center">LET REALITY SCALE HELP YOU</p>
+              <p className="keyfetR text-center mt-3">LET REALITY SCALE HELP YOU</p>
               <h2
                 className="mil-h3 mil-muted mil-center"
                 style={{ color: "white" }}
               >
                 Transform
               </h2>
-              <p className="keyfetE text-center">
+              <p className="keyfetE text-center mt-3">
                 {" "}
                 how you showcase your products and engage with your customers!
               </p>

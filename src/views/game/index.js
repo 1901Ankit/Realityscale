@@ -32,7 +32,7 @@ const Game = ({ image, heading, subHeading, price }) => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          borderRadius: 10,
+          // borderRadius: 10,
           width: "100%",
         }}
       >
@@ -52,7 +52,7 @@ const Game = ({ image, heading, subHeading, price }) => {
               zIndex: 1,
               background:
                 "linear-gradient(0, rgba(0, 0, 0, .75), transparent 50%)",
-              borderRadius: "10",
+              // borderRadius: "10",
             },
           }}
           onMouseEnter={handleMouseEnter}

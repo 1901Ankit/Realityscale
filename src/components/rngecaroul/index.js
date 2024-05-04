@@ -55,7 +55,7 @@ const Range = () => {
   };
 
   return (
-    <div className=" mil-dark-bg pb-5 mobileviewrange">
+    <div className=" mil-dark-bg mobileviewrange">
       <div className="mi-invert-fix">
         <div>
           <h1 className="keyfetR text-center pt-5">OUR USP</h1>
