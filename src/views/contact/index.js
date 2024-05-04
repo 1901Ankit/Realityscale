@@ -4,7 +4,7 @@ import $ from "jquery";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import logoe from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import logos from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
 import Mouse from "../../components/mouse";
 import { HiLocationMarker } from "react-icons/hi";
 import { BsFillTelephoneFill } from "react-icons/bs";
@@ -246,19 +246,19 @@ const Contactus = () => {
 
   let contact = [
     {
-      icon: <BsFillTelephoneFill size={30} color="#f9a634" className="icon" />,
+      icon: <BsFillTelephoneFill size={30} color="#ffd94a" className="icon" />,
       name: "Contact Phone Number",
       value: "+444 555 666 777",
       value2: "+222 222 222 333",
     },
     {
-      icon: <AiFillMail size={30} color="#f9a634" className="icon" />,
+      icon: <AiFillMail size={30} color="#ffd94a" className="icon" />,
       name: "Our Email Address",
       value: "admin@gmail.com",
       value2: "example@gmail.com",
     },
     {
-      icon: <HiLocationMarker size={30} color="#f9a634" className="icon" />,
+      icon: <HiLocationMarker size={30} color="#ffd94a" className="icon" />,
       name: "Our Location",
       value:
         "2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh 201307",
@@ -293,7 +293,7 @@ const Contactus = () => {
       <div className="mil-menu-frame">
         <div className="mil-frame-top">
           <a href="/" className="mil-logo">
-            <img src={logoe} style={{ width: "20%" }} />
+            <img src={logos} style={{ width: "20%" }} />
           </a>
           <div className="mil-menu-btn">
             <span></span>
@@ -386,15 +386,29 @@ const Contactus = () => {
       <div className="mil-curtain"></div>
       <div className="mil-frame">
         <div className="mil-frame-top">
+        <a href="/" className="mil-logo">
+            <img
+              src={logo}
+              style={{ width: "20%" }}
+              className="logoimagesystm"
+            />
+          </a>
           <a href="/" className="mil-logo">
-            <img src={logo} style={{ width: "20%" }} />
+            <img
+              src={logos}
+              style={{ width: "20%" }}
+              className="logoimagemobile"
+            />
           </a>
           <div className="mil-menu-btn">
             <span></span>
           </div>
         </div>
         <div className="mil-frame-bottom">
-          <div className="mil-current-page"></div>
+          <div className="mil-current-page text-white"><span>
+            CONTACT
+            </span>
+            </div>
           <div className="mil-back-to-top">
             <a href="#top" className="mil-link mil-dark mil-arrow-place">
               <span className="text-grey">Back to top</span>

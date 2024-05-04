@@ -144,14 +144,14 @@ const Business = () => {
       <div className="mi-invert-fix">
         <div className="">
           <div className="mil-animation-frame">
-            <div
+            {/* <div
               className="mil-animation mil-position-1 mil-scale"
-              data-value-1="2.4"
-              data-value-2="1.4"
+              data-value-1="2"
+              data-value-2="1"
               style={{
                 top: "200px",
-                right: "100px",
-                transform: "translate3d(0px, 0px, 0px) scale(0, 0)",
+                right: "200px",
+                transform: "translate3d(0px, 0px, 0px) scale(1.236, 1.236)",
               }}
             >
               <div className="mil-dodecahedron">
@@ -163,13 +163,13 @@ const Business = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
             <div
               className="mil-animation mil-position-2 mil-scale"
               data-value-1="2"
               data-value-2="1"
               style={{
-                left: "50px",
+                left: "20px",
                 top: "60px",
                 transform: "translate3d(0px, 0px, 0px) scale(1.236, 1.236)",
               }}

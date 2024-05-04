@@ -247,7 +247,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* <div className="mil-curtain"></div> */}
+      <div className="mil-curtain"></div>
       <div className="mil-frame">
         <div className="mil-frame-top">
           <a href="/" className="mil-logo">
@@ -270,7 +270,9 @@ const Home = () => {
           </div>
         </div>
         <div className="mil-frame-bottom">
-          <div className="mil-current-page"></div>
+          <div class="mil-current-page">
+            <span>Homepage</span>
+          </div>
           <div className="mil-back-to-top">
             <a href="#top" className="mil-link mil-dark mil-arrow-place">
               <span className="text-grey">Back to top</span>
@@ -289,10 +291,13 @@ const Home = () => {
           <div className="mil-animation-frame">
             <div
               className="mil-animation mil-position-1 mil-scale"
-              data-value-1="7"
-              data-value-2="1.6"
+              data-value-1="6"
+              data-value-2="1.3"
               style={{
-                transform: "translate3d(0px, 0px, 0px) scale(2.2178, 2.2178)",
+                transform: "translate3d(0px, 0px, 0px) scale(1.6454,1.6454)",
+                translate: "none",
+                rotate: "none",
+                scale: "none",
               }}
             >
               <div className="mil-dodecahedron">
@@ -521,7 +526,12 @@ const Home = () => {
           <Container sx={{ p: { lg: 5, xs: 5 }, paddingBottom: 15 }}>
             <div>
               <p className="keyfetR text-center">LET REALITY SCALE HELP YOU</p>
-              <p className="keyfet text-center"> TRANSFORM</p>
+              <h2
+                className="mil-h3 mil-muted mil-center"
+                style={{ color: "white" }}
+              >
+                Transform
+              </h2>
               <p className="keyfetE text-center">
                 {" "}
                 how you showcase your products and engage with your customers!

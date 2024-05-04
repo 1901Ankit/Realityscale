@@ -764,4 +764,7 @@ animation text in first item .carousel .list .item:nth-child(1) .content .author
   .des {
     font-size: 15px;
   }
+  .carousel .list .item .topic{
+font-size: 25px;
+  }
 }

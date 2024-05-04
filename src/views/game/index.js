@@ -9,6 +9,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import arrow from "../../assests/images/svg/arrow.png";
+import ArrowSVG from "../../components/arrow";
 const Game = ({ image, heading, subHeading, price }) => {
   const [isButtonVisible, setIsButtonVisible] = useState(false);
 
@@ -72,6 +73,7 @@ const Game = ({ image, heading, subHeading, price }) => {
                 {subHeading}
               </Typography>
               <Box
+                className="mil-link mil-muted mil-arrow-place"
                 sx={{
                   display: isButtonVisible ? "block" : "none",
                   transform: isButtonVisible
@@ -81,12 +83,8 @@ const Game = ({ image, heading, subHeading, price }) => {
                 }}
               >
                 Read More
-                <img
-                  src={arrow}
-                  className="mil-button mil-icon-button-smq  mx-2"
-                  width={18}
-                />
-              </Box>
+                <ArrowSVG className="mil-arrow" fill="#000" />{" "}
+               </Box>
             </Stack>
           </Box>
         </Box>

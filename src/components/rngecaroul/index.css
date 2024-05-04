@@ -101,6 +101,9 @@
     .events-content p {
       text-align: start !important;
     }
+    .mobileviewrange{
+      display: none;
+    }
   }
   .isdis{
     overflow: hidden !important;

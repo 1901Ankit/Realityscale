@@ -1047,7 +1047,7 @@ frame
 
 ------------------------------------------- */
 .mil-logo {
-  font-size: 30px;
+  font-size: 42px;
   font-weight: 500;
   line-height: 100%;
 }
@@ -1059,7 +1059,7 @@ frame
 }
 
 .mil-frame {
-  padding: 30px 60px 60px 60px;
+  padding: 50px 60px 60px 60px;
   position: fixed;
   z-index: 2;
   pointer-events: none;
@@ -1099,7 +1099,6 @@ frame
     padding: 0 30px;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    /* width: 90%; */
   }
 
   .mil-frame .mil-frame-top .mil-logo {
@@ -1138,6 +1137,7 @@ frame
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 12px;
+  font-family: "Outfit", sans-serif !important;
   width: 300px;
   color: rgb(0, 0, 0);
   -webkit-transform: rotate(-90deg) translateX(138px) translateY(-138px);
@@ -1438,7 +1438,7 @@ menu
 }
 
 .mil-main-menu ul li {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .mil-main-menu ul li:last-child {
@@ -1491,15 +1491,15 @@ menu
 .mil-main-menu ul li span.mil-active:before {
   -webkit-transform: scale(1);
   transform: scale(1);
-  background-color: #ffd94a;
+  background-color: rgb(255, 152, 0);
 }
 
 .mil-main-menu ul li.mil-active>span {
-  color: #ffd94a;
+  color: rgb(255, 152, 0);
 }
 
 .mil-main-menu ul li.mil-active>span:hover {
-  color: #ffd94a !important;
+  color: rgb(255, 152, 0) !important;
   -webkit-filter: brightness(110%);
   filter: brightness(110%);
 }
@@ -1530,7 +1530,7 @@ menu
   margin-top: 40px;
 }
 
-.mil-main-menu ul li.mil-has-children ul li a {
+.mil-main-menu ul li.mil-has-children ul li span {
   display: block;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.4);
@@ -1539,11 +1539,11 @@ menu
   text-transform: uppercase;
 }
 
-.mil-main-menu ul li.mil-has-children ul li a:before {
+.mil-main-menu ul li.mil-has-children ul li span:before {
   display: none;
 }
 
-.mil-main-menu ul li.mil-has-children ul li a:hover {
+.mil-main-menu ul li.mil-has-children ul li span:hover {
   color: rgba(255, 255, 255, 0.8);
   -webkit-transform: translateX(5px);
   transform: translateX(5px);
@@ -1599,6 +1599,8 @@ menu
     margin-top: 30px;
   }
 }
+
+
 
 /* -------------------------------------------
 
@@ -1962,7 +1964,7 @@ dodecahedron
 
 .mil-position-1 {
   top: 100px;
-  right: 240px;
+  right: 290px;
 }
 
 .mil-position-1 .mil-pentagon div {
@@ -4554,10 +4556,6 @@ html.is-animating .mil-menu-frame {
 }
 
 @media (max-width: 767px) {
-  .mil-frame {
-    /* display: none; */
-    padding: 30px 0 50px;
-  }
 
   .logoimagesystm {
     display: none;
@@ -4615,6 +4613,11 @@ html.is-animating .mil-menu-frame {
 
   .mobilevideo {
     display: block;
+    /* margin-bottom: 0px; */
+  }
+
+  .logoimagemobile {
+    width: 15% !important;
   }
 }
 
@@ -4642,6 +4645,7 @@ html.is-animating .mil-menu-frame {
   top: 50%;
   left: 50%;
   width: 155%;
+  border-radius: 2%;
   /* height: 50vh !important; */
   /* transform: translate(20%, -50%); */
   /* display: flex; */

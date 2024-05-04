@@ -1,7 +1,8 @@
 import React from "react";
 import "./index.css";
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo White 04.png";
-import { FaInstagram } from "react-icons/fa6";
+// import { FaInstagram } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
@@ -74,7 +75,7 @@ const SocialIcons = () => {
       <li>
         <a href="#." target="_blank" className="social-icon">
           {" "}
-          <FaInstagram />
+          <RiInstagramFill/>
         </a>
       </li>
       <li>
@@ -107,7 +108,9 @@ const Footer = () => {
           <div className="row justify-content-between">
             <div className="col-md-4 col-lg-4 mil-mb-60">
               <div className="main-footer__about">
-                <p className="footer-widget__text">Let’s start working together</p>
+                <p className="footer-widget__text">
+                  Let’s start working together
+                </p>
                 <a href="#">help@company.com</a>
               </div>
               <div className="mil-muted mil-logo mil-up mil-mb-30 mt-4 ">

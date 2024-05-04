@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./index.css";
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import logoe from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
+import logos from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
 import memberimage from "../../assests/images/human/christopher-campbell-rDEOVtE7vOs-unsplash.jpg";
 import { useNavigate } from "react-router-dom";
 import Mouse from "../../components/mouse";
@@ -284,7 +284,8 @@ const Member = () => {
       <div className="mil-menu-frame">
         <div className="mil-frame-top">
           <a href="/" className="mil-logo">
-            <img src={logoe} style={{ width: "20%" }} />
+            <img src={logos} style={{ width: "20%" }} />
+            {/* <img src={logoe} style={{ width: "20%" }} /> */}
           </a>
           <div className="mil-menu-btn">
             <span></span>
@@ -378,14 +379,27 @@ const Member = () => {
       <div className="mil-frame">
         <div className="mil-frame-top">
           <a href="/" className="mil-logo">
-            <img src={logo} style={{ width: "20%" }} />
+            <img
+              src={logo}
+              style={{ width: "20%" }}
+              className="logoimagesystm"
+            />
+          </a>
+          <a href="/" className="mil-logo">
+            <img
+              src={logos}
+              style={{ width: "20%" }}
+              className="logoimagemobile"
+            />
           </a>
           <div className="mil-menu-btn">
             <span></span>
           </div>
         </div>
         <div className="mil-frame-bottom">
-          <div className="mil-current-page"></div>
+          <div className="mil-current-page">
+            <span>TEAM</span>
+          </div>
           <div className="mil-back-to-top">
             <a href="#top" className="mil-link mil-dark mil-arrow-place">
               <span className="text-grey">Back to top</span>

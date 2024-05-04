@@ -25,7 +25,7 @@
 }
 
 .contact-two .contact-one__input-box {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .contact-two .contact-one__input-box textarea,
@@ -151,7 +151,7 @@
     -webkit-appearance: none;
     border-radius: 18px;
     outline: none !important;
-    background-color: #f5900d;
+    background-color: #ffd94a;
     color: #ffffff;
     font-size: 16px;
     font-weight: 800;
