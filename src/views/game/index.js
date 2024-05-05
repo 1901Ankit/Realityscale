@@ -46,19 +46,27 @@ const Game = ({ image, heading, subHeading, price }) => {
             alignItems: "end",
             border: "2px solid transparent",
             position: "relative",
-            ":hover": {
-              border: "2px solid #ffd94a",
-              transition: "border .5s, box-shadow .5s",
-              zIndex: 1,
-              background:
-                "linear-gradient(0, rgba(0, 0, 0, .75), transparent 50%)",
-              // borderRadius: "10",
-            },
+            ...(phoneMatches
+              ? {}
+              : {
+                  ":hover": {
+                    border: "2px solid #ffd94a",
+                    transition: "border .5s, box-shadow .5s",
+                    zIndex: 1,
+                    background:
+                      "linear-gradient(0, rgba(0, 0, 0, .75), transparent 50%)",
+                  },
+                }),
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Box sx={{ paddingBottom: 1, paddingLeft: 1 }}>
+          <Box 
+          sx={{
+            paddingBottom: phoneMatches ? 0 : 1,
+            paddingLeft: phoneMatches ? 2 : 3,
+          }}>
+          {/* // sx={{ paddingBottom: 1, paddingLeft: 5 }} */}
             <Typography
               sx={{ fontSize: 20, fontWeight: 600 }}
               className="d-text"
@@ -67,24 +75,32 @@ const Game = ({ image, heading, subHeading, price }) => {
             </Typography>
             <Stack direction={"row"} alignItems={"center"} spacing={0}>
               <Typography
-                sx={{ fontSize: 20, fontWeight: 600 }}
+                sx={{ fontSize: 20, fontWeight: 600  }}
                 className="d-text"
               >
                 {subHeading}
+                {phoneMatches ? (
+                  <Box
+                    className="mil-link mil-muted mil-arrow-place left-align"
+                    sx={{
+                      display: isButtonVisible ? "none" : "block",
+                    }}
+                  >
+                    Read More
+                    <ArrowSVG className="mil-arrow" fill="#000" />{" "}
+                  </Box>
+                ) : (
+                  <Box
+                    className="mil-link mil-muted mil-arrow-place left-align"
+                    sx={{
+                      display: isButtonVisible ? "block" : "none",
+                    }}
+                  >
+                    Read More
+                    <ArrowSVG className="mil-arrow" fill="#000" />{" "}
+                  </Box>
+                )}
               </Typography>
-              <Box
-                className="mil-link mil-muted mil-arrow-place left-align "
-                sx={{
-                  display: isButtonVisible ? "block" : "none",
-                  transform: isButtonVisible
-                    ? "translateY(0)"
-                    : "translateY(100%)",
-                  transition: "transform 0.5s ease-in-out",
-                }}
-              >
-                Read More
-                <ArrowSVG className="mil-arrow" fill="#000" />{" "}
-              </Box>
             </Stack>
           </Box>
         </Box>

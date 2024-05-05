@@ -97,11 +97,15 @@ z-index :1;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     margin-bottom: 99px;
+    color: #fff;
 }
 
 @media (max-width: 767px) {
     .client-carousel__tilte {
         margin-bottom: 49px;
+    }
+    .logoclient{
+padding: 50px;
     }
 }
 

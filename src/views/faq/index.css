@@ -142,7 +142,13 @@
 }
 
 .mil-lighter {
-  font-size: 25px;
+  font-size: 48px;
   color: white;
   font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .mil-lighter {
+    font-size: 42px;
+  }
 }

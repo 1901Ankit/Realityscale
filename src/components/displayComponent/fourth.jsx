@@ -22,7 +22,7 @@ const Fourth = () => {
         <div className="pl-left">
           <h2 className="onbord mb-4">STREAMLINED MARKETING</h2>
           <p className="skills_para">
-          The blueprint for a multiplayer game lobby system entails several key components designed to facilitate player interaction and game setup. At its core lies the main lobby scene, serving as the gateway for players to initiate various actions such as creating or joining game rooms, adjusting settings, and connecting with friends online.
+          The blueprint for a multiplayer game lobby system entails several key components designed to facilitate player interaction and game setup. At its core lies the main lobby scene, serving as the gateway for, adjusting settings, and connecting with friends online.
           </p>
         </div>
       </div>

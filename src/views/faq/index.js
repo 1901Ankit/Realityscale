@@ -5,7 +5,7 @@ import {
   AccordionHeader,
   AccordionItem,
 } from "react-headless-accordion";
-import {FaMinus, FaPlus } from "react-icons/fa";
+import { FaMinus, FaPlus } from "react-icons/fa";
 import data from "../../assests/data/data";
 import ArrowSVG from "../../components/arrow";
 import "./index.css";
@@ -17,13 +17,16 @@ const FAQ = () => {
         <div className="overlayed">
           <div className="container mil-p-120-09">
             <div className="row justify-content-between">
-              <div className="col-lg-5 mil-relative mil-mb-90 px-5">
+              <div className="col-lg-5 mil-relative mil-mb-90">
                 <div className="">
                   <span className="ourcors mil-upper mil-light mil-up mil-mb-30">
-                    Our Core
+                    FAQ
                   </span>
-                  <h1 className="mil-upper mil-lighter mil-up mil-mb-30">
-                    Whole difference
+                  <h1 className="mil-lighter mil-mb-30 mil-up mil-mb-30">
+                    Got a question?{" "}<br/>
+                    <span className="mil-thin" style={{ fontWeight: "100px" }}>
+                      Get your answer
+                    </span>
                   </h1>
                   <p className="mil-light-soft mil-up mil-mb-40">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed

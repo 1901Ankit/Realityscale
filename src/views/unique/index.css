@@ -15,3 +15,8 @@
   .profws{
     color: white !important;
   }
+  @media screen and (max-width: 768px) {
+    .mil-services-grid{
+    padding: 30px !important;
+    }
+  }

@@ -235,7 +235,7 @@ const Home = () => {
                   </div>
                   <div className="mil-menu-right">
                     <div className="row">
-                      <div className="col-lg-8 mil-mb-60">
+                      <div className="col-lg-8">
                         <h6 className="mil-muted mil-mb-10">Projects</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
                           {projects.map((project, index) => (
@@ -310,7 +310,7 @@ const Home = () => {
               data-value-1="6"
               data-value-2="1.3"
               style={{
-                transform: "translate3d(0px, 0px, 0px) scale(1.6454,1.6454)",
+                transform: "translate3d(0px, 0px, 0px) scale(2.5044,2.5044)",
                 translate: "none",
                 rotate: "none",
                 scale: "none",
@@ -539,7 +539,7 @@ const Home = () => {
 
       <div className="contactus_parallax">
         <div className="paralaxoverlay">
-          <Container sx={{ p: { lg: 5, xs: 5 }, paddingBottom: 15 }}>
+          <Container sx={{ p: { lg: 5, xs: 2 }, paddingBottom: 15 }}>
             <div>
               <p className="keyfetR text-center mt-5">
                 LET REALITY SCALE HELP YOU

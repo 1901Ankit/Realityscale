@@ -1,13 +1,14 @@
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-family: "Outfit", sans-serif !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #000000;
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 150%;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
 }
-
-
 
 ::-webkit-scrollbar {
   display: none;

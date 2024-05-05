@@ -4,7 +4,7 @@ import image1 from "../../assests/images/Features/cloud.webp";
 import image2 from "../../assests/images/Features/realit.webp";
 import image3 from "../../assests/images/Features/business.webp";
 import image4 from "../../assests/images/Features/adaptive.webp";
-import image5 from "../../assests/images/Features/adaptive.webp";
+import image5 from "../../assests/images/Features/content.webp";
 import description from "../../assests/data/constant";
 const Keyfeature = () => {
   const showSlider = () => {
@@ -204,7 +204,8 @@ const Keyfeature = () => {
               <div className="item">
                 <img src={image5} className="" />
                 <div className="content">
-                  <div className="title">Adaptive</div>
+                  <div className="title">
+Content</div>
                   <div className="description">Description</div>
                 </div>
               </div>

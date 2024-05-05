@@ -368,6 +368,20 @@ button
   fill: rgb(0, 0, 0);
 }
 
+.mil-button.mil-icon-button-sm2 {
+  padding: 0px;
+  height: 35px;
+}
+
+.mil-button.mil-icon-button-sm2 svg {
+  margin-left: 0;
+  background-color: #ffd94a;
+}
+
+.mil-button.mil-icon-button-sm2 svg path {
+  fill: rgb(0, 0, 0);
+}
+
 .mil-button:hover {
   -webkit-transform: scale(1.015);
   transform: scale(1.015);
@@ -671,6 +685,7 @@ spaces
   padding-top: 120px;
   padding-bottom: 120px;
 }
+
 
 @media screen and (max-width: 992px) {
   .mil-p-120-120 {
@@ -1310,8 +1325,6 @@ menu
   padding-left: 60px;
   position: relative;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
   -ms-flex-align: end;
@@ -1347,7 +1360,7 @@ menu
 
 @media screen and (max-height: 800px) {
   .mil-menu-frame .mil-menu-right-frame {
-    display: none;
+    /* display: none; */
   }
 }
 
@@ -1632,6 +1645,7 @@ banner
     padding-bottom: 90px;
   }
 }
+
 @media screen and (max-width: 1366px) {
   .mil-banner .container {
     height: 100% !important;
@@ -4561,6 +4575,18 @@ html.is-animating .mil-menu-frame {
 }
 
 @media (max-width: 767px) {
+  .uniidea {
+    text-align: center !important;
+    padding: 0;
+  }
+
+  .custom-cursor__cursor {
+    display: none;
+  }
+
+  .custom-cursor__cursor-two {
+    display: none;
+  }
 
   .logoimagesystm {
     display: none;
@@ -4618,6 +4644,7 @@ html.is-animating .mil-menu-frame {
 
   .mobilevideo {
     display: block;
+    padding-bottom: 91px;
     /* margin-bottom: 0px; */
   }
 
@@ -4637,7 +4664,7 @@ html.is-animating .mil-menu-frame {
 
 .mil-mutede {
   color: white;
-  font-size: 50px;
+  font-size: 64px;
   /* padding: 0 450px; */
 }
 

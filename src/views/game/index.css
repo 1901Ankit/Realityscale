@@ -12,4 +12,13 @@
 }
 .d-text{
 font-weight: 600 !important;
+font-family: "Outfit", sans-serif !important;
+}
+/* .redna{
+    display: block !important;
+} */
+@media (max-width: 767px) {
+.borderhover:hover{
+    border: none !important;
+}
 }

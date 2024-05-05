@@ -20,7 +20,7 @@ const Range = () => {
   const [activeStep, setActiveStep] = useState(0);
   const handlePrev = () => {
     setActiveStep((prevStep) =>
-      prevStep === 0 ? components.length - 1 : prevStep - 1
+      prevStep === 0 ? components.length - 1 : prevStep - 1 
     );
   };
 
@@ -59,7 +59,8 @@ const Range = () => {
       <div className="mi-invert-fix">
         <div className="container mil-p-120-60 " style={{ maxWidth: 1080 }}>
           <h1 className="keyfetR text-center">OUR USP</h1>
-          <h1 className="keyfet text-center"> Every Detail Counts</h1>
+          <h1 className="keyfet text-center"> Every Detail 
+          Counts</h1>
           <Stepper
             activeStep={activeStep}
             alternativeLabel

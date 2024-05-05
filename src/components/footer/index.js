@@ -123,7 +123,7 @@ const Footer = () => {
                 <input type="text" placeholder="Enter our email" />
                 <button
                   type="submit"
-                  className="mil-button mil-icon-button-sm mil-arrow-place"
+                  className="mil-button mil-icon-button-sm2 mil-arrow-place"
                 >
                   <ArrowSVG className="mil-arrow" fill="#000000" />
                 </button>
@@ -162,7 +162,7 @@ const Footer = () => {
                 <div className="mil-mb-30">
                   <SocialIcons />
                 </div>
-                <p className="mil-light-soft mil-up fw-200">
+                <p className="mil-light-soft mil-up fw-200 copywrite">
                   © Copyright 2024 - Reality-Scale. All Rights Reserved.
                 </p>
               </div>

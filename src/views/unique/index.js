@@ -188,56 +188,56 @@ const Business = () => {
         </div>
         <div className="container mil-p-120-30">
           {/* <div className="mil-mb-120"> */}
-            <div className="row">
-              {/* <div className="col-lg-10">
+          <div className="row">
+            {/* <div className="col-lg-10">
                 <span className="mil-suptitle mil-light-soft mil-suptitle-right mil-up text-grey">
                   Professionals focused on helping your brand
                   <br />
                   grow and move forward.
                 </span>
               </div> */}
-              <div className="col-lg-7" style={{ textAlign: "right" }}>
-                <span
-                  className="mil-suptitle mil-suptitle-right  mil-light-soft mil-up"
-                  style={{
-                    translate: "none",
-                    rotate: "none",
-                    scale: "none",
-                    transform: "translate(0px, 0px)",
-                    opacity: "1",
-                    textAlign: "right",
-                  }}
-                >
-                  Professionals focused on helping your brand <br />
-                  grow and move forward.
-                </span>
-              </div>
-            </div>
-            <div className="mil-complex-text justify-content-center mil-up mil-mb-15 ">
-              <span className="mil-text-image">
-                <img src={image1} alt="team" />
+            <div className="col-lg-7" style={{ textAlign: "right" }}>
+              <span
+                className="mil-suptitle mil-suptitle-right  mil-light-soft mil-up"
+                style={{
+                  translate: "none",
+                  rotate: "none",
+                  scale: "none",
+                  transform: "translate(0px, 0px)",
+                  opacity: "1",
+                  textAlign: "right",
+                }}
+              >
+                Professionals focused on helping your brand <br />
+                grow and move forward.
               </span>
-              <h2
-                className="mil-h1 mil-muted mil-center"
-                style={{ color: "white" }}
-              >
-                Unique <span className="mil-thin">Ideas</span>
-              </h2>
             </div>
-            <div className="mil-complex-text justify-content-center mil-up">
-              <h2
-                className="mil-h1 mil-muted mil-center"
-                style={{ color: "white" }}
-              >
-                For Your <span className="mil-thin">Business.</span>
-              </h2>
-              <div className="mil-services-button mil-button mil-arrow-place">
-                <span>What we do</span>
-                <ArrowSVG className="mil-arrow" />
-              </div>
+          </div>
+          <div className="mil-complex-text justify-content-center mil-up mil-mb-15 ">
+            <span className="mil-text-image">
+              <img src={image1} alt="team" />
+            </span>
+            <h2
+              className="mil-h1 mil-muted mil-center uniidea"
+              style={{ color: "white" }}
+            >
+              Unique <span className="mil-thin">Ideas</span>
+            </h2>
+          </div>
+          <div className="mil-complex-text justify-content-center mil-up">
+            <h2
+              className="mil-h1 mil-muted mil-center"
+              style={{ color: "white" }}
+            >
+              For Your <span className="mil-thin">Business.</span>
+            </h2>
+            <div className="mil-services-button mil-button mil-arrow-place">
+              <span>What we do</span>
+              <ArrowSVG className="mil-arrow" />
             </div>
+          </div>
           {/* </div> */}
-          <div className="row mil-services-grid m-0">
+          <div className="row mil-services-grid  mt-5">
             {data.map((val, index) => (
               <div
                 key={index}

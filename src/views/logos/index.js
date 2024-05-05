@@ -81,14 +81,14 @@ const Sliderlogo = () => {
   return (
     <div className=" mil-dark-bg">
       <div className="mi-invert-fix">
-        <div className="container logoclient mil-p-120-30">
+        <div className="container logoclient">
           <div className="row">
             {/* <div className="col-sm-12 text-center">
               <h5>Our Clients</h5>
             </div> */}
-            <h5 class="client-carousel__tilte text-white">
+            {/* <h5 class="client-carousel__tilte">
               <span>1K+ Brands Trust Us</span>
-            </h5>
+            </h5> */}
           </div>
           <Carousel
             responsive={responsive}
