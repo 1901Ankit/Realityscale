@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import "./index.css";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 import Keyfeature from "../keyfeature";
 import About from "../about";
 import Business from "../unique";
@@ -21,7 +22,19 @@ import Mouse from "../../components/mouse";
 import { useNavigate } from "react-router-dom";
 import video from "../../assests/video/police.mp4";
 import ArrowSVG from "../../components/arrow";
+
 const Home = () => {
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  gsap.to(".element", {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".trigger-element",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+
   const projects = [
     "Interior design studio",
     "Home Security Camera",
@@ -70,6 +83,7 @@ const Home = () => {
   };
 
   useEffect(() => {
+    gsap.to(".element", { duration: 1, opacity: 0 });
     const sections = [
       ".mil-dodecahedron",
       ".mil-lines",
@@ -84,7 +98,8 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".element", { duration: 1, opacity: 0 });
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
     gsap.to(".mil-progress", {
       height: "100%",
@@ -115,6 +130,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
+    gsap.to(".element", { duration: 1, opacity: 0 });
     $(".mil-menu-btn").on("click", menuBtnHandler);
     $(".mil-main-menu li").on("click", menuItemHandler);
     return () => {
@@ -350,7 +366,7 @@ const Home = () => {
 
           <div className="mil-gradient"></div>
 
-          <div className="container ">
+          <div className="container mil-p-120-30">
             <div
               className=" mil-up"
               style={{
@@ -358,7 +374,7 @@ const Home = () => {
               }}
             >
               <div className="systemvideo">
-                <div className="row align-items-center d-flex justify-content-center mb-5 ">
+                <div className="row align-items-center d-flex justify-content-center ">
                   <div className="" style={{ position: "absolute" }}>
                     <div className="col-md-7 col-lg-6">
                       <h1 className="mil-mutede mil-mb-30">
@@ -525,10 +541,12 @@ const Home = () => {
         <div className="paralaxoverlay">
           <Container sx={{ p: { lg: 5, xs: 5 }, paddingBottom: 15 }}>
             <div>
-              <p className="keyfetR text-center mt-3">LET REALITY SCALE HELP YOU</p>
+              <p className="keyfetR text-center mt-5">
+                LET REALITY SCALE HELP YOU
+              </p>
               <h2
                 className="mil-h3 mil-muted mil-center"
-                style={{ color: "white" }}
+                style={{ color: "white", fontSize:"58px" }}
               >
                 Transform
               </h2>

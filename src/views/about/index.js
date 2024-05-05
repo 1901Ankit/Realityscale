@@ -105,12 +105,12 @@ const About = () => {
                 Welcome <br />
                 to <span className="mil-thin" style={{fontWeight:"100"}}>Reality Scale</span>
               </h2>{" "}
-              <p className="">
+              <p className="fw-300">
                 Where Innovation Bridges the Digital and Physical Realms.
               </p>
               <p className="mil-up mil-mb-10">
                 <span className=" fw-bold">At Reality Scale,</span>
-                <span className="mx-1">
+                <span className="mx-1 fw-300">
                   we are driven by a vision to revolutionize digital
                   presentations across industries. Our studio is at the
                   forefront of creating interactive experiences that not only
@@ -120,7 +120,7 @@ const About = () => {
               </p>
               <p className="mil-up mil-mb-10">
                 <span className=" fw-bold">Innovation is Our Passion:</span>
-                <span className="mx-1">
+                <span className="mx-1 fw-300">
                   it's the core of our mission. By continuously pushing the
                   boundaries of immersive technology, we provide businesses with
                   unique tools to enhance customer interaction.
@@ -129,7 +129,7 @@ const About = () => {
               <p className="mil-up mil-mb-60">
                 <span className=" fw-bold">Visualize the Future:</span>
 
-                <span className="mx-1">
+                <span className="mx-1 fw-300">
                   Imagine a world where digital interactions rival the depth and
                   detail of the real world. Reality Scale makes it a reality,
                   offering a suite of tools that bring unprecedented realism and

@@ -169,9 +169,42 @@ const Loader = () => {
           className={`mil-preloader-animation ${!showVideo ? "visible" : ""}`}
         >
           <div className="mil-pos-abs mil-animation-1">
-            <p className="mil-h3 mil-muted mil-thin text-white">Create</p>
-            <p className="mil-h3 mil-muted text-white">Your</p>
-            <p className="mil-h3 mil-muted mil-thin text-white">Reality</p>
+            <p
+              className="mil-h3 mil-muted mil-thin text-white fw-100"
+              style={{
+                translate: "none",
+                rotate: "none",
+                scale: "none",
+                transform: "translate(0px, -30px)",
+                opacity: "0",
+              }}
+            >
+              Create
+            </p>
+            <p
+              className="mil-h3 mil-muted text-white fw-500"
+              style={{
+                translate: "none",
+                rotate: "none",
+                scale: "none",
+                transform: "translate(0px, -30px)",
+                opacity: "0",
+              }}
+            >
+              Your
+            </p>
+            <p
+              className="mil-h3 mil-muted mil-thin text-white fw-100"
+              style={{
+                translate: "none",
+                rotate: "none",
+                scale: "none",
+                transform: "translate(0px, -30px)",
+                opacity: "0",
+              }}
+            >
+              Reality
+            </p>
           </div>
           <div className="mil-pos-abs mil-animation-2">
             <div className="mil-reveal-frame">

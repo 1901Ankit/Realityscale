@@ -92,7 +92,7 @@ z-index :1;
     text-align: center;
     display: block;
     font-weight: 500;
-    border-bottom: 1px solid grey !important;
+    border-bottom: 1px solid #808080 !important;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1.3px;

@@ -9,7 +9,11 @@ const Production = () => {
       <div className="container mil-p-120-60">
         <div className="row align-items-center mil-mb-30">
           <div className="col-lg-6 mil-mb-30">
-            <h3 className="mil-up">Popular Publications:</h3>
+            <h3 className="mil-up">Popular
+            <span className="mx-1 fw-100">
+               Publications:
+              </span>
+               </h3>
           </div>
           <div className="col-lg-6 mil-mb-30">
             <div className="mil-adaptive-right mil-up">
@@ -41,7 +45,7 @@ const Production = () => {
                       </div>
                     </div>
                     <h4 className="mil-up mil-mb-30">{val.title}</h4>
-                    <p className="mil-post-text mil-up mil-mb-30">
+                    <p className="mil-post-text mil-up mil-mb-30 fw-200">
                       {val.content}
                     </p>
                     <div className="mil-link mil-dark mil-arrow-place mil-up">

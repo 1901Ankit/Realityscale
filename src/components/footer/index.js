@@ -33,7 +33,7 @@ const Navigation = () => {
 
 const MenuList = () => {
   return (
-    <ul className="mil-menu-list mil-up mil-mb-30 p-0">
+    <ul className="mil-menu-list mil-up mil-mb-30 p-0 fw-200">
       <li>
         <a href="#." className="mil-light-soft">
           Privacy Policy
@@ -62,7 +62,7 @@ const Address = () => {
   return (
     <>
       <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
-      <p className="mil-light-soft mil-up">
+      <p className="mil-light-soft mil-up fw-200">
         2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307
       </p>
     </>
@@ -108,7 +108,7 @@ const Footer = () => {
           <div className="row justify-content-between">
             <div className="col-md-4 col-lg-4 mil-mb-60">
               <div className="main-footer__about">
-                <p className="footer-widget__text">
+                <p className="footer-widget__text fw-400">
                   Let’s start working together
                 </p>
                 <a href="#">help@company.com</a>
@@ -116,7 +116,7 @@ const Footer = () => {
               <div className="mil-muted mil-logo mil-up mil-mb-30 mt-4 ">
                 <img src={logo} style={{ width: "50%" }} />
               </div>
-              <p className="mil-light-soft mil-up mil-mb-30 mt-5">
+              <p className="mil-light-soft mil-up mil-mb-30 mt-5 fw-200">
                 Subscribe our newsletter:
               </p>
               <form className="mil-subscribe-form mil-up">
@@ -137,7 +137,7 @@ const Footer = () => {
                   <Navigation />
                 </div>
                 {/* Menu list */}
-                <div className="col-md-6 col-lg-5">
+                <div className="col-md-6 col-lg-5 fw-200">
                   <MenuList />
                 </div>
               </div>
@@ -162,7 +162,7 @@ const Footer = () => {
                 <div className="mil-mb-30">
                   <SocialIcons />
                 </div>
-                <p className="mil-light-soft mil-up">
+                <p className="mil-light-soft mil-up fw-200">
                   © Copyright 2024 - Reality-Scale. All Rights Reserved.
                 </p>
               </div>

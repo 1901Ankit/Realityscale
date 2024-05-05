@@ -41,7 +41,7 @@
 .ourcors {
   background-color: transparent;
   border-bottom: 1px solid grey;
-  
+
   /* border-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, white, rgba(255, 255, 255, 0.1) 3px) 3; */
 }
 
@@ -50,7 +50,7 @@
 }
 
 .ourcors {
-font-family:  "Outfit", sans-serif !important;
+  font-family: "Outfit", sans-serif !important;
   display: inline-block;
   padding-bottom: 10px;
   color: #000;
@@ -62,11 +62,11 @@ font-family:  "Outfit", sans-serif !important;
 }
 
 .mil-suptitle {
-font-family:  "Outfit", sans-serif !important;
+  font-family: "Outfit", sans-serif !important;
   display: inline-block;
   padding-bottom: 10px;
   color: grey;
-  font-weight: 600
+  font-weight: 100 !important
 }
 
 .mil-suptitle:after {

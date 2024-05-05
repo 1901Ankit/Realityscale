@@ -60,10 +60,19 @@ const Multicarousel = () => {
   return (
     <>
       <section className="mil-softer-bg">
-        <div className="container mil-p-120-60">
+        <div className="container mil-p-120-30">
           <div className="row">
-            <div className="col-lg-10">
-              <span className="mil-suptitle mil-suptitle-right mil-suptitle-dark mil-up">
+            <div className="col-lg-10" style={{textAlign:"right"}}>
+              <span
+                className="mil-suptitle mil-suptitle-right mil-suptitle-dark mil-up"
+             style={{translate:"none",
+              rotate:"none",
+              scale:"none",
+              transform:"translate(0px, 0px)",
+              opacity:"1",
+              textAlign:"right"
+             }}
+             >
                 Customer reviews are a valuable source <br />
                 of information for both businesses and consumers.
               </span>
@@ -116,7 +125,7 @@ const Multicarousel = () => {
                           <p className="mil-mb-5 mil-upper mil-up mil-mb-30">
                             {val.testimonialsubheading}
                           </p>
-                          <p className="mil-text-xl mil-up">
+                          <p className="mil-text-xl mil-up  fw-200">
                             {val.testimonialparagraph}
                           </p>
                         </div>

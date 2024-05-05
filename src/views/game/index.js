@@ -58,14 +58,14 @@ const Game = ({ image, heading, subHeading, price }) => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Box sx={{ paddingBottom: 2, paddingLeft: 1 }}>
+          <Box sx={{ paddingBottom: 1, paddingLeft: 1 }}>
             <Typography
               sx={{ fontSize: 20, fontWeight: 600 }}
               className="d-text"
             >
               {heading}
             </Typography>
-            <Stack direction={"row"} alignItems={"center"} spacing={1}>
+            <Stack direction={"row"} alignItems={"center"} spacing={0}>
               <Typography
                 sx={{ fontSize: 20, fontWeight: 600 }}
                 className="d-text"
@@ -73,7 +73,7 @@ const Game = ({ image, heading, subHeading, price }) => {
                 {subHeading}
               </Typography>
               <Box
-                className="mil-link mil-muted mil-arrow-place"
+                className="mil-link mil-muted mil-arrow-place left-align "
                 sx={{
                   display: isButtonVisible ? "block" : "none",
                   transform: isButtonVisible
@@ -84,7 +84,7 @@ const Game = ({ image, heading, subHeading, price }) => {
               >
                 Read More
                 <ArrowSVG className="mil-arrow" fill="#000" />{" "}
-               </Box>
+              </Box>
             </Stack>
           </Box>
         </Box>

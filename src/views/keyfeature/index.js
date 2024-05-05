@@ -31,7 +31,7 @@ const Keyfeature = () => {
   };
   return (
     <>
-      <div className="waper">
+      <div className="waper  ">
         <div className="waper" onClick={handleSliderClick}>
           <div className="carousel m-auto">
             <div className="list">
@@ -172,7 +172,7 @@ const Keyfeature = () => {
               </div>
             </div>
 
-            <div className="thumbnail">
+            <div className="thumbnail  mil-p-120-30">
               <div className="item">
                 <img src={image1} />
                 <div className="content">

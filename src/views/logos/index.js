@@ -81,7 +81,7 @@ const Sliderlogo = () => {
   return (
     <div className=" mil-dark-bg">
       <div className="mi-invert-fix">
-        <div className="container p-5 logoclient">
+        <div className="container logoclient mil-p-120-30">
           <div className="row">
             {/* <div className="col-sm-12 text-center">
               <h5>Our Clients</h5>

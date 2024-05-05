@@ -79,10 +79,12 @@
   .events-content p {
     font-size: 1rem !important;
     color: #ffff;
+    font-weight: 100 !important;
   }
   .events-content em,
   .events-content p {
     line-height: 1.6;
+    font-weight: 100 !important;
    width: 100%;
    text-align: left;
   }
@@ -138,7 +140,7 @@
 }
 .keyfetE{
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 100 !important;
   color: white;
     font-family: "Outfit", sans-serif !important;
 }

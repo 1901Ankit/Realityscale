@@ -140,7 +140,7 @@ const Business = () => {
     },
   ];
   return (
-    <div className=" mil-dark-bg">
+    <div className=" mil-dark-bg ">
       <div className="mi-invert-fix">
         <div className="">
           <div className="mil-animation-frame">
@@ -186,13 +186,29 @@ const Business = () => {
             </div>
           </div>
         </div>
-        <div className="container mil-p-120-0">
-          <div className="mil-mb-120">
+        <div className="container mil-p-120-30">
+          {/* <div className="mil-mb-120"> */}
             <div className="row">
-              <div className="col-lg-10">
+              {/* <div className="col-lg-10">
                 <span className="mil-suptitle mil-light-soft mil-suptitle-right mil-up text-grey">
                   Professionals focused on helping your brand
                   <br />
+                  grow and move forward.
+                </span>
+              </div> */}
+              <div className="col-lg-7" style={{ textAlign: "right" }}>
+                <span
+                  className="mil-suptitle mil-suptitle-right  mil-light-soft mil-up"
+                  style={{
+                    translate: "none",
+                    rotate: "none",
+                    scale: "none",
+                    transform: "translate(0px, 0px)",
+                    opacity: "1",
+                    textAlign: "right",
+                  }}
+                >
+                  Professionals focused on helping your brand <br />
                   grow and move forward.
                 </span>
               </div>
@@ -220,25 +236,20 @@ const Business = () => {
                 <ArrowSVG className="mil-arrow" />
               </div>
             </div>
-          </div>
+          {/* </div> */}
           <div className="row mil-services-grid m-0">
-            {data.map(
-              (
-                val,
-                index 
-              ) => (
-                <div
-                  key={index}
-                  className="col-md-6 col-lg-3 mil-services-grid-item p-0"
-                >
-                  <Uniq_production
-                    head={val.head}
-                    para={val.para}
-                    img={val.img}
-                  />
-                </div>
-              )
-            )}
+            {data.map((val, index) => (
+              <div
+                key={index}
+                className="col-md-6 col-lg-3 mil-services-grid-item p-0"
+              >
+                <Uniq_production
+                  head={val.head}
+                  para={val.para}
+                  img={val.img}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

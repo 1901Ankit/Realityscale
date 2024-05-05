@@ -11,4 +11,12 @@
     display: flex;
     background-color: #000 !important;
   }
+  .creatdloader{
+    font-family: "Outfit", sans-serif !important;
+    color: rgba(0, 0, 0, 0.914);
+    font-weight: 100 !important;
+    line-height: 110%;
+    font-size: 35px;
+  }
+
  
