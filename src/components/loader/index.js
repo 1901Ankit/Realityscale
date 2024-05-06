@@ -179,7 +179,7 @@ const Loader = () => {
                 opacity: "0",
               }}
             >
-              Create
+              Where
             </p>
             <p
               className="mil-h3 mil-muted text-white fw-500"
@@ -191,7 +191,7 @@ const Loader = () => {
                 opacity: "0",
               }}
             >
-              Your
+              Imagination Meets
             </p>
             <p
               className="mil-h3 mil-muted mil-thin text-white fw-100"

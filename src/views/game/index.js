@@ -2,15 +2,13 @@ import React, { useState } from "react";
 import "./index.css";
 import {
   Box,
-  Button,
-  Grid,
-  Stack,
   Typography,
+  Stack,
   useMediaQuery,
 } from "@mui/material";
-import arrow from "../../assests/images/svg/arrow.png";
 import ArrowSVG from "../../components/arrow";
-const Game = ({ image, heading, subHeading, price }) => {
+
+const Game = ({ image, heading, subHeading }) => {
   const [isButtonVisible, setIsButtonVisible] = useState(false);
 
   const handleMouseEnter = () => {
@@ -20,26 +18,26 @@ const Game = ({ image, heading, subHeading, price }) => {
   const handleMouseLeave = () => {
     setIsButtonVisible(false);
   };
+
   const phoneMatches = useMediaQuery("(max-width:600px)");
 
   return (
-    <div>
+    <div className="d-overlay">
       <div
-        className="d-overlay"
+        className="zoom-img"
         style={{
           backgroundImage: `url(${image})`,
-          height: phoneMatches ? 200 : 200,
+          height: phoneMatches ? 220 : 220,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          // borderRadius: 10,
           width: "100%",
         }}
       >
         <Box
           sx={{
             height: "100%",
-            backgroundColor: "#00000039",
+            backgroundColor: "#00000045",
             color: "#ffffff",
             display: "flex",
             justifyContent: "flex-start",
@@ -50,56 +48,44 @@ const Game = ({ image, heading, subHeading, price }) => {
               ? {}
               : {
                   ":hover": {
-                    border: "2px solid #ffd94a",
+                    border: "none",
                     transition: "border .5s, box-shadow .5s",
                     zIndex: 1,
-                    background:
-                      "linear-gradient(0, rgba(0, 0, 0, .75), transparent 50%)",
+                    backgroundColor: "#00000045",
+                    paddingLeft:"10px",
                   },
                 }),
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Box 
-          sx={{
-            paddingBottom: phoneMatches ? 0 : 1,
-            paddingLeft: phoneMatches ? 2 : 3,
-          }}>
-          {/* // sx={{ paddingBottom: 1, paddingLeft: 5 }} */}
+          <Box
+            sx={{
+              paddingBottom: phoneMatches ? 0 : 2,
+              paddingLeft: phoneMatches ? 3 : 3,
+            }}
+          >
             <Typography
-              sx={{ fontSize: 20, fontWeight: 600 }}
+              sx={{ fontSize: 18, fontWeight: 600 }}
               className="d-text"
             >
               {heading}
             </Typography>
             <Stack direction={"row"} alignItems={"center"} spacing={0}>
               <Typography
-                sx={{ fontSize: 20, fontWeight: 600  }}
-                className="d-text"
+                sx={{ fontSize: 12, fontWeight: 100 }}
+                className="d-text1"
               >
                 {subHeading}
-                {phoneMatches ? (
-                  <Box
-                    className="mil-link mil-muted mil-arrow-place left-align"
-                    sx={{
-                      display: isButtonVisible ? "none" : "block",
-                    }}
-                  >
-                    Read More
-                    <ArrowSVG className="mil-arrow" fill="#000" />{" "}
-                  </Box>
-                ) : (
-                  <Box
-                    className="mil-link mil-muted mil-arrow-place left-align"
-                    sx={{
-                      display: isButtonVisible ? "block" : "none",
-                    }}
-                  >
-                    Read More
-                    <ArrowSVG className="mil-arrow" fill="#000" />{" "}
-                  </Box>
-                )}
+                <Box
+                  className="mil-link mil-muted mil-arrow-place left-align"
+                  sx={{
+                    display: (phoneMatches || isButtonVisible) ? "block" : "none",
+                  }}
+                >
+                  Read More
+                  <ArrowSVG className="mil-arrow" fill="#000" />{" "}
+                </Box>
               </Typography>
             </Stack>
           </Box>

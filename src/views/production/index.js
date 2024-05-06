@@ -10,7 +10,7 @@ const Production = () => {
         <div className="row align-items-center mil-mb-30">
           <div className="col-lg-6 mil-mb-30">
             <h3 className="mil-up">Popular
-            <span className="mx-1 fw-100">
+            <span className="mx-1 mil-thin">
                Publications:
               </span>
                </h3>

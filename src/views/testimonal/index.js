@@ -60,7 +60,7 @@ const Multicarousel = () => {
   return (
     <>
       <section className="mil-softer-bg">
-        <div className="container mil-p-120-30">
+        <div className="container mil-p-120-30 p-4">
           <div className="row">
             <div className="col-lg-10" style={{textAlign:"right"}}>
               <span

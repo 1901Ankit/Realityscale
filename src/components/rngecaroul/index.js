@@ -58,9 +58,12 @@ const Range = () => {
     <div className=" mil-dark-bg mobileviewrange">
       <div className="mi-invert-fix">
         <div className="container mil-p-120-60 " style={{ maxWidth: 1080 }}>
-          <h1 className="keyfetR text-center">OUR USP</h1>
+          <h1 className="keyfetR text-center">ShowCase</h1>
           <h1 className="keyfet text-center"> Every Detail 
-          Counts</h1>
+         <span className="mil-thin mx-1">
+           Counts
+          </span>
+           </h1>
           <Stepper
             activeStep={activeStep}
             alternativeLabel

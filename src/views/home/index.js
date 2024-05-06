@@ -179,7 +179,7 @@ const Home = () => {
 
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
       <Mouse />
       <div className="mil-progress-track">
         <div className="mil-progress"></div>
@@ -265,26 +265,35 @@ const Home = () => {
       </div>
       <div className="mil-curtain"></div>
       <div className="mil-frame">
-        <div className="mil-frame-top">
-          <a href="/" className="mil-logo">
-            <img
-              src={logo}
-              style={{ width: "20%" }}
-              className="logoimagesystm"
-            />
+        <div class="mil-frame-top">
+          <a href="/" class="mil-logo">
+            <img src={logo} class="logoimagesystm" style={{ width: "20%" }} />
           </a>
-          <a href="/" className="mil-logo">
-            <img
-              src={logoe}
-              style={{ width: "20%" }}
-              className="logoimagemobile"
-            />
+          <a href="/" class="mil-logo">
+            <img src={logoe} class="logoimagemobile" style={{ width: "20%" }} />
           </a>
-
-          <div className="mil-menu-btn">
+           {/* <nav className="mil-navigation">
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </nav> */}
+          <div class="mil-menu-btn">
             <span></span>
           </div>
         </div>
+       
+
         <div className="mil-frame-bottom">
           <div class="mil-current-page">
             <span>Homepage</span>
@@ -344,24 +353,6 @@ const Home = () => {
                 ))}
               </div>
             </div>
-            <div
-              className="mil-animation mil-position-3 mil-scale"
-              data-value-1="1.2"
-              data-value-2=".1"
-              style={{
-                transform: "translate3d(0px, 0px, 0px) scale(0.4716, 0.4716)",
-              }}
-            >
-              <div className="mil-dodecahedron">
-                {[...Array(12)].map((_, index) => (
-                  <div className="mil-pentagon" key={index}>
-                    {[...Array(5)].map((_, i) => (
-                      <div key={i}></div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           <div className="mil-gradient"></div>
@@ -380,13 +371,13 @@ const Home = () => {
                       <h1 className="mil-mutede mil-mb-30">
                         Your{" "}
                         <span
-                          className="mil-thin"
+                          className="mil-thins"
                           style={{ fontWeight: "100px" }}
                         >
                           Digital
                         </span>
                         <br /> Innovation{" "}
-                        <span className="mil-thin">Partner</span>
+                        <span className="mil-thins">Partner</span>
                       </h1>
 
                       <p className="mil-light-soft mil-mb-60 text-white">
@@ -539,19 +530,13 @@ const Home = () => {
 
       <div className="contactus_parallax">
         <div className="paralaxoverlay">
-          <Container sx={{ p: { lg: 5, xs: 2 }, paddingBottom: 15 }}>
+          <Container sx={{ p: { lg: 2, xs: 2 }, paddingBottom: 15 }}>
             <div>
-              <p className="keyfetR text-center mt-5">
-                LET REALITY SCALE HELP YOU
-              </p>
-              <h2
-                className="mil-h3 mil-muted mil-center"
-                style={{ color: "white", fontSize:"58px" }}
-              >
-                Transform
+              <h2 className=" mil-mutede mil-mb-10  mil-center mt-5">
+                LET REALITY SCALE <br />
+                <span className="mil-thin">HELP YOU Transform</span>
               </h2>
-              <p className="keyfetE text-center mt-3">
-                {" "}
+              <p className="keyfetE mil-light-soft mil-center">
                 how you showcase your products and engage with your customers!
               </p>
             </div>

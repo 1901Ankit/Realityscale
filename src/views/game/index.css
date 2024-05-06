@@ -10,15 +10,34 @@
 .paralaxoverlay {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.962), transparent 50%, transparent 90%, rgba(0, 0, 0, 0.962));
 }
-.d-text{
-font-weight: 600 !important;
-font-family: "Outfit", sans-serif !important;
+
+.d-text {
+    font-weight: 600 !important;
+    font-family: "Outfit", sans-serif !important;
 }
-/* .redna{
-    display: block !important;
-} */
+
+.d-text1 {
+    font-weight: 100 !important;
+    font-family: "Outfit", sans-serif !important;
+    width: 90%;
+}
+
 @media (max-width: 767px) {
-.borderhover:hover{
-    border: none !important;
+    .borderhover:hover {
+        border: none !important;
+    }
 }
+
+.d-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.d-overlay:hover .zoom-img {
+    transform: scale(1.1);
+}
+
+.zoom-img {
+    transition: transform 0.3s ease;
+
 }

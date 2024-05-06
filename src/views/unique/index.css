@@ -17,6 +17,7 @@
   }
   @media screen and (max-width: 768px) {
     .mil-services-grid{
-    padding: 30px !important;
+    /* padding: 30px !important;    .mil-text-xl {
+ */
     }
   }

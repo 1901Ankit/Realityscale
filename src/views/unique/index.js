@@ -186,16 +186,8 @@ const Business = () => {
             </div>
           </div>
         </div>
-        <div className="container mil-p-120-30">
-          {/* <div className="mil-mb-120"> */}
+        <div className="container mil-p-120-30 p-4">
           <div className="row">
-            {/* <div className="col-lg-10">
-                <span className="mil-suptitle mil-light-soft mil-suptitle-right mil-up text-grey">
-                  Professionals focused on helping your brand
-                  <br />
-                  grow and move forward.
-                </span>
-              </div> */}
             <div className="col-lg-7" style={{ textAlign: "right" }}>
               <span
                 className="mil-suptitle mil-suptitle-right  mil-light-soft mil-up"

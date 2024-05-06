@@ -57,34 +57,40 @@ let data = {
     {
       image: backgroundImage1,
       heading: "AI Integration",
-      subHeading: "",
+      subHeading:
+        "Enhance customer interaction and streamline operations with our customizable AI-powered solutions.",
     },
     {
       image: backgroundImage2,
       heading: "Automotive Solutions",
-      subHeading: "",
+      subHeading:
+        "Showcase vehicles in stunning detail and drive sales with interactive configurators and virtual showrooms.",
     },
 
     {
       image: backgroundImage3,
       heading: "Web3 Frontier ",
-      subHeading: "",
+      subHeading:
+        "Embrace the future of technology with our cutting-edge metaverse, blockchain, and NFT solutions.",
     },
 
     {
       image: backgroundImage4,
       heading: "Real Estate Solutions ",
-      subHeading: "",
+      subHeading:
+        "Revolutionize property marketing with immersive 3D visualizations and AI-powered sales tools.",
     },
     {
       image: backgroundImage5,
       heading: "XR Immersion",
-      subHeading: "",
+      subHeading:
+        "Experience products in new dimensions with our interactive augmented and virtual reality solutions.",
     },
     {
       image: backgroundImage6,
       heading: "Reality Scale Framework ",
-      subHeading: "",
+      subHeading:
+        "Create high-fidelity, scalable cloud presentations or showcases with our powerful development toolkit.",
     },
   ],
   blogPosts: [

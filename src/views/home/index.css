@@ -51,7 +51,7 @@ blockquote {
 
 @media screen and (max-width: 768px) {
   .mil-text-xl {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
@@ -68,6 +68,10 @@ blockquote {
 
 .mil-thin {
   font-weight: 100 !important;
+  color: #ffd94a !important;
+}
+.mil-thins{
+font-weight: 100 !important;
 }
 
 a {
@@ -4575,6 +4579,9 @@ html.is-animating .mil-menu-frame {
 }
 
 @media (max-width: 767px) {
+  .mil-frame .mil-frame-top{
+padding: 0;
+  }
   .uniidea {
     text-align: center !important;
     padding: 0;
@@ -4644,7 +4651,7 @@ html.is-animating .mil-menu-frame {
 
   .mobilevideo {
     display: block;
-    padding-bottom: 91px;
+    padding-bottom: 90px;
     /* margin-bottom: 0px; */
   }
 

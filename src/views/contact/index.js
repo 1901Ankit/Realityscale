@@ -488,7 +488,7 @@ const Contactus = () => {
             animationName: "fadeInUp",
           }}
         >
-          <div className="container my-5">
+          <div className="container">
             <div className="row">
               {contact.map((val) => (
                 <div className="col-sm-4 p-4">
@@ -519,11 +519,11 @@ const Contactus = () => {
             animationName: "fadeInUp",
           }}
         >
-          <div className="section-title text-center">
-            <h5 className="section-title__tagline section-title__tagline--has-dots text-grey">
+          <div className="section-title ">
+            <h5 className="section-title__tagline section-title__tagline--has-dots text-grey text-center">
               Let's Talk
             </h5>
-            <h2 className="section-title__title text-white">
+            <h2 className="section-title__title text-white text-center">
               Feel free to get in touch
               <br /> with Reality
             </h2>

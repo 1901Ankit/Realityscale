@@ -104,7 +104,7 @@ const Footer = () => {
   return (
     <footer className="mil-dark-back">
       <div className="mi-inverter-fix">
-        <div className="container mil-p-120-60">
+        <div className="container mil-p-120-30">
           <div className="row justify-content-between">
             <div className="col-md-4 col-lg-4 mil-mb-60">
               <div className="main-footer__about">

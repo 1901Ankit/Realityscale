@@ -142,8 +142,8 @@ const About = () => {
                 </div>
                 <h6 className="mil-quote mil-up">
                   Passionately Creating{" "}
-                  <span className="mil-thin">Design Wonders:</span> Unleashing{" "}
-                  <span className="mil-thin">Boundless Creativity</span>
+                  <span className="mil-thins">Design Wonders:</span> Unleashing{" "}
+                  <span className="mil-thins">Boundless Creativity</span>
                 </h6>
               </div>
             </div>

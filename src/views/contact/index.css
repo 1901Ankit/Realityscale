@@ -76,7 +76,10 @@
 
 @media (max-width: 767px) {
     .contact-one__left {
-        padding-top: 80px;
+        padding: 30px 0 !important;
+    }
+    .contact-information {
+padding: 50px 0;
     }
 }
 
