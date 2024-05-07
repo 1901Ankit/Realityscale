@@ -6,97 +6,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Uniq_production from "../../components/uniq_prodution";
 import unique from "../../assests/data/unique";
 import ArrowSVG from "../../components/arrow";
+import Aos from "aos";
 const Business = () => {
-  function setupAnimations() {
-    // Register the ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
-
-    const appearances = document.querySelectorAll(".mil-up");
-
-    appearances.forEach((section) => {
-      gsap.fromTo(
-        section,
-        {
-          opacity: 0,
-          y: 40,
-          scale: 0.98,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 0.4,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-
-    const scaleImages = document.querySelectorAll(".mil-scale");
-
-    scaleImages.forEach((section) => {
-      const value1 = parseFloat(section.getAttribute("data-value-1"));
-      const value2 = parseFloat(section.getAttribute("data-value-2"));
-      gsap.fromTo(
-        section,
-        {
-          scale: value1,
-        },
-        {
-          scale: value2,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            scrub: true,
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-
-    if (window.innerWidth > 960) {
-      const parallaxImages = document.querySelectorAll(".mil-parallax");
-      parallaxImages.forEach((section) => {
-        const value1 = parseFloat(section.getAttribute("data-value-1"));
-        const value2 = parseFloat(section.getAttribute("data-value-2"));
-        gsap.fromTo(
-          section,
-          {
-            y: value1,
-          },
-          {
-            y: value2,
-            ease: "sine",
-            scrollTrigger: {
-              trigger: section,
-              scrub: true,
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      });
-
-      const rotateSections = document.querySelectorAll(".mil-rotate");
-      rotateSections.forEach((section) => {
-        const value = parseFloat(section.getAttribute("data-value"));
-        gsap.to(section, {
-          rotation: value,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            scrub: true,
-            toggleActions: "play none none reverse",
-          },
-        });
-      });
-    }
-  }
-
-  window.addEventListener("load", setupAnimations);
-
+  Aos.init();
   let data = [
     {
       head: unique.head1,
@@ -186,7 +98,7 @@ const Business = () => {
             </div>
           </div>
         </div>
-        <div className="container mil-p-120-30 p-4">
+        <div className="container mil-p-120-30">
           <div className="row">
             <div className="col-lg-7" style={{ textAlign: "right" }}>
               <span
@@ -205,13 +117,13 @@ const Business = () => {
               </span>
             </div>
           </div>
-          <div className="mil-complex-text justify-content-center mil-up mil-mb-15 ">
+          <div className="mil-complex-text justify-content-center mil-up mil-mb-15">
             <span className="mil-text-image">
               <img src={image1} alt="team" />
             </span>
             <h2
               className="mil-h1 mil-muted mil-center uniidea"
-              style={{ color: "white" }}
+              style={{ color: "#ffd94a" }}
             >
               Unique <span className="mil-thin">Ideas</span>
             </h2>
@@ -219,9 +131,9 @@ const Business = () => {
           <div className="mil-complex-text justify-content-center mil-up">
             <h2
               className="mil-h1 mil-muted mil-center"
-              style={{ color: "white" }}
+              style={{ color: "#ffd94a" }}
             >
-              For Your <span className="mil-thin">Business.</span>
+              For Your <span className="mil-thin text-white">Business.</span>
             </h2>
             <div className="mil-services-button mil-button mil-arrow-place">
               <span>What we do</span>
@@ -234,6 +146,14 @@ const Business = () => {
               <div
                 key={index}
                 className="col-md-6 col-lg-3 mil-services-grid-item p-0"
+                data-aos="fade-up"
+                data-aos-offset="20"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top"
               >
                 <Uniq_production
                   head={val.head}

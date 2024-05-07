@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import $ from "jquery";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import "./index.css";
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
 import logos from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
@@ -10,9 +11,11 @@ import { useNavigate } from "react-router-dom";
 import Mouse from "../../components/mouse";
 import ArrowSVG from "../../components/arrow";
 import TeamMembercontent from "../../components/member";
+import Progressbar from "../../components/progressbar";
+import Backtop from "../../components/backtop";
 const Member = () => {
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
     const cloneAndAppend = (sourceSelector, targetSelector) => {
       const sourceElement = document.querySelector(sourceSelector);
       const targetElement = document.querySelector(targetSelector);
@@ -278,9 +281,7 @@ const Member = () => {
   return (
     <>
       <Mouse />
-      <div className="mil-progress-track">
-        <div className="mil-progress"></div>
-      </div>
+      <Progressbar />
       <div className="mil-menu-frame">
         <div className="mil-frame-top">
           <a href="/" className="mil-logo">
@@ -400,15 +401,7 @@ const Member = () => {
           <div className="mil-current-page">
             <span>TEAM</span>
           </div>
-          <div className="mil-back-to-top">
-            <a href="#top" className="mil-link mil-dark mil-arrow-place">
-              <span className="text-grey">Back to top</span>
-              <ArrowSVG
-                className="mil-slider-arrow mil-revi-next mil-arrow-place"
-                fill="#000000"
-              />
-            </a>
-          </div>
+          <Backtop />
         </div>
       </div>
 

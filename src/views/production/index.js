@@ -3,17 +3,28 @@ import image1 from "../../assests/images/landing/door.jpg";
 import ArrowSVG from "../../components/arrow";
 import data from "../../assests/data/data";
 import "./index.css";
+import Aos from "aos";
 const Production = () => {
+  Aos.init();
   return (
     <div>
       <div className="container mil-p-120-60">
         <div className="row align-items-center mil-mb-30">
-          <div className="col-lg-6 mil-mb-30">
-            <h3 className="mil-up">Popular
-            <span className="mx-1 mil-thin">
-               Publications:
-              </span>
-               </h3>
+          <div
+            className="col-lg-6 mil-mb-30"
+            data-aos="fade-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top"
+          >
+            <h3 className="mil-up">
+              Popular
+              <span className="mx-1 mil-thin">Publications:</span>
+            </h3>
           </div>
           <div className="col-lg-6 mil-mb-30">
             <div className="mil-adaptive-right mil-up">
@@ -30,11 +41,32 @@ const Production = () => {
               <div className="col-lg-6" key={id}>
                 <a href="#" className="mil-blog-card mil-mb-60">
                   <div className="mil-cover-frame mil-up">
-                    <img src={image1} alt="cover" />
+                    <img
+                      src={image1}
+                      alt="cover"
+                      data-aos="fade-up"
+                      data-aos-offset="20"
+                      data-aos-delay="50"
+                      data-aos-duration="1000"
+                      data-aos-easing="ease-in-out"
+                      data-aos-mirror="true"
+                      data-aos-once="false"
+                      data-aos-anchor-placement="top"
+                    />
                   </div>
-                  <div className="mil-post-descr">
+                  <div
+                    className="mil-post-descr"
+                    data-aos="fade-up"
+                    data-aos-offset="20"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out"
+                    data-aos-mirror="true"
+                    data-aos-once="false"
+                    data-aos-anchor-placement="top"
+                  >
                     <div className="mil-labels mil-up mil-mb-30">
-                      <div className="mil-label mil-upper mil-accent">
+                      <div className="mil-label mil-upper mil-accent text-black">
                         {val.category}
                       </div>
                       <div
@@ -44,13 +76,15 @@ const Production = () => {
                         {val.date}
                       </div>
                     </div>
-                    <h4 className="mil-up mil-mb-30">{val.title}</h4>
+                    <h4 className="mil-up mil-mb-30  text-black">
+                      {val.title}
+                    </h4>
                     <p className="mil-post-text mil-up mil-mb-30 fw-200">
                       {val.content}
                     </p>
-                    <div className="mil-link mil-dark mil-arrow-place mil-up">
-                      <span>Read more</span>
-                      <ArrowSVG className="mil-arrow" fill="#000000" />
+                    <div className="mil-links mil-dark mil-arrow-place mil-up">
+                      <span className="mil-label mil-upper mil-accent text-black">Read more</span>
+                      <ArrowSVG className="mil-arrow" />
                     </div>
                   </div>
                 </a>

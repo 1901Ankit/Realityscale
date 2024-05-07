@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import $ from "jquery";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
 import logos from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
 import Mouse from "../../components/mouse";
@@ -11,230 +12,40 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiFillMail } from "react-icons/ai";
 import "./index.css";
 import ArrowSVG from "../../components/arrow";
+import Progressbar from "../../components/progressbar";
+import Backtop from "../../components/backtop";
 const Contactus = () => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const cloneAndAppend = (sourceSelector, targetSelector) => {
-      const sourceElement = document.querySelector(sourceSelector);
-      const targetElement = document.querySelector(targetSelector);
+  const menuBtnHandler = () => {
+    $(".mil-menu-btn, .mil-menu, .mil-menu-frame, body").toggleClass(
+      "mil-active menu-open"
+    );
+    $("body").css(
+      "overflow-y",
+      $("body").hasClass("menu-open") ? "hidden" : "auto"
+    );
+  };
 
-      if (sourceElement && targetElement) {
-        const clone = sourceElement.cloneNode(true);
-        targetElement.appendChild(clone);
-      }
-    };
-
-    // cloneAndAppend('.mil-arrow', '.mil-arrow-place');
-    cloneAndAppend(".mil-dodecahedron", ".mil-animation");
-    cloneAndAppend(".mil-lines", ".mil-lines-place");
-    cloneAndAppend(".mil-main-menu ul li.mil-active > a", ".mil-current-page");
-  }, []);
-
-  const [rotation, setRotation] = useState(0);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const interval = setInterval(() => {
-      setRotation((rotation) => rotation + 1);
-    }, 50);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  //----scrolldown----//
-  function setupAnimations() {
-    // Register the ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
-
- 
-
-    const appearances = document.querySelectorAll(".mil-up");
-   
-    appearances.forEach((section) => {
-      gsap.fromTo(
-        section,
-        {
-          opacity: 0,
-          y: 40,
-          scale: 0.98,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 0.4,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            toggleActions: "play none none reverse",
-          },
-        }
+  const menuItemHandler = (event) => {
+    const link = $(event.currentTarget).find("a").attr("href");
+    if (link) {
+      event.preventDefault();
+      $(".mil-menu-btn, .mil-menu, .mil-menu-frame, body").removeClass(
+        "mil-active menu-open"
       );
-    });
-
-    const scaleImages = document.querySelectorAll(".mil-scale");
-
-    scaleImages.forEach((section) => {
-      const value1 = parseFloat(section.getAttribute("data-value-1"));
-      const value2 = parseFloat(section.getAttribute("data-value-2"));
-      gsap.fromTo(
-        section,
-        {
-          scale: value1,
-        },
-        {
-          scale: value2,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            scrub: true,
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-
-    if (window.innerWidth > 960) {
-      const parallaxImages = document.querySelectorAll(".mil-parallax");
-      parallaxImages.forEach((section) => {
-        const value1 = parseFloat(section.getAttribute("data-value-1"));
-        const value2 = parseFloat(section.getAttribute("data-value-2"));
-        gsap.fromTo(
-          section,
-          {
-            y: value1,
-          },
-          {
-            y: value2,
-            ease: "sine",
-            scrollTrigger: {
-              trigger: section,
-              scrub: true,
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      });
-
-      const rotateSections = document.querySelectorAll(".mil-rotate");
-      rotateSections.forEach((section) => {
-        const value = parseFloat(section.getAttribute("data-value"));
-        gsap.to(section, {
-          rotation: value,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            scrub: true,
-            toggleActions: "play none none reverse",
-          },
-        });
-      });
+      $("body").css("overflow-y", "auto");
+      setTimeout(() => (window.location.href = link), 300);
     }
-  }
-
-  window.addEventListener("load", setupAnimations);
-
-  //------endscrolldown-----//
-
+  };
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to(".mil-progress", {
-      height: "100%",
-      ease: "sine",
-      scrollTrigger: {
-        scrub: 0.3,
-      },
-    });
-  }, []);
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const btt = document.querySelector(".mil-back-to-top .mil-link");
-
-    gsap.set(btt, {
-      x: -30,
-      opacity: 0,
-    });
-
-    gsap.to(btt, {
-      x: 0,
-      opacity: 1,
-      ease: "sine",
-      scrollTrigger: {
-        trigger: "body",
-        start: "top -40%",
-        end: "top -40%",
-        toggleActions: "play none reverse none",
-      },
-    });
-  }, []);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const arrowPlace = document.querySelector(".mil-arrow-place");
-    if (arrowPlace) {
-      const arrow = arrowPlace.querySelector(".mil-arrow");
-      if (arrow) {
-        arrowPlace.appendChild(arrow.cloneNode(true));
-      }
-    }
-
-    const animation = document.querySelector(".mil-animation");
-    if (animation) {
-      const dodecahedron = animation.querySelector(".mil-dodecahedron");
-      if (dodecahedron) {
-        animation.appendChild(dodecahedron.cloneNode(true));
-      }
-    }
-
-    const linesPlace = document.querySelector(".mil-lines-place");
-    if (linesPlace) {
-      const lines = linesPlace.querySelector(".mil-lines");
-      if (lines) {
-        linesPlace.appendChild(lines.cloneNode(true));
-      }
-    }
-
-    const currentPage = document.querySelector(".mil-current-page");
-    if (currentPage) {
-      const activeLink = document.querySelector(
-        ".mil-main-menu ul li.mil-active > a"
-      );
-      if (activeLink) {
-        currentPage.appendChild(activeLink.cloneNode(true));
-      }
-    }
-  }, []);
-
-  //---------- mainmenu-------//
-  useEffect(() => {
-    function toggleMenu() {
-      $(".mil-menu-btn").toggleClass("mil-active");
-      $(".mil-menu").toggleClass("mil-active");
-      $(".mil-menu-frame").toggleClass("mil-active");
-      $("body").toggleClass("menu-open");
-      if ($("body").hasClass("menu-open")) {
-        $("body").css("overflow-y", "hidden");
-      } else {
-        $("body").css("overflow-y", "auto");
-      }
-    }
-    $(".mil-main-menu li").on("click", function (event) {
-      const link = $(this).find("a").attr("href");
-      if (link) {
-        event.preventDefault();
-        toggleMenu();
-        window.location.href = link;
-      }
-    });
-    $(".mil-menu-btn").on("click", toggleMenu);
+    gsap.to(".element", { duration: 1, opacity: 0 });
+    $(".mil-menu-btn").on("click", menuBtnHandler);
+    $(".mil-main-menu li").on("click", menuItemHandler);
     return () => {
-      $(".mil-menu-btn").off("click", toggleMenu);
-      $(".mil-main-menu li").off("click");
+      $(".mil-menu-btn, .mil-main-menu li").off("click");
       $("body").css("overflow-y", "auto");
     };
   }, []);
+
   const navigate = useNavigate();
   const Home = () => {
     navigate("/");
@@ -287,9 +98,7 @@ const Contactus = () => {
   return (
     <>
       <Mouse />
-      <div className="mil-progress-track">
-        <div className="mil-progress"></div>
-      </div>
+      <Progressbar/>
       <div className="mil-menu-frame">
         <div className="mil-frame-top">
           <a href="/" className="mil-logo">
@@ -386,7 +195,7 @@ const Contactus = () => {
       <div className="mil-curtain"></div>
       <div className="mil-frame">
         <div className="mil-frame-top">
-        <a href="/" className="mil-logo">
+          <a href="/" className="mil-logo">
             <img
               src={logo}
               style={{ width: "20%" }}
@@ -405,19 +214,10 @@ const Contactus = () => {
           </div>
         </div>
         <div className="mil-frame-bottom">
-          <div className="mil-current-page text-white"><span>
-            CONTACT
-            </span>
-            </div>
-          <div className="mil-back-to-top">
-            <a href="#top" className="mil-link mil-dark mil-arrow-place">
-              <span className="text-grey">Back to top</span>
-              <ArrowSVG
-                className="mil-slider-arrow mil-revi-next mil-arrow-place"
-                fill="#000000"
-              />
-            </a>
+          <div className="mil-current-page text-white">
+            <span>CONTACT</span>
           </div>
+          <Backtop/>
         </div>
       </div>
 
@@ -459,9 +259,18 @@ const Contactus = () => {
                         <a href="#">Contact</a>
                       </li>
                     </ul>
-                    <h1 className="mil-muted mil-mb-60">
-                      This is <span className="mil-thin">what</span>
-                      <br /> we do <span className="mil-thin">best</span>
+                    <h1
+                      className="mil-muted mil-mb-60"
+                      style={{ color: "#ffd94a" }}
+                    >
+                      This is{" "}
+                      <span className="mil-thins" style={{ color: "white" }}>
+                        what
+                      </span>
+                      <br /> we do{" "}
+                      <span className="mil-thins" style={{ color: "white" }}>
+                        best
+                      </span>
                     </h1>
                     <a
                       href="#services"
@@ -478,7 +287,7 @@ const Contactus = () => {
         </div>
       </div>
 
-      <section className="contact-information">
+      <div className="contact-information">
         <div
           className="container wow fadeInUp animated animated"
           data-wow-delay="300ms"
@@ -495,9 +304,9 @@ const Contactus = () => {
                   <div className="bord text-start p-4">
                     {val.icon}
                     <h5 className="text-white my-3">{val.name}</h5>
-                    <p className="text-grey mb-0">{val.value}</p>
+                    <p className="text-white mb-0 vlaue" >{val.value}</p>
                     {val.value2 ? (
-                      <p className="text-grey">{val.value2}</p>
+                      <p className="text-white vlaue">{val.value2}</p>
                     ) : (
                       <></>
                     )}
@@ -507,104 +316,110 @@ const Contactus = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="contact-two">
-        <div
-          className="container wow fadeInUp animated animated"
-          data-wow-delay="300ms"
-          style={{
-            visibility: "visible",
-            animationDelay: "300ms",
-            animationName: "fadeInUp",
-          }}
-        >
-          <div className="section-title ">
-            <h5 className="section-title__tagline section-title__tagline--has-dots text-grey text-center">
-              Let's Talk
-            </h5>
-            <h2 className="section-title__title text-white text-center">
-              Feel free to get in touch
-              <br /> with Reality
-            </h2>
-          </div>
-          <div className="contact-one__left text-center">
-            <div className="contact-one__form-box">
-              <form
-                className="contact-one__form contact-form-validated"
-                noValidate
-              >
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="contact-one__input-box">
-                      <input type="text" placeholder="Your name" name="name" />
+      <div className="mil-dark-bg">
+        <div className="mi-invert-fix">
+          <div
+            className="container wow fadeInUp animated animated"
+            data-wow-delay="300ms"
+            style={{
+              visibility: "visible",
+              animationDelay: "300ms",
+              animationName: "fadeInUp",
+            }}
+          >
+            <div className="section-title ">
+              <h5 className="section-title__tagline section-title__tagline--has-dots text-grey text-center">
+                Let's Talk
+              </h5>
+              <h2 className="section-title__title text-white text-center">
+                Feel free to get in touch
+                <br /> with Reality
+              </h2>
+            </div>
+            <div className="contact-one__left text-center">
+              <div className="contact-one__form-box">
+                <form
+                  className="contact-one__form contact-form-validated"
+                  noValidate
+                >
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="contact-one__input-box">
+                        <input
+                          type="text"
+                          placeholder="Your name"
+                          name="name"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="contact-one__input-box">
-                      <input
-                        type="email"
-                        placeholder="Email address"
-                        name="email"
-                      />
+                    <div className="col-md-6">
+                      <div className="contact-one__input-box">
+                        <input
+                          type="email"
+                          placeholder="Email address"
+                          name="email"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="contact-one__input-box">
-                      <input type="text" placeholder="Phone" name="phone" />
+                    <div className="col-md-6">
+                      <div className="contact-one__input-box">
+                        <input type="text" placeholder="Phone" name="phone" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="contact-one__input-box">
-                      <select name="casestudy">
-                        <option
-                          value=" 0
+                    <div className="col-md-6">
+                      <div className="contact-one__input-box">
+                        <select name="casestudy">
+                          <option
+                            value=" 0
                     "
-                        >
-                          Please select options
-                        </option>
-                        <option
-                          value="1
+                          >
+                            Please select options
+                          </option>
+                          <option
+                            value="1
                       "
-                        >
-                          Select service 01
-                        </option>
-                        <option
-                          value="2
+                          >
+                            Select service 01
+                          </option>
+                          <option
+                            value="2
                       "
-                        >
-                          Select service 02
-                        </option>
-                        <option
-                          value="
+                          >
+                            Select service 02
+                          </option>
+                          <option
+                            value="
                       3"
-                        >
-                          Select service 03
-                        </option>
-                      </select>
+                          >
+                            Select service 03
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="contact-one__input-box">
+                        <textarea
+                          name="message"
+                          placeholder="Write Comment"
+                        ></textarea>
+                      </div>
+                      <button
+                        type="submit"
+                        class="mil-services-button mil-button mil-arrow-place"
+                      >
+                        <span>Send Message</span>
+                        <ArrowSVG className=" mil-arrow" fill="#000000" />
+                      </button>
                     </div>
                   </div>
-                  <div className="col-md-12">
-                    <div className="contact-one__input-box">
-                      <textarea
-                        name="message"
-                        placeholder="Write Comment"
-                      ></textarea>
-                    </div>
-                    <button
-                      type="submit"
-                      class="mil-services-button mil-button mil-arrow-place"
-                    >
-                      <span>Send Message</span>
-                      <ArrowSVG className=" mil-arrow" fill="#000000" />
-                    </button>
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

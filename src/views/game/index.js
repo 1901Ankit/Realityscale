@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import "./index.css";
-import {
-  Box,
-  Typography,
-  Stack,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Typography, Stack, useMediaQuery } from "@mui/material";
 import ArrowSVG from "../../components/arrow";
-
 const Game = ({ image, heading, subHeading }) => {
   const [isButtonVisible, setIsButtonVisible] = useState(false);
-
   const handleMouseEnter = () => {
     setIsButtonVisible(true);
   };
-
   const handleMouseLeave = () => {
     setIsButtonVisible(false);
   };
@@ -52,7 +44,7 @@ const Game = ({ image, heading, subHeading }) => {
                     transition: "border .5s, box-shadow .5s",
                     zIndex: 1,
                     backgroundColor: "#00000045",
-                    paddingLeft:"10px",
+                    paddingLeft: "10px",
                   },
                 }),
           }}
@@ -66,7 +58,7 @@ const Game = ({ image, heading, subHeading }) => {
             }}
           >
             <Typography
-              sx={{ fontSize: 18, fontWeight: 600 }}
+              sx={{ fontSize: 18, fontWeight: 600, color: "#ffd94a" }}
               className="d-text"
             >
               {heading}
@@ -78,13 +70,13 @@ const Game = ({ image, heading, subHeading }) => {
               >
                 {subHeading}
                 <Box
-                  className="mil-link mil-muted mil-arrow-place left-align"
+                  className="mil-links mil-muted mil-arrow-place left-align"
                   sx={{
-                    display: (phoneMatches || isButtonVisible) ? "block" : "none",
+                    display: phoneMatches || isButtonVisible ? "block" : "none",
                   }}
                 >
                   Read More
-                  <ArrowSVG className="mil-arrow" fill="#000" />{" "}
+                  <ArrowSVG className="mil-arrow" />
                 </Box>
               </Typography>
             </Stack>

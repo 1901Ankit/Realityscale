@@ -31,7 +31,7 @@ const Keyfeature = () => {
   };
   return (
     <>
-      <div className="waper  ">
+      <div className="container-fluid p-0" id="keyfeature's">
         <div className="waper" onClick={handleSliderClick}>
           <div className="carousel m-auto">
             <div className="list">
@@ -176,37 +176,36 @@ const Keyfeature = () => {
               <div className="item">
                 <img src={image1} />
                 <div className="content">
-                  <div className="title">Cloud</div>
-                  <div className="description">Description</div>
+                  <div className="title" style={{color:"#ffd94a"}}>Cloud</div>
+                 <div className="description" style={{color:"#ffd94a"}}>Native </div>
                 </div>
               </div>
               <div className="item">
                 <img src={image2} className="" />
                 <div className="content">
-                  <div className="title">Reality </div>
-                  <div className="description">Description</div>
+                   <div className="title" style={{color:"#ffd94a"}}>Reality </div>
+                 <div className="description" style={{color:"#ffd94a"}}>Modeling</div>
                 </div>
               </div>
               <div className="item">
                 <img src={image3} className="" />
                 <div className="content">
-                  <div className="title">Business</div>
-                  <div className="description">Description</div>
+                   <div className="title" style={{color:"#ffd94a"}}>Business</div>
+                  <div className="description" style={{color:"#ffd94a"}}>Accelerator</div>
                 </div>
               </div>
               <div className="item">
                 <img src={image4} className="" />
                 <div className="content">
-                  <div className="title">Adaptive</div>
-                  <div className="description">Description</div>
+                   <div className="title" style={{color:"#ffd94a"}}>Adaptive</div>
+                 <div className="description" style={{color:"#ffd94a"}}>AI</div>
                 </div>
               </div>
               <div className="item">
                 <img src={image5} className="" />
                 <div className="content">
-                  <div className="title">
-Content</div>
-                  <div className="description">Description</div>
+                   <div className="title" style={{color:"#ffd94a"}}>Content</div>
+                 <div className="description" style={{color:"#ffd94a"}}>Creation </div>
                 </div>
               </div>
             </div>

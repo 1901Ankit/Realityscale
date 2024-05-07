@@ -23,9 +23,9 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
   <script>
-    gsap.registerPlugin(ScrollTrigger);
-  </script>
-  <script>
+    // Initialize ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    // Add your custom JavaScript here
     document.addEventListener('DOMContentLoaded', function () {
       gsap.to(".element", { duration: 1, opacity: 0 });
     });
@@ -38,7 +38,7 @@
 
 <body>
   <div id="root"></div>
-  <script src="../public/main.js"></script>
+
 </body>
 
 </html>

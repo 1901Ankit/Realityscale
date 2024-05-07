@@ -15,12 +15,14 @@ import Fourth from "../displayComponent/fourth";
 import SecondComponent from "../displayComponent/secondComponent";
 import Third from "../displayComponent/third";
 import "./index.css";
+import Aos from "aos";
 
 const Range = () => {
+  Aos.init();
   const [activeStep, setActiveStep] = useState(0);
   const handlePrev = () => {
     setActiveStep((prevStep) =>
-      prevStep === 0 ? components.length - 1 : prevStep - 1 
+      prevStep === 0 ? components.length - 1 : prevStep - 1
     );
   };
 
@@ -58,12 +60,24 @@ const Range = () => {
     <div className=" mil-dark-bg mobileviewrange">
       <div className="mi-invert-fix">
         <div className="container mil-p-120-60 " style={{ maxWidth: 1080 }}>
-          <h1 className="keyfetR text-center">ShowCase</h1>
-          <h1 className="keyfet text-center"> Every Detail 
-         <span className="mil-thin mx-1">
-           Counts
-          </span>
-           </h1>
+          <div
+            className=""
+            data-aos="fade-up"
+            data-aos-offset="20"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top"
+          >
+            <h1 className="keyfetR text-center">SHOWCASE</h1>
+            <h1 className="keyfet text-center mt-3">
+              {" "}
+              Every Detail
+              <span className="mil-thin mx-2 text-white">Counts</span>
+            </h1>
+          </div>
           <Stepper
             activeStep={activeStep}
             alternativeLabel

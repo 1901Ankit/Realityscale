@@ -7,7 +7,9 @@ import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import ArrowSVG from "../arrow";
+import Aos from "aos";
 const Navigation = () => {
+  Aos.init();
   return (
     <nav className="mil-footer-menu mil-mb-30">
       <ul className="p-0">
@@ -75,7 +77,7 @@ const SocialIcons = () => {
       <li>
         <a href="#." target="_blank" className="social-icon">
           {" "}
-          <RiInstagramFill/>
+          <RiInstagramFill />
         </a>
       </li>
       <li>
@@ -107,7 +109,17 @@ const Footer = () => {
         <div className="container mil-p-120-30">
           <div className="row justify-content-between">
             <div className="col-md-4 col-lg-4 mil-mb-60">
-              <div className="main-footer__about">
+              <div
+                className="main-footer__about"
+                data-aos="fade-up"
+                data-aos-offset="20"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top"
+              >
                 <p className="footer-widget__text fw-400">
                   Let’s start working together
                 </p>
@@ -129,15 +141,55 @@ const Footer = () => {
                 </button>
               </form>
             </div>
-            <div className="col-md-7 col-lg-6">
+            <div
+              className="col-md-7 col-lg-6"
+              data-aos="fade-up"
+              data-aos-offset="20"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top"
+            >
               {/* Navigation */}
-              <div className="row justify-content-end">
+              <div
+                className="row justify-content-end"
+                data-aos="fade-up"
+                data-aos-offset="20"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top"
+              >
                 {/* Footer menu */}
-                <div className="col-md-6 col-lg-7">
+                <div
+                  className="col-md-6 col-lg-7"
+                  data-aos="fade-up"
+                  data-aos-offset="20"
+                  data-aos-delay="50"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                  data-aos-once="false"
+                  data-aos-anchor-placement="top"
+                >
                   <Navigation />
                 </div>
                 {/* Menu list */}
-                <div className="col-md-6 col-lg-5 fw-200">
+                <div
+                  className="col-md-6 col-lg-5 fw-200"
+                  data-aos="fade-up"
+                  data-aos-offset="20"
+                  data-aos-delay="50"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                  data-aos-once="false"
+                  data-aos-anchor-placement="top"
+                >
                   <MenuList />
                 </div>
               </div>

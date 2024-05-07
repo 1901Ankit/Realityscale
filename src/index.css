@@ -1,5 +1,4 @@
 body {
-  padding: 0;
   margin: 0;
   font-family: "Outfit", sans-serif !important;
   font-size: 16px;
@@ -12,20 +11,4 @@ body {
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-@media (min-width: 1400px) {
-
-  .container-xxl,
-  .container-xl,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container {
-    max-width: 1200px !important;
-  }
 }

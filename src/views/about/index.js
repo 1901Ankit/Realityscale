@@ -4,113 +4,148 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./index.css";
 import image1 from "../../assests/images/Welcome to Reality Scale/Welcome_to_Reality_Scale.webp";
+import Aos from "aos";
 const About = () => {
-  function setupAnimations() {
-    // Register the ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
+  Aos.init();
+  // function setupAnimations() {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    const appearances = document.querySelectorAll(".mil-up");
+  //   const appearances = document.querySelectorAll(".mil-up");
 
-    appearances.forEach((section) => {
-      gsap.fromTo(
-        section,
-        {
-          opacity: 0,
-          y: 40,
-          scale: 0.98,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 0.4,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
+  //   appearances.forEach((section) => {
+  //     gsap.fromTo(
+  //       section,
+  //       {
+  //         opacity: 0,
+  //         y: 40,
+  //         scale: 0.98,
+  //       },
+  //       {
+  //         y: 0,
+  //         opacity: 1,
+  //         scale: 1,
+  //         duration: 0.4,
+  //         ease: "sine",
+  //         scrollTrigger: {
+  //           trigger: section,
+  //           toggleActions: "play none none reverse",
+  //         },
+  //       }
+  //     );
+  //   });
 
-    const scaleImages = document.querySelectorAll(".mil-scale");
+  //   const scaleImages = document.querySelectorAll(".mil-scale");
 
-    scaleImages.forEach((section) => {
-      const value1 = parseFloat(section.getAttribute("data-value-1"));
-      const value2 = parseFloat(section.getAttribute("data-value-2"));
-      gsap.fromTo(
-        section,
-        {
-          scale: value1,
-        },
-        {
-          scale: value2,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            scrub: true,
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
+  //   scaleImages.forEach((section) => {
+  //     const value1 = parseFloat(section.getAttribute("data-value-1"));
+  //     const value2 = parseFloat(section.getAttribute("data-value-2"));
+  //     gsap.fromTo(
+  //       section,
+  //       {
+  //         scale: value1,
+  //       },
+  //       {
+  //         scale: value2,
+  //         ease: "sine",
+  //         scrollTrigger: {
+  //           trigger: section,
+  //           scrub: true,
+  //           toggleActions: "play none none reverse",
+  //         },
+  //       }
+  //     );
+  //   });
 
-    if (window.innerWidth > 960) {
-      const parallaxImages = document.querySelectorAll(".mil-parallax");
-      parallaxImages.forEach((section) => {
-        const value1 = parseFloat(section.getAttribute("data-value-1"));
-        const value2 = parseFloat(section.getAttribute("data-value-2"));
-        gsap.fromTo(
-          section,
-          {
-            y: value1,
-          },
-          {
-            y: value2,
-            ease: "sine",
-            scrollTrigger: {
-              trigger: section,
-              scrub: true,
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      });
+  //   if (window.innerWidth > 960) {
+  //     const parallaxImages = document.querySelectorAll(".mil-parallax");
+  //     parallaxImages.forEach((section) => {
+  //       const value1 = parseFloat(section.getAttribute("data-value-1"));
+  //       const value2 = parseFloat(section.getAttribute("data-value-2"));
+  //       gsap.fromTo(
+  //         section,
+  //         {
+  //           y: value1,
+  //         },
+  //         {
+  //           y: value2,
+  //           ease: "sine",
+  //           scrollTrigger: {
+  //             trigger: section,
+  //             scrub: true,
+  //             toggleActions: "play none none reverse",
+  //           },
+  //         }
+  //       );
+  //     });
 
-      const rotateSections = document.querySelectorAll(".mil-rotate");
-      rotateSections.forEach((section) => {
-        const value = parseFloat(section.getAttribute("data-value"));
-        gsap.to(section, {
-          rotation: value,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            scrub: true,
-            toggleActions: "play none none reverse",
-          },
-        });
-      });
-    }
-  }
+  //     const rotateSections = document.querySelectorAll(".mil-rotate");
+  //     rotateSections.forEach((section) => {
+  //       const value = parseFloat(section.getAttribute("data-value"));
+  //       gsap.to(section, {
+  //         rotation: value,
+  //         ease: "sine",
+  //         scrollTrigger: {
+  //           trigger: section,
+  //           scrub: true,
+  //           toggleActions: "play none none reverse",
+  //         },
+  //       });
+  //     });
+  //   }
+  // }
 
-  window.addEventListener("load", setupAnimations);
+  // window.addEventListener("load", setupAnimations);
 
   return (
-    <section id="about">
-      <div className="container mil-p-120-30">
+   
+      <div className="container mil-p-120-30" id="about">
         <div className="row justify-content-between align-items-center">
           <div className="col-lg-6 col-xl-5">
-            <div className="mil-mb-90">
+            <div
+              className="mil-mb-90"
+              data-aos="fade-up"
+              data-aos-offset="20"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top"
+            >
               <h2 className="mil-up mil-mb-30">
                 Welcome <br />
-                to <span className="mil-thin" style={{fontWeight:"100"}}>Reality Scale</span>
+                to{" "}
+                <span
+                  className="mil-thin"
+                  style={{ fontWeight: "100" }}
+                  data-aos="fade-up"
+                  data-aos-offset="20"
+                  data-aos-delay="50"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                  data-aos-once="false"
+                  data-aos-anchor-placement="top"
+                >
+                  Reality Scale
+                </span>
               </h2>{" "}
               <p className="fw-300">
                 Where Innovation Bridges the Digital and Physical Realms.
               </p>
               <p className="mil-up mil-mb-10">
                 <span className=" fw-bold">At Reality Scale,</span>
-                <span className="mx-1 fw-300">
+                <span
+                  className="mx-1 fw-300"
+                  data-aos="fade-up"
+                  data-aos-offset="20"
+                  data-aos-delay="200"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                  data-aos-once="false"
+                  data-aos-anchor-placement="top"
+                >
                   we are driven by a vision to revolutionize digital
                   presentations across industries. Our studio is at the
                   forefront of creating interactive experiences that not only
@@ -120,7 +155,17 @@ const About = () => {
               </p>
               <p className="mil-up mil-mb-10">
                 <span className=" fw-bold">Innovation is Our Passion:</span>
-                <span className="mx-1 fw-300">
+                <span
+                  className="mx-1 fw-300"
+                  data-aos="fade-up"
+                  data-aos-offset="20"
+                  data-aos-delay="200"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                  data-aos-once="false"
+                  data-aos-anchor-placement="top"
+                >
                   it's the core of our mission. By continuously pushing the
                   boundaries of immersive technology, we provide businesses with
                   unique tools to enhance customer interaction.
@@ -129,21 +174,41 @@ const About = () => {
               <p className="mil-up mil-mb-60">
                 <span className=" fw-bold">Visualize the Future:</span>
 
-                <span className="mx-1 fw-300">
+                <span
+                  className="mx-1 fw-300"
+                  data-aos="fade-up"
+                  data-aos-offset="20"
+                  data-aos-delay="200"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                  data-aos-once="false"
+                  data-aos-anchor-placement="top"
+                >
                   Imagine a world where digital interactions rival the depth and
                   detail of the real world. Reality Scale makes it a reality,
                   offering a suite of tools that bring unprecedented realism and
                   interactivity to your digital products.
                 </span>
               </p>
-              <div className="mil-about-quote">
+              <div
+                className="mil-about-quote"
+                data-aos="fade-up"
+                data-aos-offset="20"
+                data-aos-delay="800"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top"
+              >
                 <div className="mil-avatar mil-up">
                   <img src={image1} alt="Founder" />
                 </div>
-                <h6 className="mil-quote mil-up">
+                <h6 className="mil-quote mil-up text-black">
                   Passionately Creating{" "}
-                  <span className="mil-thins">Design Wonders:</span> Unleashing{" "}
-                  <span className="mil-thins">Boundless Creativity</span>
+                  <span className="mil-thin">Design Wonders:</span> Unleashing{" "}
+                  <span className="mil-thin">Boundless Creativity</span>
                 </h6>
               </div>
             </div>
@@ -214,6 +279,14 @@ const About = () => {
                   src={image1}
                   alt="img"
                   className="mil-scale"
+                  data-aos="fade-up"
+                  data-aos-offset="20"
+                  data-aos-delay="500"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                  data-aos-once="false"
+                  data-aos-anchor-placement="top"
                   data-value-1="1"
                   data-value-2="1.2"
                   style={{
@@ -226,7 +299,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+
   );
 };
 

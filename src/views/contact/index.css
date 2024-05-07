@@ -9,6 +9,9 @@
     background-color:black;
     padding: 100px 0;
 }
+.vlaue{
+    font-weight: 200 !important;
+}
 
 @media (max-width: 767px) {
     .contact-two {

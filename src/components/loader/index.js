@@ -182,8 +182,9 @@ const Loader = () => {
               Where
             </p>
             <p
-              className="mil-h3 mil-muted text-white fw-500"
+              className="mil-h3 mil-muted  fw-500"
               style={{
+                color:"#ffd94a",
                 translate: "none",
                 rotate: "none",
                 scale: "none",

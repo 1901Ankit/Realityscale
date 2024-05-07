@@ -5,8 +5,9 @@ import "swiper/swiper-bundle.min.css";
 import Testilogo from "../testilogo";
 import ArrowSVG from "../../components/arrow";
 import data from "../../assests/data/data";
-
+import Aos from "aos";
 const Multicarousel = () => {
+  Aos.init();
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -60,25 +61,36 @@ const Multicarousel = () => {
   return (
     <>
       <section className="mil-softer-bg">
-        <div className="container mil-p-120-30 p-4">
+        <div className="container mil-p-120-30">
           <div className="row">
-            <div className="col-lg-10" style={{textAlign:"right"}}>
+            <div className="col-lg-10" style={{ textAlign: "right" }}>
               <span
                 className="mil-suptitle mil-suptitle-right mil-suptitle-dark mil-up"
-             style={{translate:"none",
-              rotate:"none",
-              scale:"none",
-              transform:"translate(0px, 0px)",
-              opacity:"1",
-              textAlign:"right"
-             }}
-             >
+                style={{
+                  translate: "none",
+                  rotate: "none",
+                  scale: "none",
+                  transform: "translate(0px, 0px)",
+                  opacity: "1",
+                  textAlign: "right",
+                }}
+              >
                 Customer reviews are a valuable source <br />
                 of information for both businesses and consumers.
               </span>
             </div>
           </div>
-          <h2 className="mil-center mil-up mil-mb-60">
+          <h2
+            className="mil-center mil-up mil-mb-60"
+            data-aos="fade-up"
+            data-aos-offset="20"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top"
+          >
             Customer <span className="mil-thin">Voices:</span> <br />
             Hear What <span className="mil-thin">They Say!</span>
           </h2>
@@ -108,7 +120,17 @@ const Multicarousel = () => {
                 />
               </div>
 
-              <div className="swiper-container mil-reviews-slider">
+              <div
+                className="swiper-container mil-reviews-slider"
+                data-aos="fade-up"
+                data-aos-offset="20"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top"
+              >
                 <div className="swiper-wrapper">
                   {data.testimonial.map((val, id) => {
                     return (
@@ -118,7 +140,7 @@ const Multicarousel = () => {
                           data-swiper-parallax="-200"
                           data-swiper-parallax-opacity="0"
                         >
-                          <h5 className="mil-up mil-mb-10">
+                          <h5 className="mil-up mil-mb-10 text-black">
                             {" "}
                             {val.testimonialheading}
                           </h5>

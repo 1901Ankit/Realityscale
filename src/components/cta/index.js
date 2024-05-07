@@ -3,8 +3,8 @@ import "./index.css";
 import imagectc from "../../assests/images/landing/cta-1-1.jpg";
 const CTA = () => {
   return (
-    <div className="blacked">
-      <div className="overlayed">
+    <div className="mil-dark-back">
+    <div className="mi-inverter-fix">
         <section className="cta-one  py-5">
           <div
             className="container text-center wow fadeInUp animated animated"

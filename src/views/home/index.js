@@ -20,11 +20,15 @@ import Loader from "../../components/loader";
 import $ from "jquery";
 import Mouse from "../../components/mouse";
 import { useNavigate } from "react-router-dom";
-import video from "../../assests/video/police.mp4";
+import video from "../../assests/video/Reality-video.mp4";
 import ArrowSVG from "../../components/arrow";
+import Scroll from "../../components/scroll360";
+import Backtop from "../../components/backtop";
+import Progressbar from "../../components/progressbar";
+import Aos from "aos";
 
 const Home = () => {
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  Aos.init();
   gsap.to(".element", {
     opacity: 0,
     scrollTrigger: {
@@ -84,53 +88,6 @@ const Home = () => {
 
   useEffect(() => {
     gsap.to(".element", { duration: 1, opacity: 0 });
-    const sections = [
-      ".mil-dodecahedron",
-      ".mil-lines",
-      ".mil-main-menu ul li.mil-active > a",
-    ];
-    sections.forEach((section) =>
-      cloneAndAppend(
-        section,
-        section.endsWith("a") ? ".mil-current-page" : ".mil-animation"
-      )
-    );
-  }, []);
-
-  useEffect(() => {
-    gsap.to(".element", { duration: 1, opacity: 0 });
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-    gsap.to(".mil-progress", {
-      height: "100%",
-      ease: "sine",
-      scrollTrigger: {
-        trigger: document.body,
-        start: "top 0",
-        end: "bottom 0",
-        scrub: 0.3,
-      },
-    });
-
-    const btt = document.querySelector(".mil-back-to-top .mil-link");
-    if (btt) {
-      gsap.set(btt, { x: -30, opacity: 0 });
-      gsap.to(btt, {
-        x: 0,
-        opacity: 1,
-        ease: "sine",
-        scrollTrigger: {
-          trigger: "body",
-          start: "top -40%",
-          end: "top -40%",
-          toggleActions: "play none reverse none",
-        },
-      });
-    }
-  }, []);
-
-  useEffect(() => {
-    gsap.to(".element", { duration: 1, opacity: 0 });
     $(".mil-menu-btn").on("click", menuBtnHandler);
     $(".mil-main-menu li").on("click", menuItemHandler);
     return () => {
@@ -177,13 +134,77 @@ const Home = () => {
     );
   }
 
+  // const appearances = document.querySelectorAll(".mil-up");
+
+  // appearances.forEach((section) => {
+  //   section.style.opacity = 0;
+  //   section.style.transform = "tra nslateY(40px) scale(0.98)";
+  //   section.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+
+  //   const sectionObserver = new IntersectionObserver(
+  //     (entries, observer) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           section.style.opacity = 1;
+  //           section.style.transform = "translateY(0) scale(1)";
+  //           observer.unobserve(section);
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.5 }
+  //   );
+
+  //   sectionObserver.observe(section);
+  // });
+
+  // const scaleImages = document.querySelectorAll(".mil-scale");
+
+  // scaleImages.forEach((section) => {
+  //   const value1 = parseFloat(section.dataset.value1);
+  //   const value2 = parseFloat(section.dataset.value2);
+  //   const sectionObserver = new IntersectionObserver(
+  //     (entries, observer) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           section.style.transform = `scale(${value2})`;
+  //           observer.unobserve(section);
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.5 }
+  //   );
+
+  //   sectionObserver.observe(section);
+  // });
+
+  // const parallaxImages = document.querySelectorAll(".mil-parallax");
+
+  // if (window.innerWidth > 960) {
+  //   parallaxImages.forEach((section) => {
+  //     const value1 = parseFloat(section.dataset.value1);
+  //     const value2 = parseFloat(section.dataset.value2);
+  //     const sectionObserver = new IntersectionObserver(
+  //       (entries, observer) => {
+  //         entries.forEach((entry) => {
+  //           if (entry.isIntersecting) {
+  //             section.style.transform = `translateY(${value2}px)`;
+  //             observer.unobserve(section);
+  //           }
+  //         });
+  //       },
+  //       { threshold: 0.5 }
+  //     );
+
+  //     sectionObserver.observe(section);
+  //   });
+  // }
+
   return (
     <>
-      {/* <Loader /> */}
+      <Loader />
       <Mouse />
-      <div className="mil-progress-track">
-        <div className="mil-progress"></div>
-      </div>
+      <Progressbar />
+
       <div className="mil-menu-frame">
         <div className="mil-frame-top">
           <a href="/" className="mil-logo">
@@ -265,14 +286,22 @@ const Home = () => {
       </div>
       <div className="mil-curtain"></div>
       <div className="mil-frame">
-        <div class="mil-frame-top">
-          <a href="/" class="mil-logo">
-            <img src={logo} class="logoimagesystm" style={{ width: "20%" }} />
+        <div className="mil-frame-top">
+          <a href="/" className="mil-logo">
+            <img
+              src={logo}
+              className="logoimagesystm"
+              style={{ width: "20%" }}
+            />
           </a>
-          <a href="/" class="mil-logo">
-            <img src={logoe} class="logoimagemobile" style={{ width: "20%" }} />
+          <a href="/" className="mil-logo">
+            <img
+              src={logoe}
+              className="logoimagemobile"
+              style={{ width: "20%" }}
+            />
           </a>
-           {/* <nav className="mil-navigation">
+          {/* <nav className="mil-navigation">
             <ul>
               <li>
                 <a href="#">Home</a>
@@ -288,26 +317,17 @@ const Home = () => {
               </li>
             </ul>
           </nav> */}
-          <div class="mil-menu-btn">
+          <div className="mil-menu-btn">
             <span></span>
           </div>
         </div>
-       
 
         <div className="mil-frame-bottom">
           <div class="mil-current-page">
             <span>Homepage</span>
           </div>
-          <div className="mil-back-to-top">
-            <a href="#top" className="mil-link mil-dark mil-arrow-place">
-              <span className="text-grey">Back to top</span>
 
-              <ArrowSVG
-                className="mil-slider-arrow mil-revi-next mil-arrow-place"
-                fill="#000000"
-              />
-            </a>
-          </div>
+          <Backtop />
         </div>
       </div>
 
@@ -357,7 +377,7 @@ const Home = () => {
 
           <div className="mil-gradient"></div>
 
-          <div className="container mil-p-120-30">
+          <div className="container mil-mb-10">
             <div
               className=" mil-up"
               style={{
@@ -440,25 +460,23 @@ const Home = () => {
                     className="col-md-6  col-lg-6"
                     style={{ marginTop: "35px" }}
                   >
-                    <h1 className="mil-mutede">
+                    <h1 className="mil-mutede mil-mb-30">
                       Your{" "}
                       <span
-                        className="mil-thin"
+                        className="mil-thins"
                         style={{ fontWeight: "100px" }}
                       >
-                        Imagination
+                        Digital
                       </span>
-                      <br /> Meets{" "}
-                      <span className="mil-thin">Our Innovation</span>
+                      <br /> Innovation{" "}
+                      <span className="mil-thins">Partner</span>
                     </h1>
 
-                    <p
-                      className="mil-light-soft mil-mb-30 text-white"
-                      style={{ fontSize: "12px" }}
-                    >
-                      Welcome to our world of endless imagination and boundless
-                      creativity. Together, let's embark on a remarkable journey
-                      where dreams become tangible realities.
+                    <p className="mil-light-soft mil-mb-60 text-white">
+                      We craft solutions that elevate your business
+                      <br />
+                      interactions and customer engagements
+                      <br /> to new realities
                     </p>
                     <a
                       href="/contact"
@@ -474,81 +492,72 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="mil-circle-text ">
-                <svg
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 300 300"
-                  enableBackground="new 0 0 300 300"
-                  xmlSpace="preserve"
-                  className="mil-ct-svg mil-rotate"
-                  data-value="360"
-                  style={{
-                    translate: "none",
-                    rotate: "none",
-                    scale: "none",
-                    transform:
-                      "translate3d(0px, 0px, 0px) rotate(159.782deg) scale(2, 2)",
-                  }}
-                >
-                  <defs>
-                    <path
-                      id="circlePath"
-                      d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-                    ></path>
-                  </defs>
-                  <circle cx="150" cy="100" r="75" fill="none"></circle>
-                  <g>
-                    <use xlinkHref="#circlePath" fill="none"></use>
-                    <text style={{ letterSpacing: "6.5px" }}>
-                      <textPath xlinkHref="#circlePath">
-                        Scroll down - Scroll down -{" "}
-                      </textPath>
-                    </text>
-                  </g>
-                </svg>
-                <a
-                  href="#about"
-                  className="mil-button mil-arrow-place mil-icon-button mil-arrow-down"
-                >
-                  <ArrowSVG className="mil-arrow" fill="#000000" />
-                </a>
-              </div>
+              <Scroll />
             </div>
           </div>
         </div>
       </div>
 
+      <Keyfeature />
       <Sliderlogo />
       <Range />
       <About />
-      <Keyfeature />
 
       <div className="contactus_parallax">
         <div className="paralaxoverlay">
           <Container sx={{ p: { lg: 2, xs: 2 }, paddingBottom: 15 }}>
-            <div>
-              <h2 className=" mil-mutede mil-mb-10  mil-center mt-5">
-                LET REALITY SCALE <br />
-                <span className="mil-thin">HELP YOU Transform</span>
-              </h2>
-              <p className="keyfetE mil-light-soft mil-center">
-                how you showcase your products and engage with your customers!
-              </p>
+            <div
+              className=" mil-muteded mil-mb-30  mil-center mt-5"
+              data-aos="fade-up"
+              data-aos-offset="20"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top"
+            >
+              {" "}
+              LET REALITY SCALE <br />{" "}
+              <h1 className="helpyou mt-3">
+                Help You
+                <span className="mil-thin text-white"> Transform</span>
+              </h1>
             </div>
+            <p className="keyfetE mil-light-soft mil-center">
+              how you showcase your products and engage with your customers!
+            </p>
+
             <Grid
               container
               spacing={{ lg: 5, xs: 2 }}
               marginTop={0}
               marginBottom={4}
               className="mt-2"
+              data-aos="fade-up"
+              data-aos-offset="20"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top"
             >
               {data.gameData.map((val, i) => (
-                <Grid item lg={4} xs={12} key={i}>
+                <Grid
+                  item
+                  lg={4}
+                  xs={12}
+                  key={i}
+                  data-aos="fade-up"
+                  data-aos-offset="20"
+                  data-aos-delay="50"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                  data-aos-once="false"
+                  data-aos-anchor-placement="top"
+                >
                   <Game
                     image={val.image}
                     heading={val.heading}

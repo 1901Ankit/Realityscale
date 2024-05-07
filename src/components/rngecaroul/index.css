@@ -127,14 +127,14 @@
   border-radius: 10px;
 }
 .keyfet{
-  font-size: 40px;
+  font-size: 68px;
   font-weight: 500;
-  color: white;  
+  color: #ffd94a;
   font-family: "Outfit", sans-serif !important;
 }
 .keyfetR{
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 200;
   color: white;
     font-family: "Outfit", sans-serif !important;
 }
