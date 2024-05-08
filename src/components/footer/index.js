@@ -111,7 +111,7 @@ const Footer = () => {
             <div className="col-md-4 col-lg-4 mil-mb-60">
               <div
                 className="main-footer__about"
-                data-aos="fade-up"
+                data-aos="fade-down"
                 data-aos-offset="20"
                 data-aos-delay="50"
                 data-aos-duration="1000"
@@ -123,7 +123,7 @@ const Footer = () => {
                 <p className="footer-widget__text fw-400">
                   Let’s start working together
                 </p>
-                <a href="#">help@company.com</a>
+                <a href="#">+91 8800291352</a>
               </div>
               <div className="mil-muted mil-logo mil-up mil-mb-30 mt-4 ">
                 <img src={logo} style={{ width: "50%" }} />
@@ -143,9 +143,9 @@ const Footer = () => {
             </div>
             <div
               className="col-md-7 col-lg-6"
-              data-aos="fade-up"
+              data-aos="fade-down"
               data-aos-offset="20"
-              data-aos-delay="50"
+              data-aos-delay="100"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
               data-aos-mirror="true"
@@ -155,9 +155,9 @@ const Footer = () => {
               {/* Navigation */}
               <div
                 className="row justify-content-end"
-                data-aos="fade-up"
+                data-aos="fade-down"
                 data-aos-offset="20"
-                data-aos-delay="50"
+                data-aos-delay="100"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
@@ -167,9 +167,9 @@ const Footer = () => {
                 {/* Footer menu */}
                 <div
                   className="col-md-6 col-lg-7"
-                  data-aos="fade-up"
+                  data-aos="fade-down"
                   data-aos-offset="20"
-                  data-aos-delay="50"
+                  data-aos-delay="100"
                   data-aos-duration="1000"
                   data-aos-easing="ease-in-out"
                   data-aos-mirror="true"
@@ -181,9 +181,9 @@ const Footer = () => {
                 {/* Menu list */}
                 <div
                   className="col-md-6 col-lg-5 fw-200"
-                  data-aos="fade-up"
+                  data-aos="fade-down"
                   data-aos-offset="20"
-                  data-aos-delay="50"
+                  data-aos-delay="100"
                   data-aos-duration="1000"
                   data-aos-easing="ease-in-out"
                   data-aos-mirror="true"
@@ -215,7 +215,7 @@ const Footer = () => {
                   <SocialIcons />
                 </div>
                 <p className="mil-light-soft mil-up fw-200 copywrite">
-                  © Copyright 2024 - Reality-Scale. All Rights Reserved.
+                  © Copyright 2024 - Reality Sacle LLC and Digixito Media Private Limited. All Rights Reserved.
                 </p>
               </div>
             </div>

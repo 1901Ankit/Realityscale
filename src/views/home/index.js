@@ -28,6 +28,23 @@ import Progressbar from "../../components/progressbar";
 import Aos from "aos";
 
 const Home = () => {
+  useEffect(() => {
+    const cloneAndAppend = (sourceSelector, targetSelector) => {
+      const sourceElement = document.querySelector(sourceSelector);
+      const targetElement = document.querySelector(targetSelector);
+
+      if (sourceElement && targetElement) {
+        const clone = sourceElement.cloneNode(true);
+        targetElement.appendChild(clone);
+      }
+    };
+
+    // cloneAndAppend('.mil-arrow', '.mil-arrow-place');
+    cloneAndAppend(".mil-dodecahedron", ".mil-animation");
+    cloneAndAppend(".mil-lines", ".mil-lines-place");
+    cloneAndAppend(".mil-main-menu ul li.mil-active > a", ".mil-current-page");
+  }, []);
+
   Aos.init();
   gsap.to(".element", {
     opacity: 0,

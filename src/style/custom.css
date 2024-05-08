@@ -357,13 +357,8 @@ h6,
     width: 1000px;
   }
 } */
-@media screen and (min-device-width: 1200px) and (max-device-width: 1368px) { 
+/* @media screen and (min-device-width: 1200px) and (max-device-width: 1368px) { 
   .container {
     width: 1000px;
   }
-}
-@media screen and (max-width: 1400px) { 
-  .container {
-    width: 1200px;
-  }
-}
+} */

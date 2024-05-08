@@ -53,7 +53,7 @@ const Game = ({ image, heading, subHeading }) => {
         >
           <Box
             sx={{
-              paddingBottom: phoneMatches ? 0 : 2,
+              paddingBottom: phoneMatches ? 2 : 2,
               paddingLeft: phoneMatches ? 3 : 3,
             }}
           >

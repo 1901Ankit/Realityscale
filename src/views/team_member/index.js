@@ -32,181 +32,6 @@ const Member = () => {
     cloneAndAppend(".mil-main-menu ul li.mil-active > a", ".mil-current-page");
   }, []);
 
-  const [rotation, setRotation] = useState(0);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const interval = setInterval(() => {
-      setRotation((rotation) => rotation + 1);
-    }, 50);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  //----scrolldown----//
-  function setupAnimations() {
-    // Register the ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
-
-    const appearances = document.querySelectorAll(".mil-up");
-
-    appearances.forEach((section) => {
-      gsap.fromTo(
-        section,
-        {
-          opacity: 0,
-          y: 40,
-          scale: 0.98,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 0.4,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-
-    const scaleImages = document.querySelectorAll(".mil-scale");
-
-    scaleImages.forEach((section) => {
-      const value1 = parseFloat(section.getAttribute("data-value-1"));
-      const value2 = parseFloat(section.getAttribute("data-value-2"));
-      gsap.fromTo(
-        section,
-        {
-          scale: value1,
-        },
-        {
-          scale: value2,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            scrub: true,
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-
-    if (window.innerWidth > 960) {
-      const parallaxImages = document.querySelectorAll(".mil-parallax");
-      parallaxImages.forEach((section) => {
-        const value1 = parseFloat(section.getAttribute("data-value-1"));
-        const value2 = parseFloat(section.getAttribute("data-value-2"));
-        gsap.fromTo(
-          section,
-          {
-            y: value1,
-          },
-          {
-            y: value2,
-            ease: "sine",
-            scrollTrigger: {
-              trigger: section,
-              scrub: true,
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      });
-
-      const rotateSections = document.querySelectorAll(".mil-rotate");
-      rotateSections.forEach((section) => {
-        const value = parseFloat(section.getAttribute("data-value"));
-        gsap.to(section, {
-          rotation: value,
-          ease: "sine",
-          scrollTrigger: {
-            trigger: section,
-            scrub: true,
-            toggleActions: "play none none reverse",
-          },
-        });
-      });
-    }
-  }
-
-  window.addEventListener("load", setupAnimations);
-
-  //------endscrolldown-----//
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to(".mil-progress", {
-      height: "100%",
-      ease: "sine",
-      scrollTrigger: {
-        scrub: 0.3,
-      },
-    });
-  }, []);
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const btt = document.querySelector(".mil-back-to-top .mil-link");
-
-    gsap.set(btt, {
-      x: -30,
-      opacity: 0,
-    });
-
-    gsap.to(btt, {
-      x: 0,
-      opacity: 1,
-      ease: "sine",
-      scrollTrigger: {
-        trigger: "body",
-        start: "top -40%",
-        end: "top -40%",
-        toggleActions: "play none reverse none",
-      },
-    });
-  }, []);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const arrowPlace = document.querySelector(".mil-arrow-place");
-    if (arrowPlace) {
-      const arrow = arrowPlace.querySelector(".mil-arrow");
-      if (arrow) {
-        arrowPlace.appendChild(arrow.cloneNode(true));
-      }
-    }
-
-    const animation = document.querySelector(".mil-animation");
-    if (animation) {
-      const dodecahedron = animation.querySelector(".mil-dodecahedron");
-      if (dodecahedron) {
-        animation.appendChild(dodecahedron.cloneNode(true));
-      }
-    }
-
-    const linesPlace = document.querySelector(".mil-lines-place");
-    if (linesPlace) {
-      const lines = linesPlace.querySelector(".mil-lines");
-      if (lines) {
-        linesPlace.appendChild(lines.cloneNode(true));
-      }
-    }
-
-    const currentPage = document.querySelector(".mil-current-page");
-    if (currentPage) {
-      const activeLink = document.querySelector(
-        ".mil-main-menu ul li.mil-active > a"
-      );
-      if (activeLink) {
-        currentPage.appendChild(activeLink.cloneNode(true));
-      }
-    }
-  }, []);
-
   //---------- mainmenu-------//
   useEffect(() => {
     function toggleMenu() {
@@ -296,7 +121,7 @@ const Member = () => {
         <div className="container">
           <div className="mil-menu-content">
             <div className="row">
-              <div className="col-xl-5">
+              <div className="col-xl-5 mt-5">
                 <nav className="mil-main-menu" id="">
                   <ul className="unlisted">
                     <li className="mil-has-children ">
@@ -334,7 +159,7 @@ const Member = () => {
                   </div>
                   <div className="mil-menu-right">
                     <div className="row">
-                      <div className="col-lg-8 mil-mb-60">
+                      <div className="col-lg-8 pb-3">
                         <h6 className="mil-muted mil-mb-10">Projects</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
                           {projects.map((project, index) => (
@@ -361,13 +186,11 @@ const Member = () => {
                     </div>
                     <div className="mil-divider mil-mb-60"></div>
                     <div className="row justify-content-between">
-                      <div className="col-md-6 col-lg-6">
-                        <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
-                        <p className="mil-light-soft mil-up">
-                          {address.line1},<br />
-                          {address.line2}
-                        </p>
-                      </div>
+                      <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
+                      <p className="mil-light-soft mil-up">
+                        {address.line1},<br />
+                        {address.line2}
+                      </p>
                     </div>
                   </div>
                 </div>

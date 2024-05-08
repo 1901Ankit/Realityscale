@@ -15,6 +15,22 @@ import ArrowSVG from "../../components/arrow";
 import Progressbar from "../../components/progressbar";
 import Backtop from "../../components/backtop";
 const Contactus = () => {
+  useEffect(() => {
+    const cloneAndAppend = (sourceSelector, targetSelector) => {
+      const sourceElement = document.querySelector(sourceSelector);
+      const targetElement = document.querySelector(targetSelector);
+
+      if (sourceElement && targetElement) {
+        const clone = sourceElement.cloneNode(true);
+        targetElement.appendChild(clone);
+      }
+    };
+
+    // cloneAndAppend('.mil-arrow', '.mil-arrow-place');
+    cloneAndAppend(".mil-dodecahedron", ".mil-animation");
+    cloneAndAppend(".mil-lines", ".mil-lines-place");
+    cloneAndAppend(".mil-main-menu ul li.mil-active > a", ".mil-current-page");
+  }, []);
   const menuBtnHandler = () => {
     $(".mil-menu-btn, .mil-menu, .mil-menu-frame, body").toggleClass(
       "mil-active menu-open"
@@ -98,7 +114,7 @@ const Contactus = () => {
   return (
     <>
       <Mouse />
-      <Progressbar/>
+      <Progressbar />
       <div className="mil-menu-frame">
         <div className="mil-frame-top">
           <a href="/" className="mil-logo">
@@ -112,7 +128,7 @@ const Contactus = () => {
         <div className="container">
           <div className="mil-menu-content">
             <div className="row">
-              <div className="col-xl-5">
+              <div className="col-xl-5 mt-5">
                 <nav className="mil-main-menu" id="">
                   <ul className="unlisted">
                     <li className="mil-has-children ">
@@ -150,7 +166,7 @@ const Contactus = () => {
                   </div>
                   <div className="mil-menu-right">
                     <div className="row">
-                      <div className="col-lg-8 mil-mb-60">
+                      <div className="col-lg-8 pb-3">
                         <h6 className="mil-muted mil-mb-10">Projects</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
                           {projects.map((project, index) => (
@@ -177,13 +193,11 @@ const Contactus = () => {
                     </div>
                     <div className="mil-divider mil-mb-60"></div>
                     <div className="row justify-content-between">
-                      <div className="col-md-6 col-lg-6">
-                        <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
-                        <p className="mil-light-soft mil-up">
-                          {address.line1},<br />
-                          {address.line2}
-                        </p>
-                      </div>
+                      <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
+                      <p className="mil-light-soft mil-up">
+                        {address.line1},<br />
+                        {address.line2}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -217,7 +231,7 @@ const Contactus = () => {
           <div className="mil-current-page text-white">
             <span>CONTACT</span>
           </div>
-          <Backtop/>
+          <Backtop />
         </div>
       </div>
 
@@ -304,7 +318,7 @@ const Contactus = () => {
                   <div className="bord text-start p-4">
                     {val.icon}
                     <h5 className="text-white my-3">{val.name}</h5>
-                    <p className="text-white mb-0 vlaue" >{val.value}</p>
+                    <p className="text-white mb-0 vlaue">{val.value}</p>
                     {val.value2 ? (
                       <p className="text-white vlaue">{val.value2}</p>
                     ) : (
