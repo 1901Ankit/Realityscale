@@ -1,29 +1,45 @@
-import React, { useEffect } from "react";
-import "./index.css";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Progressbar = () => {
+  const progressBarRef = useRef(null);
+
   useEffect(() => {
-    const progressBar = document.querySelector(".mil-progress");
-    if (progressBar) {
-      const handleScroll = () => {
-        const scrollPercentage =
-          (window.scrollY /
-            (document.documentElement.scrollHeight - window.innerHeight)) *
-          100;
-        progressBar.style.height = scrollPercentage + "%";
-      };
+    const progressBar = progressBarRef.current;
 
-      handleScroll();
+    const updateProgress = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercentage = (window.scrollY / totalHeight) * 100;
 
-      window.addEventListener("scroll", handleScroll);
+      // Use GSAP's smooth animation with ease-out easing function
+      gsap.to(progressBar, { height: `${scrollPercentage}%`, duration: 0.8, ease: "power3.out" });
+    };
 
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }
+    updateProgress();
+
+    // Create ScrollTrigger to smoothly update progress bar
+    ScrollTrigger.create({
+      start: "top top",
+      end: "bottom bottom",
+      onUpdate: updateProgress,
+      onUpdateParams: ["{self}"],
+      // Enable smoothing during scrolling
+      scrub: true,
+      // Adjust the throttle to control the smoothness of updates
+      throttle: 50, // Adjust this value as needed
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
+
   return (
     <div className="mil-progress-track">
-      <div className="mil-progress"></div>
+      <div ref={progressBarRef} className="mil-progress"></div>
     </div>
   );
 };

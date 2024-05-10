@@ -148,12 +148,12 @@ const Business = () => {
                 className="col-md-6 col-lg-3 mil-services-grid-item p-0"
                 data-aos="fade-up"
                 data-aos-offset="20"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
+                data-aos-delay={`${index * 100}`}
+                data-aos-duration="800" 
+                data-aos-easing="ease" 
                 data-aos-mirror="true"
                 data-aos-once="false"
-                data-aos-anchor-placement="top"
+                data-aos-anchor-placement="top" 
               >
                 <Uniq_production
                   head={val.head}

@@ -41,7 +41,7 @@ const Testilogo = () => {
   ];
   return (
     <div className="mil-softer-bg">
-      <div className="container p-5 logoclient">
+      <div className="container p-7 logoclient">
         <Carousel
           responsive={responsive}
           arrows={false}

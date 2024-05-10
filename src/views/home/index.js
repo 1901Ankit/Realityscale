@@ -521,72 +521,74 @@ const Home = () => {
       <About />
 
       <div className="contactus_parallax">
-        <div className="paralaxoverlay">
-          <Container sx={{ p: { lg: 2, xs: 2 }, paddingBottom: 15 }}>
-            <div
-              className=" mil-muteded mil-mb-30  mil-center mt-5"
-              data-aos="fade-up"
-              data-aos-offset="20"
-              data-aos-delay="50"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-              data-aos-once="false"
-              data-aos-anchor-placement="top"
-            >
-              {" "}
-              LET REALITY SCALE <br />{" "}
-              <h1 className="helpyou mt-3">
-                Help You
-                <span className="mil-thin text-white"> Transform</span>
-              </h1>
-            </div>
-            <p className="keyfetE mil-light-soft mil-center">
-              how you showcase your products and engage with your customers!
-            </p>
-
-            <Grid
-              container
-              spacing={{ lg: 5, xs: 2 }}
-              marginTop={0}
-              marginBottom={4}
-              className="mt-2"
-              data-aos="fade-up"
-              data-aos-offset="20"
-              data-aos-delay="50"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-              data-aos-once="false"
-              data-aos-anchor-placement="top"
-            >
-              {data.gameData.map((val, i) => (
-                <Grid
-                  item
-                  lg={4}
-                  xs={12}
-                  key={i}
-                  data-aos="fade-up"
-                  data-aos-offset="20"
-                  data-aos-delay="50"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top"
-                >
-                  <Game
-                    image={val.image}
-                    heading={val.heading}
-                    subHeading={val.subHeading}
-                    price={val.price}
-                  />
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        </div>
+  <div className="paralaxoverlay">
+    <Container sx={{ p: { lg: 2, xs: 2 }, paddingBottom: 15 }}>
+      <div
+        className="mil-muteded mil-mb-30 mil-center mt-5"
+        data-aos="fade-up"
+        data-aos-offset="20"
+        data-aos-delay="100"
+        data-aos-duration="1200"
+        data-aos-easing="ease" 
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top"
+      >
+        {" "}
+        LET REALITY SCALE <br />{" "}
+        <h1 className="helpyou mt-3">
+          Help You
+          <span className="mil-thin text-white"> Transform</span>
+        </h1>
       </div>
+
+      <p className="keyfetE mil-light-soft mil-center">
+        how you showcase your products and engage with your customers!
+      </p>
+
+      <Grid
+        container
+        spacing={{ lg: 5, xs: 2 }}
+        marginTop={0}
+        marginBottom={4}
+        className="mt-2"
+        data-aos="fade-up"
+        data-aos-offset="20"
+        data-aos-delay="1000"
+        data-aos-duration="1500"
+        data-aos-easing="ease" 
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top"
+      >
+        {data.gameData.map((val, i) => (
+          <Grid
+            item
+            lg={4}
+            xs={12}
+            key={i}
+            data-aos="fade-up"
+            data-aos-offset="20"
+            data-aos-delay="1000"
+            data-aos-duration="1500"
+            data-aos-easing="ease" 
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top"
+          >
+            <Game
+              image={val.image}
+              heading={val.heading}
+              subHeading={val.subHeading}
+              price={val.price}
+            />
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
+  </div>
+</div>
+
       <Business />
       {/* <TeamSection /> */}
       <Multicarousel />
