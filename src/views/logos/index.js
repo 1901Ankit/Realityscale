@@ -1,25 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
-import image1 from "../../assests/images/brand/honda.png";
-import image2 from "../../assests/images/brand/mahindra.png";
+import image1 from "../../assests/images/brand/honda.png";  
+import image4 from "../../assests/images/brand/mahindra.png";
 import image3 from "../../assests/images/brand/renault.png";
-import image5 from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
-import image4 from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
-import image6 from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
-import image7 from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
-import image8 from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
-import image9 from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
-import image10 from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
-import image11 from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
-import image12 from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
-import image13 from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
 import "./index.css";
 
 const Sliderlogo = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 3,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -34,73 +24,64 @@ const Sliderlogo = () => {
       items: 1,
     },
   };
+
   let images = [
+    {
+      img: image3,
+      key: "image3",
+    },
     {
       img: image1,
       key: "image1",
     },
     {
-      img: image2,
-      key: "image2",
+      img: image4,
+      key: "image4",
     },
-    {
-      img: image3,
-      key: "image3  ",
-    },
-    // {
-    //   img: image4,
-    // },
-    // {
-    //   img: image5,
-    // },
-    // {
-    //   img: image6,
-    // },
-    // {
-    //   img: image7,
-    // },
-    // {
-    //   img: image8,
-    // },
-    // {
-    //   img: image9,
-    // },
-    // {
-    //   img: image10,
-    // },
-    // {
-    //   img: image11,
-    // },
-    // {
-    //   img: image12,
-    // },
-    // {
-    //   img: image13,
-    // },
   ];
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handleBeforeChange = (nextSlide) => {
+    setCurrentSlide(nextSlide);
+  };
+
+  useEffect(() => {
+    const itemsToShow = responsive.desktop.items;
+    const middleIndex = Math.floor(itemsToShow / 2);
+
+    const updateMiddleLogo = () => {
+      const carouselItems = document.querySelectorAll(".react-multi-carousel-item");
+      carouselItems.forEach((item, index) => {
+        const img = item.querySelector("img");
+        if (img) {
+          if (index === (currentSlide + middleIndex) % carouselItems.length) {
+            img.classList.add("middle-logo");
+          } else {
+            img.classList.remove("middle-logo");
+          }
+        }
+      });
+    };
+
+    updateMiddleLogo();
+  }, [currentSlide, responsive]);
+
   return (
-    <div className=" mil-dark-bg">
+    <div className="mil-dark-bg">
       <div className="mi-invert-fix">
         <div className="container logoclient mil-p-120-30">
-          <div className="row">
-            {/* <div className="col-sm-12 text-center">
-              <h5>Our Clients</h5>
-            </div> */}
-            {/* <h5 class="client-carousel__tilte">
-              <span>1K+ Brands Trust Us</span>
-            </h5> */}
-          </div>
           <Carousel
             responsive={responsive}
             arrows={false}
             className="text-center"
             showDots={false}
             autoPlay={true}
-            autoPlaySpeed={2000}
+            autoPlaySpeed={1800}
             infinite={true}
+            beforeChange={handleBeforeChange}
           >
             {images.map((val) => (
-              <img key={val.key} src={val.img} alt="" height={100} />
+              <img className="carousel-logo" key={val.key} src={val.img} alt="" height={100} />
             ))}
           </Carousel>
         </div>

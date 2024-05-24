@@ -82,14 +82,14 @@ const Multicarousel = () => {
           </div>
           <h2
             className="mil-center mil-up mil-mb-60"
-            data-aos="fade-up"
-            data-aos-offset="20"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="false"
-            data-aos-anchor-placement="top"
+            // data-aos="fade-up"
+            // data-aos-offset="20"
+            // data-aos-delay="50"
+            // data-aos-duration="1000"
+            // data-aos-easing="ease-in-out"
+            // data-aos-mirror="true"
+            // data-aos-once="false"
+            // data-aos-anchor-placement="top"
           >
             Customer <span className="mil-thin">Voices:</span> <br />
             Hear What <span className="mil-thin">They Say!</span>
@@ -122,14 +122,14 @@ const Multicarousel = () => {
 
               <div
                 className="swiper-container mil-reviews-slider"
-                data-aos="fade-up"
-                data-aos-offset="20"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                data-aos-anchor-placement="top"
+                // data-aos="fade-up"
+                // data-aos-offset="20"
+                // data-aos-delay="50"
+                // data-aos-duration="1000"
+                // data-aos-easing="ease-in-out"
+                // data-aos-mirror="true"
+                // data-aos-once="false"
+                // data-aos-anchor-placement="top"
               >
                 <div className="swiper-wrapper">
                   {data.testimonial.map((val, id) => {

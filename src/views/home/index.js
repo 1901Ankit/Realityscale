@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useRef } from "react";
 import "./index.css";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -22,12 +22,101 @@ import Mouse from "../../components/mouse";
 import { useNavigate } from "react-router-dom";
 import video from "../../assests/video/Reality-video.mp4";
 import ArrowSVG from "../../components/arrow";
-import Scroll from "../../components/scroll360";
 import Backtop from "../../components/backtop";
 import Progressbar from "../../components/progressbar";
 import Aos from "aos";
 
 const Home = () => {
+  const appearance = document.querySelectorAll(".mil-up");
+
+  appearance.forEach((section) => {
+    gsap.fromTo(
+      section,
+      {
+        opacity: 0,
+        y: 40,
+        scale: 0.98,
+        ease: "sine",
+      },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 0.4,
+        scrollTrigger: {
+          trigger: section,
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  });
+
+  const scaleImage = document.querySelectorAll(".mil-scale");
+
+  scaleImage.forEach((section) => {
+    var value1 = $(section).data("value-1");
+    var value2 = $(section).data("value-2");
+    gsap.fromTo(
+      section,
+      {
+        ease: "sine",
+        scale: value1,
+      },
+      {
+        scale: value2,
+        scrollTrigger: {
+          trigger: section,
+          scrub: true,
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  });
+
+  const parallaxImage = document.querySelectorAll(".mil-parallax");
+
+  if ($(window).width() > 960) {
+    parallaxImage.forEach((section) => {
+      var value1 = $(section).data("value-1");
+      var value2 = $(section).data("value-2");
+      gsap.fromTo(
+        section,
+        {
+          ease: "sine",
+          y: value1,
+        },
+        {
+          y: value2,
+          scrollTrigger: {
+            trigger: section,
+            scrub: true,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }
+
+  const rotate = document.querySelectorAll(".mil-rotate");
+
+  rotate.forEach((section) => {
+    var value = $(section).data("value");
+    gsap.fromTo(
+      section,
+      {
+        ease: "sine",
+        rotate: 0,
+      },
+      {
+        rotate: value,
+        scrollTrigger: {
+          trigger: section,
+          scrub: true,
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  });
   useEffect(() => {
     const cloneAndAppend = (sourceSelector, targetSelector) => {
       const sourceElement = document.querySelector(sourceSelector);
@@ -74,6 +163,7 @@ const Home = () => {
 
   const address =
     "2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307";
+  const address2 = "   30 N Gould St Ste R, Sheridan, WY 82801";
 
   const cloneAndAppend = (sourceSelector, targetSelector) => {
     const source = document.querySelector(sourceSelector);
@@ -117,9 +207,11 @@ const Home = () => {
   const Member = () => {
     navigate("/team");
   };
-  const navigater = useNavigate();
   const Contactus = () => {
     navigate("/contact");
+  };
+  const Product = () => {
+    navigate("/product");
   };
 
   function ProjectItem({ name }) {
@@ -147,6 +239,14 @@ const Home = () => {
       <div className="col-md-6 col-lg-6">
         <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
         <p className="mil-light-soft mil-up">{address}</p>
+      </div>
+    );
+  }
+  function Address2({ address2 }) {
+    return (
+      <div className="col-md-6 col-lg-6">
+        <h6 className="mil-muted mil-up mil-mb-10">USA</h6>
+        <p className="mil-light-soft mil-up">{address2}</p>
       </div>
     );
   }
@@ -215,7 +315,21 @@ const Home = () => {
   //     sectionObserver.observe(section);
   //   });
   // }
+  const parallaxRef = useRef(null);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (parallaxRef.current) {
+        const scrollPosition = window.pageYOffset;
+        parallaxRef.current.style.backgroundPositionY = `${scrollPosition * 1.2}px`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <>
       <Loader />
@@ -247,15 +361,12 @@ const Home = () => {
                       </span>
                     </li>
                     <li className="mil-has-children">
+                      <span className=""onClick={Product}>Product</span>
+                    </li>
+                    <li className="mil-has-children">
                       <span className="" onClick={Contactus}>
                         Contact us
                       </span>
-                    </li>
-                    <li className="mil-has-children">
-                      <span>Newsletter</span>
-                    </li>
-                    <li className="mil-has-children">
-                      <span>Other's</span>
                     </li>
                   </ul>
                 </nav>
@@ -293,6 +404,7 @@ const Home = () => {
                     <div className="mil-divider mil-mb-60"></div>
                     <div className="row justify-content-between">
                       <Address address={address} />
+                      <Address2 address2={address2} />
                     </div>
                   </div>
                 </div>
@@ -509,7 +621,6 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <Scroll />
             </div>
           </div>
         </div>
@@ -520,74 +631,43 @@ const Home = () => {
       <Range />
       <About />
 
-      <div className="contactus_parallax">
-  <div className="paralaxoverlay">
-    <Container sx={{ p: { lg: 2, xs: 2 }, paddingBottom: 15 }}>
-      <div
-        className="mil-muteded mil-mb-30 mil-center mt-5"
-        data-aos="fade-up"
-        data-aos-offset="20"
-        data-aos-delay="100"
-        data-aos-duration="1200"
-        data-aos-easing="ease" 
-        data-aos-mirror="true"
-        data-aos-once="false"
-        data-aos-anchor-placement="top"
-      >
-        {" "}
-        LET REALITY SCALE <br />{" "}
-        <h1 className="helpyou mt-3">
-          Help You
-          <span className="mil-thin text-white"> Transform</span>
-        </h1>
+      <div className="contactus_parallax" ref={parallaxRef}>
+        <div className="paralaxoverlay">
+          <Container sx={{ p: { lg: 2, xs: 2 }, paddingBottom: 15 }}>
+            <div className="mil-muteded mil-mb-30 mil-center mt-5">
+              {" "}
+              LET REALITY SCALE <br />{" "}
+              <h1 className="helpyou mt-3">
+                Help You
+                <span className="mil-thin text-white"> Transform</span>
+              </h1>
+            </div>
+
+            <p className="keyfetE mil-light-soft mil-center">
+              how you showcase your products and engage with your customers!
+            </p>
+
+            <Grid
+              container
+              spacing={{ lg: 5, xs: 2 }}
+              marginTop={0}
+              marginBottom={4}
+              className="mt-2"
+            >
+              {data.gameData.map((val, i) => (
+                <Grid item lg={4} xs={12} key={i}>
+                  <Game
+                    image={val.image}
+                    heading={val.heading}
+                    subHeading={val.subHeading}
+                    price={val.price}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
+        </div>
       </div>
-
-      <p className="keyfetE mil-light-soft mil-center">
-        how you showcase your products and engage with your customers!
-      </p>
-
-      <Grid
-        container
-        spacing={{ lg: 5, xs: 2 }}
-        marginTop={0}
-        marginBottom={4}
-        className="mt-2"
-        data-aos="fade-up"
-        data-aos-offset="20"
-        data-aos-delay="1000"
-        data-aos-duration="1500"
-        data-aos-easing="ease" 
-        data-aos-mirror="true"
-        data-aos-once="false"
-        data-aos-anchor-placement="top"
-      >
-        {data.gameData.map((val, i) => (
-          <Grid
-            item
-            lg={4}
-            xs={12}
-            key={i}
-            data-aos="fade-up"
-            data-aos-offset="20"
-            data-aos-delay="1000"
-            data-aos-duration="1500"
-            data-aos-easing="ease" 
-            data-aos-mirror="true"
-            data-aos-once="false"
-            data-aos-anchor-placement="top"
-          >
-            <Game
-              image={val.image}
-              heading={val.heading}
-              subHeading={val.subHeading}
-              price={val.price}
-            />
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
-  </div>
-</div>
 
       <Business />
       {/* <TeamSection /> */}

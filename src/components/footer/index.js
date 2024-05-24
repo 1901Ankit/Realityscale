@@ -8,6 +8,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import ArrowSVG from "../arrow";
 import Aos from "aos";
+import { Link } from "react-router-dom";
 const Navigation = () => {
   Aos.init();
   return (
@@ -70,6 +71,16 @@ const Address = () => {
     </>
   );
 };
+const Address2 = () => {
+  return (
+    <>
+      <h6 className="mil-muted mil-up mil-mb-10">USA</h6>
+      <p className="mil-light-soft mil-up fw-200">
+        30 N Gould St Ste R, Sheridan, WY 82801
+      </p>
+    </>
+  );
+};
 
 const SocialIcons = () => {
   return (
@@ -109,17 +120,7 @@ const Footer = () => {
         <div className="container mil-p-120-30">
           <div className="row justify-content-between">
             <div className="col-md-4 col-lg-4 mil-mb-60">
-              <div
-                className="main-footer__about"
-                data-aos="fade-down"
-                data-aos-offset="20"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                data-aos-anchor-placement="top"
-              >
+              <div className="main-footer__about">
                 <p className="footer-widget__text fw-400">
                   Let’s start working together
                 </p>
@@ -141,55 +142,15 @@ const Footer = () => {
                 </button>
               </form>
             </div>
-            <div
-              className="col-md-7 col-lg-6"
-              data-aos="fade-down"
-              data-aos-offset="20"
-              data-aos-delay="100"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-              data-aos-once="false"
-              data-aos-anchor-placement="top"
-            >
+            <div className="col-md-7 col-lg-6">
               {/* Navigation */}
-              <div
-                className="row justify-content-end"
-                data-aos="fade-down"
-                data-aos-offset="20"
-                data-aos-delay="100"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                data-aos-anchor-placement="top"
-              >
+              <div className="row justify-content-end">
                 {/* Footer menu */}
-                <div
-                  className="col-md-6 col-lg-7"
-                  data-aos="fade-down"
-                  data-aos-offset="20"
-                  data-aos-delay="100"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top"
-                >
+                <div className="col-md-6 col-lg-7">
                   <Navigation />
                 </div>
                 {/* Menu list */}
-                <div
-                  className="col-md-6 col-lg-5 fw-200"
-                  data-aos="fade-down"
-                  data-aos-offset="20"
-                  data-aos-delay="100"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top"
-                >
+                <div className="col-md-6 col-lg-5 fw-200">
                   <MenuList />
                 </div>
               </div>
@@ -200,12 +161,12 @@ const Footer = () => {
             <div className="col-md-7 col-lg-6">
               {/* {/ Address /} */}
               <div className="row justify-content-between">
-                <div className="col-md-6 col-lg-5">
+                <div className="col-md-6 col-lg-6">
                   <Address />
                 </div>
-                {/* <div className="col-md-6 col-lg-5">
-                  <Address />
-                </div> */}
+                <div className="col-md-6 col-lg-6">
+                  <Address2 />
+                </div>
               </div>
             </div>
             <div className="col-md-4 col-lg-6 mil-mb-20">
@@ -214,8 +175,16 @@ const Footer = () => {
                 <div className="mil-mb-30">
                   <SocialIcons />
                 </div>
+
                 <p className="mil-light-soft mil-up fw-200 copywrite">
-                  © Copyright 2024 - Reality Sacle LLC and Digixito Media Private Limited. All Rights Reserved.
+                  ©Copyright 2024 - Reality Sacle LLC &
+                  <a
+                    href="https://www.digixito.com/"
+                    className="mx-1 text-white"
+                  >
+                    Digixito Media Private Limited.
+                  </a>
+                  <span className="text-grey">All Rights Reserved.</span>
                 </p>
               </div>
             </div>

@@ -1,3 +1,10 @@
-.p-7{
+.p-7 {
     padding: 5rem !important;
+}
+
+
+@media (max-width: 767px) {
+    .logoclients {
+        padding: 50px;
+    }
 }

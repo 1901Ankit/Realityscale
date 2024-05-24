@@ -30,7 +30,7 @@ const Loader = () => {
       const fadeTimeThreshold = 3;
       if (videoDuration - currentTime <= fadeTimeThreshold) {
         const opacity =
-          (fadeTimeThreshold - (videoDuration - currentTime)) /
+          // (fadeTimeThreshold - (videoDuration - currentTime)) 
           fadeTimeThreshold;
         gsap.to(video, {
           opacity: opacity,
@@ -211,7 +211,25 @@ const Loader = () => {
             <div className="mil-reveal-frame">
               <p className="mil-reveal-box"></p>
               <p className="mil-h3 mil-muted mil-thin text-white reltiy">
-                realityscale.com
+                <span
+                  className="mil-h3 mil-muted fw-500"
+                  style={{
+                    color: "#ffd94a",
+                  }}
+                >
+                  r
+                </span>
+                eality
+                <span
+                  className="mil-h3 mil-muted fw-500"
+                  style={{
+                    color: "#ffd94a",
+                  }}
+                >
+                  {" "}
+                  s
+                </span>
+                cale.com
               </p>
             </div>
           </div>

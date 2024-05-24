@@ -150,3 +150,21 @@
   margin-left: -10px !important;
 }
 
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+color: #ffd94a !important;
+}
+.css-4peds9-MuiTypography-root{
+  font-family: "Outfit", sans-serif !important;
+}
+
+.css-5xe99f-MuiLinearProgress-bar1{
+background-color: #ffd94a !important;
+}
+.css-eglki6-MuiLinearProgress-root{
+background-color: white !important;
+width: 91% !important;
+left: 5%;
+}
+.css-4pzcgi-MuiTabs-root .MuiTab-root{
+  color: grey !important;
+}

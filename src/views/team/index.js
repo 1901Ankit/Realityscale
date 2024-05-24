@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import AnnaImage from "../../assests/images/landing/door.jpg";
 import OscarImage from "../../assests/images/landing/door.jpg";
 import EmmaImage from "../../assests/images/landing/door.jpg";
@@ -11,24 +11,45 @@ const TeamSection = () => {
         <div className="row justify-content-between align-items-center">
           <div className="col-lg-5 col-xl-4">
             <div className="mil-mb-90">
-              <h2 className="mil-up mil-mb-60">Meet <br />Our Team</h2>
-              <p className="mil-up mil-mb-30">We are talented individuals who are passionate about bringing ideas to life. With a diverse range of backgrounds and skill sets, we collaborate to produce effective solutions for our clients.</p>
-              <p className="mil-up mil-mb-60">Together, our creative team is committed to delivering impactful work that exceeds expectations.</p>
+              <h2 className="mil-up mil-mb-60">
+                Meet <br />
+                Our Team
+              </h2>
+              <p className="mil-up mil-mb-30">
+                We are talented individuals who are passionate about bringing
+                ideas to life. With a diverse range of backgrounds and skill
+                sets, we collaborate to produce effective solutions for our
+                clients.
+              </p>
+              <p className="mil-up mil-mb-60">
+                Together, our creative team is committed to delivering impactful
+                work that exceeds expectations.
+              </p>
               <div className="mil-up">
-                <a href="team.html" className="mil-button mil-arrow-place mil-mb-60">
+                <a
+                  href="team.html"
+                  className="mil-button mil-arrow-place mil-mb-60"
+                >
                   <span>Read more</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="mil-arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className="mil-arrow"
+                  >
                     <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z"></path>
                   </svg>
                 </a>
               </div>
-              <h4 className="mil-up"><span className="mil-thin">We</span> delivering <br /><span className="mil-thin">exceptional</span> results.</h4>
+              <h4 className="mil-up">
+                <span className="mil-thin">We</span> delivering <br />
+                <span className="mil-thin">exceptional</span> results.
+              </h4>
             </div>
           </div>
           <div className="col-lg-6">
             <div className="mil-team-list">
               <div className="mil-lines-place">
-              <svg
+                <svg
                   width="250"
                   viewBox="0 0 300 1404"
                   fill="none"
@@ -89,8 +110,12 @@ const TeamSection = () => {
                     <img src={AnnaImage} alt="Anna Oldman" />
                     <div className="mil-description">
                       <div className="mil-secrc-text">
-                        <h5 className="mil-muted mil-mb-5"><a href="home-2.html">Anna Oldman</a></h5>
-                        <p className="mil-link mil-light-soft mil-mb-10">Art Director</p>
+                        <h5 className="mil-muted mil-mb-5">
+                          <a href="home-2.html">Anna Oldman</a>
+                        </h5>
+                        <p className="mil-link mil-light-soft mil-mb-10">
+                          Art Director
+                        </p>
                         <ul className="mil-social-icons mil-center">
                           {/* Social icons */}
                         </ul>
@@ -101,8 +126,12 @@ const TeamSection = () => {
                     <img src={OscarImage} alt="Oscar Freeman" />
                     <div className="mil-description">
                       <div className="mil-secrc-text">
-                        <h5 className="mil-muted mil-mb-5"><a href="home-2.html">Oscar Freeman</a></h5>
-                        <p className="mil-link mil-light-soft mil-mb-10">Frontend Dev</p>
+                        <h5 className="mil-muted mil-mb-5">
+                          <a href="home-2.html">Oscar Freeman</a>
+                        </h5>
+                        <p className="mil-link mil-light-soft mil-mb-10">
+                          Frontend Dev
+                        </p>
                         <ul className="mil-social-icons mil-center">
                           {/* Social icons */}
                         </ul>
@@ -115,8 +144,12 @@ const TeamSection = () => {
                     <img src={AnnaImage} alt="Anna Oldman" />
                     <div className="mil-description">
                       <div className="mil-secrc-text">
-                        <h5 className="mil-muted mil-mb-5"><a href="home-2.html">Anna Oldman</a></h5>
-                        <p className="mil-link mil-light-soft mil-mb-10">Art Director</p>
+                        <h5 className="mil-muted mil-mb-5">
+                          <a href="home-2.html">Anna Oldman</a>
+                        </h5>
+                        <p className="mil-link mil-light-soft mil-mb-10">
+                          Art Director
+                        </p>
                         <ul className="mil-social-icons mil-center">
                           {/* Social icons */}
                         </ul>
@@ -127,8 +160,12 @@ const TeamSection = () => {
                     <img src={OscarImage} alt="Oscar Freeman" />
                     <div className="mil-description">
                       <div className="mil-secrc-text">
-                        <h5 className="mil-muted mil-mb-5"><a href="home-2.html">Oscar Freeman</a></h5>
-                        <p className="mil-link mil-light-soft mil-mb-10">Frontend Dev</p>
+                        <h5 className="mil-muted mil-mb-5">
+                          <a href="home-2.html">Oscar Freeman</a>
+                        </h5>
+                        <p className="mil-link mil-light-soft mil-mb-10">
+                          Frontend Dev
+                        </p>
                         <ul className="mil-social-icons mil-center">
                           {/* Social icons */}
                         </ul>
@@ -143,6 +180,6 @@ const TeamSection = () => {
       </div>
     </section>
   );
-}
+};
 
 export default TeamSection;

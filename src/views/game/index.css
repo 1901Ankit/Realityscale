@@ -1,15 +1,16 @@
 .contactus_parallax {
     background-image: url("../../assests/images/gamecollection/3.webp");
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 130vh;
+    background-position: top;
+    background-attachment: scroll;
     background-size: cover;
-    background-attachment:scroll;
-    /* height: 100%; */
 }
 
 .paralaxoverlay {
+    height: 130vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.962), transparent 50%, transparent 90%, rgba(0, 0, 0, 0.962));
 }
+
 
 .d-text {
     font-weight: 600 !important;

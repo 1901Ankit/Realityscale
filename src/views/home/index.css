@@ -742,7 +742,7 @@ spaces
 }
 
 .mil-p-120-30 {
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 30px;
 }
 
@@ -1196,6 +1196,17 @@ menu
     -webkit-transform: translateY(30px);
     transform: translateY(30px);
   }
+
+}
+@media screen and (min-width: 1920px) and (min-height: 1080px){
+  .mil-menu-frame .mil-menu-right-frame {
+    height: 80vh !important;
+      }
+}
+@media screen and (min-width: 1280px) and (min-height: 800px) {
+  .mil-menu-frame .mil-menu-right-frame {
+    height: 85vh ;
+      }
 }
 
 .mil-menu-frame .mil-menu-right-frame {

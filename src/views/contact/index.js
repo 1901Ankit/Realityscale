@@ -66,9 +66,11 @@ const Contactus = () => {
   const Home = () => {
     navigate("/");
   };
-  const navigater = useNavigate();
   const Member = () => {
     navigate("/team");
+  };
+  const Product = () => {
+    navigate("/product");
   };
 
   let contact = [
@@ -91,7 +93,8 @@ const Contactus = () => {
         "2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh 201307",
     },
   ];
-  const projects = [
+
+   const projects = [
     "Interior design studio",
     "Home Security Camera",
     "Kemia Honest Skincare",
@@ -107,10 +110,46 @@ const Contactus = () => {
     "Careers",
   ];
 
-  const address = {
-    line1: "2nd Floor, D-320, Sector 63 Rd,",
-    line2: "Sector 63, Noida, Uttar Pradesh, 201307",
-  };
+  const address =
+    "2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307";
+  const address2 =
+    "   30 N Gould St Ste R, Sheridan, WY 82801";
+    function ProjectItem({ name }) {
+      return (
+        <li>
+          <a href="#" className="mil-light-soft">
+            {name}
+          </a>
+        </li>
+      );
+    }
+  
+    function UsefulLink({ name }) {
+      return (
+        <li>
+          <a href="#" className="mil-light-soft">
+            {name}
+          </a>
+        </li>
+      );
+    }
+  
+    function Address({ address }) {
+      return (
+        <div className="col-md-6 col-lg-6">
+          <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
+          <p className="mil-light-soft mil-up">{address}</p>
+        </div>
+      );
+    }
+    function Address2({ address2 }) {
+      return (
+        <div className="col-md-6 col-lg-6">
+          <h6 className="mil-muted mil-up mil-mb-10">USA</h6>
+          <p className="mil-light-soft mil-up">{address2}</p>
+        </div>
+      );
+    }
   return (
     <>
       <Mouse />
@@ -141,14 +180,11 @@ const Contactus = () => {
                         Team
                       </span>
                     </li>
+                    <li className="mil-has-children">
+                      <span className="" onClick={Product}>Product</span>
+                    </li>
                     <li className="mil-has-children mil-active">
                       <span>Contact us</span>
-                    </li>
-                    <li className="mil-has-children">
-                      <span>Newsletter</span>
-                    </li>
-                    <li className="mil-has-children">
-                      <span>Other's</span>
                     </li>
                   </ul>
                 </nav>
@@ -166,15 +202,11 @@ const Contactus = () => {
                   </div>
                   <div className="mil-menu-right">
                     <div className="row">
-                      <div className="col-lg-8 pb-3">
+                      <div className="col-lg-8">
                         <h6 className="mil-muted mil-mb-10">Projects</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
                           {projects.map((project, index) => (
-                            <li key={index}>
-                              <a href="#" className="mil-light-soft">
-                                {project}
-                              </a>
-                            </li>
+                            <ProjectItem key={index} name={project} />
                           ))}
                         </ul>
                       </div>
@@ -182,22 +214,15 @@ const Contactus = () => {
                         <h6 className="mil-muted mil-mb-10">Useful links</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
                           {usefulLinks.map((link, index) => (
-                            <li key={index}>
-                              <a href="#" className="mil-light-soft">
-                                {link}
-                              </a>
-                            </li>
+                            <UsefulLink key={index} name={link} />
                           ))}
                         </ul>
                       </div>
                     </div>
                     <div className="mil-divider mil-mb-60"></div>
                     <div className="row justify-content-between">
-                      <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
-                      <p className="mil-light-soft mil-up">
-                        {address.line1},<br />
-                        {address.line2}
-                      </p>
+                      <Address address={address} />
+                      <Address2 address2={address2} />
                     </div>
                   </div>
                 </div>
@@ -287,7 +312,7 @@ const Contactus = () => {
                       </span>
                     </h1>
                     <a
-                      href="#services"
+                      href="#"
                       className="mil-link mil-accent mil-arrow-place mil-down-arrow"
                     >
                       <span className="text-white">Send Message</span>

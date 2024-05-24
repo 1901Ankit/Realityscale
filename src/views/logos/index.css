@@ -1,98 +1,12 @@
-/* .client-carousel {
-    background-color: rgb(0, 0, 0);
-    box-sizing: border-box;
-    color: rgb(93, 93, 93);
-    display: block;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    height: 228.4px;
-    line-height: 28.125px;
-    padding-bottom: 80px;
-    text-size-adjust: 100%;
-    unicode-bidi: isolate;
-    width: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.client-carousel__tilte {
-    border-bottom-color: rgba(255, 255, 255, 0.1);
-    border-bottom-style: solid;
-    border-bottom-width: 0.8px;
-    box-sizing: border-box;
-    color: rgb(93, 93, 93);
-    display: block;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    height: 26.4px;
-    letter-spacing: 1.3px;
-    line-height: 15.6px;
-    margin-block-end: 99px;
-    margin-block-start: 0px;
-    margin-bottom: 99px;
-    margin-inline-end: 0px;
-    margin-inline-start: 0px;
-    margin-top: 0px;
-    text-align: center;
-    text-size-adjust: 100%;
-    text-transform: uppercase;
-    unicode-bidi: isolate;
-    width: 1170px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.client-carousel__tilte span {
-    background-color: rgb(0, 0, 0);
-    box-sizing: border-box;
-    color: rgb(93, 93, 93);
-    display: inline-block;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    height: 25.6px;
-    letter-spacing: 1.3px;
-    line-height: 15.6px;
-    padding-bottom: 5px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 5px;
-    position: relative;
-    text-align: center;
-    text-size-adjust: 100%;
-    text-transform: uppercase;
-    top: 13px;
-    width: 212.062px;
-    z-index: 2;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-.client-carousel .client-carousel__one{
-    box-sizing :border-box;
-color :rgb(93, 93, 93);
-display: block;
-font-family: "Plus Jakarta Sans", sans-serif;
-font-size :15px;
-font-weight: 500;
-height :23px;
-line-height: 28.125px;
-position: relative;
-text-size-adjust: 100%;
-unicode-bidi :isolate;
-width :1170px;
-z-index :1;
--webkit-tap-highlight-color :rgba(0, 0, 0, 0);
-} */
 .client_bg {
     background-color: black;
 }
 
-
-
-.client-carousel__tilte {
+.client-carousel__title {
     text-align: center;
     display: block;
     font-weight: 500;
-    border-bottom: 1px solid #808080 !important;
+    /* / border-bottom: 1px solid #808080 !important; / */
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
@@ -101,21 +15,26 @@ z-index :1;
 }
 
 @media (max-width: 767px) {
-    .client-carousel__tilte {
+    .client-carousel__title {
         margin-bottom: 49px;
     }
-    .logoclient{
-padding: 50px;
+    .carousel-logo {
+        filter: grayscale(100%);
+        filter: brightness(1) contrast(1.2) !important;
+      }
+
+    .logoclient {
+        padding: 50px;
     }
 }
 
 @media (max-width: 1199px) {
-    .client-carousel__tilte {
+    .client-carousel__title {
         margin-bottom: 69px;
     }
 }
 
-.client-carousel__tilte span {
+.client-carousel__title span {
     display: inline-block;
     background-color: black;
     padding: 5px 24px;
@@ -123,3 +42,16 @@ padding: 50px;
     position: relative;
     top: 13px;
 }
+.carousel-logo {
+    filter: grayscale(100%);
+    filter: brightness(0.5) contrast(1.2);
+  }
+  
+  .middle-logo {
+    filter: brightness(1) contrast(1.2); /* Adjust styles for the middle image */
+  }
+  
+  .other-logo {
+    filter: grayscale(100%);
+    filter: brightness(0.5) contrast(1.2); /* Adjust styles for the remaining images */
+  }

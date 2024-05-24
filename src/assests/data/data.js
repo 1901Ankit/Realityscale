@@ -28,30 +28,41 @@ let data = {
 
   faq: [
     {
-      title: "	What is Lorem?",
+      title: "Can Reality Scale develop custom applications for my business?",
       message:
-        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "Yes, Reality Scale offers custom application development services to solve specific business challenges. Our experts work closely with clients to understand their unique needs and create tailored solutions that leverage immersive technologies to drive results.",
     },
     {
-      title: "		What is Lorem?",
+      title: "How can Reality Scale benefit my business?",
       message:
-        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "Reality Scale offers a range of solutions tailored to meet your business's specific needs. Whether you're in real estate, automotive, retail, education, healthcare, or another industry, our immersive experiences can help you captivate your audience, drive sales, and stay ahead of the competition. ",
     },
     {
-      title: "		What is Lorem?",
+      title: "What industries does Reality Scale serve?",
       message:
-        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "Reality Scale serves various industries, including real estate, automotive, retail, education, healthcare, architecture and design, manufacturing, tourism and hospitality, entertainment, and more. Our customisable solutions can be adapted to meet each sector's unique requirements. ",
     },
     {
-      title: "	What is Lorem?",
+      title:
+        "	What sets Reality Scale apart from other immersive technology providers?",
       message:
-        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "At Reality Scale, we bring expertise, creativity, collaboration, innovation, and a results-driven approach to every project. Our commitment to staying at the forefront of immersive technology ensures our clients receive cutting-edge solutions that deliver tangible outcomes and drive business growth. ",
     },
     {
-      title: "		What is Lorem?",
+      title: "	How does Reality Scale's cloud-based platform work?",
       message:
-        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+        "Our proprietary cloud-native platform streamlines content creation, management, and distribution, making it easy for businesses to deploy and scale immersive experiences across multiple channels and devices. With omni-channel access, seamless presentation, and interactive features, our platform revolutionises digital engagement. ",
     },
+    // {
+    //   title: "Can Reality Scale develop custom applications for my business?",
+    //   message:
+    //     "Yes, Reality Scale offers custom application development services to solve specific business challenges. Our experts work closely with clients to understand their unique needs and create tailored solutions that leverage immersive technologies to drive results.",
+    // },
+    // {
+    //   title: "	How do I get started with Reality Scale?",
+    //   message:
+    //     "Getting started with Reality Scale is easy. Contact us today to schedule a consultation and explore how our innovative solutions can elevate your brand and captivate your audience. Our team will work with you every step of the way to ensure a seamless and successful implementation. ",
+    // },
   ],
   gameData: [
     {

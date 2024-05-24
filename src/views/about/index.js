@@ -5,111 +5,103 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./index.css";
 import image1 from "../../assests/images/Welcome to Reality Scale/Welcome_to_Reality_Scale.webp";
 import Aos from "aos";
+import $ from "jquery";
 const About = () => {
   Aos.init();
-  // function setupAnimations() {
-  //   gsap.registerPlugin(ScrollTrigger);
 
-  //   const appearances = document.querySelectorAll(".mil-up");
+  const appearance = document.querySelectorAll(".mil-up");
 
-  //   appearances.forEach((section) => {
-  //     gsap.fromTo(
-  //       section,
-  //       {
-  //         opacity: 0,
-  //         y: 40,
-  //         scale: 0.98,
-  //       },
-  //       {
-  //         y: 0,
-  //         opacity: 1,
-  //         scale: 1,
-  //         duration: 0.4,
-  //         ease: "sine",
-  //         scrollTrigger: {
-  //           trigger: section,
-  //           toggleActions: "play none none reverse",
-  //         },
-  //       }
-  //     );
-  //   });
+        appearance.forEach((section) => {
+            gsap.fromTo(section, {
+                opacity: 0,
+                y: 40,
+                scale: .98,
+                ease: 'sine',
 
-  //   const scaleImages = document.querySelectorAll(".mil-scale");
+            }, {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+                duration: .4,
+                scrollTrigger: {
+                    trigger: section,
+                    toggleActions: 'play none none reverse',
+                }
+            });
+        });
 
-  //   scaleImages.forEach((section) => {
-  //     const value1 = parseFloat(section.getAttribute("data-value-1"));
-  //     const value2 = parseFloat(section.getAttribute("data-value-2"));
-  //     gsap.fromTo(
-  //       section,
-  //       {
-  //         scale: value1,
-  //       },
-  //       {
-  //         scale: value2,
-  //         ease: "sine",
-  //         scrollTrigger: {
-  //           trigger: section,
-  //           scrub: true,
-  //           toggleActions: "play none none reverse",
-  //         },
-  //       }
-  //     );
-  //   });
+        const scaleImage = document.querySelectorAll(".mil-scale");
 
-  //   if (window.innerWidth > 960) {
-  //     const parallaxImages = document.querySelectorAll(".mil-parallax");
-  //     parallaxImages.forEach((section) => {
-  //       const value1 = parseFloat(section.getAttribute("data-value-1"));
-  //       const value2 = parseFloat(section.getAttribute("data-value-2"));
-  //       gsap.fromTo(
-  //         section,
-  //         {
-  //           y: value1,
-  //         },
-  //         {
-  //           y: value2,
-  //           ease: "sine",
-  //           scrollTrigger: {
-  //             trigger: section,
-  //             scrub: true,
-  //             toggleActions: "play none none reverse",
-  //           },
-  //         }
-  //       );
-  //     });
+        scaleImage.forEach((section) => {
+            var value1 = $(section).data("value-1");
+            var value2 = $(section).data("value-2");
+            gsap.fromTo(section, {
+                ease: 'sine',
+                scale: value1,
 
-  //     const rotateSections = document.querySelectorAll(".mil-rotate");
-  //     rotateSections.forEach((section) => {
-  //       const value = parseFloat(section.getAttribute("data-value"));
-  //       gsap.to(section, {
-  //         rotation: value,
-  //         ease: "sine",
-  //         scrollTrigger: {
-  //           trigger: section,
-  //           scrub: true,
-  //           toggleActions: "play none none reverse",
-  //         },
-  //       });
-  //     });
-  //   }
-  // }
+            }, {
+                scale: value2,
+                scrollTrigger: {
+                    trigger: section,
+                    scrub: true,
+                    toggleActions: 'play none none reverse',
+                }
+            });
+        });
 
-  // window.addEventListener("load", setupAnimations);
+        const parallaxImage = document.querySelectorAll(".mil-parallax");
 
+
+        if ($(window).width() > 960) {
+            parallaxImage.forEach((section) => {
+                var value1 = $(section).data("value-1");
+                var value2 = $(section).data("value-2");
+                gsap.fromTo(section, {
+                    ease: 'sine',
+                    y: value1,
+
+                }, {
+                    y: value2,
+                    scrollTrigger: {
+                        trigger: section,
+                        scrub: true,
+                        toggleActions: 'play none none reverse',
+                    }
+                });
+            });
+        }
+
+        const rotate = document.querySelectorAll(".mil-rotate");
+
+        rotate.forEach((section) => {
+            var value = $(section).data("value");
+            gsap.fromTo(section, {
+                ease: 'sine',
+                rotate: 0,
+
+            }, {
+                rotate: value,
+                scrollTrigger: {
+                    trigger: section,
+                    scrub: true,
+                    toggleActions: 'play none none reverse',
+                }
+            });
+        });
   return (
     <div className="container mil-p-120-30" id="about">
       <div className="row justify-content-between align-items-center">
         <div className="col-lg-6 col-xl-5">
           <div
             className="mil-mb-90"
-            data-aos="fade-up"
-            data-aos-offset="20"
-            data-aos-delay="100"
-            data-aos-duration="1200"
-            data-aos-easing="ease"
-            data-aos-mirror="true"
-            data-aos-once="false"
-            data-aos-anchor-placement="top"
+            // data-aos="fade-up"
+            // data-aos-offset="20"
+            // data-aos-delay="100"
+            // data-aos-duration="1200"
+            // data-aos-easing="ease"
+            // data-aos-mirror="true"
+            // data-aos-once="false"
+            // data-aos-anchor-placement="top"
           >
             <h2 className="mil-up mil-mb-30">
               Welcome <br />
@@ -117,14 +109,14 @@ const About = () => {
               <span
                 className="mil-thin"
                 style={{ fontWeight: "100" }}
-                data-aos="fade-up"
-                data-aos-offset="20"
-                data-aos-delay="100"
-                data-aos-duration="1200"
-                data-aos-easing="ease"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                data-aos-anchor-placement="top"
+                // data-aos="fade-up"
+                // data-aos-offset="20"
+                // data-aos-delay="100"
+                // data-aos-duration="1200"
+                // data-aos-easing="ease"
+                // data-aos-mirror="true"
+                // data-aos-once="false"
+                // data-aos-anchor-placement="top"
               >
                 Reality Scale
               </span>
@@ -136,14 +128,14 @@ const About = () => {
               <span className=" fw-bold">At Reality Scale,</span>
               <span
                 className="mx-1 fw-300"
-                data-aos="fade-up"
-                data-aos-offset="20"
-                data-aos-delay="100"
-                data-aos-duration="1200"
-                data-aos-easing="ease"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                data-aos-anchor-placement="top"
+                // data-aos="fade-up"
+                // data-aos-offset="20"
+                // data-aos-delay="100"
+                // data-aos-duration="1200"
+                // data-aos-easing="ease"
+                // data-aos-mirror="true"
+                // data-aos-once="false"
+                // data-aos-anchor-placement="top"
               >
                 we are driven by a vision to revolutionize digital presentations
                 across industries. Our studio is at the forefront of creating
@@ -155,14 +147,14 @@ const About = () => {
               <span className=" fw-bold">Innovation is Our Passion:</span>
               <span
                 className="mx-1 fw-300"
-                data-aos="fade-up"
-                data-aos-offset="20"
-                data-aos-delay="100"
-                data-aos-duration="1200"
-                data-aos-easing="ease"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                data-aos-anchor-placement="top"
+                // data-aos="fade-up"
+                // data-aos-offset="20"
+                // data-aos-delay="100"
+                // data-aos-duration="1200"
+                // data-aos-easing="ease"
+                // data-aos-mirror="true"
+                // data-aos-once="false"
+                // data-aos-anchor-placement="top"
               >
                 it's the core of our mission. By continuously pushing the
                 boundaries of immersive technology, we provide businesses with
@@ -174,14 +166,14 @@ const About = () => {
 
               <span
                 className="mx-1 fw-300"
-                data-aos="fade-up"
-                data-aos-offset="20"
-                data-aos-delay="100"
-                data-aos-duration="1200"
-                data-aos-easing="ease"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                data-aos-anchor-placement="top"
+                // data-aos="fade-up"
+                // data-aos-offset="20"
+                // data-aos-delay="100"
+                // data-aos-duration="1200"
+                // data-aos-easing="ease"
+                // data-aos-mirror="true"
+                // data-aos-once="false"
+                // data-aos-anchor-placement="top"
               >
                 Imagine a world where digital interactions rival the depth and
                 detail of the real world. Reality Scale makes it a reality,
@@ -191,14 +183,14 @@ const About = () => {
             </p>
             <div
               className="mil-about-quote"
-              data-aos="fade-up"
-              data-aos-offset="20"
-              data-aos-delay="100"
-              data-aos-duration="1200"
-              data-aos-easing="ease"
-              data-aos-mirror="true"
-              data-aos-once="false"
-              data-aos-anchor-placement="top"
+              // data-aos="fade-up"
+              // data-aos-offset="20"
+              // data-aos-delay="100"
+              // data-aos-duration="1200"
+              // data-aos-easing="ease"
+              // data-aos-mirror="true"
+              // data-aos-once="false"
+              // data-aos-anchor-placement="top"
             >
               <div className="mil-avatar mil-up">
                 <img src={image1} alt="Founder" />
@@ -277,14 +269,14 @@ const About = () => {
                 src={image1}
                 alt="img"
                 className="mil-scale"
-                data-aos="fade-up"
-                data-aos-offset="20"
-                data-aos-delay="100"
-                data-aos-duration="1200"
-                data-aos-easing="ease"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                data-aos-anchor-placement="top"
+                // data-aos="fade-up"
+                // data-aos-offset="20"
+                // data-aos-delay="100"
+                // data-aos-duration="1200"
+                // data-aos-easing="ease"
+                // data-aos-mirror="true"
+                // data-aos-once="false"
+                // data-aos-anchor-placement="top"
                 data-value-1="1"
                 data-value-2="1.2"
                 style={{

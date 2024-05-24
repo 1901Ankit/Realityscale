@@ -12,14 +12,14 @@ const Production = () => {
         <div className="row align-items-center mil-mb-30">
           <div
             className="col-lg-6 mil-mb-30"
-            data-aos="fade-up"
-            data-aos-offset="20"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="false"
-            data-aos-anchor-placement="top"
+            // data-aos="fade-up"
+            // data-aos-offset="20"
+            // data-aos-delay="50"
+            // data-aos-duration="1000"
+            // data-aos-easing="ease-in-out"
+            // data-aos-mirror="true"
+            // data-aos-once="false"
+            // data-aos-anchor-placement="top"
           >
             <h3 className="mil-up">
               Popular
@@ -44,26 +44,26 @@ const Production = () => {
                     <img
                       src={image1}
                       alt="cover"
-                      data-aos="fade-up"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="1000"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="true"
-                      data-aos-once="false"
-                      data-aos-anchor-placement="top"
+                      // data-aos="fade-up"
+                      // data-aos-offset="20"
+                      // data-aos-delay="50"
+                      // data-aos-duration="1000"
+                      // data-aos-easing="ease-in-out"
+                      // data-aos-mirror="true"
+                      // data-aos-once="false"
+                      // data-aos-anchor-placement="top"
                     />
                   </div>
                   <div
                     className="mil-post-descr"
-                    data-aos="fade-up"
-                    data-aos-offset="20"
-                    data-aos-delay="50"
-                    data-aos-duration="1000"
-                    data-aos-easing="ease-in-out"
-                    data-aos-mirror="true"
-                    data-aos-once="false"
-                    data-aos-anchor-placement="top"
+                    // data-aos="fade-up"
+                    // data-aos-offset="20"
+                    // data-aos-delay="50"
+                    // data-aos-duration="1000"
+                    // data-aos-easing="ease-in-out"
+                    // data-aos-mirror="true"
+                    // data-aos-once="false"
+                    // data-aos-anchor-placement="top"
                   >
                     <div className="mil-labels mil-up mil-mb-30">
                       <div className="mil-label mil-upper mil-accent text-black">

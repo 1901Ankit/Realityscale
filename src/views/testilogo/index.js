@@ -41,11 +41,11 @@ const Testilogo = () => {
   ];
   return (
     <div className="mil-softer-bg">
-      <div className="container p-7 logoclient">
+      <div className="container p-7 logoclients">
         <Carousel
           responsive={responsive}
           arrows={false}
-          className="text-center"
+          className="text-center caris"
           showDots={false}
           autoPlay={true}
           autoPlaySpeed={2000}
@@ -54,7 +54,7 @@ const Testilogo = () => {
           {images.map((val, index) => (
             <img key={index} src={val.img} alt="" height={100} />
           ))}
-        </Carousel>
+        </Carousel> 
       </div>
     </div>
   );
