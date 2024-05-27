@@ -199,26 +199,19 @@ const Range = () => {
       prevStep === components.length - 1 ? 0 : prevStep + 1
     );
   };
+
   useEffect(() => {
-    const interval = setInterval(autoSlide, 2000);
+    const interval = setInterval(autoSlide, 2500);
     return () => clearInterval(interval);
   }, []);
 
   // liner
   const [progress, setProgress] = useState(0);
-  const [intervalId, setIntervalId] = useState(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((prevProgress) =>
-        prevProgress >= 100 ? 0 : prevProgress + 10
-      );
-    }, 600);
-
-    setIntervalId(interval);
-
-    return () => clearInterval(interval);
-  }, []);
+    const newProgress = (activeStep / (components.length - 1)) * 100;
+    setProgress(newProgress);
+  }, [activeStep, components.length]);
   return (
     <div className=" mil-dark-bg mobileviewrange">
       <div className="mi-invert-fix">
@@ -312,7 +305,7 @@ const Range = () => {
                       color: "#fff ",
                     },
                     "&": {
-                      top: "55px",
+                      top: "50px",
                     },
                   }}
                 >

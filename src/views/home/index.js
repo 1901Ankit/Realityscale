@@ -26,6 +26,7 @@ import Backtop from "../../components/backtop";
 import Progressbar from "../../components/progressbar";
 import Aos from "aos";
 
+
 const Home = () => {
   const appearance = document.querySelectorAll(".mil-up");
 
@@ -675,6 +676,7 @@ const Home = () => {
 
       <Production />
       <FAQ />
+
     </>
   );
 };
