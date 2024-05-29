@@ -169,10 +169,7 @@ const Range = () => {
     },
   ];
 
-  const handleSliderChange = (event, newValue) => {
-    setActiveStep(newValue);
-  };
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (e, newValue) => {
     setValue(newValue);
@@ -234,8 +231,8 @@ const Range = () => {
                 value={value}
                 onChange={handleChange}
                 sx={{
-                  "& .MuiTab-root": { color: "white", width: 200 },
-                  "& .Mui-selected": { color: "white" },
+                  "& .MuiTab-root": { color: "grey !important", width: 200 },
+                  "& .Mui-selected": { color: "#ffd94a !important" },
                   "&.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected": {
                     color: "#ffd94a !important",
                   },
@@ -314,7 +311,14 @@ const Range = () => {
               ))}
             </Stepper>
 
-            <LinearProgress variant="determinate" value={progress} />
+            <LinearProgress
+              variant="determinate"
+              value={progress}
+              classes={{
+                bar1Determinate: "custom-bar1",
+                root: "custom-root",
+              }}
+            />
 
             <Stack direction={"row"} alignItems={"center"} spacing={0} mt={5}>
               <div className="container">
@@ -377,7 +381,14 @@ const Range = () => {
               ))}
             </Stepper>
 
-            <LinearProgress variant="determinate" value={progress} />
+            <LinearProgress
+              variant="determinate"
+              value={progress}
+              classes={{
+                bar1Determinate: "custom-bar1",
+                root: "custom-root",
+              }}
+            />
 
             <Stack direction={"row"} alignItems={"center"} spacing={0} mt={5}>
               <div className="container">
@@ -439,7 +450,14 @@ const Range = () => {
               ))}
             </Stepper>
 
-            <LinearProgress variant="determinate" value={progress} />
+            <LinearProgress
+              variant="determinate"
+              value={progress}
+              classes={{
+                bar1Determinate: "custom-bar1",
+                root: "custom-root",
+              }}
+            />
 
             <Stack direction={"row"} alignItems={"center"} spacing={0} mt={5}>
               <div className="container">
@@ -501,7 +519,14 @@ const Range = () => {
               ))}
             </Stepper>
 
-            <LinearProgress variant="determinate" value={progress} />
+            <LinearProgress
+              variant="determinate"
+              value={progress}
+              classes={{
+                bar1Determinate: "custom-bar1",
+                root: "custom-root",
+              }}
+            />
             <Stack direction={"row"} alignItems={"center"} spacing={0} mt={5}>
               <div className="container">
                 <div className="text-start">{fourthparagraph[activeStep]}</div>

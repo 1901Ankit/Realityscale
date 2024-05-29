@@ -19,17 +19,7 @@ const FAQ = () => {
           <div className="container mil-p-120-09">
             <div className="row justify-content-between">
               <div className="col-lg-5 mil-relative mil-mb-90">
-                <div
-                  className=""
-                  // data-aos="fade-up"
-                  // data-aos-offset="20"
-                  // data-aos-delay="50"
-                  // data-aos-duration="1000"
-                  // data-aos-easing="ease-in-out"
-                  // data-aos-mirror="true"
-                  // data-aos-once="false"
-                  // data-aos-anchor-placement="top"
-                >
+                <div className="">
                   <span className="ourcors mil-upper mil-light mil-up mil-mb-30">
                     FAQ
                   </span>

@@ -1,93 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "./index.css";
 import image1 from "../../assests/images/landing/plane.jpg";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Uniq_production from "../../components/uniq_prodution";
 import unique from "../../assests/data/unique";
 import ArrowSVG from "../../components/arrow";
 import Aos from "aos";
-import $ from "jquery";
+
 const Business = () => {
-  const appearance = document.querySelectorAll(".mil-up");
-
-        appearance.forEach((section) => {
-            gsap.fromTo(section, {
-                opacity: 0,
-                y: 40,
-                scale: .98,
-                ease: 'sine',
-
-            }, {
-                y: 0,
-                opacity: 1,
-                scale: 1,
-                duration: .4,
-                scrollTrigger: {
-                    trigger: section,
-                    toggleActions: 'play none none reverse',
-                }
-            });
-        });
-
-        const scaleImage = document.querySelectorAll(".mil-scale");
-
-        scaleImage.forEach((section) => {
-            var value1 = $(section).data("value-1");
-            var value2 = $(section).data("value-2");
-            gsap.fromTo(section, {
-                ease: 'sine',
-                scale: value1,
-
-            }, {
-                scale: value2,
-                scrollTrigger: {
-                    trigger: section,
-                    scrub: true,
-                    toggleActions: 'play none none reverse',
-                }
-            });
-        });
-
-        const parallaxImage = document.querySelectorAll(".mil-parallax");
-
-
-        if ($(window).width() > 960) {
-            parallaxImage.forEach((section) => {
-                var value1 = $(section).data("value-1");
-                var value2 = $(section).data("value-2");
-                gsap.fromTo(section, {
-                    ease: 'sine',
-                    y: value1,
-
-                }, {
-                    y: value2,
-                    scrollTrigger: {
-                        trigger: section,
-                        scrub: true,
-                        toggleActions: 'play none none reverse',
-                    }
-                });
-            });
-        }
-
-        const rotate = document.querySelectorAll(".mil-rotate");
-
-        rotate.forEach((section) => {
-            var value = $(section).data("value");
-            gsap.fromTo(section, {
-                ease: 'sine',
-                rotate: 0,
-
-            }, {
-                rotate: value,
-                scrollTrigger: {
-                    trigger: section,
-                    scrub: true,
-                    toggleActions: 'play none none reverse',
-                }
-            });
-        });
   Aos.init();
   let data = [
     {
@@ -136,26 +55,6 @@ const Business = () => {
       <div className="mi-invert-fix">
         <div className="">
           <div className="mil-animation-frame">
-            {/* <div
-              className="mil-animation mil-position-1 mil-scale"
-              data-value-1="2"
-              data-value-2="1"
-              style={{
-                top: "200px",
-                right: "200px",
-                transform: "translate3d(0px, 0px, 0px) scale(1.236, 1.236)",
-              }}
-            >
-              <div className="mil-dodecahedron">
-                {[...Array(12)].map((_, index) => (
-                  <div className="mil-pentagon" key={index}>
-                    {[...Array(5)].map((_, i) => (
-                      <div key={i}></div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </div> */}
             <div
               className="mil-animation mil-position-2 mil-scale"
               data-value-1="2"
@@ -226,14 +125,6 @@ const Business = () => {
               <div
                 key={index}
                 className="col-md-6 col-lg-3 mil-services-grid-item p-0"
-                // data-aos="fade-up"
-                // data-aos-offset="20"
-                // data-aos-delay={`${index * 100}`}
-                // data-aos-duration="800" 
-                // data-aos-easing="ease" 
-                // data-aos-mirror="true"
-                // data-aos-once="false"
-                // data-aos-anchor-placement="top" 
               >
                 <Uniq_production
                   head={val.head}

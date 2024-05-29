@@ -53,16 +53,6 @@ let data = {
       message:
         "Our proprietary cloud-native platform streamlines content creation, management, and distribution, making it easy for businesses to deploy and scale immersive experiences across multiple channels and devices. With omni-channel access, seamless presentation, and interactive features, our platform revolutionises digital engagement. ",
     },
-    // {
-    //   title: "Can Reality Scale develop custom applications for my business?",
-    //   message:
-    //     "Yes, Reality Scale offers custom application development services to solve specific business challenges. Our experts work closely with clients to understand their unique needs and create tailored solutions that leverage immersive technologies to drive results.",
-    // },
-    // {
-    //   title: "	How do I get started with Reality Scale?",
-    //   message:
-    //     "Getting started with Reality Scale is easy. Contact us today to schedule a consultation and explore how our innovative solutions can elevate your brand and captivate your audience. Our team will work with you every step of the way to ensure a seamless and successful implementation. ",
-    // },
   ],
   gameData: [
     {
@@ -164,5 +154,24 @@ let data = {
         "   I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
     },
   ],
+  projects: [
+    "Interior design studio",
+    "Home Security Camera",
+    "Kemia Honest Skincare",
+    "Cascade of Lava",
+    "Air Pro by Molekule",
+    "Tony's Chocolonely",
+  ],
+
+  usefulLinks: [
+    "Privacy Policy",
+    "Terms and conditions",
+    "Cookie Policy",
+    "Careers",
+  ],
+
+  address:
+    "2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307 INDIA",
+  address2: "30 N Gould St Ste R, Sheridan, WY 82801 USA",
 };
 export default data;

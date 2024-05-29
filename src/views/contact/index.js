@@ -1,9 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import $ from "jquery";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
 import logos from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
 import Mouse from "../../components/mouse";
@@ -14,6 +13,7 @@ import "./index.css";
 import ArrowSVG from "../../components/arrow";
 import Progressbar from "../../components/progressbar";
 import Backtop from "../../components/backtop";
+import data from "../../assests/data/data";
 const Contactus = () => {
   useEffect(() => {
     const cloneAndAppend = (sourceSelector, targetSelector) => {
@@ -94,62 +94,43 @@ const Contactus = () => {
     },
   ];
 
-   const projects = [
-    "Interior design studio",
-    "Home Security Camera",
-    "Kemia Honest Skincare",
-    "Cascade of Lava",
-    "Air Pro by Molekule",
-    "Tony's Chocolonely",
-  ];
+  function ProjectItem({ name }) {
+    return (
+      <li>
+        <a href="#" className="mil-light-soft">
+          {name}
+        </a>
+      </li>
+    );
+  }
 
-  const usefulLinks = [
-    "Privacy Policy",
-    "Terms and conditions",
-    "Cookie Policy",
-    "Careers",
-  ];
+  function UsefulLink({ name }) {
+    return (
+      <li>
+        <a href="#" className="mil-light-soft">
+          {name}
+        </a>
+      </li>
+    );
+  }
 
-  const address =
-    "2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307";
-  const address2 =
-    "   30 N Gould St Ste R, Sheridan, WY 82801";
-    function ProjectItem({ name }) {
-      return (
-        <li>
-          <a href="#" className="mil-light-soft">
-            {name}
-          </a>
-        </li>
-      );
-    }
-  
-    function UsefulLink({ name }) {
-      return (
-        <li>
-          <a href="#" className="mil-light-soft">
-            {name}
-          </a>
-        </li>
-      );
-    }
-  
-    function Address({ address }) {
-      return (
-        <div className="col-md-6 col-lg-6">
-          <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
-          <p className="mil-light-soft mil-up">{address}</p>
-        </div>
-      );
-    }
-    function Address2({ address2 }) {
-      return (
-        <div className="col-md-6 col-lg-6">
-          <h6 className="mil-muted mil-up mil-mb-10">USA</h6>
-          <p className="mil-light-soft mil-up">{address2}</p>
-        </div>
-      );
-    }
+  function Address({ address }) {
+    return (
+      <div className="col-md-6 col-lg-6">
+        <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
+        <p className="mil-light-soft mil-up">{address}</p>
+      </div>
+    );
+  }
+
+  function Address2({ address2 }) {
+    return (
+      <div className="col-md-6 col-lg-6">
+        <h6 className="mil-muted mil-up mil-mb-10">USA</h6>
+        <p className="mil-light-soft mil-up">{address2}</p>
+      </div>
+    );
+  }
   return (
     <>
       <Mouse />
@@ -181,7 +162,9 @@ const Contactus = () => {
                       </span>
                     </li>
                     <li className="mil-has-children">
-                      <span className="" onClick={Product}>Product</span>
+                      <span className="" onClick={Product}>
+                        Product
+                      </span>
                     </li>
                     <li className="mil-has-children mil-active">
                       <span>Contact us</span>
@@ -205,7 +188,7 @@ const Contactus = () => {
                       <div className="col-lg-8">
                         <h6 className="mil-muted mil-mb-10">Projects</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          {projects.map((project, index) => (
+                          {data.projects.map((project, index) => (
                             <ProjectItem key={index} name={project} />
                           ))}
                         </ul>
@@ -213,7 +196,7 @@ const Contactus = () => {
                       <div className="col-lg-4 mil-mb-60">
                         <h6 className="mil-muted mil-mb-10">Useful links</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          {usefulLinks.map((link, index) => (
+                          {data.usefulLinks.map((link, index) => (
                             <UsefulLink key={index} name={link} />
                           ))}
                         </ul>
@@ -221,8 +204,8 @@ const Contactus = () => {
                     </div>
                     <div className="mil-divider mil-mb-60"></div>
                     <div className="row justify-content-between">
-                      <Address address={address} />
-                      <Address2 address2={address2} />
+                      <Address address={data.address} />
+                      <Address2 address2={data.address2} />
                     </div>
                   </div>
                 </div>

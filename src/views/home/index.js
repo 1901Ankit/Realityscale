@@ -1,8 +1,6 @@
-import React, { useEffect,useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./index.css";
 import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import ScrollToPlugin from "gsap/ScrollToPlugin";
 import Keyfeature from "../keyfeature";
 import About from "../about";
 import Business from "../unique";
@@ -14,7 +12,7 @@ import Sliderlogo from "../logos";
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
 import logoe from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
 import Game from "../game";
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import data from "../../assests/data/data";
 import Loader from "../../components/loader";
 import $ from "jquery";
@@ -26,98 +24,7 @@ import Backtop from "../../components/backtop";
 import Progressbar from "../../components/progressbar";
 import Aos from "aos";
 
-
 const Home = () => {
-  const appearance = document.querySelectorAll(".mil-up");
-
-  appearance.forEach((section) => {
-    gsap.fromTo(
-      section,
-      {
-        opacity: 0,
-        y: 40,
-        scale: 0.98,
-        ease: "sine",
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 0.4,
-        scrollTrigger: {
-          trigger: section,
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  });
-
-  const scaleImage = document.querySelectorAll(".mil-scale");
-
-  scaleImage.forEach((section) => {
-    var value1 = $(section).data("value-1");
-    var value2 = $(section).data("value-2");
-    gsap.fromTo(
-      section,
-      {
-        ease: "sine",
-        scale: value1,
-      },
-      {
-        scale: value2,
-        scrollTrigger: {
-          trigger: section,
-          scrub: true,
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  });
-
-  const parallaxImage = document.querySelectorAll(".mil-parallax");
-
-  if ($(window).width() > 960) {
-    parallaxImage.forEach((section) => {
-      var value1 = $(section).data("value-1");
-      var value2 = $(section).data("value-2");
-      gsap.fromTo(
-        section,
-        {
-          ease: "sine",
-          y: value1,
-        },
-        {
-          y: value2,
-          scrollTrigger: {
-            trigger: section,
-            scrub: true,
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-  }
-
-  const rotate = document.querySelectorAll(".mil-rotate");
-
-  rotate.forEach((section) => {
-    var value = $(section).data("value");
-    gsap.fromTo(
-      section,
-      {
-        ease: "sine",
-        rotate: 0,
-      },
-      {
-        rotate: value,
-        scrollTrigger: {
-          trigger: section,
-          scrub: true,
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  });
   useEffect(() => {
     const cloneAndAppend = (sourceSelector, targetSelector) => {
       const sourceElement = document.querySelector(sourceSelector);
@@ -128,8 +35,6 @@ const Home = () => {
         targetElement.appendChild(clone);
       }
     };
-
-    // cloneAndAppend('.mil-arrow', '.mil-arrow-place');
     cloneAndAppend(".mil-dodecahedron", ".mil-animation");
     cloneAndAppend(".mil-lines", ".mil-lines-place");
     cloneAndAppend(".mil-main-menu ul li.mil-active > a", ".mil-current-page");
@@ -145,26 +50,6 @@ const Home = () => {
       scrub: true,
     },
   });
-
-  const projects = [
-    "Interior design studio",
-    "Home Security Camera",
-    "Kemia Honest Skincare",
-    "Cascade of Lava",
-    "Air Pro by Molekule",
-    "Tony's Chocolonely",
-  ];
-
-  const usefulLinks = [
-    "Privacy Policy",
-    "Terms and conditions",
-    "Cookie Policy",
-    "Careers",
-  ];
-
-  const address =
-    "2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307";
-  const address2 = "   30 N Gould St Ste R, Sheridan, WY 82801";
 
   const cloneAndAppend = (sourceSelector, targetSelector) => {
     const source = document.querySelector(sourceSelector);
@@ -243,6 +128,7 @@ const Home = () => {
       </div>
     );
   }
+
   function Address2({ address2 }) {
     return (
       <div className="col-md-6 col-lg-6">
@@ -251,84 +137,21 @@ const Home = () => {
       </div>
     );
   }
-
-  // const appearances = document.querySelectorAll(".mil-up");
-
-  // appearances.forEach((section) => {
-  //   section.style.opacity = 0;
-  //   section.style.transform = "tra nslateY(40px) scale(0.98)";
-  //   section.style.transition = "opacity 0.4s ease, transform 0.4s ease";
-
-  //   const sectionObserver = new IntersectionObserver(
-  //     (entries, observer) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           section.style.opacity = 1;
-  //           section.style.transform = "translateY(0) scale(1)";
-  //           observer.unobserve(section);
-  //         }
-  //       });
-  //     },
-  //     { threshold: 0.5 }
-  //   );
-
-  //   sectionObserver.observe(section);
-  // });
-
-  // const scaleImages = document.querySelectorAll(".mil-scale");
-
-  // scaleImages.forEach((section) => {
-  //   const value1 = parseFloat(section.dataset.value1);
-  //   const value2 = parseFloat(section.dataset.value2);
-  //   const sectionObserver = new IntersectionObserver(
-  //     (entries, observer) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           section.style.transform = `scale(${value2})`;
-  //           observer.unobserve(section);
-  //         }
-  //       });
-  //     },
-  //     { threshold: 0.5 }
-  //   );
-
-  //   sectionObserver.observe(section);
-  // });
-
-  // const parallaxImages = document.querySelectorAll(".mil-parallax");
-
-  // if (window.innerWidth > 960) {
-  //   parallaxImages.forEach((section) => {
-  //     const value1 = parseFloat(section.dataset.value1);
-  //     const value2 = parseFloat(section.dataset.value2);
-  //     const sectionObserver = new IntersectionObserver(
-  //       (entries, observer) => {
-  //         entries.forEach((entry) => {
-  //           if (entry.isIntersecting) {
-  //             section.style.transform = `translateY(${value2}px)`;
-  //             observer.unobserve(section);
-  //           }
-  //         });
-  //       },
-  //       { threshold: 0.5 }
-  //     );
-
-  //     sectionObserver.observe(section);
-  //   });
-  // }
   const parallaxRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (parallaxRef.current) {
         const scrollPosition = window.pageYOffset;
-        parallaxRef.current.style.backgroundPositionY = `${scrollPosition * 1.2}px`;
+        parallaxRef.current.style.backgroundPositionY = `${
+          scrollPosition * 1.6
+        }px`;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
@@ -362,7 +185,9 @@ const Home = () => {
                       </span>
                     </li>
                     <li className="mil-has-children">
-                      <span className=""onClick={Product}>Product</span>
+                      <span className="" onClick={Product}>
+                        Product
+                      </span>
                     </li>
                     <li className="mil-has-children">
                       <span className="" onClick={Contactus}>
@@ -388,7 +213,7 @@ const Home = () => {
                       <div className="col-lg-8">
                         <h6 className="mil-muted mil-mb-10">Projects</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          {projects.map((project, index) => (
+                          {data.projects.map((project, index) => (
                             <ProjectItem key={index} name={project} />
                           ))}
                         </ul>
@@ -396,7 +221,7 @@ const Home = () => {
                       <div className="col-lg-4 mil-mb-60">
                         <h6 className="mil-muted mil-mb-10">Useful links</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          {usefulLinks.map((link, index) => (
+                          {data.usefulLinks.map((link, index) => (
                             <UsefulLink key={index} name={link} />
                           ))}
                         </ul>
@@ -404,8 +229,8 @@ const Home = () => {
                     </div>
                     <div className="mil-divider mil-mb-60"></div>
                     <div className="row justify-content-between">
-                      <Address address={address} />
-                      <Address2 address2={address2} />
+                      <Address address={data.address} />
+                      <Address2 address2={data.address2} />
                     </div>
                   </div>
                 </div>
@@ -431,22 +256,7 @@ const Home = () => {
               style={{ width: "20%" }}
             />
           </a>
-          {/* <nav className="mil-navigation">
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Services</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </nav> */}
+
           <div className="mil-menu-btn">
             <span></span>
           </div>
@@ -634,7 +444,7 @@ const Home = () => {
 
       <div className="contactus_parallax" ref={parallaxRef}>
         <div className="paralaxoverlay">
-          <Container sx={{ p: { lg: 2, xs: 2 }, paddingBottom: 15 }}>
+          <Container sx={{ p: { lg: 2, xs: 2 }, paddingBottom: 25 }}>
             <div className="mil-muteded mil-mb-30 mil-center mt-5">
               {" "}
               LET REALITY SCALE <br />{" "}
@@ -671,12 +481,10 @@ const Home = () => {
       </div>
 
       <Business />
-      {/* <TeamSection /> */}
       <Multicarousel />
 
       <Production />
       <FAQ />
-
     </>
   );
 };

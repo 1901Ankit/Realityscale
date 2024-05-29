@@ -10,17 +10,7 @@ const Production = () => {
     <div>
       <div className="container mil-p-120-60">
         <div className="row align-items-center mil-mb-30">
-          <div
-            className="col-lg-6 mil-mb-30"
-            // data-aos="fade-up"
-            // data-aos-offset="20"
-            // data-aos-delay="50"
-            // data-aos-duration="1000"
-            // data-aos-easing="ease-in-out"
-            // data-aos-mirror="true"
-            // data-aos-once="false"
-            // data-aos-anchor-placement="top"
-          >
+          <div className="col-lg-6 mil-mb-30">
             <h3 className="mil-up">
               Popular
               <span className="mx-1 mil-thin">Publications:</span>
@@ -41,30 +31,9 @@ const Production = () => {
               <div className="col-lg-6" key={id}>
                 <a href="#" className="mil-blog-card mil-mb-60">
                   <div className="mil-cover-frame mil-up">
-                    <img
-                      src={image1}
-                      alt="cover"
-                      // data-aos="fade-up"
-                      // data-aos-offset="20"
-                      // data-aos-delay="50"
-                      // data-aos-duration="1000"
-                      // data-aos-easing="ease-in-out"
-                      // data-aos-mirror="true"
-                      // data-aos-once="false"
-                      // data-aos-anchor-placement="top"
-                    />
+                    <img src={image1} alt="cover" />
                   </div>
-                  <div
-                    className="mil-post-descr"
-                    // data-aos="fade-up"
-                    // data-aos-offset="20"
-                    // data-aos-delay="50"
-                    // data-aos-duration="1000"
-                    // data-aos-easing="ease-in-out"
-                    // data-aos-mirror="true"
-                    // data-aos-once="false"
-                    // data-aos-anchor-placement="top"
-                  >
+                  <div className="mil-post-descr">
                     <div className="mil-labels mil-up mil-mb-30">
                       <div className="mil-label mil-upper mil-accent text-black">
                         {val.category}
@@ -83,7 +52,9 @@ const Production = () => {
                       {val.content}
                     </p>
                     <div className="mil-links mil-dark mil-arrow-place mil-up">
-                      <span className="mil-label mil-upper mil-accent text-black">Read more</span>
+                      <span className="mil-label mil-upper mil-accent text-black">
+                        Read more
+                      </span>
                       <ArrowSVG className="mil-arrow" />
                     </div>
                   </div>

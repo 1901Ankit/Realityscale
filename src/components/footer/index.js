@@ -7,27 +7,40 @@ import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import ArrowSVG from "../arrow";
-import Aos from "aos";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Navigation = () => {
-  Aos.init();
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    window.scrollTo(0, 0);
+    navigate("/contact");
+  };
+  const handlehomeClick = () => {
+    window.scrollTo(0, 0);
+    navigate("/");
+  };
+  const handleproductClick = () => {
+    window.scrollTo(0, 0);
+    navigate("/product");
+  };
+  const handleteamClick = () => {
+    window.scrollTo(0, 0);
+    navigate("/team");
+  };
   return (
     <nav className="mil-footer-menu mil-mb-30">
       <ul className="p-0">
         <li className="mil-up ">
-          <a href="/">Home</a>
+          <span onClick={handlehomeClick}>Home</span>
         </li>
         <li className="mil-up ">
-          <a href="/team">Team</a>
+          <span onClick={handleteamClick}>Team</span>
         </li>
         <li className="mil-up">
-          <a href="#">Services</a>
+          <span onClick={handleproductClick}>Product</span>
         </li>
         <li className="mil-up">
-          <a href="/contact">Contact</a>
-        </li>
-        <li className="mil-up">
-          <a href="#">Blog</a>
+          <span onClick={handleContactClick}>Contact</span>
         </li>
       </ul>
     </nav>
@@ -38,22 +51,22 @@ const MenuList = () => {
   return (
     <ul className="mil-menu-list mil-up mil-mb-30 p-0 fw-200">
       <li>
-        <a href="#." className="mil-light-soft">
+        <a href="#" className="mil-light-soft">
           Privacy Policy
         </a>
       </li>
       <li>
-        <a href="#." className="mil-light-soft">
+        <a href="#" className="mil-light-soft">
           Terms and conditions
         </a>
       </li>
       <li>
-        <a href="#." className="mil-light-soft">
+        <a href="#" className="mil-light-soft">
           Cookie Policy
         </a>
       </li>
       <li>
-        <a href="#." className="mil-light-soft">
+        <a href="#" className="mil-light-soft">
           Careers
         </a>
       </li>
@@ -64,9 +77,9 @@ const MenuList = () => {
 const Address = () => {
   return (
     <>
-      <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
+      <h6 className="mil-muted mil-up mil-mb-10">INDIA</h6>
       <p className="mil-light-soft mil-up fw-200">
-        2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307
+        2nd Floor, D-320, Sector 63, Noida, Uttar Pradesh, 201307 INDIA
       </p>
     </>
   );
@@ -76,7 +89,7 @@ const Address2 = () => {
     <>
       <h6 className="mil-muted mil-up mil-mb-10">USA</h6>
       <p className="mil-light-soft mil-up fw-200">
-        30 N Gould St Ste R, Sheridan, WY 82801
+        30 N Gould St Ste R Sheridan, WY 82801 USA
       </p>
     </>
   );
@@ -86,25 +99,25 @@ const SocialIcons = () => {
   return (
     <ul className="mil-social-icons mil-up">
       <li>
-        <a href="#." target="_blank" className="social-icon">
+        <a href="#" target="_blank" className="social-icon">
           {" "}
           <RiInstagramFill />
         </a>
       </li>
       <li>
-        <a href="#." target="_blank" className="social-icon">
+        <a href="#" target="_blank" className="social-icon">
           {" "}
           <FaYoutube />
         </a>
       </li>
       <li>
-        <a href="#." target="_blank" className="social-icon">
+        <a href="#" target="_blank" className="social-icon">
           {" "}
           <FaXTwitter />
         </a>
       </li>
       <li>
-        <a href="#." target="_blank" className="social-icon">
+        <a href="#" target="_blank" className="social-icon">
           {" "}
           <FaFacebook />
         </a>

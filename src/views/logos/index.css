@@ -45,13 +45,15 @@
 .carousel-logo {
     filter: grayscale(100%);
     filter: brightness(0.5) contrast(1.2);
+    transition: all 0.5s ease;
   }
+  
   
   .middle-logo {
-    filter: brightness(1) contrast(1.2); /* Adjust styles for the middle image */
+    filter: brightness(100%);
   }
   
-  .other-logo {
-    filter: grayscale(100%);
-    filter: brightness(0.5) contrast(1.2); /* Adjust styles for the remaining images */
+  .side-logo {
+    filter: brightness(50%);
+    opacity: 0.5;
   }

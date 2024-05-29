@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect } from "react";
 import $ from "jquery";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import "./index.css";
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
 import logos from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
@@ -13,8 +10,8 @@ import ArrowSVG from "../../components/arrow";
 import TeamMembercontent from "../../components/member";
 import Progressbar from "../../components/progressbar";
 import Backtop from "../../components/backtop";
+import data from "../../assests/data/data";
 const Member = () => {
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   useEffect(() => {
     const cloneAndAppend = (sourceSelector, targetSelector) => {
       const sourceElement = document.querySelector(sourceSelector);
@@ -73,25 +70,6 @@ const Member = () => {
     navigate("/product");
   };
 
-  const projects = [
-    "Interior design studio",
-    "Home Security Camera",
-    "Kemia Honest Skincare",
-    "Cascade of Lava",
-    "Air Pro by Molekule",
-    "Tony's Chocolonely",
-  ];
-
-  const usefulLinks = [
-    "Privacy Policy",
-    "Terms and conditions",
-    "Cookie Policy",
-    "Careers",
-  ];
-
-  const address =
-    "2nd Floor, D-320, Sector 63 Rd, Sector 63, Noida, Uttar Pradesh, 201307";
-  const address2 = "   30 N Gould St Ste R, Sheridan, WY 82801";
   const teamMembers = [
     {
       name: "Anna Oldman",
@@ -133,6 +111,7 @@ const Member = () => {
       </div>
     );
   }
+
   function Address2({ address2 }) {
     return (
       <div className="col-md-6 col-lg-6">
@@ -171,7 +150,9 @@ const Member = () => {
                       <span className="">Team</span>
                     </li>
                     <li className="mil-has-children">
-                      <span className="" onClick={Product}>Product</span>
+                      <span className="" onClick={Product}>
+                        Product
+                      </span>
                     </li>
                     <li className="mil-has-children">
                       <span className="" onClick={Contactus}>
@@ -197,7 +178,7 @@ const Member = () => {
                       <div className="col-lg-8">
                         <h6 className="mil-muted mil-mb-10">Projects</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          {projects.map((project, index) => (
+                          {data.projects.map((project, index) => (
                             <ProjectItem key={index} name={project} />
                           ))}
                         </ul>
@@ -205,7 +186,7 @@ const Member = () => {
                       <div className="col-lg-4 mil-mb-60">
                         <h6 className="mil-muted mil-mb-10">Useful links</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          {usefulLinks.map((link, index) => (
+                          {data.usefulLinks.map((link, index) => (
                             <UsefulLink key={index} name={link} />
                           ))}
                         </ul>
@@ -213,8 +194,8 @@ const Member = () => {
                     </div>
                     <div className="mil-divider mil-mb-60"></div>
                     <div className="row justify-content-between">
-                      <Address address={address} />
-                      <Address2 address2={address2} />
+                      <Address address={data.address} />
+                      <Address2 address2={data.address2} />
                     </div>
                   </div>
                 </div>

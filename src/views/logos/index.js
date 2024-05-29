@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
-import image1 from "../../assests/images/brand/honda.png";  
+import image1 from "../../assests/images/brand/honda.png";
 import image4 from "../../assests/images/brand/mahindra.png";
 import image3 from "../../assests/images/brand/renault.png";
 import "./index.css";
 
 const Sliderlogo = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -39,32 +41,10 @@ const Sliderlogo = () => {
       key: "image4",
     },
   ];
-  const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleBeforeChange = (nextSlide) => {
-    setCurrentSlide(nextSlide);
+    setActiveIndex(nextSlide);
   };
-
-  useEffect(() => {
-    const itemsToShow = responsive.desktop.items;
-    const middleIndex = Math.floor(itemsToShow / 2);
-
-    const updateMiddleLogo = () => {
-      const carouselItems = document.querySelectorAll(".react-multi-carousel-item");
-      carouselItems.forEach((item, index) => {
-        const img = item.querySelector("img");
-        if (img) {
-          if (index === (currentSlide + middleIndex) % carouselItems.length) {
-            img.classList.add("middle-logo");
-          } else {
-            img.classList.remove("middle-logo");
-          }
-        }
-      });
-    };
-
-    updateMiddleLogo();
-  }, [currentSlide, responsive]);
 
   return (
     <div className="mil-dark-bg">
@@ -80,9 +60,20 @@ const Sliderlogo = () => {
             infinite={true}
             beforeChange={handleBeforeChange}
           >
-            {images.map((val) => (
-              <img className="carousel-logo" key={val.key} src={val.img} alt="" height={100} />
-            ))}
+            {images.map((val, index) => {
+              const isMiddleLogo = index === (activeIndex + 1) % images.length;
+              return (
+                <img
+                  className={`carousel-logo ${
+                    isMiddleLogo ? "middle-logo" : "side-logo"
+                  }`}
+                  key={val.key}
+                  src={val.img}
+                  alt=""
+                  height={100}
+                />
+              );
+            })}
           </Carousel>
         </div>
       </div>

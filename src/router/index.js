@@ -6,6 +6,7 @@ import CTA from "../components/cta";
 import Member from "../views/team_member";
 import Contactus from "../views/contact";
 import Product from "../views/product";
+import Productdetail from "../views/productdetail";
 
 const Router = () => {
   return (
@@ -16,6 +17,7 @@ const Router = () => {
           <Route exact path="/team" element={<Member />} />
           <Route exact path="/contact" element={<Contactus />} />
           <Route exact path="/product" element={<Product />} />
+          <Route exact path="/productdetail" element={<Productdetail />} />
         </Routes>
         <CTA />
         <Footer />

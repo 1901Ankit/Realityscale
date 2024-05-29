@@ -118,11 +118,6 @@
   height: 100%;
 }
 
-/* @media screen and (max-width: 992px) {
-  .mil-mobile-hidden {
-    display: block;
-  }
-} */
 
 section {
   position: relative;
@@ -346,19 +341,6 @@ h6,
   .container-md,
   .container-sm,
   .container {
-    max-width: 1200px !important ;
+    max-width: 1200px !important;
   }
 }
-
-
-
-/* @media (min-width: 1368px) {
-  .container {
-    width: 1000px;
-  }
-} */
-/* @media screen and (min-device-width: 1200px) and (max-device-width: 1368px) { 
-  .container {
-    width: 1000px;
-  }
-} */

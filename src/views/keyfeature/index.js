@@ -10,7 +10,6 @@ import image5 from "../../assests/images/Features/content.webp";
 import description from "../../assests/data/constant";
 import Aos from "aos";
 
-gsap.registerPlugin(ScrollTrigger);
 Aos.init();
 const Keyfeature = () => {
   const showSlider = () => {
@@ -38,7 +37,6 @@ const Keyfeature = () => {
       const totalHeight =
         document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercentage = (window.scrollY / totalHeight) * 100;
-      // Use GSAP's smooth animation with ease-out easing function
       gsap.to(progressBar, {
         height: `${scrollPercentage}%`,
         duration: 0.8,
@@ -47,21 +45,6 @@ const Keyfeature = () => {
     };
 
     updateProgress();
-
-    ScrollTrigger.create({
-      start: "top top",
-      end: "bottom bottom",
-      onUpdate: updateProgress,
-      onUpdateParams: ["{self}"],
-
-      scrub: true,
-
-      throttle: 20,
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
   }, []);
   return (
     <>
@@ -137,7 +120,6 @@ const Keyfeature = () => {
                   </div>
                   <div className="des mt-3">
                     <span className="fw-bold mx-1">
-                      
                       {description.description.span3}
                     </span>
                     {description.description.message3}{" "}

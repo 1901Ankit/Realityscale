@@ -86,7 +86,7 @@ a {
 }
 
 .mil-accent {
-  color: #ffd94a;
+  color: #fff;
 }
 
 .mil-light {
@@ -1198,15 +1198,17 @@ menu
   }
 
 }
-@media screen and (min-width: 1920px) and (min-height: 1080px){
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
   .mil-menu-frame .mil-menu-right-frame {
     height: 80vh !important;
-      }
+  }
 }
+
 @media screen and (min-width: 1280px) and (min-height: 800px) {
   .mil-menu-frame .mil-menu-right-frame {
-    height: 85vh ;
-      }
+    height: 85vh;
+  }
 }
 
 .mil-menu-frame .mil-menu-right-frame {
@@ -3069,32 +3071,33 @@ footer
   margin-bottom: 20px;
 }
 
-.mil-footer-menu ul li a {
+.mil-footer-menu ul li span {
   display: block;
   font-weight: 500;
   font-size: 25px;
   color: rgba(255, 255, 255, 0.9);
   -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  cursor: pointer;
 }
 
-.mil-footer-menu ul li a:hover {
+.mil-footer-menu ul li span:hover {
   -webkit-transform: translateX(10px);
   transform: translateX(10px);
   color: #ffd94a;
 }
 
 @media screen and (max-width: 768px) {
-  .mil-footer-menu ul li a {
+  .mil-footer-menu ul li span {
     font-size: 22px;
   }
 }
 
-.mil-footer-menu ul li.mil-active a {
+.mil-footer-menu ul li.mil-active span {
   color: #ffd94a;
 }
 
-.mil-footer-menu ul li.mil-active a:hover {
+.mil-footer-menu ul li.mil-active span:hover {
   -webkit-transform: none;
   transform: none;
 }
