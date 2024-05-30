@@ -70,3 +70,143 @@ font-family:  "Outfit", sans-serif !important;
 .mil-dark-backs {
   background-color: black;
 }
+
+
+/* -------------------------------------------
+
+footer
+
+------------------------------------------- */
+.mil-footer-menu {
+  margin-bottom: 120px;
+}
+
+.mil-footer-menu ul li {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.mil-footer-menu ul li span {
+  display: block;
+  font-weight: 500;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  cursor: pointer;
+}
+
+.mil-footer-menu ul li span:hover {
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  color: #ffd94a;
+}
+
+@media screen and (max-width: 768px) {
+  .mil-footer-menu ul li span {
+    font-size: 22px;
+  }
+}
+
+.mil-footer-menu ul li.mil-active span {
+  color: #ffd94a;
+}
+
+.mil-footer-menu ul li.mil-active span:hover {
+  -webkit-transform: none;
+  transform: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mil-footer-menu {
+    margin-bottom: 60px;
+  }
+}
+
+.mil-subscribe-form {
+  position: relative;
+  height: 70px;
+  width: 100%;
+}
+
+.mil-subscribe-form input {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 70px;
+  padding: 0 0 0 50px;
+  -webkit-transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+}
+
+.mil-subscribe-form input::-webkit-input-placeholder {
+  color: rgb(128, 128, 128);
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mil-subscribe-form input::-moz-placeholder {
+  color: rgb(128, 128, 128);
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mil-subscribe-form input:-ms-input-placeholder {
+  color: rgb(128, 128, 128);
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mil-subscribe-form input::-ms-input-placeholder {
+  color: rgb(128, 128, 128);
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mil-subscribe-form input::placeholder {
+  color: rgb(128, 128, 128);
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mil-subscribe-form input:focus {
+  background-color: rgb(255, 255, 255);
+  outline: inherit;
+}
+
+.mil-subscribe-form input:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.mil-subscribe-form .mil-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.mil-subscribe-form.mil-subscribe-form-2 input {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}

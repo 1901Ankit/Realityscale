@@ -25,6 +25,7 @@ import Progressbar from "../../components/progressbar";
 import Aos from "aos";
 
 const Home = () => {
+  Aos.init();
   useEffect(() => {
     const cloneAndAppend = (sourceSelector, targetSelector) => {
       const sourceElement = document.querySelector(sourceSelector);
@@ -110,10 +111,10 @@ const Home = () => {
     );
   }
 
-  function UsefulLink({ name }) {
+  function UsefulLink({ name, url }) {
     return (
       <li>
-        <a href="#" className="mil-light-soft">
+        <a href={url} className="mil-light-soft">
           {name}
         </a>
       </li>
@@ -221,8 +222,12 @@ const Home = () => {
                       <div className="col-lg-4 mil-mb-60">
                         <h6 className="mil-muted mil-mb-10">Useful links</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          {data.usefulLinks.map((link, index) => (
-                            <UsefulLink key={index} name={link} />
+                        {data.usefulLinks.map((link, index) => (
+                            <UsefulLink
+                              key={index}
+                              name={link.name}
+                              url={link.url}
+                            />
                           ))}
                         </ul>
                       </div>
@@ -445,7 +450,17 @@ const Home = () => {
       <div className="contactus_parallax" ref={parallaxRef}>
         <div className="paralaxoverlay">
           <Container sx={{ p: { lg: 2, xs: 2 }, paddingBottom: 25 }}>
-            <div className="mil-muteded mil-mb-30 mil-center mt-5">
+            <div
+              className="mil-muteded mil-mb-30 mil-center mt-5"
+              data-aos="fade-up"
+              data-aos-offset="20"
+              data-aos-delay="50"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="false"
+              data-aos-once="true"
+              data-aos-anchor-placement="top"
+            >
               {" "}
               LET REALITY SCALE <br />{" "}
               <h1 className="helpyou mt-3">
@@ -464,6 +479,14 @@ const Home = () => {
               marginTop={0}
               marginBottom={4}
               className="mt-2"
+              data-aos="fade-up"
+              data-aos-offset="20"
+              data-aos-delay="50"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="false"
+              data-aos-once="true"
+              data-aos-anchor-placement="top"
             >
               {data.gameData.map((val, i) => (
                 <Grid item lg={4} xs={12} key={i}>

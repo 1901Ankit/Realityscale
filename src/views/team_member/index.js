@@ -1,4 +1,4 @@
-import React, {useEffect } from "react";
+import React, { useEffect } from "react";
 import $ from "jquery";
 import "./index.css";
 import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
@@ -92,11 +92,10 @@ const Member = () => {
       </li>
     );
   }
-
-  function UsefulLink({ name }) {
+  function UsefulLink({ name, url }) {
     return (
       <li>
-        <a href="#" className="mil-light-soft">
+        <a href={url} className="mil-light-soft">
           {name}
         </a>
       </li>
@@ -187,7 +186,11 @@ const Member = () => {
                         <h6 className="mil-muted mil-mb-10">Useful links</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
                           {data.usefulLinks.map((link, index) => (
-                            <UsefulLink key={index} name={link} />
+                            <UsefulLink
+                              key={index}
+                              name={link.name}
+                              url={link.url}
+                            />
                           ))}
                         </ul>
                       </div>

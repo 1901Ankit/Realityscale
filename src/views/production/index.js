@@ -28,7 +28,18 @@ const Production = () => {
         <div className="row">
           {data.blogPosts.map((val, id) => {
             return (
-              <div className="col-lg-6" key={id}>
+              <div
+                className="col-lg-6"
+                key={id}
+                data-aos="fade-up"
+                data-aos-offset="20"
+                data-aos-delay="50"
+                data-aos-duration="800"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="false"
+                data-aos-once="true"
+                data-aos-anchor-placement="top"
+              >
                 <a href="#" className="mil-blog-card mil-mb-60">
                   <div className="mil-cover-frame mil-up">
                     <img src={image1} alt="cover" />

@@ -120,7 +120,8 @@ const Business = () => {
             </div>
           </div>
           {/* </div> */}
-          <div className="row mil-services-grid  mt-5">
+          <div className="row mil-services-grid  mt-5"
+          >
             {data.map((val, index) => (
               <div
                 key={index}

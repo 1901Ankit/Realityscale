@@ -86,11 +86,10 @@ const Product = () => {
       </li>
     );
   }
-
-  function UsefulLink({ name }) {
+  function UsefulLink({ name, url }) {
     return (
       <li>
-        <a href="#" className="mil-light-soft">
+        <a href={url} className="mil-light-soft">
           {name}
         </a>
       </li>
@@ -206,8 +205,12 @@ const Product = () => {
                       <div className="col-lg-4 mil-mb-60">
                         <h6 className="mil-muted mil-mb-10">Useful links</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          {data.usefulLinks.map((link, index) => (
-                            <UsefulLink key={index} name={link} />
+                        {data.usefulLinks.map((link, index) => (
+                            <UsefulLink
+                              key={index}
+                              name={link.name}
+                              url={link.url}
+                            />
                           ))}
                         </ul>
                       </div>
@@ -329,8 +332,8 @@ const Product = () => {
             >
               <Tabs
                 sx={{
-                  "& .MuiTab-root": { color: "white", width: 200 },
-                  "& .Mui-selected": { color: "#ffd94a" },
+                  "& .MuiTab-root": { color: "white !important", width: 200 },
+                  "& .Mui-selected": { color: "#ffd94a !important" },
 
                   "& .MuiTab-root.Mui-selected": {
                     color: "ffd94a !important",

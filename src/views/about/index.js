@@ -11,7 +11,17 @@ const About = () => {
   return (
     <div className="container mil-p-120-30" id="about">
       <div className="row justify-content-between align-items-center">
-        <div className="col-lg-6 col-xl-5 mil-mb-90">
+        <div
+          className="col-lg-6 col-xl-5 mil-mb-90"
+          data-aos="fade-up"
+          data-aos-offset="20"
+          data-aos-delay="50"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="false"
+          data-aos-once="true"
+          data-aos-anchor-placement="top"
+        >
           <h2
             className="mil-up mil-mb-30"
             style={{
@@ -49,7 +59,17 @@ const About = () => {
             </h6>
           </div>
         </div>
-        <div className="col-lg-5">
+        <div
+          className="col-lg-5"
+          data-aos="fade-up"
+          data-aos-offset="20"
+          data-aos-delay="50"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="false"
+          data-aos-once="true"
+          data-aos-anchor-placement="top"
+        >
           <div className="mil-about-photo mil-mb-90">
             <div className="mil-lines-place">
               <MilLinesSVG />

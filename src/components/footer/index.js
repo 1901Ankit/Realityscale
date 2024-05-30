@@ -27,6 +27,7 @@ const Navigation = () => {
     window.scrollTo(0, 0);
     navigate("/team");
   };
+ 
   return (
     <nav className="mil-footer-menu mil-mb-30">
       <ul className="p-0">
@@ -51,12 +52,12 @@ const MenuList = () => {
   return (
     <ul className="mil-menu-list mil-up mil-mb-30 p-0 fw-200">
       <li>
-        <a href="#" className="mil-light-soft">
+        <a href="/privacy" className="mil-light-soft">
           Privacy Policy
         </a>
       </li>
       <li>
-        <a href="#" className="mil-light-soft">
+        <a href="/terms" className="mil-light-soft">
           Terms and conditions
         </a>
       </li>

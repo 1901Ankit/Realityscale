@@ -6,25 +6,7 @@ import backgroundImage5 from "../images/Products/xr-immersion.webp";
 import backgroundImage6 from "../images/Products/reality-scale-framework.webp";
 
 let data = {
-  footerLinks: [
-    {
-      name: "ABOUT",
-      url: "/about",
-    },
-    {
-      name: "PRODUCT",
-      url: "/product",
-    },
-    {
-      name: "FEATURE",
-      url: "/feature ",
-    },
 
-    {
-      name: "CONTACT",
-      url: "/contact",
-    },
-  ],
 
   faq: [
     {
@@ -164,8 +146,8 @@ let data = {
   ],
 
   usefulLinks: [
-    "Privacy Policy",
-    "Terms and conditions",
+ { name: "Privacy Policy", url: "/Privacy" },
+  { name: "Terms and conditions", url: "/Terms" },
     "Cookie Policy",
     "Careers",
   ],

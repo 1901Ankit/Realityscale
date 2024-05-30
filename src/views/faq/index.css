@@ -33,10 +33,6 @@
 }
 
 
-.mil-accordion-group.mil-dark .mil-accordion-menu,
-.mil-accordion-group.mil-dark .mil-accordion-menu h6 {
-  color: #000
-}
 
 .ourcors {
   background-color: transparent;
@@ -84,13 +80,7 @@
 }
 
 
-.mil-accordion-group .mil-accordion-menu h6 {
-  transition: .4s cubic-bezier(0, 0, .3642, 1)
-}
 
-.mil-accordion-group.mil-dark {
-  border-bottom: 5px solid rgba(0, 0, 0, .1)
-}
 
 .mil-accordion-content,
 .mil-accordion-content.mil-expanded {
@@ -98,44 +88,7 @@
   overflow: hidden
 }
 
-.mil-accordion-group {
-  border-bottom: 5px solid rgba(255, 255, 255, .2);
-  border-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, rgba(255, 255, 255, 0.2) 1px, rgba(255, 255, 255, 0.2) 3px) 5;
-  margin-bottom: 30px
-}
 
-.mil-accordion-group .mil-accordion-menu {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-bottom: 30px
-}
-
-.mil-accordion-group .mil-accordion-menu .mil-symbol {
-  margin-right: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 10px;
-  position: relative
-}
-
-.mil-accordion-group .mil-accordion-menu .mil-symbol .mil-minus,
-.mil-accordion-group .mil-accordion-menu .mil-symbol .mil-plus,
-.mil-menu-btn span:after,
-.mil-menu-btn span:before {
-  position: absolute
-}
-
-.mil-accordion-group .mil-accordion-menu .mil-symbol .mil-minus {
-  color: #ffd94a;
-  transform: translateY(-2px)
-}
-
-.mil-accordion-group .mil-accordion-menu:hover h6 {
-  transform: translateX(10px)
-}
 
 .mil-accordion-content {
   padding-left: 40px

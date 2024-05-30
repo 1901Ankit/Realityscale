@@ -98,7 +98,7 @@ const Multicarousel = () => {
             ))}
           </div>
           <div className="row mil-relative justify-content-center">
-            <div className="col-lg-8">
+            <div className="col-lg-8" data-aos="fade-up">
               <div className="mil-slider-nav mil-soft mil-reviews-nav mil-up">
                 <ArrowSVG
                   className="mil-slider-arrow mil-prev mil-revi-prev mil-arrow-place "
