@@ -1,56 +1,79 @@
 import image1 from "../../assests/images/Welcome to Reality Scale/Welcome_to_Reality_Scale.webp";
 export const componentData = {
-  title: "EMPOWER YOUR VISION",
-  paragraph: `A multiplayer framework serves as the backbone for creating online
-                multiplayer experiences across a wide range of applications,
-                including video games, virtual worlds, collaborative platforms,
-                and more.`,
+  title: "Mysterium VR Game",
+  paragraph: `A VR game that merges live music with gameplay, offering an immersive and synchronised musical journey for users.
+  `,
   linkText: "Read more",
   linkTo: "/product",
 };
 
 export const secondParaData = {
-  title: "SEAMLESS ACCESS",
-  paragraph: `When it comes to industry-leading graphics, there's a select group
-                of companies and technologies that stand out for their
-                cutting-edge advancements and innovative approaches.`,
+  title: "Mahindra VR Configurator",
+  paragraph: `A VR experience that lets users customize cars in a realistic & interactive setting, with features to analyze user preferences choices.`,
   linkText: "Read more",
   linkTo: "/product",
 };
 
 export const thirdParaData = {
-  title: "INTELLIGENT AI ASSISTANCE",
-  paragraph: `The provided C++ source code implements a basic multiplayer game
-                server using sockets for communication. Upon execution, the server
-                initializes a socket and binds it to a specified port, enabling it
-                to listen for incoming connections from clients.`,
+  title: "We Are VR Virtual digital cone",
+  paragraph: `An innovative platform for virtual tours of real estate, seamlessly integrating online and VR environments with cinematic flair.`,
   linkText: "Read more",
   linkTo: "/product",
 };
 
 export const fourthParaData = {
-  title: "SEAMLESS",
-  paragraph: `When it comes to industry-leading graphics, there's a select group
-                of companies and technologies that stand out for their
-                cutting-edge advancements and innovative approaches.`,
+  title: "Mercedes Maybach Meta",
+  paragraph: `A mixed reality showcase at an auto show, blending virtual features with a real Mercedes-Maybach for an enhanced viewing experience.`,
+  linkText: "Read more",
+  linkTo: "/product",
+};
+export const fourthParaData2 = {
+  title: "Honda Showroom Configurator",
+  paragraph: `An interactive digital display for Honda showrooms, allowing detailed customization and analytics, controlled seamlessly by sales staff via mobile.`,
+  linkText: "Read more",
+  linkTo: "/product",
+};
+export const fourthParaData3 = {
+  title: "Renault/Honda/Hyundai Online Cloud Configurator",
+  paragraph: `A browser-based car configurator offering detailed customization and remote guided tours, backed by efficient cloud technology for smooth operation.`,
   linkText: "Read more",
   linkTo: "/product",
 };
 
 export const fifthParaData = {
-  title: "SEAMLESS ACCESS",
-  paragraph: `When it comes to industry-leading graphics, there's a select group
-              of companies and technologies that stand out for their
-              cutting-edge advancements and innovative approaches.`,
+  title: "Reality Scale Real-Estate",
+  paragraph: `A comprehensive cloud platform for immersive real estate experiences, enabling virtual tours and detailed property exploration.`,
+  linkText: "Read more",
+  linkTo: "/product",
+};
+export const fifthParaData2 = {
+  title: "Fashion Project",
+  paragraph: `A cloud-powered platform revolutionizing the way fashion is showcased, offering interactive and customizable virtual experiences.`,
+  linkText: "Read more",
+  linkTo: "/product",
+};
+export const fifthParaData3 = {
+  title: "Reality Scale Interior",
+  paragraph: `A cloud-based solution for exploring & customizing interior designs in real-time, enhancing  estate presentations easy navigation`,
   linkText: "Read more",
   linkTo: "/product",
 };
 
 export const sixthParaData = {
-  title: "SEAMLESS ACCESS",
-  paragraph: `When it comes to industry-leading graphics, there's a select group
-              of companies and technologies that stand out for their
-              cutting-edge advancements and innovative approaches.`,
+  title: "Disney Game Project",
+  paragraph: `A captivating VR game crafted for live broadcast during a Disney children's show, ensuring a fun and safe interactive experience for kids.`,
+  linkText: "Read more",
+  linkTo: "/product",
+};
+export const sixthParaData2 = {
+  title: "Youth Olympics Project",
+  paragraph: `An engaging AR bike-riding game activated by QR codes, designed for a dynamic Olympic experience and smooth performance on mobile.`,
+  linkText: "Read more",
+  linkTo: "/product",
+};
+export const sixthParaData3 = {
+  title: "WNDR Platform",
+  paragraph: `A cloud-based gaming platform reviving classic game vibes, enhanced with realistic characters and NFT features, ensuring smooth play across devices.`,
   linkText: "Read more",
   linkTo: "/product",
 };

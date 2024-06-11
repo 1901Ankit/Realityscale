@@ -106,19 +106,20 @@ const SocialIcons = () => {
         </a>
       </li>
       <li>
-        <a href="#" target="_blank" className="social-icon">
+        <a href="https://www.youtube.com/channel/UCg0f7WD6d_-9N-wCN93cnPA" target="_blank" className="social-icon">
           {" "}
           <FaYoutube />
         </a>
       </li>
       <li>
-        <a href="#" target="_blank" className="social-icon">
+        <a href="#" target="_blank" className="social-ic
+        on">
           {" "}
           <FaXTwitter />
         </a>
       </li>
       <li>
-        <a href="#" target="_blank" className="social-icon">
+        <a href="https://www.facebook.com/realityscale/" target="_blank" className="social-icon">
           {" "}
           <FaFacebook />
         </a>

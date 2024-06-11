@@ -237,7 +237,7 @@ const Terms = () => {
       <div>
         <div class="mil-inner-banner">
           <div
-            class="mil-banner-content mil-center mil-up"
+            class="mil-banner-content mil-started mil-up"
             style={{
               translate: "none",
               rotate: "none",
@@ -259,20 +259,20 @@ const Terms = () => {
               </ul>
               <h2 class="mil-thin-gen">
                 {" "}
-                Terms and <span class="mil-thin">Conditions</span>
+                Terms  <span class="mil-thin"> and Conditions</span>
               </h2>
             </div>
           </div>
         </div>
         {/* bannerend */}
 
-        <div class="mil-blog-section">
-          <div class="container mil-p-100-100">
+        <div className="mil-blog-section">
+          <div className="container mil-p-100-100">
             <div
               id="post-929"
-              class="post-929 page type-page status-publish hentry"
+              className="post-929 page type-page status-publish hentry"
             >
-              <div class="single-post-text">
+              <div className="single-post-text">
                 <p>Welcome to Reality!</p>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
@@ -303,7 +303,7 @@ const Terms = () => {
                   but also the leap into electronic typesetting, remaining
                   essentially unchanged.{" "}
                 </p>
-                <h3 class="wp-block-heading">
+                <h3 className="wp-block-heading">
                   <strong>Cookies</strong>
                 </h3>
                 <p>
@@ -321,7 +321,7 @@ const Terms = () => {
                   also the leap into electronic typesetting, remaining
                   essentially unchanged.
                 </p>
-                <h3 class="wp-block-heading">
+                <h3 className="wp-block-heading">
                   <strong>License</strong>
                 </h3>
                 <p>
@@ -390,7 +390,7 @@ const Terms = () => {
                   also the leap into electronic typesetting, remaining
                   essentially unchanged.
                 </p>
-                <h3 class="wp-block-heading">
+                <h3 className="wp-block-heading">
                   <strong>Hyperlinking to our Content</strong>
                 </h3>
                 <p>
@@ -483,7 +483,7 @@ const Terms = () => {
                   No use of Reality logo or other artwork will be allowed for
                   linking absent a trademark license agreement.
                 </p>
-                <h3 class="wp-block-heading">
+                <h3 className="wp-block-heading">
                   <strong>iFrames</strong>
                 </h3>
                 <p>
@@ -491,7 +491,7 @@ const Terms = () => {
                   create frames around our Webpages that alter in any way the
                   visual presentation or appearance of our Website.
                 </p>
-                <h3 class="wp-block-heading">
+                <h3 className="wp-block-heading">
                   <strong>Content Liability</strong>
                 </h3>
                 <p>
@@ -503,7 +503,7 @@ const Terms = () => {
                   also the leap into electronic typesetting, remaining
                   essentially unchanged.
                 </p>
-                <h3 class="wp-block-heading">
+                <h3 className="wp-block-heading">
                   <strong>Reservation of Rights</strong>
                 </h3>
                 <p>
@@ -515,7 +515,7 @@ const Terms = () => {
                   also the leap into electronic typesetting, remaining
                   essentially unchanged.
                 </p>
-                <h3 class="wp-block-heading">
+                <h3 className="wp-block-heading">
                   <strong>Removal of links from our website</strong>
                 </h3>
                 <p>
@@ -536,7 +536,7 @@ const Terms = () => {
                   also the leap into electronic typesetting, remaining
                   essentially unchanged.
                 </p>
-                <h3 class="wp-block-heading">
+                <h3 className="wp-block-heading">
                   <strong>Disclaimer</strong>
                 </h3>
                 <p>

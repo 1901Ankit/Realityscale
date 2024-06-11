@@ -4,10 +4,17 @@ import backgroundImage3 from "../images/Products/web3-frontier.webp";
 import backgroundImage4 from "../images/Products/real-estate-solutions.webp";
 import backgroundImage5 from "../images/Products/xr-immersion.webp";
 import backgroundImage6 from "../images/Products/reality-scale-framework.webp";
-
+import image1 from "../images/work/1.webp";
+import image2 from "../images/work/2.webp";
+import image3 from "../../assests/images/work/4.webp";
+import image4 from "../../assests/images/work/3.webp";
+import image5 from "../../assests/images/work/5.webp";
+import image6 from "../../assests/images/work/6.webp";
+import image7 from "../../assests/images/work/7.webp";
+import image8 from "../../assests/images/work/8.webp";
+import image9 from "../../assests/images/work/9.webp";
+import image10 from "../../assests/images/work/10.webp";
 let data = {
-
-
   faq: [
     {
       title: "Can Reality Scale develop custom applications for my business?",
@@ -146,10 +153,961 @@ let data = {
   ],
 
   usefulLinks: [
- { name: "Privacy Policy", url: "/Privacy" },
-  { name: "Terms and conditions", url: "/Terms" },
+    { name: "Privacy Policy", url: "/Privacy" },
+    { name: "Terms and conditions", url: "/Terms" },
     "Cookie Policy",
     "Careers",
+  ],
+  product: [
+    {
+      name: "Mahindra VR Configurator",
+      type: "VR/AR",
+      img: image1,
+      productDetails: {
+        bannerImage: image1,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image1,
+          },
+          {
+            img: image1,
+          },
+          {
+            img: image1,
+          },
+          {
+            img: image1,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image1,
+          },
+          {
+            img: image1,
+          },
+          {
+            img: image1,
+          },
+          {
+            img: image1,
+          },
+        ],
+      },
+      dataAos: "fade-up",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+    {
+      name: "Mysterium VR Game",
+      type: "VR/AR",
+      img: image2,
+      productDetails: {
+        bannerImage: image2,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image2,
+          },
+          {
+            img: image2,
+          },
+          {
+            img: image2,
+          },
+          {
+            img: image2,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image2,
+          },
+          {
+            img: image2,
+          },
+          {
+            img: image2,
+          },
+          {
+            img: image2,
+          },
+        ],
+      },
+      dataAos: "fade-down",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+
+    {
+      name: "Mercedes Maybach Meta 2 Demo",
+      type: "AUTOMOTIVE",
+      img: image4,
+      productDetails: {
+        bannerImage: image4,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image4,
+          },
+          {
+            img: image4,
+          },
+          {
+            img: image4,
+          },
+          {
+            img: image4,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image4,
+          },
+          {
+            img: image4,
+          },
+          {
+            img: image4,
+          },
+          {
+            img: image4,
+          },
+        ],
+      },
+      dataAos: "fade-up",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+    {
+      name: "   Honda Showroom Configurator",
+      type: "         AUTOMOTIVE",
+      img: image3,
+      productDetails: {
+        bannerImage: image3,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image3,
+          },
+          {
+            img: image3,
+          },
+          {
+            img: image3,
+          },
+          {
+            img: image3,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image3,
+          },
+          {
+            img: image3,
+          },
+          {
+            img: image3,
+          },
+          {
+            img: image3,
+          },
+        ],
+      },
+      dataAos: "fade-down",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+    {
+      name: "Reality Scale Interior",
+      type: "     ARCHITECTURAL",
+      img: image5,
+      productDetails: {
+        bannerImage: image5,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image5,
+          },
+          {
+            img: image5,
+          },
+          {
+            img: image5,
+          },
+          {
+            img: image5,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image5,
+          },
+          {
+            img: image5,
+          },
+          {
+            img: image5,
+          },
+          {
+            img: image5,
+          },
+        ],
+      },
+      dataAos: "fade-up",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+    {
+      name: "Fashion Project",
+      type: "ARCHITECTURAL",
+      img: image6,
+      productDetails: {
+        bannerImage: image6,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image6,
+          },
+          {
+            img: image6,
+          },
+          {
+            img: image6,
+          },
+          {
+            img: image6,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image6,
+          },
+          {
+            img: image6,
+          },
+          {
+            img: image6,
+          },
+          {
+            img: image6,
+          },
+        ],
+      },
+      dataAos: "fade-down",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+    {
+      name: "Disney Game Project",
+      type: "     GAMING",
+      img: image7,
+      productDetails: {
+        bannerImage: image7,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image7,
+          },
+          {
+            img: image7,
+          },
+          {
+            img: image7,
+          },
+          {
+            img: image7,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image7,
+          },
+          {
+            img: image7,
+          },
+          {
+            img: image7,
+          },
+          {
+            img: image7,
+          },
+        ],
+      },
+      dataAos: "fade-up",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+    {
+      name: "Youth Olympics Project",
+      type: "GAMING",
+      img: image8,
+      productDetails: {
+        bannerImage: image8,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image8,
+          },
+          {
+            img: image8,
+          },
+          {
+            img: image8,
+          },
+          {
+            img: image8,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image8,
+          },
+          {
+            img: image8,
+          },
+          {
+            img: image8,
+          },
+          {
+            img: image8,
+          },
+        ],
+      },
+      dataAos: "fade-down",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+  ],
+
+  vr: [
+    {
+      name: "Mahindra VR Configurator",
+      type: "VR/AR",
+      img: image1,
+      productDetails: {
+        bannerImage: image1,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image1,
+          },
+          {
+            img: image1,
+          },
+          {
+            img: image1,
+          },
+          {
+            img: image1,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image1,
+          },
+          {
+            img: image1,
+          },
+          {
+            img: image1,
+          },
+          {
+            img: image1,
+          },
+        ],
+      },
+      dataAos: "fade-up",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+    {
+      name: "Mysterium VR Game",
+      type: "VR/AR",
+      img: image2,
+      productDetails: {
+        bannerImage: image2,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image2,
+          },
+          {
+            img: image2,
+          },
+          {
+            img: image2,
+          },
+          {
+            img: image2,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image2,
+          },
+          {
+            img: image2,
+          },
+          {
+            img: image2,
+          },
+          {
+            img: image2,
+          },
+        ],
+      },
+      dataAos: "fade-down",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+
+    {
+      name: "WNDR Platform",
+      type: "     VR/AR",
+      img: image9,
+      productDetails: {
+        bannerImage: image9,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image9,
+          },
+          {
+            img: image9,
+          },
+          {
+            img: image9,
+          },
+          {
+            img: image9,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image9,
+          },
+          {
+            img: image9,
+          },
+          {
+            img: image9,
+          },
+          {
+            img: image9,
+          },
+        ],
+      },
+      dataAos: "fade-up",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+    {
+      name: "Virtual Digital Cone",
+      type: "         VR/AR",
+      img: image10,
+      productDetails: {
+        bannerImage: image10,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image10,
+          },
+          {
+            img: image10,
+          },
+          {
+            img: image10,
+          },
+          {
+            img: image10,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image10,
+          },
+          {
+            img: image10,
+          },
+          {
+            img: image10,
+          },
+          {
+            img: image10,
+          },
+        ],
+      },
+      dataAos: "fade-down",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+  ],
+
+  automative:[
+    {
+      name: "Mercedes Maybach Meta 2 Demo",
+      type: "AUTOMOTIVE",
+      img: image4,
+      productDetails: {
+        bannerImage: image4,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image4,
+          },
+          {
+            img: image4,
+          },
+          {
+            img: image4,
+          },
+          {
+            img: image4,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image4,
+          },
+          {
+            img: image4,
+          },
+          {
+            img: image4,
+          },
+          {
+            img: image4,
+          },
+        ],
+      },
+      dataAos: "fade-up",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+    {
+      name: "   Honda Showroom Configurator",
+      type: "         AUTOMOTIVE",
+      img: image3,
+      productDetails: {
+        bannerImage: image3,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image3,
+          },
+          {
+            img: image3,
+          },
+          {
+            img: image3,
+          },
+          {
+            img: image3,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image3,
+          },
+          {
+            img: image3,
+          },
+          {
+            img: image3,
+          },
+          {
+            img: image3,
+          },
+        ],
+      },
+      dataAos: "fade-down",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+  ],
+
+  archite:[
+    {
+      name: "Reality Scale Interior",
+      type: "     ARCHITECTURAL",
+      img: image5,
+      productDetails: {
+        bannerImage: image5,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image5,
+          },
+          {
+            img: image5,
+          },
+          {
+            img: image5,
+          },
+          {
+            img: image5,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image5,
+          },
+          {
+            img: image5,
+          },
+          {
+            img: image5,
+          },
+          {
+            img: image5,
+          },
+        ],
+      },
+      dataAos: "fade-up",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+    {
+      name: "Fashion Project",
+      type: "ARCHITECTURAL",
+      img: image6,
+      productDetails: {
+        bannerImage: image6,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image6,
+          },
+          {
+            img: image6,
+          },
+          {
+            img: image6,
+          },
+          {
+            img: image6,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image6,
+          },
+          {
+            img: image6,
+          },
+          {
+            img: image6,
+          },
+          {
+            img: image6,
+          },
+        ],
+      },
+      dataAos: "fade-down",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+  ],
+  gaming:[
+    {
+      name: "Disney Game Project",
+      type: "     GAMING",
+      img: image7,
+      productDetails: {
+        bannerImage: image7,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image7,
+          },
+          {
+            img: image7,
+          },
+          {
+            img: image7,
+          },
+          {
+            img: image7,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image7,
+          },
+          {
+            img: image7,
+          },
+          {
+            img: image7,
+          },
+          {
+            img: image7,
+          },
+        ],
+      },
+      dataAos: "fade-up",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
+    {
+      name: "Youth Olympics Project",
+      type: "GAMING",
+      img: image8,
+      productDetails: {
+        bannerImage: image8,
+        client: "ENVATO MARKET",
+        date: "APRIL 2023",
+        author: "PAUL TRUEMAN",
+        slider1Image: [
+          {
+            img: image8,
+          },
+          {
+            img: image8,
+          },
+          {
+            img: image8,
+          },
+          {
+            img: image8,
+          },
+        ],
+        paraHeading: "Simplicity, elegance, innovation!",
+        para1:
+          "A home surveillance camera that pays great attention to security and user privacy, featuring two modes to provide security while protecting personal privacy. The camera has an open and closed mode, we define the product to have clear two sides, expressing two working states and emotions.",
+        para2:
+          "Presents a simple and quiet state when not in use, delivering a gentle and security. At the same time, the camera can adapt to a variety of environments, providing elegant ways of wall hanging and standing installation.",
+        slider2: [
+          {
+            img: image8,
+          },
+          {
+            img: image8,
+          },
+          {
+            img: image8,
+          },
+          {
+            img: image8,
+          },
+        ],
+      },
+      dataAos: "fade-down",
+      dataAosOffset: "20",
+      dataaosdelay: "50",
+      dataaosduration: "800",
+      dataaoseasing: "ease-in-out",
+      dataaosmirror: "false",
+      dataaosonce: "true",
+      dataaosanchorplacement: "top",
+    },
   ],
 
   address:

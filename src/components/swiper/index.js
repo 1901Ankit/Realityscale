@@ -8,30 +8,26 @@ import imagegif from "../../assests/images/work/detail/2.gif";
 import "./index.css";
 import { Pagination } from "swiper";
 
-const Wipper = () => {
+const Wipper = ({ data }) => {
+  console.log("datata", data);
   return (
     <div className="backgroundvlack">
       <Swiper
-        slidesPerView={2.2}
+        slidesPerView={3.5}
         spaceBetween={20}
+        centeredSlides={true}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper container p-0"
+        className="mySwiper container-fluid p-0"
       >
-        <SwiperSlide>
-          <img src={imagegif} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image5} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image4} />
-        </SwiperSlide>
+        {data &&
+          data.map((val, i) => (
+            <SwiperSlide key={i}>
+              <img src={val.img} />
+            </SwiperSlide>
+          ))}
       </Swiper>
     </div>
   );

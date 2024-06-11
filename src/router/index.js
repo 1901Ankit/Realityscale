@@ -6,9 +6,9 @@ import CTA from "../components/cta";
 import Member from "../views/team_member";
 import Contactus from "../views/contact";
 import Product from "../views/product";
-import Productdetail from "../views/productdetail";
 import Privacy from "../views/privacy";
 import Terms from "../views/terms";
+import Productdetails from "../views/productdetails";
 
 const Router = () => {
   return (
@@ -19,7 +19,7 @@ const Router = () => {
           <Route exact path="/team" element={<Member />} />
           <Route exact path="/contact" element={<Contactus />} />
           <Route exact path="/product" element={<Product />} />
-          <Route exact path="/productdetail" element={<Productdetail />} />
+          <Route exact path="/productdetails" element={<Productdetails />} />
           <Route exact path="/privacy" element={<Privacy />} />
           <Route exact path="/terms" element={<Terms />} />
         </Routes>

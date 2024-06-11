@@ -6,7 +6,6 @@ import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.
 import logos from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
 import Mouse from "../../components/mouse";
 import "./index.css";
-import ArrowSVG from "../../components/arrow";
 import Progressbar from "../../components/progressbar";
 import Backtop from "../../components/backtop";
 import data from "../../assests/data/data";
@@ -235,9 +234,9 @@ const Privacy = () => {
 
       {/* banner */}
       <div>
-        <div class="mil-inner-banner">
+        <div className="mil-inner-banner">
           <div
-            class="mil-banner-content mil-center mil-up"
+            className="mil-banner-content mil-started mil-up"
             style={{
               translate: "none",
               rotate: "none",
@@ -246,8 +245,8 @@ const Privacy = () => {
               opacity: "1",
             }}
           >
-            <div class="container">
-              <ul class="mil-breadcrumbs mil-center mil-mb-60 listpriva">
+            <div className="container">
+              <ul className="mil-breadcrumbs mil-center mil-mb-60 listpriva">
                 <li>
                   <a href="/" title="Home">
                     Home
@@ -257,19 +256,19 @@ const Privacy = () => {
                   <a>Privacy Policy</a>
                 </li>
               </ul>
-              <h2 class="mil-thin-gen">
+              <h2 className="mil-thin-gen">
                 {" "}
-                <span class="mil-thin">Privacy</span> Policy
+                <span className="mil-thin">Privacy</span> Policy
               </h2>
             </div>
           </div>
         </div>
         {/* bannerend */}
 
-        <div class="mil-blog-section">
-          <div class="container mil-p-100-100">
+        <div className="mil-blog-section">
+          <div className="container mil-p-100-100">
             <div>
-              <div class="single-post-text">
+              <div className="single-post-text">
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -283,7 +282,7 @@ const Privacy = () => {
                   If you have additional questions or require more information
                   about our Privacy Policy, do not hesitate to contact us.
                 </p>
-                <h2 class="wp-block-heading">Log Files</h2>
+                <h2 className="wp-block-heading">Log Files</h2>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -299,7 +298,7 @@ const Privacy = () => {
                   but also the leap into electronic typesetting, remaining
                   essentially unchanged.
                 </p>
-                <h2 class="wp-block-heading" id="cookies">
+                <h2 className="wp-block-heading" id="cookies">
                   Cookies and Web Beacons
                 </h2>
                 <p>
@@ -312,7 +311,7 @@ const Privacy = () => {
                   essentially unchanged.
                 </p>
                 <p>For more general information on cookies, please read .</p>
-                <h2 class="wp-block-heading">Privacy Policies</h2>
+                <h2 className="wp-block-heading">Privacy Policies</h2>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -335,7 +334,9 @@ const Privacy = () => {
                   Note that Ashley has no access to or control over these
                   cookies that are used by third-party advertisers.
                 </p>
-                <h2 class="wp-block-heading">Third Party Privacy Policies</h2>
+                <h2 className="wp-block-heading">
+                  Third Party Privacy Policies
+                </h2>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -354,7 +355,7 @@ const Privacy = () => {
                   also the leap into electronic typesetting, remaining
                   essentially unchanged.
                 </p>
-                <h2 class="wp-block-heading">Children’s Information</h2>
+                <h2 className="wp-block-heading">Children’s Information</h2>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -373,7 +374,7 @@ const Privacy = () => {
                   also the leap into electronic typesetting, remaining
                   essentially unchanged.
                 </p>
-                <h2 class="wp-block-heading">Online Privacy Policy Only</h2>
+                <h2 className="wp-block-heading">Online Privacy Policy Only</h2>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -383,7 +384,7 @@ const Privacy = () => {
                   also the leap into electronic typesetting, remaining
                   essentially unchanged.
                 </p>
-                <h2 class="wp-block-heading">Consent</h2>
+                <h2 className="wp-block-heading">Consent</h2>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. It has survived not only five centuries,

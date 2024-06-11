@@ -23,13 +23,21 @@ import Componentpara from "../paracomponent/componentpara";
 import Secondpara from "../paracomponent/secondpara";
 import Thirdpara from "../paracomponent/thirdpara";
 import Fourthpara from "../paracomponent/fourthpara";
+import Fourthpara2 from "../paracomponent/fourthpara2";
+import Fourthpara3 from "../paracomponent/fourthpara3";
 import "./index.css";
 import Aos from "aos";
 import TabPanel from "../tab-panel";
 import Fifth from "../displayComponent/fifth";
 import Sixth from "../displayComponent/six";
+import Sixth2 from "../displayComponent/six2";
+import Sixth3 from "../displayComponent/six3";
 import Fifthpara from "../paracomponent/fifthpara";
+import Fifthpara2 from "../paracomponent/fifthpara2";
+import Fifthpara3 from "../paracomponent/fifthpara3";
 import Sixthpara from "../paracomponent/sixthpara";
+import Sixthpara2 from "../paracomponent/sixthpara2";
+import Sixthpara3 from "../paracomponent/sixthpara3";
 import ArrowSVG from "../arrow";
 import { Link } from "react-router-dom";
 
@@ -101,8 +109,8 @@ const Range = () => {
   ];
   const fourth = [
     <Sixth handleNext={handleNext} handlePrev={handlePrev} />,
-    <Sixth />,
-    <Sixth />,
+    <Sixth2 />,
+    <Sixth3 />,
   ];
   const paragraph = [
     <Componentpara handleNext={handleNext} handlePrev={handlePrev} />,
@@ -111,61 +119,61 @@ const Range = () => {
   ];
   const twoparagraph = [
     <Fourthpara handleNext={handleNext} handlePrev={handlePrev} />,
-    <Fourthpara />,
-    <Fourthpara />,
+    <Fourthpara2 />,
+    <Fourthpara3 />,
   ];
   const threeparagraph = [
     <Fifthpara handleNext={handleNext} handlePrev={handlePrev} />,
-    <Fifthpara />,
-    <Fifthpara />,
+    <Fifthpara2 />,
+    <Fifthpara3 />,
   ];
   const fourthparagraph = [
     <Sixthpara handleNext={handleNext} handlePrev={handlePrev} />,
-    <Sixthpara />,
-    <Sixthpara />,
+    <Sixthpara2 />,
+    <Sixthpara3 />,
   ];
   const componentLabel = [
     {
-      label: "EMPOWER YOUR VISION",
+      label: "Mysterium VR Game",
     },
     {
-      label: "SEAMLESS ACCESS",
+      label: "Mahindra VR Configurator",
     },
     {
-      label: "STREAMLINED MARKETING",
+      label: "We Are VR Virtual digital cone",
     },
   ];
   const twoLabel = [
     {
-      label: "EMPOWER  ",
+      label: "Mercedes Maybach Meta",
     },
     {
-      label: "SEAMLESS ",
+      label: "Honda Showroom Configurator",
     },
     {
-      label: "STREAMLINED ",
+      label: "Renault/Honda/Hyundai Online Cloud Configurator ",
     },
   ];
   const threelabel = [
     {
-      label: "EMPOWER  ",
+      label: "Reality Scale Real-Estate",
     },
     {
-      label: "SEAMLESS ",
+      label: "Fashion Project ",
     },
     {
-      label: "STREAMLINED ",
+      label: "Reality Scale Interior ",
     },
   ];
   const fourthlabel = [
     {
-      label: "EMPOWER  ",
+      label: "Disney Game Project",
     },
     {
-      label: "SEAMLESS ",
+      label: "Youth Olympics Project",
     },
     {
-      label: "STREAMLINED ",
+      label: "WNDR Platform",
     },
   ];
 
@@ -198,7 +206,7 @@ const Range = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(autoSlide, 2500);
+    const interval = setInterval(autoSlide, 4000);
     return () => clearInterval(interval);
   }, []);
 

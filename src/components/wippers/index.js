@@ -6,28 +6,25 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./index.css";
 import { Pagination } from "swiper";
 
-const Wippers = () => {
+const Wippers = ({ data }) => {
   return (
     <div className="backgroundvlack">
       <Swiper
-        slidesPerView={3}
+        slidesPerView={3.5}
         spaceBetween={20}
-        freeMode={true}
+        centeredSlides={true}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper container p-0"
+        className="mySwiper container-fluid p-0"
       >
-        <SwiperSlide>
-          <img src={image5} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image4} />
-        </SwiperSlide>
+        {data &&
+          data.map((val, i) => (
+            <SwiperSlide key={i}>
+              <img src={val.img} />
+            </SwiperSlide>
+          ))}
       </Swiper>
     </div>
   );

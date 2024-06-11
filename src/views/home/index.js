@@ -23,6 +23,7 @@ import ArrowSVG from "../../components/arrow";
 import Backtop from "../../components/backtop";
 import Progressbar from "../../components/progressbar";
 import Aos from "aos";
+import Scroll from "../../components/scroll360";
 
 const Home = () => {
   Aos.init();
@@ -222,7 +223,7 @@ const Home = () => {
                       <div className="col-lg-4 mil-mb-60">
                         <h6 className="mil-muted mil-mb-10">Useful links</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                        {data.usefulLinks.map((link, index) => (
+                          {data.usefulLinks.map((link, index) => (
                             <UsefulLink
                               key={index}
                               name={link.name}
@@ -330,9 +331,9 @@ const Home = () => {
               }}
             >
               <div className="systemvideo">
-                <div className="row align-items-center d-flex justify-content-center ">
+                <div className="row align-items-center d-flex justify-content-center">
                   <div className="" style={{ position: "absolute" }}>
-                    <div className="col-md-7 col-lg-6">
+                    <div className="col-md-6 col-lg-6">
                       <h1 className="mil-mutede mil-mb-30">
                         Your{" "}
                         <span
@@ -368,23 +369,16 @@ const Home = () => {
                     </div>
                   </div>
 
-                  <div className="col-md-7 col-lg-6">
-                    <div className="jiskaksia">
-                      <video
-                        autoPlay
-                        playsInline
-                        loop
-                        muted
-                        className="video"
-                        style={{ pointerEvents: "none" }}
-                      >
-                        <source src={video} type="video/mp4" />
-                      </video>
-                    </div>
+                  <div className="col-md-6 col-lg-6">
+                    <video autoPlay playsInline loop muted className="video">
+                      <source src={video} type="video/mp4" />
+                      
+                    </video>
+                    
                   </div>
                 </div>
               </div>
-
+{/* <Scroll/> */}
               <div className="mobilevideo">
                 <div className="row ">
                   <div className="col-md-6 col-lg-6">
@@ -437,6 +431,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+          
             </div>
           </div>
         </div>

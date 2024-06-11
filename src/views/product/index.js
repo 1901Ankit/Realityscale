@@ -9,12 +9,16 @@ import "./index.css";
 import ArrowSVG from "../../components/arrow";
 import Progressbar from "../../components/progressbar";
 import Backtop from "../../components/backtop";
-import image1 from "../../assests/images/work/1.jpg";
-import image2 from "../../assests/images/work/2.jpg";
-import image3 from "../../assests/images/work/3.jpg";
-import image4 from "../../assests/images/work/4.jpg";
-import image5 from "../../assests/images/work/5.jpg";
-import image6 from "../../assests/images/work/6.jpg";
+import image1 from "../../assests/images/work/1.webp";
+import image2 from "../../assests/images/work/2.webp";
+import image3 from "../../assests/images/work/4.webp";
+import image4 from "../../assests/images/work/3.webp";
+import image5 from "../../assests/images/work/5.webp";
+import image6 from "../../assests/images/work/6.webp";
+import image7 from "../../assests/images/work/7.webp";
+import image8 from "../../assests/images/work/8.webp";
+import image9 from "../../assests/images/work/9.webp";
+import image10 from "../../assests/images/work/10.webp";
 import { Tab, Tabs, Box, Stack } from "@mui/material";
 import Aos from "aos";
 import data from "../../assests/data/data";
@@ -140,6 +144,13 @@ const Product = () => {
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
+  // const navigate = useNavigate();
+  const handleRoute = (value) => {
+    window.scrollTo(20, 20);
+    navigate("/productdetails", {
+      state: { value },
+    });
+  };
   return (
     <>
       <Mouse />
@@ -205,7 +216,7 @@ const Product = () => {
                       <div className="col-lg-4 mil-mb-60">
                         <h6 className="mil-muted mil-mb-10">Useful links</h6>
                         <ul className="mil-menu-list" style={{ padding: "0" }}>
-                        {data.usefulLinks.map((link, index) => (
+                          {data.usefulLinks.map((link, index) => (
                             <UsefulLink
                               key={index}
                               name={link.name}
@@ -360,242 +371,48 @@ const Product = () => {
               <section id="portfolio">
                 <div className="container mil-portfolio mil-p-120-60 ">
                   <div className="row justify-content-between align-items-center">
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-up"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
+                    {data.product.map((val, i) => (
+                      <div
+                        className="col-lg-6"
+                        data-aos={val.dataAos}
+                        data-aos-offset={val.dataAosOffset}
+                        data-aos-delay={val.dataaosdelay}
+                        data-aos-duration={val.dataaosduration}
+                        data-aos-easing={val.dataaoseasing}
+                        data-aos-mirror={val.dataaosmirror}
+                        data-aos-once={val.dataaosonce}
+                        data-aos-anchor-placement={val.dataaosanchorplacement}
                       >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image1} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
+                        <div
+                          className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
+                          data-value-1="60"
+                          data-value-2="-60"
+                          style={{
+                            translate: "none",
+                            rotate: "none",
+                            scale: "none",
+                            transform: "translate3d(0px, -32.0873px, 0px)",
+                          }}
+                        >
+                          <div
+                            className="mil-cover-frame mil-hori mil-up"
+                            onClick={() => handleRoute(val)}
+                          >
+                            <div className="mil-cover">
+                              <img src={val.img} alt="cover" width={"100%"} />
                             </div>
                           </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-down"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
-                      >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image2} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
+                          <div className="mil-descr">
+                            <div className="mil-labels mil-up mil-mb-15">
+                              <div className="mil-label mil-upper mil-accent">
+                                {val.type}
+                              </div>
                             </div>
-                          </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
-
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-up"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
-                      >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image4} alt="cover" />
+                            <h4 className="mil-up">{val.name}</h4>
                           </div>
                         </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
-                            </div>
-                          </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-down"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
-                      >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image3} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
-                            </div>
-                          </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
-
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-up"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
-                      >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image5} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
-                            </div>
-                          </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-down"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
-                      >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image6} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
-                            </div>
-                          </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </section>
@@ -609,163 +426,48 @@ const Product = () => {
               <section id="portfolio">
                 <div className="container mil-portfolio mil-p-120-60 ">
                   <div className="row justify-content-between align-items-center">
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-down"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
+                    {data.vr.map((val, i) => (
+                      <div
+                        className="col-lg-6"
+                        data-aos={val.dataAos}
+                        data-aos-offset={val.dataAosOffset}
+                        data-aos-delay={val.dataaosdelay}
+                        data-aos-duration={val.dataaosduration}
+                        data-aos-easing={val.dataaoseasing}
+                        data-aos-mirror={val.dataaosmirror}
+                        data-aos-once={val.dataaosonce}
+                        data-aos-anchor-placement={val.dataaosanchorplacement}
                       >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image1} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
+                        <div
+                          className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
+                          data-value-1="60"
+                          data-value-2="-60"
+                          style={{
+                            translate: "none",
+                            rotate: "none",
+                            scale: "none",
+                            transform: "translate3d(0px, -32.0873px, 0px)",
+                          }}
+                        >
+                          <div
+                            className="mil-cover-frame mil-hori mil-up"
+                            onClick={() => handleRoute(val)}
+                          >
+                            <div className="mil-cover">
+                              <img src={val.img} alt="cover" width={"100%"} />
                             </div>
                           </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-up"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
-                      >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image2} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
+                          <div className="mil-descr">
+                            <div className="mil-labels mil-up mil-mb-15">
+                              <div className="mil-label mil-upper mil-accent">
+                                {val.type}
+                              </div>
                             </div>
-                          </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
-
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-down"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
-                      >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image3} alt="cover" />
+                            <h4 className="mil-up">{val.name}</h4>
                           </div>
                         </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
-                            </div>
-                          </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-up"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
-                      >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image4} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
-                            </div>
-                          </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </section>
@@ -779,84 +481,48 @@ const Product = () => {
               <section id="portfolio">
                 <div className="container mil-portfolio mil-p-120-60 ">
                   <div className="row justify-content-between align-items-center">
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-down"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
+                    {data.automative.map((val, i) => (
+                      <div
+                        className="col-lg-6"
+                        data-aos={val.dataAos}
+                        data-aos-offset={val.dataAosOffset}
+                        data-aos-delay={val.dataaosdelay}
+                        data-aos-duration={val.dataaosduration}
+                        data-aos-easing={val.dataaoseasing}
+                        data-aos-mirror={val.dataaosmirror}
+                        data-aos-once={val.dataaosonce}
+                        data-aos-anchor-placement={val.dataaosanchorplacement}
                       >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image5} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
+                        <div
+                          className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
+                          data-value-1="60"
+                          data-value-2="-60"
+                          style={{
+                            translate: "none",
+                            rotate: "none",
+                            scale: "none",
+                            transform: "translate3d(0px, -32.0873px, 0px)",
+                          }}
+                        >
+                          <div
+                            className="mil-cover-frame mil-hori mil-up"
+                            onClick={() => handleRoute(val)}
+                          >
+                            <div className="mil-cover">
+                              <img src={val.img} alt="cover" width={"100%"} />
                             </div>
                           </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-up"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
-                      >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image3} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
+                          <div className="mil-descr">
+                            <div className="mil-labels mil-up mil-mb-15">
+                              <div className="mil-label mil-upper mil-accent">
+                                {val.type}
+                              </div>
                             </div>
+                            <h4 className="mil-up">{val.name}</h4>
                           </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
                         </div>
-                      </Link>
-                    </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </section>
@@ -870,84 +536,48 @@ const Product = () => {
               <section id="portfolio">
                 <div className="container mil-portfolio mil-p-120-60 ">
                   <div className="row justify-content-between align-items-center">
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-down"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
+                    {data.archite.map((val, i) => (
+                      <div
+                        className="col-lg-6"
+                        data-aos={val.dataAos}
+                        data-aos-offset={val.dataAosOffset}
+                        data-aos-delay={val.dataaosdelay}
+                        data-aos-duration={val.dataaosduration}
+                        data-aos-easing={val.dataaoseasing}
+                        data-aos-mirror={val.dataaosmirror}
+                        data-aos-once={val.dataaosonce}
+                        data-aos-anchor-placement={val.dataaosanchorplacement}
                       >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image2} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
+                        <div
+                          className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
+                          data-value-1="60"
+                          data-value-2="-60"
+                          style={{
+                            translate: "none",
+                            rotate: "none",
+                            scale: "none",
+                            transform: "translate3d(0px, -32.0873px, 0px)",
+                          }}
+                        >
+                          <div
+                            className="mil-cover-frame mil-hori mil-up"
+                            onClick={() => handleRoute(val)}
+                          >
+                            <div className="mil-cover">
+                              <img src={val.img} alt="cover" width={"100%"} />
                             </div>
                           </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-up"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
-                      >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image6} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
+                          <div className="mil-descr">
+                            <div className="mil-labels mil-up mil-mb-15">
+                              <div className="mil-label mil-upper mil-accent">
+                                {val.type}
+                              </div>
                             </div>
+                            <h4 className="mil-up">{val.name}</h4>
                           </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
                         </div>
-                      </Link>
-                    </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </section>
@@ -961,84 +591,48 @@ const Product = () => {
               <section id="portfolio">
                 <div className="container mil-portfolio mil-p-120-60 ">
                   <div className="row justify-content-between align-items-center">
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-down"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
+                    {data.gaming.map((val, i) => (
+                      <div
+                        className="col-lg-6"
+                        data-aos={val.dataAos}
+                        data-aos-offset={val.dataAosOffset}
+                        data-aos-delay={val.dataaosdelay}
+                        data-aos-duration={val.dataaosduration}
+                        data-aos-easing={val.dataaoseasing}
+                        data-aos-mirror={val.dataaosmirror}
+                        data-aos-once={val.dataaosonce}
+                        data-aos-anchor-placement={val.dataaosanchorplacement}
                       >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image1} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
+                        <div
+                          className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
+                          data-value-1="60"
+                          data-value-2="-60"
+                          style={{
+                            translate: "none",
+                            rotate: "none",
+                            scale: "none",
+                            transform: "translate3d(0px, -32.0873px, 0px)",
+                          }}
+                        >
+                          <div
+                            className="mil-cover-frame mil-hori mil-up"
+                            onClick={() => handleRoute(val)}
+                          >
+                            <div className="mil-cover">
+                              <img src={val.img} alt="cover" width={"100%"} />
                             </div>
                           </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
-                        </div>
-                      </Link>
-                    </div>
-                    <div
-                      className="col-lg-6"
-                      data-aos="fade-up"
-                      data-aos-offset="20"
-                      data-aos-delay="50"
-                      data-aos-duration="800"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="false"
-                      data-aos-once="true"
-                      data-aos-anchor-placement="top"
-                    >
-                      <Link
-                        to="/productdetail"
-                        onClick={handleClick}
-                        className="mil-portfolio-item mil-more mil-parallax mil-mb-60"
-                        data-value-1="60"
-                        data-value-2="-60"
-                        style={{
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate3d(0px, -32.0873px, 0px)",
-                        }}
-                      >
-                        <div className="mil-cover-frame mil-hori mil-up">
-                          <div className="mil-cover">
-                            <img src={image4} alt="cover" />
-                          </div>
-                        </div>
-                        <div className="mil-descr">
-                          <div className="mil-labels mil-up mil-mb-15">
-                            <div className="mil-label mil-upper mil-accent">
-                              Design
+                          <div className="mil-descr">
+                            <div className="mil-labels mil-up mil-mb-15">
+                              <div className="mil-label mil-upper mil-accent">
+                                {val.type}
+                              </div>
                             </div>
+                            <h4 className="mil-up">{val.name}</h4>
                           </div>
-                          <h4 className="mil-up">Home Security Camera</h4>
                         </div>
-                      </Link>
-                    </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </section>
