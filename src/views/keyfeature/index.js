@@ -1,6 +1,4 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useRef } from "react";
 import "./index.css";
 import image1 from "../../assests/images/Features/cloud.webp";
 import image2 from "../../assests/images/Features/realit.webp";
@@ -11,15 +9,18 @@ import description from "../../assests/data/constant";
 import Aos from "aos";
 
 Aos.init();
+
 const Keyfeature = () => {
+  const carouselRef = useRef(null);
+  const [selectedIndex, setSelectedIndex] = React.useState(null);
+
   const showSlider = () => {
-    let carouselDom = document.querySelector(".carousel");
-    let SliderDom = carouselDom.querySelector(".carousel .list");
-    let thumbnailBorderDom = document.querySelector(".carousel .thumbnail");
-    let SliderItemsDom = SliderDom.querySelectorAll(".carousel .list .item");
-    let thumbnailItemsDom = document.querySelectorAll(
-      ".carousel .thumbnail .item"
-    );
+    const carouselDom = carouselRef.current;
+    const SliderDom = carouselDom.querySelector(".list");
+    const thumbnailBorderDom = carouselDom.querySelector(".thumbnail");
+    const SliderItemsDom = SliderDom.querySelectorAll(".item");
+    const thumbnailItemsDom = thumbnailBorderDom.querySelectorAll(".item");
+
     SliderDom.appendChild(SliderItemsDom[0]);
     thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
     carouselDom.classList.add("next");
@@ -27,229 +28,63 @@ const Keyfeature = () => {
       carouselDom.classList.remove("next");
     }, 1000);
   };
-  const handleSliderClick = () => {
+
+  const handleItemClick = (index) => {
+    setSelectedIndex(index);
     showSlider();
   };
-  const progressBarRef = useRef(null);
-  useEffect(() => {
-    const progressBar = progressBarRef.current;
-    const updateProgress = () => {
-      const totalHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercentage = (window.scrollY / totalHeight) * 100;
-      gsap.to(progressBar, {
-        height: `${scrollPercentage}%`,
-        duration: 0.8,
-        ease: "power3.out",
-      });
-    };
 
-    updateProgress();
-  }, []);
   return (
-    <>
-      <div className="container-fluid p-0" id="keyfeature's">
-        <div className="waper" onClick={handleSliderClick}>
-          <div className="carousel m-auto">
-            <div className="list">
-              <div className="item">
-                <img src={image1} className="" />
-
+    <div className="container-fluid p-0" id="keyfeature's">
+      <div className="waper">
+        <div className="carousel m-auto" ref={carouselRef}>
+          <div className="list">
+            {[image1, image2, image3, image4, image5].map((image, index) => (
+              <div className="item" key={index}>
+                <img src={image} alt={`feature-${index}`} />
                 <div className="content">
                   <div className="title">
-                    {" "}
-                    {description.description.heading1}
+                    {description.description[`heading${index + 1}`]}
                   </div>
                   <div className="topic">
-                    {" "}
-                    {description.description.Subheading1}
+                    {description.description[`Subheading${index + 1}`]}
                   </div>
                   <div className="des mt-3">
                     <span className="fw-bold mx-1">
-                      {description.description.span1}
+                      {description.description[`span${index + 1}`]}
                     </span>
-                    {description.description.message1}{" "}
+                    {description.description[`message${index + 1}`]}
                   </div>
                   <br />
                   <div className="des">
                     <span className="fw-bold mx-1">
-                      {description.description.subspan1}
+                      {description.description[`subspan${index + 1}`]}
                     </span>
-                    {description.description.submessage1}
+                    {description.description[`submessage${index + 1}`]}
                   </div>
                 </div>
               </div>
-              <div className="item">
-                <img src={image2} className="" />
-
+            ))}
+          </div>
+          <div className="thumbnail mil-p-120-30">
+            {[image1, image2, image3, image4, image5].map((image, index) => (
+              <div
+                className={`item ${selectedIndex === index ? "selected" : ""}`}
+                key={index}
+                onClick={() => handleItemClick(index)}
+              >
+                <img src={image} alt={`thumbnail-${index}`} />
                 <div className="content">
-                  <div className="title">
-                    {" "}
-                    {description.description.heading2}
-                  </div>
-                  <div className="topic">
-                    {" "}
-                    {description.description.Subheading2}
-                  </div>
-                  <div className="des mt-3">
-                    <span className="fw-bold mx-1">
-                      {description.description.span2}
-                    </span>
-                    {description.description.message2}{" "}
-                  </div>
-                  <br />
-                  <div className="des">
-                    <span className="fw-bold mx-1">
-                      {description.description.subspan2}
-                    </span>
-                    {description.description.submessage2}
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                {" "}
-                <img src={image3} className="" />{" "}
-                <div className="content">
-                  <div className="title">
-                    {" "}
-                    {description.description.heading3}
-                  </div>
-                  <div className="topic">
-                    {" "}
-                    {description.description.Subheading3}
-                  </div>
-                  <div className="des mt-3">
-                    <span className="fw-bold mx-1">
-                      {description.description.span3}
-                    </span>
-                    {description.description.message3}{" "}
-                  </div>
-                  <br />
-                  <div className="des">
-                    <span className="fw-bold mx-1">
-                      {description.description.subspan3}
-                    </span>
-                    {description.description.submessage3}
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <img src={image4} className="" />
-
-                <div className="content">
-                  <div className="title">
-                    {" "}
-                    {description.description.heading4}
-                  </div>
-                  <div className="topic">
-                    {" "}
-                    {description.description.Subheading4}
-                  </div>
-                  <div className="des mt-3">
-                    <span className="fw-bold mx-1">
-                      {description.description.span4}
-                    </span>
-                    {description.description.message4}{" "}
-                  </div>
-                  <br />
-                  <div className="des">
-                    <span className="fw-bold mx-1">
-                      {description.description.subspan4}
-                    </span>
-                    {description.description.submessage4}
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <img src={image5} className="" />
-
-                <div className="content">
-                  <div className="title">
-                    {" "}
-                    {description.description.heading5}
-                  </div>
-                  <div className="topic">
-                    {" "}
-                    {description.description.Subheading5}
-                  </div>
-                  <div className="des mt-3">
-                    <span className="fw-bold mx-1">
-                      {description.description.span5}
-                    </span>
-                    {description.description.message5}{" "}
-                  </div>
-                  <br />
-                  <div className="des">
-                    <span className="fw-bold mx-1">
-                      {description.description.subspan5}
-                    </span>
-                    {description.description.submessage5}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="thumbnail  mil-p-120-30">
-              <div className="item">
-                <img src={image1} />
-                <div className="content">
-                  <div className="title" style={{ color: "#ffd94a" }}>
-                    Cloud
-                  </div>
                   <div className="description" style={{ color: "#ffd94a" }}>
-                    Native{" "}
+                    {description.description[`heading${index + 1}`]}
                   </div>
                 </div>
               </div>
-              <div className="item">
-                <img src={image2} className="" />
-                <div className="content">
-                  <div className="title" style={{ color: "#ffd94a" }}>
-                    Reality{" "}
-                  </div>
-                  <div className="description" style={{ color: "#ffd94a" }}>
-                    Modeling
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <img src={image3} className="" />
-                <div className="content">
-                  <div className="title" style={{ color: "#ffd94a" }}>
-                    Business
-                  </div>
-                  <div className="description" style={{ color: "#ffd94a" }}>
-                    Accelerator
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <img src={image4} className="" />
-                <div className="content">
-                  <div className="title" style={{ color: "#ffd94a" }}>
-                    Adaptive
-                  </div>
-                  <div className="description" style={{ color: "#ffd94a" }}>
-                    AI
-                  </div>
-                </div>
-              </div>
-              <div className="item">
-                <img src={image5} className="" />
-                <div className="content">
-                  <div className="title" style={{ color: "#ffd94a" }}>
-                    Content
-                  </div>
-                  <div className="description" style={{ color: "#ffd94a" }}>
-                    Creation{" "}
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

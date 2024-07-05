@@ -1,10 +1,11 @@
 import React from "react";
 import "./index.css";
-import image1 from "../../assests/images/landing/plane.jpg";
+import image1 from "../../assests/images/landing/1.9f88f939.webp";
 import Uniq_production from "../../components/uniq_prodution";
 import unique from "../../assests/data/unique";
 import ArrowSVG from "../../components/arrow";
 import Aos from "aos";
+import { Link } from "react-router-dom";
 
 const Business = () => {
   Aos.init();
@@ -29,54 +30,10 @@ const Business = () => {
       para: unique.para4,
       img: unique.img4,
     },
-    {
-      head: unique.head5,
-      para: unique.para5,
-      img: unique.img5,
-    },
-    {
-      head: unique.head6,
-      para: unique.para6,
-      img: unique.img6,
-    },
-    {
-      head: unique.head7,
-      para: unique.para7,
-      img: unique.img7,
-    },
-    {
-      head: unique.head8,
-      para: unique.para8,
-      img: unique.img8,
-    },
   ];
   return (
-    <div className=" mil-dark-bg ">
-      <div className="mi-invert-fix">
-        <div className="">
-          <div className="mil-animation-frame">
-            <div
-              className="mil-animation mil-position-2 mil-scale"
-              data-value-1="2"
-              data-value-2="1"
-              style={{
-                left: "20px",
-                top: "60px",
-                transform: "translate3d(0px, 0px, 0px) scale(1.236, 1.236)",
-              }}
-            >
-              <div className="mil-dodecahedron">
-                {[...Array(12)].map((_, index) => (
-                  <div className="mil-pentagon" key={index}>
-                    {[...Array(5)].map((_, i) => (
-                      <div key={i}></div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className=" bg-black ">
+      <div className="">
         <div className="container mil-p-120-30">
           <div className="row">
             <div className="col-lg-7" style={{ textAlign: "right" }}>
@@ -115,13 +72,13 @@ const Business = () => {
               For Your <span className="mil-thin text-white">Business.</span>
             </h2>
             <div className="mil-services-button mil-button mil-arrow-place">
-              <span>What we do</span>
-              <ArrowSVG className="mil-arrow" />
+              <Link to="/contact" className="text-black p-0">
+                <span>What we do</span>
+                <ArrowSVG className="mil-arrow" />
+              </Link>
             </div>
           </div>
-          {/* </div> */}
-          <div className="row mil-services-grid  mt-5"
-          >
+          <div className="row mil-services-grid  mt-5">
             {data.map((val, index) => (
               <div
                 key={index}

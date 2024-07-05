@@ -10,31 +10,21 @@ const Progressbar = () => {
 
   useEffect(() => {
     const progressBar = progressBarRef.current;
-
     const updateProgress = () => {
-      const totalHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercentage = (window.scrollY / totalHeight) * 100;
-      gsap.to(progressBar, {
-        height: `${scrollPercentage}%`,
-        duration: 0.8,
-        ease: "power3.out",
-      });
+      gsap.to(progressBar, { height: `${scrollPercentage}%`, duration: 0.8, ease: "power3.out" });
     };
 
-    updateProgress();
     ScrollTrigger.create({
       start: "top top",
       end: "bottom bottom",
       onUpdate: updateProgress,
-      onUpdateParams: ["{self}"],
       scrub: true,
       throttle: 50,
     });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+    return () => ScrollTrigger.getAll().forEach(trigger => trigger.kill());
   }, []);
 
   return (

@@ -9,7 +9,7 @@ const About = () => {
   Aos.init();
 
   return (
-    <div className="container mil-p-120-30" id="about">
+    <div className="container mil-p-120-30 " id="about">
       <div className="row justify-content-between align-items-center">
         <div
           className="col-lg-6 col-xl-5 mil-mb-90"

@@ -1,17 +1,17 @@
 import React from "react";
-import image1 from "../../assests/images/Products/xr-immersion.webp";
+import image1 from "../../assests/images/work/mahindra/mahindra.png";
 const SecondComponent = () => {
   return (
     <div className="container p-0 events-content">
       <div className="row align-items-center mt-3">
         <div className="col-sm-12 ">
-          {/* <img
+          <img
             src={image1}
             width="100%"
             className="image22 process_hover  "
             height="500px"
-          /> */}
-          <div id="video" class="hidden-xs loaded">
+          />
+          {/* <div id="video" class="hidden-xs loaded">
             <iframe
               width="100%"
               height="500px"
@@ -22,7 +22,7 @@ const SecondComponent = () => {
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

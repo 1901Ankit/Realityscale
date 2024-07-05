@@ -47,8 +47,8 @@ const Sliderlogo = () => {
   };
 
   return (
-    <div className="mil-dark-bg">
-      <div className="mi-invert-fix">
+    <div className="bg-black">
+      <div className="">
         <div className="container logoclient mil-p-120-30">
           <Carousel
             responsive={responsive}

@@ -40,6 +40,8 @@ import Sixthpara2 from "../paracomponent/sixthpara2";
 import Sixthpara3 from "../paracomponent/sixthpara3";
 import ArrowSVG from "../arrow";
 import { Link } from "react-router-dom";
+import Fourth2 from "../displayComponent/fourth2";
+import Fourth3 from "../displayComponent/fourth3";
 
 const Range = () => {
   const handleClick = () => {
@@ -99,8 +101,8 @@ const Range = () => {
   ];
   const two = [
     <Fourth handleNext={handleNext} handlePrev={handlePrev} />,
-    <Fourth />,
-    <Fourth />,
+    <Fourth2 />,
+    <Fourth3 />,
   ];
   const three = [
     <Fifth handleNext={handleNext} handlePrev={handlePrev} />,
@@ -218,8 +220,8 @@ const Range = () => {
     setProgress(newProgress);
   }, [activeStep, components.length]);
   return (
-    <div className=" mil-dark-bg mobileviewrange">
-      <div className="mi-invert-fix">
+    <div className=" bg-black mobileviewrange">
+      <div className="">
         <div className="container mil-p-120-30 " style={{ maxWidth: 1080 }}>
           <div className="">
             <h1 className="keyfetR text-center">SHOWCASE</h1>

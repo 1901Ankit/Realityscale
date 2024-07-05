@@ -18,7 +18,7 @@ const Production = () => {
           </div>
           <div className="col-lg-6 mil-mb-30">
             <div className="mil-adaptive-right mil-up">
-              <a href="#" className="mil-link mil-dark mil-arrow-place">
+              <a href="/product" className="mil-link mil-dark mil-arrow-place">
                 <span>View all</span>
                 <ArrowSVG className="mil-arrow" fill="#000000" />
               </a>
@@ -40,7 +40,7 @@ const Production = () => {
                 data-aos-once="true"
                 data-aos-anchor-placement="top"
               >
-                <a href="#" className="mil-blog-card mil-mb-60">
+                <a href="/product" className="mil-blog-card mil-mb-60">
                   <div className="mil-cover-frame mil-up">
                     <img src={image1} alt="cover" />
                   </div>
@@ -63,10 +63,12 @@ const Production = () => {
                       {val.content}
                     </p>
                     <div className="mil-links mil-dark mil-arrow-place mil-up">
-                      <span className="mil-label mil-upper mil-accent text-black">
-                        Read more
-                      </span>
-                      <ArrowSVG className="mil-arrow" />
+                      <a href="/product">
+                        <span className="mil-label mil-upper mil-accent text-black">
+                          Read more
+                        </span>
+                        <ArrowSVG className="mil-arrow" />
+                      </a>
                     </div>
                   </div>
                 </a>

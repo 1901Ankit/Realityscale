@@ -1,6 +1,5 @@
 import React from "react";
 import { FaInstagram, FaYoutube, FaTwitter, FaFacebook } from "react-icons/fa";
-import image from "../../assests/images/human/christopher-campbell-rDEOVtE7vOs-unsplash.jpg";
 const TeamMembercontent = ({ member }) => {
   return (
     <div className="mil-team-card mil-up mil-mb-30">

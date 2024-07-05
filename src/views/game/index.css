@@ -1,9 +1,9 @@
 .contactus_parallax {
-    background-image: url("../../assests/images/gamecollection/3.webp");
+    background-image: url("../../assests/images/gamecollection/shopping.jpg");
     height: 100%;
-    background-position: top;
+    background-position: center !important;
     background-attachment: scroll;
-    background-size: cover;
+    background-size:cover;
 }
 
 .paralaxoverlay {

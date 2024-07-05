@@ -10,12 +10,13 @@ import data from "../../assests/data/data";
 import ArrowSVG from "../../components/arrow";
 import "./index.css";
 import Aos from "aos";
+import { Link } from "react-router-dom";
 const FAQ = () => {
   Aos.init();
   return (
     <>
-      <div className="mil-dark-back">
-        <div className="mi-inverter-fix">
+      <div className="bg-black">
+        <div className="">
           <div className="container mil-p-120-09">
             <div className="row justify-content-between">
               <div className="col-lg-5 mil-relative mil-mb-90">
@@ -43,8 +44,10 @@ const FAQ = () => {
                     aliqua quis ipsum suspendisse ultrices gravida.
                   </p>
                   <div className="mil-services-button mil-button mil-arrow-place mt-2">
-                    <span>Read More</span>
-                    <ArrowSVG className="mil-arrow" fill="#000000" />
+                    <Link to="/product" className="text-black">
+                      <span>Read More</span>
+                      <ArrowSVG className="mil-arrow" fill="#000000" />
+                    </Link>
                   </div>
                 </div>
               </div>

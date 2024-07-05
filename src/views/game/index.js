@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import { Box, Typography, Stack, useMediaQuery } from "@mui/material";
 import ArrowSVG from "../../components/arrow";
+import { useNavigate } from "react-router-dom";
 const Game = ({ image, heading, subHeading }) => {
   const [isButtonVisible, setIsButtonVisible] = useState(false);
   const handleMouseEnter = () => {
@@ -13,6 +14,12 @@ const Game = ({ image, heading, subHeading }) => {
 
   const phoneMatches = useMediaQuery("(max-width:600px)");
 
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+    navigate("/contact");
+  };
   return (
     <div className="d-overlay">
       <div
@@ -29,7 +36,7 @@ const Game = ({ image, heading, subHeading }) => {
         <Box
           sx={{
             height: "100%",
-            backgroundColor: "#00000045",
+            backgroundColor: "#00000055",
             color: "#ffffff",
             display: "flex",
             justifyContent: "flex-start",
@@ -43,7 +50,7 @@ const Game = ({ image, heading, subHeading }) => {
                     border: "none",
                     transition: "border .5s, box-shadow .5s",
                     zIndex: 1,
-                    backgroundColor: "#00000045",
+                    backgroundColor: "#00000055",
                     paddingLeft: "10px",
                   },
                 }),
@@ -53,7 +60,7 @@ const Game = ({ image, heading, subHeading }) => {
         >
           <Box
             sx={{
-              paddingBottom: phoneMatches ? 2 : 2,
+              paddingBottom: phoneMatches ? 2 : 3,
               paddingLeft: phoneMatches ? 3 : 3,
             }}
           >
@@ -73,7 +80,9 @@ const Game = ({ image, heading, subHeading }) => {
                   className="mil-links mil-muted mil-arrow-place left-align"
                   sx={{
                     display: phoneMatches || isButtonVisible ? "block" : "none",
+                    cursor: "pointer", 
                   }}
+                  onClick={handleNavigation}
                 >
                   Read More
                   <ArrowSVG className="mil-arrow" />

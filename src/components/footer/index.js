@@ -1,48 +1,37 @@
 import React from "react";
 import "./index.css";
-import logo from "../../assests/images/logo/newlogo/Reality Scale Logo White 04.png";
+import logo from "../../assests/images/logo/Reality Scale By Digixito Logo.png";
 // import { FaInstagram } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import ArrowSVG from "../arrow";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Navigation = () => {
-  const navigate = useNavigate();
-
-  const handleContactClick = () => {
-    window.scrollTo(0, 0);
-    navigate("/contact");
-  };
-  const handlehomeClick = () => {
-    window.scrollTo(0, 0);
-    navigate("/");
-  };
-  const handleproductClick = () => {
-    window.scrollTo(0, 0);
-    navigate("/product");
-  };
-  const handleteamClick = () => {
-    window.scrollTo(0, 0);
-    navigate("/team");
-  };
- 
   return (
     <nav className="mil-footer-menu mil-mb-30">
       <ul className="p-0">
-        <li className="mil-up ">
-          <span onClick={handlehomeClick}>Home</span>
-        </li>
-        <li className="mil-up ">
-          <span onClick={handleteamClick}>Team</span>
-        </li>
-        <li className="mil-up">
-          <span onClick={handleproductClick}>Product</span>
-        </li>
-        <li className="mil-up">
-          <span onClick={handleContactClick}>Contact</span>
-        </li>
+        <a href="/">
+          <li className="mil-up ">
+            <span>Home</span>
+          </li>
+        </a>
+        <a href="/team">
+          <li className="mil-up ">
+            <span>Team</span>
+          </li>
+        </a>
+        <a href="/product">
+          <li className="mil-up">
+            <span>Product</span>
+          </li>
+        </a>
+        <a href="/contact">
+          <li className="mil-up">
+            <span>Contact</span>
+          </li>
+        </a>
       </ul>
     </nav>
   );
@@ -59,16 +48,6 @@ const MenuList = () => {
       <li>
         <a href="/terms" className="mil-light-soft">
           Terms and conditions
-        </a>
-      </li>
-      <li>
-        <a href="#" className="mil-light-soft">
-          Cookie Policy
-        </a>
-      </li>
-      <li>
-        <a href="#" className="mil-light-soft">
-          Careers
         </a>
       </li>
     </ul>
@@ -90,7 +69,7 @@ const Address2 = () => {
     <>
       <h6 className="mil-muted mil-up mil-mb-10">USA</h6>
       <p className="mil-light-soft mil-up fw-200">
-        30 N Gould St Ste R Sheridan, WY 82801 USA
+        30 N Gould St Ste R Sheridan,<br/>  WY 82801 USA
       </p>
     </>
   );
@@ -106,20 +85,32 @@ const SocialIcons = () => {
         </a>
       </li>
       <li>
-        <a href="https://www.youtube.com/channel/UCg0f7WD6d_-9N-wCN93cnPA" target="_blank" className="social-icon">
+        <a
+          href="https://www.youtube.com/channel/UCg0f7WD6d_-9N-wCN93cnPA"
+          target="_blank"
+          className="social-icon"
+        >
           {" "}
           <FaYoutube />
         </a>
       </li>
       <li>
-        <a href="#" target="_blank" className="social-ic
-        on">
+        <a
+          href="#"
+          target="_blank"
+          className="social-ic
+        on"
+        >
           {" "}
           <FaXTwitter />
         </a>
       </li>
       <li>
-        <a href="https://www.facebook.com/realityscale/" target="_blank" className="social-icon">
+        <a
+          href="https://www.facebook.com/realityscale/"
+          target="_blank"
+          className="social-icon"
+        >
           {" "}
           <FaFacebook />
         </a>
@@ -142,7 +133,7 @@ const Footer = () => {
                 <a href="#">+91 8800291352</a>
               </div>
               <div className="mil-muted mil-logo mil-up mil-mb-30 mt-4 ">
-                <img src={logo} style={{ width: "50%" }} />
+                <img src={logo} style={{ width: "64%" }} />
               </div>
               <p className="mil-light-soft mil-up mil-mb-30 mt-5 fw-200">
                 Subscribe our newsletter:
@@ -192,13 +183,18 @@ const Footer = () => {
                 </div>
 
                 <p className="mil-light-soft mil-up fw-200 copywrite">
-                  ©Copyright 2024 - Reality Sacle LLC &
+                  ©Copyright 2024 -
+                  <span className="mx-1  text-white">
+                    Reality Scale LLC 
+                    </span> 
+                    &
                   <a
                     href="https://www.digixito.com/"
                     className="mx-1 text-white"
                   >
                     Digixito Media Private Limited.
                   </a>
+                  <br />
                   <span className="text-grey">All Rights Reserved.</span>
                 </p>
               </div>

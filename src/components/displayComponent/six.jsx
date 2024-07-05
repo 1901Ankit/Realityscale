@@ -1,17 +1,17 @@
 import React from "react";
-import image1 from "../../assests/images/Products/real-estate-solutions.webp";
+import image1 from "../../assests/images/work/disneyslider/disneyslide.png";
 const Sixth = () => {
   return (
     <div className="container p-0 events-content">
       <div className="row align-items-center mt-3">
         <div className="col-sm-12 ">
-          {/* <img
+          <img
             src={image1}
             width="100%"
             className="image22 process_hover  "
             height="500px"
-          /> */}
-          <iframe
+          />
+          {/* <iframe
             width="100%"
             height="500px"
             src="https://www.youtube.com/embed/HdZ0Q0LxjG4?si=qcmIpZzgUcppaCcM"
@@ -20,7 +20,7 @@ const Sixth = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
-          ></iframe>
+          ></iframe> */}
         </div>
       </div>
     </div>

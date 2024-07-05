@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState } from "react";
 import "./index.css";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.min.css";
-import Testilogo from "../testilogo";
 import ArrowSVG from "../../components/arrow";
 import data from "../../assests/data/data";
 import Aos from "aos";
@@ -61,7 +60,7 @@ const Multicarousel = () => {
   return (
     <>
       <section className="mil-softer-bg">
-        <div className="container mil-p-120-30">
+        <div className="container mil-p-120-90">
           <div className="row">
             <div className="col-lg-10" style={{ textAlign: "right" }}>
               <span
@@ -99,7 +98,7 @@ const Multicarousel = () => {
           </div>
           <div className="row mil-relative justify-content-center">
             <div className="col-lg-8" data-aos="fade-up">
-              <div className="mil-slider-nav mil-soft mil-reviews-nav mil-up">
+              {/* <div className="mil-slider-nav mil-soft mil-reviews-nav mil-up">
                 <ArrowSVG
                   className="mil-slider-arrow mil-prev mil-revi-prev mil-arrow-place "
                   onClick={handlePrev}
@@ -108,7 +107,7 @@ const Multicarousel = () => {
                   className="mil-slider-arrow mil-revi-next mil-arrow-place "
                   onClick={handleNext}
                 />
-              </div>
+              </div> */}
 
               <div className="swiper-container mil-reviews-slider">
                 <div className="swiper-wrapper">
@@ -140,8 +139,6 @@ const Multicarousel = () => {
           </div>
         </div>
       </section>
-
-      <Testilogo />
     </>
   );
 };

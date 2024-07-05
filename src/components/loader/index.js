@@ -135,7 +135,7 @@ const Loader = () => {
                 className="mil-h3 mil-muted fw-500"
                 style={{ color: "#ffd94a" }}
               >
-                r
+                R
               </span>
               eality
               <span
@@ -143,7 +143,7 @@ const Loader = () => {
                 style={{ color: "#ffd94a" }}
               >
                 {" "}
-                s
+                S
               </span>
               cale.com
             </p>

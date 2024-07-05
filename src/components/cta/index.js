@@ -4,8 +4,8 @@ import imagectc from "../../assests/images/landing/cta-1-1.jpg";
 import CTAsvg from "../ctasvg";
 const CTA = () => {
   return (
-    <div className="mil-dark-back">
-      <div className="mi-inverter-fix">
+    <div className="bg-black">
+        <div className="">
         <section className="cta-one  py-5">
           <div
             className="container text-center wow fadeInUp animated animated"

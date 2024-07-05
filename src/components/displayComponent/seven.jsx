@@ -9,13 +9,13 @@ return (
   <div className="container p-0 events-content">
   <div className="row align-items-center mt-3">
     <div className="col-sm-6 ">
-      {/* <img
+      <img
         src={image1}
         width="100%"
         height={500}
         className="image22 process_hover  "
      
-      /> */}
+      />
     </div>
     <div className="col-sm-6 lormips"
    

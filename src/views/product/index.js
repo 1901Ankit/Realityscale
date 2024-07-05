@@ -1,123 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import $ from "jquery";
-import { gsap } from "gsap";
-import logo from "../../assests/images/logo/newlogo/Reality Scale Logo Black 05.png";
-import logos from "../../assests/images/logo/newlogo/Reality Scale Logo White 05.png";
-import Mouse from "../../components/mouse";
 import "./index.css";
 import ArrowSVG from "../../components/arrow";
-import Progressbar from "../../components/progressbar";
-import Backtop from "../../components/backtop";
-import image1 from "../../assests/images/work/1.webp";
-import image2 from "../../assests/images/work/2.webp";
-import image3 from "../../assests/images/work/4.webp";
-import image4 from "../../assests/images/work/3.webp";
-import image5 from "../../assests/images/work/5.webp";
-import image6 from "../../assests/images/work/6.webp";
-import image7 from "../../assests/images/work/7.webp";
-import image8 from "../../assests/images/work/8.webp";
-import image9 from "../../assests/images/work/9.webp";
-import image10 from "../../assests/images/work/10.webp";
-import { Tab, Tabs, Box, Stack } from "@mui/material";
+import { Tab, Tabs, Box, Stack, useMediaQuery } from "@mui/material";
 import Aos from "aos";
 import data from "../../assests/data/data";
 const Product = () => {
   Aos.init();
-  useEffect(() => {
-    const cloneAndAppend = (sourceSelector, targetSelector) => {
-      const sourceElement = document.querySelector(sourceSelector);
-      const targetElement = document.querySelector(targetSelector);
-
-      if (sourceElement && targetElement) {
-        const clone = sourceElement.cloneNode(true);
-        targetElement.appendChild(clone);
-      }
-    };
-
-    // cloneAndAppend('.mil-arrow', '.mil-arrow-place');
-    cloneAndAppend(".mil-dodecahedron", ".mil-animation");
-    cloneAndAppend(".mil-lines", ".mil-lines-place");
-    cloneAndAppend(".mil-main-menu ul li.mil-active > a", ".mil-current-page");
-  }, []);
-  const menuBtnHandler = () => {
-    $(".mil-menu-btn, .mil-menu, .mil-menu-frame, body").toggleClass(
-      "mil-active menu-open"
-    );
-    $("body").css(
-      "overflow-y",
-      $("body").hasClass("menu-open") ? "hidden" : "auto"
-    );
-  };
-
-  const menuItemHandler = (event) => {
-    const link = $(event.currentTarget).find("a").attr("href");
-    if (link) {
-      event.preventDefault();
-      $(".mil-menu-btn, .mil-menu, .mil-menu-frame, body").removeClass(
-        "mil-active menu-open"
-      );
-      $("body").css("overflow-y", "auto");
-      setTimeout(() => (window.location.href = link), 300);
-    }
-  };
-  useEffect(() => {
-    gsap.to(".element", { duration: 1, opacity: 0 });
-    $(".mil-menu-btn").on("click", menuBtnHandler);
-    $(".mil-main-menu li").on("click", menuItemHandler);
-    return () => {
-      $(".mil-menu-btn, .mil-main-menu li").off("click");
-      $("body").css("overflow-y", "auto");
-    };
-  }, []);
-
   const navigate = useNavigate();
-  const Home = () => {
-    navigate("/");
+  const [value, setValue] = useState("All");
+  const handleChange = (val) => {
+    setValue(val);
   };
-  const Member = () => {
-    navigate("/team");
-  };
-  const Contactus = () => {
-    navigate("/contact");
-  };
-  function ProjectItem({ name }) {
-    return (
-      <li>
-        <a href="#" className="mil-light-soft">
-          {name}
-        </a>
-      </li>
-    );
-  }
-  function UsefulLink({ name, url }) {
-    return (
-      <li>
-        <a href={url} className="mil-light-soft">
-          {name}
-        </a>
-      </li>
-    );
-  }
-
-  function Address({ address }) {
-    return (
-      <div className="col-md-6 col-lg-6">
-        <h6 className="mil-muted mil-up mil-mb-10">Noida</h6>
-        <p className="mil-light-soft mil-up">{address}</p>
-      </div>
-    );
-  }
-
-  function Address2({ address2 }) {
-    return (
-      <div className="col-md-6 col-lg-6">
-        <h6 className="mil-muted mil-up mil-mb-10">USA</h6>
-        <p className="mil-light-soft mil-up">{address2}</p>
-      </div>
-    );
-  }
-
   const tabsSection = [
     {
       label: "All",
@@ -135,141 +29,25 @@ const Product = () => {
       label: "Gaming",
     },
   ];
+  
 
-  const [value, setValue] = useState("All");
-
-  const handleChange = (val) => {
-    setValue(val);
-  };
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
-  // const navigate = useNavigate();
   const handleRoute = (value) => {
-    window.scrollTo(20, 20);
+    window.scrollTo(0, 0);
     navigate("/productdetails", {
       state: { value },
     });
   };
+
+  const phoneMatches = useMediaQuery("(max-width:600px)");
+  
   return (
     <>
-      <Mouse />
-      <Progressbar />
-      <div className="mil-menu-frame">
-        <div className="mil-frame-top">
-          <a href="/" className="mil-logo">
-            <img src={logos} style={{ width: "20%" }} />
-          </a>
-          <div className="mil-menu-btn">
-            <span></span>
-          </div>
-        </div>
-
-        <div className="container">
-          <div className="mil-menu-content">
-            <div className="row">
-              <div className="col-xl-5 mt-5">
-                <nav className="mil-main-menu" id="">
-                  <ul className="unlisted">
-                    <li className="mil-has-children ">
-                      <span className="" onClick={Home}>
-                        Home
-                      </span>
-                    </li>
-                    <li className="mil-has-children ">
-                      <span className="" onClick={Member}>
-                        Team
-                      </span>
-                    </li>
-                    <li className="mil-has-children  mil-active">
-                      <span>Product</span>
-                    </li>
-                    <li className="mil-has-children">
-                      <span className="" onClick={Contactus}>
-                        Contact us
-                      </span>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <div className="col-xl-7">
-                <div className="mil-menu-right-frame">
-                  <div className="mil-animation-in">
-                    <div className="mil-animation-frame">
-                      <div
-                        className="mil-animation mil-position-1 mil-scale"
-                        data-value-1="2"
-                        data-value-2="2"
-                      ></div>
-                    </div>
-                  </div>
-                  <div className="mil-menu-right">
-                    <div className="row">
-                      <div className="col-lg-8">
-                        <h6 className="mil-muted mil-mb-10">Projects</h6>
-                        <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          {data.projects.map((project, index) => (
-                            <ProjectItem key={index} name={project} />
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="col-lg-4 mil-mb-60">
-                        <h6 className="mil-muted mil-mb-10">Useful links</h6>
-                        <ul className="mil-menu-list" style={{ padding: "0" }}>
-                          {data.usefulLinks.map((link, index) => (
-                            <UsefulLink
-                              key={index}
-                              name={link.name}
-                              url={link.url}
-                            />
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="mil-divider mil-mb-60"></div>
-                    <div className="row justify-content-between">
-                      <Address address={data.address} />
-                      <Address2 address2={data.address2} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mil-curtain"></div>
-      <div className="mil-frame">
-        <div className="mil-frame-top">
-          <a href="/" className="mil-logo">
-            <img
-              src={logo}
-              style={{ width: "20%" }}
-              className="logoimagesystm"
-            />
-          </a>
-          <a href="/" className="mil-logo">
-            <img
-              src={logos}
-              style={{ width: "20%" }}
-              className="logoimagemobile"
-            />
-          </a>
-          <div className="mil-menu-btn">
-            <span></span>
-          </div>
-        </div>
-        <div className="mil-frame-bottom">
-          <div className="mil-current-page text-white">
-            <span className="text-white">PRODUCT</span>
-          </div>
-          <Backtop />
-        </div>
-      </div>
-
       <div className="mil-content">
         <div id="swupMain" className="mil-main-transition">
-          <div className="mil-dark-bg">
+          <div className="bg-black mil-dark-bg">
             <div className="mil-inner-banner">
               <div className="mi-invert-fix">
                 <div className="mil-banner-content mil-up">
@@ -313,9 +91,9 @@ const Product = () => {
                       <span className="mil-thins" style={{ color: "white" }}>
                         Product
                       </span>
-                      <br /> is coming{" "}
+                      <br /> is finally{" "}
                       <span className="mil-thins" style={{ color: "white" }}>
-                        soon
+                        launched
                       </span>
                     </h1>
                     <a
@@ -342,13 +120,11 @@ const Product = () => {
               justifyContent={"center"}
             >
               <Tabs
+                value={value}
+                onChange={handleChange}
                 sx={{
-                  "& .MuiTab-root": { color: "white !important", width: 200 },
+                  "& .MuiTab-root": { color: "grey !important", width: 200 },
                   "& .Mui-selected": { color: "#ffd94a !important" },
-
-                  "& .MuiTab-root.Mui-selected": {
-                    color: "ffd94a !important",
-                  },
                   "& .MuiTabs-indicator": {
                     backgroundColor: "transparent !important",
                   },
@@ -369,7 +145,7 @@ const Product = () => {
           <div>
             {value === "All" ? (
               <section id="portfolio">
-                <div className="container mil-portfolio mil-p-120-60 ">
+                <div className="container mil-portfolio mil-p-120-60">
                   <div className="row justify-content-between align-items-center">
                     {data.product.map((val, i) => (
                       <div
@@ -398,7 +174,10 @@ const Product = () => {
                             className="mil-cover-frame mil-hori mil-up"
                             onClick={() => handleRoute(val)}
                           >
-                            <div className="mil-cover">
+                            <div
+                              className="mil-cover"
+                              style={{ cursor: "pointer" }}
+                            >
                               <img src={val.img} alt="cover" width={"100%"} />
                             </div>
                           </div>
@@ -453,7 +232,10 @@ const Product = () => {
                             className="mil-cover-frame mil-hori mil-up"
                             onClick={() => handleRoute(val)}
                           >
-                            <div className="mil-cover">
+                            <div
+                              className="mil-cover"
+                              style={{ cursor: "pointer" }}
+                            >
                               <img src={val.img} alt="cover" width={"100%"} />
                             </div>
                           </div>
@@ -508,7 +290,10 @@ const Product = () => {
                             className="mil-cover-frame mil-hori mil-up"
                             onClick={() => handleRoute(val)}
                           >
-                            <div className="mil-cover">
+                            <div
+                              className="mil-cover"
+                              style={{ cursor: "pointer" }}
+                            >
                               <img src={val.img} alt="cover" width={"100%"} />
                             </div>
                           </div>
@@ -563,7 +348,10 @@ const Product = () => {
                             className="mil-cover-frame mil-hori mil-up"
                             onClick={() => handleRoute(val)}
                           >
-                            <div className="mil-cover">
+                            <div
+                              className="mil-cover"
+                              style={{ cursor: "pointer" }}
+                            >
                               <img src={val.img} alt="cover" width={"100%"} />
                             </div>
                           </div>
@@ -618,7 +406,10 @@ const Product = () => {
                             className="mil-cover-frame mil-hori mil-up"
                             onClick={() => handleRoute(val)}
                           >
-                            <div className="mil-cover">
+                            <div
+                              className="mil-cover"
+                              style={{ cursor: "pointer" }}
+                            >
                               <img src={val.img} alt="cover" width={"100%"} />
                             </div>
                           </div>
